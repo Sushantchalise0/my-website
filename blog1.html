@@ -1,111 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <!-- meta -->
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
-  <title>Sushant - AWS</title>
-  <meta content="" name="keywords">
-  <meta content="" name="description">
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,500i,600,600i,700,700i|Playfair+Display:400,400i,700,700i,900,900i" rel="stylesheet">
-
-  <!-- Bootstrap CSS File -->
-  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Libraries CSS Files -->
-  <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
-  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-  <link href="lib/magnific-popup/magnific-popup.css" rel="stylesheet">
-  <link href="lib/hover/hover.min.css" rel="stylesheet">
-
-  <!-- Blog Stylesheet File -->
-  <link href="css/blog.css" rel="stylesheet">
-
-  <!-- Main Stylesheet File -->
-  <link href="css/style.css" rel="stylesheet">
-
-  <!-- Responsive css -->
-  <link href="css/responsive.css" rel="stylesheet">
-
-  <!-- Favicon -->
-  <link rel="shortcut icon" href="images/favicon.png">
-
-  <!-- =======================================================
-    Theme Name: Folio
-    Theme URL: https://bootstrapmade.com/folio-bootstrap-portfolio-template/
-    Author: BootstrapMade.com
-    Author URL: https://bootstrapmade.com
-  ======================================================= -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Setup Hadoop Cluster and Configure on AWS</title>
 </head>
-
 <body>
+    <h1>How to Setup Hadoop Cluster and Configure on AWS</h1>
+    <p><strong>By:</strong> Sushant Chalise</p>
+    <p><strong>Guidance from:</strong> Asst. Prof. Basanta Joshi P.hD</p>
 
-  <!-- start section navbar -->
-  <nav id="main-nav-subpage" class="subpage-nav">
-    <div class="row">
-      <div class="container">
-
-        <div class="logo">
-          <a href="index.html"><img src="images/logo.png" alt="logo"></a>
-        </div>
-
-        <div class="responsive"><i data-icon="m" class="ion-navicon-round"></i></div>
-
-        <ul class="nav-menu list-unstyled">
-          <li><a href="#homee" class="smoothScroll">Home</a></li>
-          <li><a href="#about" class="smoothScroll">About</a></li>
-          <li><a href="#portfolio" class="smoothScroll">Portfolio</a></li>
-          <li><a href="#blog" class="smoothScroll">Blog</a></li>
-          <li><a href="#contact" class="smoothScroll">Contact</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-  <!-- End section navbar -->
-
-  
-  <!-- start section main content -->
-  <div class="main-content paddsection">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-md-8 col-md-offset-2">
-          <div class="row">
-            <div class="container-main single-main">
-              <div class="col-md-12">
-                <div class="block-main mb-30">
-                  <img src="images/aws-blog/aws-backgroud.jpg" class="img-responsive" alt="reviews2">
-                  <div class="content-main single-post padDiv">
-                    <div class="journal-txt">
-                      <h4><a href="#">How to Setup Hadoop Cluster and Configure on AWS</a></h4>
-                    </div>
-                    <div class="post-meta">
-                      <ul class="list-unstyled mb-0">
-                        <li class="author">by:<a href="#">Sushant Chalise</a></li>
-                        <li class="author">Guidance:<a href="https://www.basantajoshi.com.np">Asst. Prof. Basanta Joshi, P.hD</a></li>
-                        <li class="date">date:<a href="#">July 06, 2024</a></li>
-                      </ul>
-                    </div>
-                    <p class="mb-30">
-                      <h5>Introduction</h5>
+    <h2>Introduction</h2>
     <p>Apache Hadoop is an open source framework that is used to efficiently store and process large datasets ranging in size from gigabytes to petabytes of data. Instead of using one large computer to store and process the data, Hadoop allows clustering multiple computers to analyze massive datasets in parallel more quickly. In this setup, we will take a single namenode and three datanode.</p>
 
-    <h5>Pre-Requisites</h5>
-    <p>We will need an AWS account (here I will be using the Sandbox Environment of the AWS Academy). For the terminal access, we will be using MobaXterm, an application that provides X-Server capability for the Microsoft Windows operating system with SSH client and more. The shell environment can be downloaded <a href="https://mobaxterm.mobatek.net/">here.</a></p>
+    <h2>Pre-Requisites</h2>
+    <p>We will need an AWS account (here I will be using the Sandbox Environment of the AWS Academy). For the terminal access, we will be using MobaXterm, an application that provides X-Server capability for the Microsoft Windows operating system with SSH client and more. The shell environment can be downloaded here.</p>
 
-    <h5>Before we start</h5>
+    <h2>Before we start</h2>
     <p>In this article, many pieces of information such as public keys, private keys, Domain Names, and IP addresses are exposed. Different consequences must be considered before exposing these details. This article is solely based on educational purposes and the Instance created during this phase has been deleted.</p>
 
-    <h5>AWS EC2 Startup</h5>
+    <h2>AWS EC2 Startup</h2>
     <p>We start the Sandbox environment by clicking on the ‘Start Lab’. Also, we need to note that being the free tier, we are restricted to use the environment for a few hours, and also there are certain restrictions to use the ‘paid’ type of Instances.</p>
     <p>The main aim is to create a single namenode and three datanode. For this setup, we will initially create an Instance and set up the instance with common configuration (common configuration meaning all the configurations that are the same for namenode and datanode). Then we will replicate the instance (mirror it for 3) and finally set up individual instances.</p>
 
-    <h5>Creating the Instance</h5>
+    <h3>Creating the Instance</h3>
     <p>To create an Instance we use the service EC2 and press launch instance.</p>
-    <img src="images/aws-blog/Picture1.png" class="img-responsive" alt="reviews2">
     <p>And use the following configuration:</p>
     <ul>
         <li>Name: hadoop</li>
@@ -114,7 +33,8 @@
         <li>Keypair: Click ‘Create a new key pair’ and give it a name. Once downloaded, select the key generated.</li>
     </ul>
     <p><strong>Note:</strong> To connect to the instance with the MobaXterm securely, we will need to generate a key pair. The key pair consists of primary and secondary keys. To generate a key pair click on ‘Generate a new key pair’ it will create a dialogue box of where to save it, give the key pair the name and save it. For this, I will be using the name hadoop and saving it into the default Downloads folder. Keep all the other configurations the same and launch the instance.</p>
-    <h5>Setting Up Instance</h5>
+
+    <h3>Setting Up Instance</h3>
     <p>Once the instances are up and running, it is time to set them up for our purpose. This includes the following:</p>
     <ul>
         <li>Setup password-less login between the namenode and the datanodes.</li>
@@ -123,14 +43,14 @@
     </ul>
     <p>Before proceeding further, we will need to copy the Public DNS of the created instance. You can find it under the Instance summary tab.</p>
 
-    <h5>Accessing the Instance with Shell access</h5>
+    <h3>Accessing the Instance with Shell access</h3>
     <p>In the MobaXterm, change the home directory to where your key pair is downloaded.</p>
     <p>Then in the local terminal, you can connect to the instance with SSH using the following command:</p>
     <pre><code>ssh -i "hadoop.pem" ubuntu@ec2-54-197-203-5.compute-1.amazonaws.com</code></pre>
     <p>Then the terminal will be displayed something like this:</p>
     <p>And you will be accessing as an ubuntu user.</p>
 
-    <h5>Common Configuration</h5>
+    <h3>Common Configuration</h3>
     <p>In the following section, we will discuss the common configuration to perform for both the namenode and the datanode.</p>
     <p><strong>Update the Instance</strong></p>
     <pre><code>sudo apt-get update && sudo apt-get -y dist-upgrade</code></pre>
@@ -138,10 +58,10 @@
     <p>Reboot from the EC2 service.</p>
     <p>Note: you will need to connect with ssh once again after the reboot is performed.</p>
 
-    <h5>Install JAVA</h5>
+    <h3>Install JAVA</h3>
     <pre><code>sudo apt-get -y install openjdk-8-jdk-headless</code></pre>
 
-    <h5>Install Apache Hadoop</h5>
+    <h3>Install Apache Hadoop</h3>
     <p>Install Apache Hadoop 2.7.3 on the instances. Install it under the server directory. Link to download can be found in the archive section.</p>
     <pre><code>mkdir server
 cd server
@@ -149,13 +69,13 @@ wget https://archive.apache.org/dist/hadoop/common/hadoop-2.7.3/hadoop-2.7.3.tar
 tar xvzf hadoop-2.7.3.tar.gz</code></pre>
     <p>View the extracted file using <code>ls</code> command</p>
 
-    <h5>Setup JAVA_Home</h5>
+    <h3>Setup JAVA_Home</h3>
     <pre><code>nano cd  ~/server/hadoop-2.7.3/etc/hadoop/hadoop-env.sh</code></pre>
     <p>Change the default with:</p>
     <pre><code>export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64</code></pre>
     <p>Note: There are various ways to set up the environment variables. You can follow any practice you are comfortable with. Also, you can view this link for the generally practiced method to set up Hadoop Environment.</p>
 
-    <h5>Update core_site.xml</h5>
+    <h3>Update core_site.xml</h3>
     <p>The xml file /server/hadoop-2.7.3/etc/hadoop/core-site.xml after the configuration should look like this:</p>
     <pre><code>&lt;configuration&gt;
   &lt;property&gt;
@@ -165,12 +85,12 @@ tar xvzf hadoop-2.7.3.tar.gz</code></pre>
 &lt;/configuration&gt;</code></pre>
     <p>Here <code>&lt;nnode&gt;</code> is the public DNS (or ec2-54-197-203-5.compute-1.amazonaws.com in my case).</p>
 
-    <h5>Create Data dir</h5>
+    <h3>Create Data dir</h3>
     <p>HDFS needs the data directory to be present on each node: 1 name node and 3 data nodes. Create this directory as shown and change ownership to user ubuntu.</p>
     <pre><code>sudo mkdir -p /usr/local/hadoop/hdfs/data
 sudo chown -R ubuntu:ubuntu /usr/local/hadoop/hdfs/data</code></pre>
 
-    <h5>Setup SSH</h5>
+    <h3>Setup SSH</h3>
     <p>We need password-less SSH between the name nodes and the data nodes. Let us create a public-private key pair for this purpose on this instance.</p>
     <pre><code>ssh-keygen</code></pre>
     <p>Use the default (/home/ubuntu/.ssh/id_ed25519) for the key location and hit enter for an empty passphrase.</p>
@@ -180,7 +100,7 @@ sudo chown -R ubuntu:ubuntu /usr/local/hadoop/hdfs/data</code></pre>
     <p>This is just for educational purposes, you are not advised to expose your private and public keys.</p>
     <p>To verify, enter <code>ssh localhost</code>. Then you can see something like this or else you will get an error.</p>
 
-    <h5>Setup HDFS Properties</h5>
+    <h3>Setup HDFS Properties</h3>
     <p>Edit the following file: /server/hadoop-2.7.3/etc/hadoop/hdfs-site.xml so that the final configuration should look like this:</p>
     <pre><code>&lt;configuration&gt;
   &lt;property&gt;
@@ -197,7 +117,7 @@ sudo chown -R ubuntu:ubuntu /usr/local/hadoop/hdfs/data</code></pre>
   &lt;/property&gt;
 &lt;/configuration&gt;</code></pre>
 
-    <h5>Update the MapRed Properties</h5>
+    <h3>Update the MapRed Properties</h3>
     <p>The mapred-site.xml needs to be edited. Edit the following file: /server/hadoop-2.7.3/etc/hadoop/mapred-site.xml so that the final configuration should look like this:</p>
     <pre><code>&lt;configuration&gt;
   &lt;property&gt;
@@ -206,7 +126,7 @@ sudo chown -R ubuntu:ubuntu /usr/local/hadoop/hdfs/data</code></pre>
   &lt;/property&gt;
 &lt;/configuration&gt;</code></pre>
 
-    <h5>Update Yarn Properties</h5>
+    <h3>Update Yarn Properties</h3>
     <p>Edit the following file: /server/hadoop-2.7.3/etc/hadoop/yarn-site.xml so that the final configuration should look like this:</p>
     <pre><code>&lt;configuration&gt;
   &lt;property&gt;
@@ -219,11 +139,11 @@ sudo chown -R ubuntu:ubuntu /usr/local/hadoop/hdfs/data</code></pre>
   &lt;/property&gt;
 &lt;/configuration&gt;</code></pre>
 
-    <h5>Copy and Mirror the Instance</h5>
+    <h3>Copy and Mirror the Instance</h3>
     <p>Now that our common setup is ready, we can create a mirror for our instance to use as a data node. For this, stop the instance. After the instance is stopped, the EC2 console will show the option for AMI.</p>
     <p>Click the instance created. Then click on the image and create an image option. Give the instance an Image name. Then you can view the image created in the AMI section. Once the image is created, create instances (3) from that image.</p>
 
-    <h5>Setting up the NameNode</h5>
+    <h3>Setting up the NameNode</h3>
     <p>To set up the NameNode, do the following:</p>
     <pre><code>cd ~/server/hadoop-2.7.3/sbin
 ./hadoop-daemon.sh --script hdfs start namenode</code></pre>
@@ -234,82 +154,15 @@ hdfs namenode -format</code></pre>
     <pre><code>cd ~/server/hadoop-2.7.3/sbin
 ./start-dfs.sh</code></pre>
 
-    <h5>Setting up the DataNode</h5>
+    <h3>Setting up the DataNode</h3>
     <p>On all the DataNodes, do the following:</p>
     <pre><code>cd ~/server/hadoop-2.7.3/sbin
 ./hadoop-daemon.sh --script hdfs start datanode</code></pre>
 
-    <h5>Verification</h5>
+    <h3>Verification</h3>
     <p>You can verify the Hadoop cluster setup by accessing the web interface of the NameNode. Open a browser and go to <code>http://&lt;Public_DNS&gt;:50070</code>. You should see the NameNode web interface showing the status of the cluster.</p>
 
-    <h5>Conclusion</h5>
+    <h2>Conclusion</h2>
     <p>Congratulations! You have successfully set up a Hadoop cluster on AWS with a single NameNode and three DataNodes. This setup can be used for processing large datasets in a distributed manner, leveraging the power of Hadoop on the cloud.</p>
-
-
-  </p>
-
-                   
-                    <blockquote>If you are still looking for that one person who will change your life, take a look in the mirror.</blockquote>
-
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!--  </div> -->
-  <!-- start section main content -->
-
-  <!-- start section footer -->
-  <div id="footer" class="text-center">
-    <div class="container">
-      <div class="socials-media text-center">
-
-        <ul class="list-unstyled">
-          <li><a href="#"><i class="ion-social-facebook"></i></a></li>
-          <li><a href="#"><i class="ion-social-twitter"></i></a></li>
-          <li><a href="#"><i class="ion-social-instagram"></i></a></li>
-          <li><a href="#"><i class="ion-social-googleplus"></i></a></li>
-          <li><a href="#"><i class="ion-social-tumblr"></i></a></li>
-          <li><a href="#"><i class="ion-social-dribbble"></i></a></li>
-        </ul>
-
-      </div>
-
-      <p>&copy; Copyrights Folio. All rights reserved.</p>
-
-      <div class="credits">
-        <!--
-          All the links in the footer should remain intact.
-          You can delete the links only if you purchased the pro version.
-          Licensing information: https://bootstrapmade.com/license/
-          Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Folio
-        -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-      </div>
-
-    </div>
-  </div>
-  <!-- End section footer -->
-
-  <!-- JavaScript Libraries -->
-  <script src="lib/jquery/jquery.min.js"></script>
-  <script src="lib/jquery/jquery-migrate.min.js"></script>
-  <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="lib/typed/typed.js"></script>
-  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-  <script src="lib/magnific-popup/magnific-popup.min.js"></script>
-  <script src="lib/isotope/isotope.pkgd.min.js"></script>
-
-  <!-- Contact Form JavaScript File -->
-  <script src="contactform/contactform.js"></script>
-
-  <!-- Template Main Javascript File -->
-  <script src="js/main.js"></script>
-
 </body>
-
 </html>
