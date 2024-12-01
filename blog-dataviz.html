@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- meta -->
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Sushant - AWS</title>
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,500i,600,600i,700,700i|Playfair+Display:400,400i,700,700i,900,900i" rel="stylesheet">
+
+  <!-- Bootstrap CSS File -->
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="lib/magnific-popup/magnific-popup.css" rel="stylesheet">
+  <link href="lib/hover/hover.min.css" rel="stylesheet">
+
+  <!-- Blog Stylesheet File -->
+  <link href="css/blog.css" rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
+  <link href="css/style.css" rel="stylesheet">
+
+  <!-- Responsive css -->
+  <link href="css/responsive.css" rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="images/favicon.png">
+
+  <!-- =======================================================
+    Theme Name: Folio
+    Theme URL: https://bootstrapmade.com/folio-bootstrap-portfolio-template/
+    Author: BootstrapMade.com
+    Author URL: https://bootstrapmade.com
+  ======================================================= -->
+</head>
+
+<body>
+
+  <!-- start section navbar -->
+  <nav id="main-nav-subpage" class="subpage-nav">
+    <div class="row">
+      <div class="container">
+
+        <div class="logo">
+          <a href="index.html"><img src="images/logo.png" alt="logo"></a>
+        </div>
+
+        <div class="responsive"><i data-icon="m" class="ion-navicon-round"></i></div>
+
+        <ul class="nav-menu list-unstyled">
+          <li><a href="#homee" class="smoothScroll">Home</a></li>
+          <li><a href="#about" class="smoothScroll">About</a></li>
+          <li><a href="#portfolio" class="smoothScroll">Portfolio</a></li>
+          <li><a href="#blog" class="smoothScroll">Blog</a></li>
+          <li><a href="#contact" class="smoothScroll">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- End section navbar -->
+
+  
+  <!-- start section main content -->
+  <div class="main-content paddsection">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-8 col-md-offset-2">
+          <div class="row">
+            <div class="container-main single-main">
+              <div class="col-md-12">
+                <div class="block-main mb-30">
+                  <img src="images/history_evolution.jpeg" class="img-responsive" alt="reviews2" height="600" width="800">
+                  <div class="content-main single-post padDiv">
+                    <div class="journal-txt">
+                      <h4><a href="#">History and Evolution of Data Visualization</a></h4>
+                    </div>
+                    <div class="post-meta">
+                      <ul class="list-unstyled mb-0">
+                        <li class="author">by:<a href="#">Sushant Chalise</a></li>
+                        <li class="author">Guidance:<a href="https://www.amanshakya.com.np">Asst. Prof. Aman Shakya, P.hD</a></li>
+                        <li class="date">date:<a href="#">Dec 01, 2024</a></li>
+                      </ul>
+                    </div>
+                    <p class="mb-30">
+                      <h5>Introduction</h5>
+    <p>Apache Hadoop is an open source framework that is used to efficiently store and process large datasets ranging in size from gigabytes to petabytes of data. Instead of using one large computer to store and process the data, Hadoop allows clustering multiple computers to analyze massive datasets in parallel more quickly. In this setup, we will take a single namenode and three datanode.</p>
+
+    <h5>Pre-Requisites</h5>
+    <p>We will need an AWS account (here I will be using the Sandbox Environment of the AWS Academy). For the terminal access, we will be using MobaXterm, an application that provides X-Server capability for the Microsoft Windows operating system with SSH client and more. The shell environment can be downloaded <a href="https://mobaxterm.mobatek.net/">here.</a></p>
+
+    <h5>Before we start</h5>
+    <p>In this article, many pieces of information such as public keys, private keys, Domain Names, and IP addresses are exposed. Different consequences must be considered before exposing these details. This article is solely based on educational purposes and the Instance created during this phase has been deleted.</p>
+
+    <h5>AWS EC2 Startup</h5>
+    <p>We start the Sandbox environment by clicking on the ‘Start Lab’. Also, we need to note that being the free tier, we are restricted to use the environment for a few hours, and also there are certain restrictions to use the ‘paid’ type of Instances.</p>
+    <blockquote>The main aim is to create a single namenode and three datanode. For this setup, we will initially create an Instance and set up the instance with common configuration (common configuration meaning all the configurations that are the same for namenode and datanode). Then we will replicate the instance (mirror it for 3) and finally set up individual instances.</blockquote>
+
+    <h5>Creating the Instance</h5>
+    <p>To create an Instance we use the service EC2 and press launch instance.</p>
+    <img src="images/aws-blog/Picture1.png" class="img-responsive" alt="reviews2">
+    <p>And use the following configuration:</p>
+    <ul>
+        <li>Name: hadoop</li>
+        <li>Application and OS Image: ubuntu (24.04)</li>
+        <li>Instance Type: t2.micro (we choose t2.micro since that is only available for the free tier. If you have a need for a high-memory or high-cpu instance, you can select one of those.)</li>
+        <li>Keypair: Click ‘Create a new key pair’ and give it a name. Once downloaded, select the key generated.</li>
+    </ul>
+    <img src="images/aws-blog/Picture2.png" class="img-responsive" alt="reviews2">
+    <p><strong>Note:</strong> To connect to the instance with the MobaXterm securely, we will need to generate a key pair. The key pair consists of primary and secondary keys. To generate a key pair click on ‘Generate a new key pair’ it will create a dialogue box of where to save it, give the key pair the name and save it. For this, I will be using the name hadoop and saving it into the default Downloads folder. Keep all the other configurations the same and launch the instance.</p>
+    <h5>Setting Up Instance</h5>
+    <p>Once the instances are up and running, it is time to set them up for our purpose. This includes the following:</p>
+    <ul>
+        <li>Install java.</li>
+        <li>Install and Setup Hadoop.</li>
+        <li>Configure HDFS and more</li>
+    </ul>
+    <p>Before proceeding further, we will need to copy the Public DNS of the created instance. You can find it under the Instance summary tab.</p>
+    <img src="images/aws-blog/Picture3.png" class="img-responsive" width="700" >
+    
+    <h5>Accessing the Instance with Shell access</h5>
+    <p>In the MobaXterm, change the home directory to where your key pair is downloaded.</p>
+    <img src="images/aws-blog/Picture4.png" class="img-responsive" width="700" >
+    <p>Then in the local terminal, you can connect to the instance with SSH using the following command:</p>
+    <pre><code>ssh -i "hadoop.pem" ubuntu@ec2-54-197-203-5.compute-1.amazonaws.com</code></pre>
+    <p>Then the terminal will be displayed something like this:
+      <img src="images/aws-blog/Picture5.png" class="img-responsive" >
+    </p>
+    <p>And you will be accessing as an ubuntu user.</p>
+
+    <h4>Common Configuration</h4>
+    <p>In the following section, we will discuss the common configuration to perform for both the namenode and the datanode.</p>
+    <p><strong>Update the Instance</strong></p>
+    <pre><code>sudo apt-get update && sudo apt-get -y dist-upgrade</code></pre>
+    <p><strong>Reboot the instance</strong></p>
+    <p>Reboot from the EC2 service. <img src="images/aws-blog/Picture6.png" class="img-responsive" ></p>
+    <p>Note: you will need to connect with ssh once again after the reboot is performed.</p>
+
+    <h5>Install JAVA</h5>
+    <pre><code>sudo apt-get -y install openjdk-8-jdk-headless</code></pre>
+
+    <h5>Install Apache Hadoop</h5>
+    <p>Install Apache Hadoop 2.7.3 on the instances. Install it under the server directory. Link to download can be found in the archive section <a href="https://www.apache.org/dyn/closer.cgi/hadoop/common/hadoop-2.7.3/hadoop-2.7.3.tar.gz"><u>here</u></a>.</p>
+    <pre><code>mkdir server
+cd server
+wget https://archive.apache.org/dist/hadoop/common/hadoop-2.7.3/hadoop-2.7.3.tar.gz
+tar xvzf hadoop-2.7.3.tar.gz</code></pre>
+    <p>View the extracted file using <code>ls</code> command</p>
+
+    <h5>Setup JAVA_Home</h5>
+    <pre><code>nano cd  ~/server/hadoop-2.7.3/etc/hadoop/hadoop-env.sh</code></pre>
+    <p>Change the default with:</p>
+    <pre><code>export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64</code></pre>
+    <p>Note: There are various ways to set up the environment variables. You can follow any practice you are comfortable with. Also, you can view this <a href="https://www.tutorialspoint.com/hadoop/hadoop_enviornment_setup.htm"><u>link</u></a> for the generally practiced method to set up Hadoop Environment.</p>
+
+    <h5>Update core_site.xml</h5>
+    <p>The xml file /server/hadoop-2.7.3/etc/hadoop/core-site.xml after the configuration should look like this:</p>
+    <pre><code>&lt;configuration&gt;
+  &lt;property&gt;
+    &lt;name&gt;fs.defaultFS&lt;/name&gt;
+    &lt;value&gt;&lt;nnode&gt;:9000&lt;/value&gt;
+  &lt;/property&gt;
+&lt;/configuration&gt;</code></pre>
+    <p>Here <code>&lt;nnode&gt;</code> is the public DNS (or ec2-54-197-203-5.compute-1.amazonaws.com in my case).</p>
+
+    <h5>Create Data dir</h5>
+    <p>HDFS needs the data directory to be present on each node: 1 name node and 3 data nodes. Create this directory as shown and change ownership to user ubuntu.</p>
+    <pre><code>sudo mkdir -p /usr/local/hadoop/hdfs/data
+sudo chown -R ubuntu:ubuntu /usr/local/hadoop/hdfs/data</code></pre>
+
+    <h5>Setup SSH</h5>
+    <p>We need password-less SSH between the name nodes and the data nodes. Let us create a public-private key pair for this purpose on this instance.</p>
+    <pre><code>ssh-keygen</code></pre>
+    <p>Use the default (/home/ubuntu/.ssh/id_ed25519) for the key location and hit enter for an empty passphrase.</p>
+    <p>Note: your key can be different like id_rsa. For that, you can view the files in .ssh folder.</p>
+    <img src="images/aws-blog/Picture7.png" class="img-responsive" ></p>
+    <p>Then copy the pub keys from id_ed25519.pub and append it to the authorized_keys</p>
+    <pre><code>cat id_rsa.pub &gt;&gt; ~/.ssh/authorized_keys</code></pre>
+    <p>This is just for educational purposes, you are not advised to expose your private and public keys.</p>
+    <p>To verify, enter <code>ssh localhost</code>. Then you can see something like this or else you will get an error.
+      <img src="images/aws-blog/Picture8.png" class="img-responsive" ></p></p>
+
+    <h5>Setup HDFS Properties</h5>
+    <p>Edit the following file: /server/hadoop-2.7.3/etc/hadoop/hdfs-site.xml so that the final configuration should look like this:</p>
+    <pre><code>&lt;configuration&gt;
+  &lt;property&gt;
+    &lt;name&gt;dfs.replication&lt;/name&gt;
+    &lt;value&gt;3&lt;/value&gt;
+  &lt;/property&gt;
+  &lt;property&gt;
+    &lt;name&gt;dfs.datanode.data.dir&lt;/name&gt;
+    &lt;value&gt;file:///usr/local/hadoop/hdfs/data/datanode&lt;/value&gt;
+  &lt;/property&gt;
+&lt;/configuration&gt;</code></pre>
+
+<h5>Copy and Mirror the Instance</h5>
+    <p>Now that our common setup is ready, we can create a mirror for our instance to use as a data node. For this, stop the instance. After the instance is stopped, the EC2 console will show the option for AMI.</p>
+    <img src="images/aws-blog/Picture10.png" class="img-responsive" >
+    <p>Click the instance created. Then click on the image and create an image option. Give the instance an Image name. Then you can view the image created in the AMI section.
+      <img src="images/aws-blog/Picture11.png" class="img-responsive" >
+      <img src="images/aws-blog/Picture12.png" class="img-responsive" >
+      Once the image is created, create instances (3) from that image wih following configuration
+      <li>Name: dnode (you can give your own name)</li>
+      <li>Instance type: t2.micro</li>
+      <li>Keypair: select the same created previously (hadoop in my case)</li>
+      <li>Number of Instance: 3 (as we are planning to create 3 datanodes)</li>
+      Keep all the other configurations the same and click ‘Launch Instance’.</p>
+      <p>After the successful creation you will get something like this:
+        <img src="images/aws-blog/Picture13.png" class="img-responsive" > 
+        And the Instances tab will look like this.
+        <img src="images/aws-blog/Picture14.png" class="img-responsive" > 
+        Rename the initial instance as nnode and other dnode to dnode1, dnode2 and dnode3 for easy navigation and configuration. 
+Note the Public DNS of all the datanodes created.
+      </p>
+<h4>Specific Configuration for NameNode</h4>
+<p>For this SSH into the namenode.</p>
+
+    <h5>Update the MapRed Properties</h5>
+    <p>The mapred-site.xml needs to be edited. Edit the following file: /server/hadoop-2.7.3/etc/hadoop/mapred-site.xml so that the final configuration should look like this:
+      If you do not have the file make a copy from the template using <code>cp ~/server/hadoop-2.7.3/etc/hadoop/mapred-site.xml.template ~/server/hadoop-2.7.3/etc/hadoop/mapred-site.xml</code>
+    </p>
+    <pre><code>&lt;configuration&gt;
+      &lt;property&gt;
+      &lt;name&gt;mapreduce.jobtracker.address&lt;/name&gt;
+      &lt;value&gt;&lt;nnode&gt;&lt;/value&gt;
+    &lt;/property&gt;
+  &lt;property&gt;
+    &lt;name&gt;mapreduce.framework.name&lt;/name&gt;
+    &lt;value&gt;yarn&lt;/value&gt;
+  &lt;/property&gt;
+&lt;/configuration&gt;</code></pre>
+Here replace the &lt;nnode&gt; with the Public DNS of the namenode
+
+    <h5>Update Yarn Properties</h5>
+    <p>Edit the following file: /server/hadoop-2.7.3/etc/hadoop/yarn-site.xml so that the final configuration should look like this:</p>
+    <pre><code>&lt;configuration&gt;
+  &lt;property&gt;
+    &lt;name&gt;yarn.nodemanager.aux-services&lt;/name&gt;
+    &lt;value&gt;mapreduce_shuffle&lt;/value&gt;
+  &lt;/property&gt;
+  &lt;property&gt;
+    &lt;name&gt;yarn.nodemanager.aux-services.mapreduce_shuffle.class&lt;/name&gt;
+    &lt;value&gt;org.apache.hadoop.mapred.ShuffleHandler&lt;/value&gt;
+  &lt;/property&gt;
+  &lt;property&gt;
+  &lt;name&gt;yarn.resourcemanager.hostname&lt;/name&gt;
+  &lt;value&gt;&lt;nnode&gt;&lt;/value&gt;
+&lt;/property&gt;
+&lt;/configuration&gt;</code></pre>
+Same as befoe replace the &lt;nnode&gt; with the Public DNS of the namenode
+    
+<h5>Setup Master and Slaves</h5>
+<p>On the NameNode, create ~/server/hadoop-2.7.3/etc/hadoop/masters (if not created) and add the Public DNS of the name node.
+  nano masters (to create a new file)
+  Paste the DNS then save the file
+  
+  Also replace all content in ~/server/hadoop-2.7.3/etc/hadoop/slaves with (replace each of &lt;dnode1&gt;, etc with the appropriate DateNode’s public DNS):
+  </p>
+
+<h5>Updated HDFS Properties</h5>
+<p>edit the following file: /server/hadoop-2.7.3/etc/hadoop/hdfs-site.xml from
+  <pre><code>&lt;name&gt;dfs.datanode.name.dir&lt;name&gt;</code></pre>
+  
+  to:
+ <pre><code>&lt;name&gt;dfs.namenode.name.dir&lt;name&gt;</code></pre> 
+</p>
+
+<h5>SSH to all datanode</h5>
+<p>
+  Once the configuration is complete it is required to ssh into all the datanode instances from the namenode. This is also performed to validate if the password less operation works. 
+
+    <li>namenode> ssh nnode</li>
+    <li>namenode> ssh dnode1</li>
+    <li>namenode> ssh dnode2</li>
+    <li>namenode> ssh dnode3</li>
+    <img src="images/aws-blog/Picture15.png" class="img-responsive" > 
+    Or you can use the ip address instead of the DNS.
+Also note that you will need to ssh from the namenode to all the datanode i.e once you perform the connection to dnode1 again go back to nnode and perfrom ssh to dnode2.
+You can also check the ip address if you are confused on which instance are you connected to.
+<img src="images/aws-blog/Picture16.png" class="img-responsive" > 
+
+</p>
+
+    <h5>Setting up the NameNode</h5>
+    <p> Before we start the cluster it is required to format the HDFS file system for the namenode. </p>
+      <pre><code> cd ~/server
+./hadoop-2.7.3/bin/hdfs namenode -format
+        </code></pre>
+      <p>  If every configuration is correct, you will get something like this.</p>
+      <img src="images/aws-blog/Picture17.png" class="img-responsive" >  
+     <p>To set up the NameNode and start the hadoop cluster, do the following:</p>
+    <pre><code>./hadoop-2.7.3/sbin/start-dfs.sh
+./hadoop-2.7.3/sbin/start-yarn.sh
+./hadoop-2.7.3/sbin/mr-jobhistory-daemon.sh start historyserver
+      </code></pre>
+
+    <p>Check the services
+    <pre><code>jps</code></pre>
+    <img src="images/aws-blog/Picture18.png" class="img-responsive" >  </p>
+
+    <h5>Setting up the DataNode</h5>
+    <p>On all the DataNodes, do the following:</p>
+    <pre><code>cd ~/server/hadoop-2.7.3/sbin
+./hadoop-daemon.sh --script hdfs start datanode</code></pre>
+
+    <h5>Verification</h5>
+    <p>You can verify the Hadoop cluster setup by accessing the web interface of the NameNode. </p>
+    <p>HTTP Configuration</p>
+    <p>In the EC2 instance under the security open the security group wizard.
+      <img src="images/aws-blog/Picture19.png" class="img-responsive" >
+      <p>Edit the Inbound Rules by adding a new rule as follows and save it.</p>
+      <img src="images/aws-blog/Picture20.png" class="img-responsive" >
+    </p>
+    <p>Open a browser and go to <code>http://&lt;Public_DNS&gt;:50070</code>. You should see the NameNode web interface showing the status of the cluster.</p>
+
+    <h5>Conclusion</h5>
+    <p>Congratulations! You have successfully set up a Hadoop cluster on AWS with a single NameNode and three DataNodes. This setup can be used for processing large datasets in a distributed manner, leveraging the power of Hadoop on the cloud.</p>
+  </p>
+
+  <h5>Summary</h5>
+  <p>This article explains how to set up an Apache Hadoop cluster on Amazon EC2. Beginning with standard Ubuntu 24.04 LTS instances, it covers the installation of Java and Apache Hadoop. A base instance is configured for both the NameNode and DataNodes, and then replicated to create three DataNodes. The guide also details the configuration of Hadoop components such as HDFS, SSH, MapReduce, and YARN according to their roles. Finally, it includes steps to configure network settings for monitoring the cluster via the web UI.</p>
+
+  <h5>Acknowledgement</h5>
+  <p>Special thanks to <a href="https://www.basantajoshi.com.np/"><u>Asst. Professor Basanta Joshi,Ph.D.</a></u>, for his invaluable guidance and knowledge sharing. Many thanks to the author of the article <a href="https://www.novixys.com/blog/setup-apache-hadoop-cluster-aws-ec2/"><u> Setting up an Apache Hadoop Cluster on AWS EC2 </a></u>, which significantly contributed to this work. Additional thanks to <a href="https://www.tutorialspoint.com/hadoop/hadoop_enviornment_setup.htm"><u>TutorialsPoint</a></u> for their resources. Lastly, gratitude to the Institute of Engineering for providing the AWS Academy Data Engineering Courses free tier.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--  </div> -->
+  <!-- start section main content -->
+
+  <!-- start section footer -->
+  <div id="footer" class="text-center">
+    <div class="container">
+      <div class="socials-media text-center">
+
+        <ul class="list-unstyled">
+          <li><a href="#"><i class="ion-social-facebook"></i></a></li>
+          <li><a href="#"><i class="ion-social-twitter"></i></a></li>
+          <li><a href="#"><i class="ion-social-instagram"></i></a></li>
+          <li><a href="#"><i class="ion-social-googleplus"></i></a></li>
+          <li><a href="#"><i class="ion-social-tumblr"></i></a></li>
+          <li><a href="#"><i class="ion-social-dribbble"></i></a></li>
+        </ul>
+
+      </div>
+
+      <p>&copy; Copyrights Folio. All rights reserved.</p>
+
+      <div class="credits">
+        <!--
+          All the links in the footer should remain intact.
+          You can delete the links only if you purchased the pro version.
+          Licensing information: https://bootstrapmade.com/license/
+          Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Folio
+        -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+
+    </div>
+  </div>
+  <!-- End section footer -->
+
+  <!-- JavaScript Libraries -->
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/jquery/jquery-migrate.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="lib/typed/typed.js"></script>
+  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+  <script src="lib/magnific-popup/magnific-popup.min.js"></script>
+  <script src="lib/isotope/isotope.pkgd.min.js"></script>
+
+  <!-- Contact Form JavaScript File -->
+  <script src="contactform/contactform.js"></script>
+
+  <!-- Template Main Javascript File -->
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>
