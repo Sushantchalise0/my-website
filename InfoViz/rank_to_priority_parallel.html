@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Parallel Coordinates Plot</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        .axis path, .axis line {
+            fill: none;
+            shape-rendering: crispEdges;
+        }
+
+        .line {
+            fill: none;
+            stroke-opacity: 0.5;
+        }
+
+        .line.highlight {
+            stroke: orange;
+            stroke-width: 2;
+        }
+
+        .brush .extent {
+            fill-opacity: .3;
+            stroke: #bbb;
+        }
+
+        .axis text {
+            font-size: 12px;
+        }
+
+        .line-label {
+            font-size: 10px;
+            text-anchor: middle;
+            fill: steelblue;
+        }
+
+        .highlight {
+            stroke: orange;
+            stroke-width: 2;
+        }
+
+        .axis-title {
+            font-size: 14px;
+            text-anchor: middle;
+            fill: black;
+        }
+
+    
+            #year-selector {
+      font-size: 16px;
+      padding: 8px;
+      margin-left: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #f9f9f9;
+      cursor: pointer;
+    }
+
+    #year-selector:hover {
+      border-color: #888;
+    }
+
+
+        /* Title styling */
+        #title {
+            display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+        }
+
+        /* Tooltip styling */
+        .tooltip {
+            position: absolute;
+            text-align: center;
+            padding: 5px;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            border-radius: 4px;
+            pointer-events: none;
+            display: none;
+        }
+
+        /* Center the SVG */
+        #svg-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        svg{
+            width:"900";
+            height: 70%;
+        }
+    </style>
+</head>
+<body>
+    <!-- Title with dropdown beside it -->
+    <div id="title">
+        <!-- <h2>Interactive Parallel Coordinates Plot</h2> -->
+        
+            <select id="year-selector">
+                <!-- Year options will be populated dynamically -->
+            </select>
+
+    </div>
+
+    <!-- SVG container centered -->
+    <div id="svg-container">
+        <svg></svg>
+    </div>
+
+    <!-- Tooltip element to show rank -->
+    <div class="tooltip" id="tooltip"></div>
+
+    <script>
+        // Mapping for p1 and p2 categorical values to the category names
+        const mapping = {
+            3: 'Architecture', 4: 'Architecture',
+            5: 'Electrical', 6: 'Electrical',
+            7: 'Electronics', 8: 'Electronics',
+            1: 'Civil', 2: 'Civil',
+            9: 'Mechanical', 10: 'Mechanical',
+            11: 'Computer', 12: 'Computer',
+            27: 'Aerospace', 28: 'Aerospace',
+            29: 'Chemical', 30: 'Chemical'
+        };
+
+        // 1. Load Data from the CSV file
+        d3.csv('combined_data.csv').then(function(data) {
+            // 2. Parse the data and convert columns to numbers
+            const filteredData = data.filter(d => d.phaseNo === '1');
+            filteredData.forEach(function(d) {
+                d.Rank = +d.Rank;  // Ensure Rank is a number
+                d.p1 = +d.p1;      // Ensure p1 is a number
+                d.p2 = d.p2 ? +d.p2 : null;  // If p2 is missing, set it to null
+                d.year = +d.year;  // Ensure Year is treated as a number
+
+                // Apply mapping for p1 and p2
+                d.p1 = mapping[d.p1] || d.p1;
+                d.p2 = mapping[d.p2] || d.p2;
+
+                // Data cleaning for QuotaGroup
+                if (d.QuotaGroup === "IOE Staff" || d.QuotaGroup === "IOE/TU Teacher/Staff") {
+                    d.QuotaGroup = "IOE Staff Quota";
+                } else if (d.QuotaGroup === "Reserverd Quota" || d.QuotaGroup === "Reserved Quota") {
+                    d.QuotaGroup = "Reserved Quota";
+                } else if (d.QuotaGroup === "Foreign") {
+                    d.QuotaGroup = "Foreign Quota";
+                }
+
+                // Data cleaning for QuotaType
+                if (d.QuotaType === "Female Quota" || d.QuotaType === "Female") {
+                    d.QuotaType = "Female Quota";
+                } else if (d.QuotaType === "IOE Staff Quota" || d.QuotaType === "IOE/TU Teacher/Staff Quota") {
+                    d.QuotaType = "IOE Staff Quota";
+                }
+            });
+
+
+            const customColors = [
+    "#FF6347", // Tomato Red
+    "#4682B4", // Steel Blue
+    "#32CD32", // Lime Green
+    // "#FFD700", // Gold
+    "#6A5ACD", // Slate Blue
+    "#FF4500", // Orange Red
+    "#8A2BE2", // Blue Violet
+    "#00FA9A", // Medium Spring Green
+    "#FF1493", // Deep Pink
+    "#00BFFF"  // Deep Sky Blue
+];
+
+            // 3. Group data by Year
+            const dataByYear = d3.group(filteredData, d => d.year);
+            const custom_rank = 151;
+            // 4. Populate the Year dropdown with the available years
+            const years = Array.from(dataByYear.keys()).sort();
+            const yearSelector = d3.select("#year-selector");
+            yearSelector.selectAll("option")
+                .data(years)
+                .enter().append("option")
+                .attr("value", d => d)
+                .text(d => `${d}`);
+
+            // 5. Set up margins and dimensions
+            const container = document.querySelector('svg'); 
+            const margin = {top: 30, right: 40, bottom: 40, left: 60};
+            const width = 900 - margin.left - margin.right;
+            const height = 500 - margin.top - margin.bottom;
+
+            // 6. Set up SVG container
+            const svg = d3.select("svg")
+                .attr("width", 900)
+                .attr("height", 500)
+                .append("g")
+                .attr("transform", `translate(${margin.left},${margin.top})`);
+
+            // 7. Set up scales for each axis (Linear for Rank, p1, p2)
+            const x = d3.scalePoint()
+                .domain(["Rank", "p1", "p2"])
+                .range([0, width]);
+
+            const yRank = d3.scaleLinear()
+                .domain([1, custom_rank])  // We assume rank will be from 1 to 100
+                .range([0, height]);
+
+            // Create a scale for p1 and p2 based on the mapped values
+            const p1Categories = Array.from(new Set(filteredData.map(d => d.p1))).sort();
+            const p2Categories = Array.from(new Set(filteredData.filter(d => d.p2 !== null).map(d => d.p2))).sort();
+
+            const yP1 = d3.scaleLinear()
+                .domain([0, p1Categories.length - 1])  // Linear scale for p1 based on category count
+                .range([0, height]);
+
+            const yP2 = d3.scaleLinear()
+                .domain([0, p2Categories.length - 1])  // Linear scale for p2 based on category count
+                .range([0, height]);
+
+            // 8. Create the axes
+            const axisRank = d3.axisLeft(yRank).ticks(3).tickValues([1, `${custom_rank/2}`, `${custom_rank}`]);
+            const axisP1 = d3.axisLeft(yP1).tickValues(d3.range(0, p1Categories.length));
+            const axisP2 = d3.axisLeft(yP2).tickValues(d3.range(0, p2Categories.length));
+
+            svg.append("g")
+                .attr("class", "axis")
+                .attr("transform", `translate(${x("Rank")}, 0)`)
+                .call(axisRank)
+                .append("text")
+                .attr("class", "axis-title")
+                .attr("x", -40)
+                .attr("y", -10)
+                .style("font-weight", "bold") 
+                .text("Rank");
+
+            svg.append("g")
+                .attr("class", "axis")
+                .attr("transform", `translate(${x("p1")}, 0)`)
+                .call(axisP1)
+                .selectAll("text")
+                .text(d => p1Categories[d]);  // Display categorical labels
+
+            svg.append("g")
+                .attr("class", "axis")
+                .attr("transform", `translate(${x("p2")}, 0)`)
+                .call(axisP2)
+                .selectAll("text")
+                .text(d => p2Categories[d]);  // Display categorical labels
+
+            // Add axis titles at the top
+            svg.append("text")
+                .attr("class", "axis-title")
+                .attr("x", x("p1"))
+                .attr("y", -10)
+                .style("text-anchor", "middle")
+                .style("font-weight", "bold") 
+                .text("1st Priority");
+
+            svg.append("text")
+                .attr("class", "axis-title")
+                .attr("x", x("p2"))
+                .attr("y", -10)
+                .style("text-anchor", "middle")
+                .style("font-weight", "bold") 
+                .text("2nd Priority");
+
+            // 9. Function to update the plot based on selected year
+            function updatePlot(year) {
+                const top100 = dataByYear.get(year)
+                    .filter(d => d.Rank <= custom_rank && d.phaseNo === '1');
+
+                // Remove any existing lines
+                svg.selectAll(".line").remove();
+
+                const colorScale = d3.scaleOrdinal(customColors).domain(p1Categories);
+
+                // Draw the lines with color based on p1 and p2
+                const line = d3.line()
+                    .x(d => x(d.axis))
+                    .y(d => {
+                        if (d.axis === "Rank") return yRank(d.value);
+                        if (d.axis === "p1") return yP1(d.value);
+                        return yP2(d.value);
+                    });
+
+                svg.selectAll(".line")
+                    .data(top100)
+                    .enter().append("path")
+                    .attr("class", "line")
+                    .attr("d", d => {
+                        const points = [{ axis: "Rank", value: d.Rank }, { axis: "p1", value: p1Categories.indexOf(d.p1) }];
+                        if (d.p2 !== null) points.push({ axis: "p2", value: p2Categories.indexOf(d.p2) });
+                        return line(points);
+                    })
+                    .attr("stroke", d => colorScale(d.p1))
+                    .on("mouseover", function(event, d) {
+                        // Show tooltip with rank value
+                        d3.select("#tooltip")
+                            .style("left", (event.pageX + 5) + "px")
+                            .style("top", (event.pageY - 30) + "px")
+                            .style("display", "inline-block")
+                            .html(`Rank: ${d.Rank}`);
+
+                        // Highlight the line
+                        d3.select(this).classed("highlight", true);
+                    })
+                    .on("mouseout", function() {
+                        // Hide the tooltip
+                        d3.select("#tooltip").style("display", "none");
+
+                        // Remove highlight
+                        d3.select(this).classed("highlight", false);
+                    });
+            }
+
+            // 10. Set the initial plot for the first year
+            updatePlot(years[0]);
+
+            // 11. Update the plot when the year is selected
+            yearSelector.on("change", function() {
+                const selectedYear = +this.value;
+                updatePlot(selectedYear);
+            });
+
+        }).catch(function(error) {
+            console.error('Error loading the CSV data:', error);
+        });
+    </script>
+</body>
+</html>

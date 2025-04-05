@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nepal Districtwise Admission Rate</title>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; background-color: #f5f5f5; }
+        .map-container { display: flex; justify-content: center; position: relative; }
+        .district { stroke: #000; stroke-width: 1px; transition: fill 0.3s ease; }
+        select { margin-bottom: 10px; padding: 8px; font-size: 16px; }
+        .tooltip {
+            position: absolute;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 6px;
+            border-radius: 4px;
+            font-size: 14px;
+            display: none;
+            pointer-events: none;
+        }
+        .legend-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+        .legend {
+            font-size: 12px;
+        }
+        .legend rect {
+            stroke: #000;
+        }
+    </style>
+</head>
+<body>
+    <!-- <h2>Districtwise Gender Admission Rate - Nepal</h2> -->
+    <label for="yearSelect">Select Year:</label>
+    <select id="yearSelect"></select>
+    <div class="map-container">
+        <svg width="800" height="500"></svg>
+    </div>
+    <div class="legend-container">
+        <svg id="legend" width="400" height="60"></svg>
+    </div>
+    <div class="tooltip" id="tooltip"></div>
+    
+    <script>
+        const width = 800, height = 500;
+        const svg = d3.select("svg");
+        const projection = d3.geoMercator().center([84, 28])
+                               .scale(5100).translate([width / 2, height / 2]);
+        const path = d3.geoPath().projection(projection);
+        const tooltip = d3.select("#tooltip");
+        const legendSvg = d3.select("#legend");
+
+        d3.json("nepal-districts.geojson").then(geoData => {
+            d3.json("districtwise_gender_admission_rate.json").then(data => {
+                // Populate year dropdown
+                const years = [...new Set(data.map(d => d.year))].sort();
+                const yearSelect = d3.select("#yearSelect");
+                yearSelect.selectAll("option")
+                    .data(years)
+                    .enter()
+                    .append("option")
+                    .text(d => d)
+                    .attr("value", d => d);
+                
+                function updateMap(year) {
+                    const filteredData = data.filter(d => d.year == year);
+                    const districtData = {};
+                    filteredData.forEach(d => {
+                        const femaleRate = d.female_applied > 0 ? (d.female_admitted / d.female_applied) * 100 : 0;
+                        const maleRate = d.male_applied > 0 ? (d.male_admitted / d.male_applied) * 100 : 0;
+                        const overallRate = (d.female_applied + d.male_applied) > 0 ? 
+                                            ((d.female_admitted + d.male_admitted) / (d.female_applied + d.male_applied)) * 100 : 0;
+                        districtData[d.District.toLowerCase()] = {
+                            female_admission_rate: femaleRate.toFixed(2),
+                            male_admission_rate: maleRate.toFixed(2),
+                            overall_admission_rate: overallRate.toFixed(2)
+                        };
+                    });
+
+                    const colorScale = d3.scaleSequential(d3.interpolateBlues)
+                        .domain([0, 100]);
+                    
+                    svg.selectAll(".district").remove();
+
+                    svg.selectAll(".district")
+                        .data(geoData.features)
+                        .enter().append("path")
+                        .attr("class", "district")
+                        .attr("d", path)
+                        .attr("fill", d => {
+                            const val = districtData[d.properties.DISTRICT.toLowerCase()]?.overall_admission_rate || 0;
+                            return colorScale(val);
+                        })
+                        .on("mouseover", function(event, d) {
+                            d3.select(this).attr("fill", "#ff9933");
+                            tooltip.style("display", "block");
+                        })
+                        .on("mousemove", function(event, d) {
+                            const district = d.properties.DISTRICT.toLowerCase();
+                            const data = districtData[district] || { female_admission_rate: 0, male_admission_rate: 0, overall_admission_rate: 0 };
+                            tooltip.html(`<strong>${d.properties.DISTRICT}</strong><br>
+                                          Female Admission Rate: ${data.female_admission_rate}%<br>
+                                          Male Admission Rate: ${data.male_admission_rate}%<br>
+                                          Overall Admission Rate: ${data.overall_admission_rate}%`)
+                                .style("left", (event.pageX + 10) + "px")
+                                .style("top", (event.pageY - 10) + "px");
+                        })
+                        .on("mouseout", function(event, d) {
+                            d3.select(this).attr("fill", d => {
+                                const val = districtData[d.properties.DISTRICT.toLowerCase()]?.overall_admission_rate || 0;
+                                return colorScale(val);
+                            });
+                            tooltip.style("display", "none");
+                        });
+
+                    // Add gradient legend
+                    legendSvg.selectAll("*").remove();
+                    const legendWidth = 300, legendHeight = 20;
+                    const legendScale = d3.scaleLinear()
+                        .domain([0, 100])
+                        .range([0, legendWidth]);
+                    
+                    const legendAxis = d3.axisBottom(legendScale)
+                        .tickSize(10);
+                    
+                    const gradient = legendSvg.append("defs").append("linearGradient")
+                        .attr("id", "legend-gradient")
+                        .attr("x1", "0%").attr("x2", "100%");
+                    gradient.selectAll("stop")
+                        .data([0, 0.2, 0.4, 0.6, 0.8, 1].map(d => ({ offset: `${d * 100}%`, color: d3.interpolateBlues(d) })))
+                        .enter().append("stop")
+                        .attr("offset", d => d.offset)
+                        .attr("stop-color", d => d.color);
+                    
+                    legendSvg.append("rect")
+                        .attr("width", legendWidth)
+                        .attr("height", legendHeight)
+                        .style("fill", "url(#legend-gradient)")
+                        .attr("transform", "translate(50,0)");
+                    
+                    legendSvg.append("g")
+                        .attr("transform", `translate(50, ${legendHeight})`)
+                        .call(legendAxis);
+                }
+                
+                yearSelect.on("change", function() {
+                    updateMap(this.value);
+                });
+                
+                updateMap(years[0]);
+            });
+        });
+    </script>
+</body>
+</html>

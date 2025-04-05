@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scatter Plot with PhaseNo Consideration</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            width: 100%;
+        }
+
+        /* Style for the container holding the scatter plot */
+        #chart-container {
+            width: 100%;
+            height: 80vh; /* Make the chart container take up most of the screen height */
+            padding: 10px;
+            border: 1px solid #ccc; /* Optional, for visual boundary */
+        }
+
+        /* Flex container for title and input field */
+        #title-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px;
+        }
+
+        /* Title styling */
+        h2 {
+            margin-right: 15px;
+            font-size: 24px;
+        }
+
+        /* Style for the input field */
+        #rank-input {
+            width: 50px;
+            margin-left: 10px;
+            padding: 10px;
+            font-size: 16px;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            outline: none;
+        }
+
+        #rank-input:focus {
+            border-color: #007bff;
+            box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+        }
+
+        /* Tooltip styling */
+        .tooltip {
+            position: absolute;
+            padding: 8px;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            border-radius: 5px;
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        /* Style for each scatter plot */
+        #chart {
+            width: 90%; /* Make sure the chart takes full width of the container */
+        }
+
+        .year-label {
+            font-size: 14px;
+            font-weight: bold;
+            text-anchor: middle;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Title Section with Input Field -->
+    <div id="title-container">
+        <!-- <h2>Student Admission With Respect To Rank</h2> -->
+        <label for="rank-input">Rank:</label>
+        <input type="number" id="rank-input" value="100" />
+    </div>
+
+    <!-- Scrollable SVG container -->
+    <div id="chart-container">
+        <svg id="chart"></svg>
+    </div>
+
+    <!-- Tooltip Div -->
+    <div class="tooltip" id="tooltip"></div>
+
+    <script>
+        // The mapping for p1 values (phaseNo to course)
+        const mapping = {
+            3: 'Architecture', 4: 'Architecture',
+            5: 'Electrical', 6: 'Electrical',
+            7: 'Electronics', 8: 'Electronics',
+            1: 'Civil', 2: 'Civil',
+            9: 'Mechanical', 10: 'Mechanical',
+            11: 'Computer', 12: 'Computer',
+            27: 'Aerospace', 28: 'Aerospace',
+            29: 'Chemical', 30: 'Chemical'
+        };
+
+        // Function to render the scatter plot with a filtered rank value
+        function renderChart(maxRank) {
+            // Load the CSV file (adjust the file path if necessary)
+            d3.csv('combined_data.csv').then(function(data) {
+
+                // Step 1: Group data by year and rank, and retain the 'admitted' value based on the greater 'phaseNo'
+                const ranksPerYear = {};
+
+                // Loop through each record in the dataset
+                data.forEach(d => {
+                    const year = +d.year;
+                    const rank = +d.Rank;
+                    const phaseNo = +d.phaseNo; // Convert phaseNo to number
+                    const admitted = +d.admitted; // Convert admitted to number (0 or 1)
+                    const course = mapping[+d.p1]
+
+                    // Only consider ranks less than or equal to the maxRank
+                    if (rank <= maxRank) {
+                        // Initialize the year data structure if it doesn't exist
+                        if (!ranksPerYear[year]) {
+                            ranksPerYear[year] = {};
+                        }
+
+                        // Initialize rank data structure for this year if it doesn't exist
+                        if (!ranksPerYear[year][rank]) {
+                            ranksPerYear[year][rank] = { admitted: 0, maxPhaseNo: -1 };
+                        }
+
+                        // Check if the current row has a greater phaseNo and update admission status
+                        if (phaseNo > ranksPerYear[year][rank].maxPhaseNo) {
+                            ranksPerYear[year][rank].admitted = admitted;
+                            ranksPerYear[year][rank].maxPhaseNo = phaseNo;
+                            ranksPerYear[year][rank].course = course;
+                        }
+                    }
+                });
+
+                // Step 2: Visualize the data as a scatter plot
+                const scatterData = [];
+                for (const year in ranksPerYear) {
+                    for (const rank in ranksPerYear[year]) {
+                        scatterData.push({
+                            year: year,
+                            rank: +rank,
+                            admitted: ranksPerYear[year][rank].admitted,
+                            phaseNo: ranksPerYear[year][rank].maxPhaseNo, // Add phaseNo here
+                            course: ranksPerYear[year][rank].course
+                        });
+                    }
+                }
+
+                // Set up SVG for scatter plot
+                const svg = d3.select("#chart");
+                const margin = { top: 30, right: 30, bottom: 40, left: 100 };
+                const width = window.innerWidth - margin.left - margin.right; // Set width to 100% of the screen
+                const height = 1000; // Fixed height for now, can be adjusted based on data
+
+                // Set up SVG container dimensions
+                svg.attr("width", width)
+                    .attr("height", height);
+
+                // Calculate the maximum number of years
+                const years = Object.keys(ranksPerYear);
+                const numberOfYears = years.length;
+                const plotHeight = Math.floor(height / numberOfYears) - 40; // Adjust the plot height to fit multiple plots with margin between them
+
+                // Tooltip reference
+                const tooltip = d3.select("#tooltip");
+
+                // Step 3: Loop through each year to create individual scatter plots
+                years.forEach((year, i) => {
+                    const currentYearData = scatterData.filter(d => d.year === year);
+
+                    // Step 4: Set up a dynamic X-scale for each year
+                    const xScale = d3.scaleLinear()
+                        .domain([d3.min(currentYearData, d => d.rank) - 10, d3.max(currentYearData, d => d.rank) + 10])
+                        .range([0, width]);
+
+                    // Step 5: Set up Y-scale for admitted status (0 or 1)
+                    const yScale = d3.scaleLinear()
+                        .domain([0, 1]) // Admitted: 0 = Not Admitted, 1 = Admitted
+                        .range([plotHeight - 20, 0]);
+
+                    // Add a group for each year to hold the scatter plot
+                    const yearGroup = svg.append("g")
+                        .attr("transform", `translate(${margin.left}, ${i * (plotHeight + 40) + margin.top})`); // Stack the plots with margin between them
+
+                    // Add scatter plot points
+                    yearGroup.selectAll(".dot")
+                        .data(currentYearData)
+                        .enter().append("circle")
+                        .attr("class", "dot")
+                        .attr("cx", d => xScale(d.rank))
+                        .attr("cy", d => yScale(d.admitted))
+                        .attr("r", 2)
+                        .style("fill", d => d.admitted === 1 ? "green" : "red") // Green for admitted, red for not admitted
+                        .style("opacity", 0.7)
+                        .on("mouseover", function(event, d) {
+                            console.log(d)
+                            // Show the tooltip with rank and p1 value
+                            tooltip.style("opacity", 1)
+                                .html(`Rank: ${d.rank}<br>Course: ${d.course}`) // Use mapping for phaseNo to get course name
+                                .style("left", `${event.pageX + 10}px`) // Position the tooltip 10px to the right of the cursor
+                                .style("top", `${event.pageY - 25}px`); // Position the tooltip slightly above the cursor
+
+                            d3.select(this).transition()
+                                .duration(200) // Smooth transition
+                                .attr("r", 5); // Increase the size of the circle
+                        })
+                        .on("mouseout", function() {
+                            tooltip.style("opacity", 0); // Hide the tooltip
+                            d3.select(this).transition()
+                                .duration(200) // Smooth transition
+                                .attr("r", 2); // Reset to original size
+                        });
+
+                    // Add X axis for the current year
+                    const xAxis = d3.axisBottom(xScale);
+                    yearGroup.append("g")
+                        .attr("transform", `translate(0,${plotHeight - 20})`)
+                        .style('margin-top', '15px')
+                        .call(xAxis);
+
+                    // Add Y axis for admission status with custom tick labels
+                    const yAxis = d3.axisLeft(yScale)
+                        .ticks(1)  // Limit the number of ticks to 2 (0 and 1)
+                        .tickFormat(d => d === 1 ? "Admitted" : "Not Admitted");
+
+                    yearGroup.append("g")
+                        .call(yAxis);
+
+                    // Add year label
+                    yearGroup.append("text")
+                        .attr("x", width / 2)
+                        .attr("y", -10)
+                        .attr("class", "year-label")
+                        .style('font-size', '17px')
+                        .text(year);
+                });
+
+            }).catch(function(error) {
+                console.error("Error loading the CSV data:", error);
+            });
+        }
+
+        // Initial render with default rank value 100
+        renderChart(100);
+
+        // Event listener for rank input field
+        document.getElementById("rank-input").addEventListener("input", function() {
+            const maxRank = +this.value; // Get the input value as a number
+            d3.select("#chart").selectAll("*").remove(); // Clear the current chart
+            renderChart(maxRank); // Re-render the chart with the updated rank filter
+        });
+    </script>
+
+</body>
+</html>

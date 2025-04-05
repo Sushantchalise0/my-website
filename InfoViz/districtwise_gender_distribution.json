@@ -1,0 +1,1480 @@
+{
+    "2077": {
+        "ACHHAM": {
+            "Male": 12,
+            "Female": 0
+        },
+        "ARGHAKHANCHI": {
+            "Male": 26,
+            "Female": 9
+        },
+        "BAGLUNG": {
+            "Male": 18,
+            "Female": 7
+        },
+        "BAITADI": {
+            "Male": 6,
+            "Female": 2
+        },
+        "BAJHANG": {
+            "Male": 5,
+            "Female": 0
+        },
+        "BAJURA": {
+            "Male": 2,
+            "Female": 0
+        },
+        "BANKE": {
+            "Male": 11,
+            "Female": 2
+        },
+        "BARA": {
+            "Male": 23,
+            "Female": 3
+        },
+        "BARDIYA": {
+            "Male": 11,
+            "Female": 0
+        },
+        "BHAKTAPUR": {
+            "Male": 43,
+            "Female": 38
+        },
+        "BHOJPUR": {
+            "Male": 6,
+            "Female": 3
+        },
+        "CHITAWAN": {
+            "Male": 72,
+            "Female": 24
+        },
+        "DADELDHURA": {
+            "Male": 7,
+            "Female": 1
+        },
+        "DAILEKH": {
+            "Male": 3,
+            "Female": 0
+        },
+        "DANG": {
+            "Male": 28,
+            "Female": 8
+        },
+        "DARCHULA": {
+            "Male": 8,
+            "Female": 1
+        },
+        "DHADING": {
+            "Male": 24,
+            "Female": 12
+        },
+        "DHANKUTA": {
+            "Male": 2,
+            "Female": 1
+        },
+        "DHANUSHA": {
+            "Male": 45,
+            "Female": 12
+        },
+        "DOLAKHA": {
+            "Male": 14,
+            "Female": 6
+        },
+        "DOLKHA": {
+            "Male": 1,
+            "Female": 0
+        },
+        "DOLPA": {
+            "Male": 1,
+            "Female": 0
+        },
+        "DOTI": {
+            "Male": 2,
+            "Female": 1
+        },
+        "GORKHA": {
+            "Male": 32,
+            "Female": 8
+        },
+        "GULMI": {
+            "Male": 31,
+            "Female": 7
+        },
+        "HUMLA": {
+            "Male": 3,
+            "Female": 2
+        },
+        "ILAM": {
+            "Male": 5,
+            "Female": 2
+        },
+        "JAJARKOT": {
+            "Male": 1,
+            "Female": 2
+        },
+        "JHAPA": {
+            "Male": 45,
+            "Female": 23
+        },
+        "JUMLA": {
+            "Male": 6,
+            "Female": 0
+        },
+        "KAILALI": {
+            "Male": 24,
+            "Female": 2
+        },
+        "KALIKOT": {
+            "Male": 1,
+            "Female": 1
+        },
+        "KANCHANPUR": {
+            "Male": 15,
+            "Female": 3
+        },
+        "KAPILBASTU": {
+            "Male": 12,
+            "Female": 3
+        },
+        "KASKI": {
+            "Male": 43,
+            "Female": 24
+        },
+        "KATHMANDU": {
+            "Male": 165,
+            "Female": 80
+        },
+        "KAVREPALANCHOK": {
+            "Male": 27,
+            "Female": 12
+        },
+        "KHOTANG": {
+            "Male": 8,
+            "Female": 2
+        },
+        "LALITPUR": {
+            "Male": 45,
+            "Female": 38
+        },
+        "LAMJUNG": {
+            "Male": 18,
+            "Female": 7
+        },
+        "MAHOTTARI": {
+            "Male": 39,
+            "Female": 13
+        },
+        "MAKAWANPUR": {
+            "Male": 19,
+            "Female": 13
+        },
+        "MORANG": {
+            "Male": 40,
+            "Female": 15
+        },
+        "MUGU": {
+            "Male": 3,
+            "Female": 0
+        },
+        "MUSTANG": {
+            "Male": 1,
+            "Female": 1
+        },
+        "MYAGDI": {
+            "Male": 5,
+            "Female": 1
+        },
+        "NAWALPARASI": {
+            "Male": 24,
+            "Female": 9
+        },
+        "NUWAKOT": {
+            "Male": 20,
+            "Female": 3
+        },
+        "OKHALDHUNGA": {
+            "Male": 8,
+            "Female": 0
+        },
+        "PALPA": {
+            "Male": 21,
+            "Female": 9
+        },
+        "PANCHTHAR": {
+            "Male": 8,
+            "Female": 0
+        },
+        "PARBAT": {
+            "Male": 22,
+            "Female": 4
+        },
+        "PARSA": {
+            "Male": 14,
+            "Female": 2
+        },
+        "PYUTHAN": {
+            "Male": 8,
+            "Female": 3
+        },
+        "RAMECHHAP": {
+            "Male": 14,
+            "Female": 4
+        },
+        "RASUWA": {
+            "Male": 5,
+            "Female": 0
+        },
+        "RAUTAHAT": {
+            "Male": 25,
+            "Female": 6
+        },
+        "ROLPA": {
+            "Male": 1,
+            "Female": 0
+        },
+        "RUKUM": {
+            "Male": 3,
+            "Female": 0
+        },
+        "RUPANDEHI": {
+            "Male": 40,
+            "Female": 22
+        },
+        "SALYAN": {
+            "Male": 3,
+            "Female": 0
+        },
+        "SANKHUWASABHA": {
+            "Male": 3,
+            "Female": 2
+        },
+        "SAPTARI": {
+            "Male": 40,
+            "Female": 9
+        },
+        "SARLAHI": {
+            "Male": 42,
+            "Female": 6
+        },
+        "SINDHULI": {
+            "Male": 7,
+            "Female": 6
+        },
+        "SINDHUPALCHOK": {
+            "Male": 16,
+            "Female": 5
+        },
+        "SIRAHA": {
+            "Male": 28,
+            "Female": 6
+        },
+        "SOLUKHUMBU": {
+            "Male": 8,
+            "Female": 2
+        },
+        "SUNSARI": {
+            "Male": 38,
+            "Female": 6
+        },
+        "SURKHET": {
+            "Male": 12,
+            "Female": 0
+        },
+        "SYANGJA": {
+            "Male": 27,
+            "Female": 6
+        },
+        "TANAHUN": {
+            "Male": 22,
+            "Female": 8
+        },
+        "TAPLEJUNG": {
+            "Male": 6,
+            "Female": 2
+        },
+        "TERHATHUM": {
+            "Male": 6,
+            "Female": 0
+        },
+        "UDAYAPUR": {
+            "Male": 8,
+            "Female": 4
+        }
+    },
+    "2078": {
+        "ACHHAM": {
+            "Male": 8,
+            "Female": 3
+        },
+        "ARGHAKHANCHI": {
+            "Male": 19,
+            "Female": 5
+        },
+        "BAGLUNG": {
+            "Male": 21,
+            "Female": 4
+        },
+        "BAITADI": {
+            "Male": 12,
+            "Female": 2
+        },
+        "BAJHANG": {
+            "Male": 7,
+            "Female": 1
+        },
+        "BANKE": {
+            "Male": 11,
+            "Female": 3
+        },
+        "BARA": {
+            "Male": 40,
+            "Female": 9
+        },
+        "BARDIYA": {
+            "Male": 10,
+            "Female": 4
+        },
+        "BHAKTAPUR": {
+            "Male": 20,
+            "Female": 15
+        },
+        "BHOJPUR": {
+            "Male": 3,
+            "Female": 5
+        },
+        "CHITAWAN": {
+            "Male": 40,
+            "Female": 21
+        },
+        "DADELDHURA": {
+            "Male": 6,
+            "Female": 0
+        },
+        "DAILEKH": {
+            "Male": 4,
+            "Female": 0
+        },
+        "DANG": {
+            "Male": 23,
+            "Female": 10
+        },
+        "DARCHULA": {
+            "Male": 3,
+            "Female": 3
+        },
+        "DHADING": {
+            "Male": 16,
+            "Female": 6
+        },
+        "DHANKUTA": {
+            "Male": 3,
+            "Female": 2
+        },
+        "DHANUSHA": {
+            "Male": 56,
+            "Female": 22
+        },
+        "DOLAKHA": {
+            "Male": 13,
+            "Female": 3
+        },
+        "DOLPA": {
+            "Male": 4,
+            "Female": 0
+        },
+        "DOTI": {
+            "Male": 5,
+            "Female": 1
+        },
+        "GORKHA": {
+            "Male": 26,
+            "Female": 11
+        },
+        "GULMI": {
+            "Male": 43,
+            "Female": 8
+        },
+        "HUMLA": {
+            "Male": 4,
+            "Female": 0
+        },
+        "ILAM": {
+            "Male": 7,
+            "Female": 9
+        },
+        "JAJARKOT": {
+            "Male": 0,
+            "Female": 1
+        },
+        "JHAPA": {
+            "Male": 39,
+            "Female": 20
+        },
+        "JUMLA": {
+            "Male": 4,
+            "Female": 0
+        },
+        "KAILALI": {
+            "Male": 23,
+            "Female": 8
+        },
+        "KALIKOT": {
+            "Male": 4,
+            "Female": 1
+        },
+        "KANCHANPUR": {
+            "Male": 31,
+            "Female": 10
+        },
+        "KAPILBASTU": {
+            "Male": 17,
+            "Female": 6
+        },
+        "KASKI": {
+            "Male": 42,
+            "Female": 25
+        },
+        "KATHMANDU": {
+            "Male": 104,
+            "Female": 82
+        },
+        "KAVREPALANCHOK": {
+            "Male": 16,
+            "Female": 7
+        },
+        "KHOTANG": {
+            "Male": 9,
+            "Female": 4
+        },
+        "LALITPUR": {
+            "Male": 31,
+            "Female": 34
+        },
+        "LAMJUNG": {
+            "Male": 12,
+            "Female": 3
+        },
+        "MAHOTTARI": {
+            "Male": 42,
+            "Female": 19
+        },
+        "MAKAWANPUR": {
+            "Male": 21,
+            "Female": 9
+        },
+        "MORANG": {
+            "Male": 54,
+            "Female": 10
+        },
+        "MUGU": {
+            "Male": 0,
+            "Female": 1
+        },
+        "MYAGDI": {
+            "Male": 10,
+            "Female": 1
+        },
+        "NAWALPARASI": {
+            "Male": 33,
+            "Female": 10
+        },
+        "NUWAKOT": {
+            "Male": 21,
+            "Female": 4
+        },
+        "OKHALDHUNGA": {
+            "Male": 12,
+            "Female": 4
+        },
+        "OKHALDUNGA": {
+            "Male": 1,
+            "Female": 0
+        },
+        "PALPA": {
+            "Male": 25,
+            "Female": 4
+        },
+        "PANCHTHAR": {
+            "Male": 4,
+            "Female": 1
+        },
+        "PARBAT": {
+            "Male": 15,
+            "Female": 10
+        },
+        "PARSA": {
+            "Male": 19,
+            "Female": 4
+        },
+        "PYUTHAN": {
+            "Male": 7,
+            "Female": 4
+        },
+        "RAMECHHAP": {
+            "Male": 13,
+            "Female": 6
+        },
+        "RASUWA": {
+            "Male": 2,
+            "Female": 1
+        },
+        "RAUTAHAT": {
+            "Male": 24,
+            "Female": 7
+        },
+        "ROLPA": {
+            "Male": 0,
+            "Female": 3
+        },
+        "RUKUM": {
+            "Male": 2,
+            "Female": 0
+        },
+        "RUPANDEHI": {
+            "Male": 52,
+            "Female": 8
+        },
+        "SALYAN": {
+            "Male": 6,
+            "Female": 1
+        },
+        "SANKHUWASABHA": {
+            "Male": 9,
+            "Female": 0
+        },
+        "SAPTARI": {
+            "Male": 48,
+            "Female": 4
+        },
+        "SARLAHI": {
+            "Male": 37,
+            "Female": 11
+        },
+        "SINDHULI": {
+            "Male": 11,
+            "Female": 2
+        },
+        "SINDHUPALCHOK": {
+            "Male": 18,
+            "Female": 5
+        },
+        "SIRAHA": {
+            "Male": 36,
+            "Female": 8
+        },
+        "SOLUKHUMBU": {
+            "Male": 7,
+            "Female": 2
+        },
+        "SUNSARI": {
+            "Male": 29,
+            "Female": 9
+        },
+        "SURKHET": {
+            "Male": 9,
+            "Female": 2
+        },
+        "SYANGJA": {
+            "Male": 30,
+            "Female": 8
+        },
+        "TANAHUN": {
+            "Male": 16,
+            "Female": 6
+        },
+        "TAPLEJUNG": {
+            "Male": 8,
+            "Female": 1
+        },
+        "TERHATHUM": {
+            "Male": 2,
+            "Female": 1
+        },
+        "UDAYAPUR": {
+            "Male": 5,
+            "Female": 3
+        }
+    },
+    "2079": {
+        "ACHHAM": {
+            "Male": 6,
+            "Female": 1
+        },
+        "ARGHAKHANCHI": {
+            "Male": 19,
+            "Female": 3
+        },
+        "BAGLUNG": {
+            "Male": 15,
+            "Female": 3
+        },
+        "BAITADI": {
+            "Male": 4,
+            "Female": 3
+        },
+        "BAJHANG": {
+            "Male": 9,
+            "Female": 1
+        },
+        "BAJURA": {
+            "Male": 5,
+            "Female": 1
+        },
+        "BANKE": {
+            "Male": 10,
+            "Female": 7
+        },
+        "BARA": {
+            "Male": 35,
+            "Female": 3
+        },
+        "BARDIYA": {
+            "Male": 8,
+            "Female": 6
+        },
+        "BHAKTAPUR": {
+            "Male": 34,
+            "Female": 18
+        },
+        "BHOJPUR": {
+            "Male": 3,
+            "Female": 4
+        },
+        "CHITAWAN": {
+            "Male": 49,
+            "Female": 16
+        },
+        "DADELDHURA": {
+            "Male": 5,
+            "Female": 3
+        },
+        "DAILEKH": {
+            "Male": 8,
+            "Female": 0
+        },
+        "DANG": {
+            "Male": 27,
+            "Female": 6
+        },
+        "DARCHULA": {
+            "Male": 5,
+            "Female": 4
+        },
+        "DHADING": {
+            "Male": 20,
+            "Female": 3
+        },
+        "DHANKUTA": {
+            "Male": 5,
+            "Female": 5
+        },
+        "DHANUSHA": {
+            "Male": 52,
+            "Female": 23
+        },
+        "DOLAKHA": {
+            "Male": 16,
+            "Female": 2
+        },
+        "DOLPA": {
+            "Male": 0,
+            "Female": 2
+        },
+        "DOTI": {
+            "Male": 5,
+            "Female": 0
+        },
+        "GORKHA": {
+            "Male": 21,
+            "Female": 7
+        },
+        "GULMI": {
+            "Male": 18,
+            "Female": 6
+        },
+        "HUMLA": {
+            "Male": 1,
+            "Female": 0
+        },
+        "ILAM": {
+            "Male": 12,
+            "Female": 4
+        },
+        "JAJARKOT": {
+            "Male": 1,
+            "Female": 0
+        },
+        "JHAPA": {
+            "Male": 55,
+            "Female": 12
+        },
+        "JUMLA": {
+            "Male": 8,
+            "Female": 0
+        },
+        "KAILALI": {
+            "Male": 27,
+            "Female": 8
+        },
+        "KALIKOT": {
+            "Male": 4,
+            "Female": 0
+        },
+        "KANCHANPUR": {
+            "Male": 35,
+            "Female": 3
+        },
+        "KAPILBASTU": {
+            "Male": 8,
+            "Female": 1
+        },
+        "KASKI": {
+            "Male": 31,
+            "Female": 16
+        },
+        "KATHMANDU": {
+            "Male": 75,
+            "Female": 45
+        },
+        "KAVREPALANCHOK": {
+            "Male": 17,
+            "Female": 6
+        },
+        "KHOTANG": {
+            "Male": 5,
+            "Female": 1
+        },
+        "LALITPUR": {
+            "Male": 29,
+            "Female": 25
+        },
+        "LAMJUNG": {
+            "Male": 7,
+            "Female": 6
+        },
+        "MAHOTTARI": {
+            "Male": 37,
+            "Female": 22
+        },
+        "MAKAWANPUR": {
+            "Male": 18,
+            "Female": 5
+        },
+        "MORANG": {
+            "Male": 42,
+            "Female": 14
+        },
+        "MUGU": {
+            "Male": 1,
+            "Female": 1
+        },
+        "MYAGDI": {
+            "Male": 4,
+            "Female": 2
+        },
+        "NAWALPARASI": {
+            "Male": 28,
+            "Female": 9
+        },
+        "NUWAKOT": {
+            "Male": 14,
+            "Female": 4
+        },
+        "OKHALDHUNGA": {
+            "Male": 9,
+            "Female": 4
+        },
+        "PALPA": {
+            "Male": 13,
+            "Female": 2
+        },
+        "PANCHTHAR": {
+            "Male": 3,
+            "Female": 0
+        },
+        "PARBAT": {
+            "Male": 14,
+            "Female": 8
+        },
+        "PARSA": {
+            "Male": 12,
+            "Female": 7
+        },
+        "PYUTHAN": {
+            "Male": 8,
+            "Female": 4
+        },
+        "RAMECHHAP": {
+            "Male": 9,
+            "Female": 2
+        },
+        "RASUWA": {
+            "Male": 1,
+            "Female": 1
+        },
+        "RAUTAHAT": {
+            "Male": 32,
+            "Female": 7
+        },
+        "ROLPA": {
+            "Male": 3,
+            "Female": 1
+        },
+        "RUKUM": {
+            "Male": 3,
+            "Female": 1
+        },
+        "RUPANDEHI": {
+            "Male": 46,
+            "Female": 14
+        },
+        "SALYAN": {
+            "Male": 6,
+            "Female": 0
+        },
+        "SANKHUWASABHA": {
+            "Male": 6,
+            "Female": 3
+        },
+        "SAPTARI": {
+            "Male": 45,
+            "Female": 7
+        },
+        "SARLAHI": {
+            "Male": 24,
+            "Female": 7
+        },
+        "SINDHULI": {
+            "Male": 8,
+            "Female": 8
+        },
+        "SINDHUPALCHOK": {
+            "Male": 14,
+            "Female": 7
+        },
+        "SIRAHA": {
+            "Male": 43,
+            "Female": 13
+        },
+        "SOLUKHUMBU": {
+            "Male": 2,
+            "Female": 4
+        },
+        "SUNSARI": {
+            "Male": 29,
+            "Female": 7
+        },
+        "SURKHET": {
+            "Male": 2,
+            "Female": 2
+        },
+        "SYANGJA": {
+            "Male": 20,
+            "Female": 12
+        },
+        "TANAHUN": {
+            "Male": 20,
+            "Female": 7
+        },
+        "TAPLEJUNG": {
+            "Male": 1,
+            "Female": 1
+        },
+        "TERHATHUM": {
+            "Male": 4,
+            "Female": 0
+        },
+        "UDAYAPUR": {
+            "Male": 7,
+            "Female": 2
+        }
+    },
+    "2080": {
+        "ACHHAM": {
+            "Male": 3,
+            "Female": 2
+        },
+        "ARGHAKHANCHI": {
+            "Male": 20,
+            "Female": 1
+        },
+        "BAGLUNG": {
+            "Male": 16,
+            "Female": 3
+        },
+        "BAITADI": {
+            "Male": 14,
+            "Female": 3
+        },
+        "BAJHANG": {
+            "Male": 6,
+            "Female": 0
+        },
+        "BAJURA": {
+            "Male": 4,
+            "Female": 1
+        },
+        "BANKE": {
+            "Male": 12,
+            "Female": 3
+        },
+        "BARA": {
+            "Male": 28,
+            "Female": 10
+        },
+        "BARDIYA": {
+            "Male": 7,
+            "Female": 0
+        },
+        "BHAKTAPUR": {
+            "Male": 28,
+            "Female": 15
+        },
+        "BHOJPUR": {
+            "Male": 4,
+            "Female": 2
+        },
+        "CHITAWAN": {
+            "Male": 42,
+            "Female": 16
+        },
+        "DADELDHURA": {
+            "Male": 3,
+            "Female": 1
+        },
+        "DAILEKH": {
+            "Male": 6,
+            "Female": 0
+        },
+        "DANG": {
+            "Male": 28,
+            "Female": 11
+        },
+        "DARCHULA": {
+            "Male": 8,
+            "Female": 2
+        },
+        "DHADING": {
+            "Male": 17,
+            "Female": 6
+        },
+        "DHANKUTA": {
+            "Male": 3,
+            "Female": 1
+        },
+        "DHANUSHA": {
+            "Male": 46,
+            "Female": 20
+        },
+        "DOLAKHA": {
+            "Male": 9,
+            "Female": 2
+        },
+        "DOLPA": {
+            "Male": 1,
+            "Female": 0
+        },
+        "DOTI": {
+            "Male": 4,
+            "Female": 0
+        },
+        "GORKHA": {
+            "Male": 21,
+            "Female": 8
+        },
+        "GULMI": {
+            "Male": 28,
+            "Female": 10
+        },
+        "HUMLA": {
+            "Male": 3,
+            "Female": 2
+        },
+        "ILAM": {
+            "Male": 10,
+            "Female": 3
+        },
+        "JAJARKOT": {
+            "Male": 3,
+            "Female": 0
+        },
+        "JHAPA": {
+            "Male": 36,
+            "Female": 12
+        },
+        "JUMLA": {
+            "Male": 6,
+            "Female": 0
+        },
+        "KAILALI": {
+            "Male": 32,
+            "Female": 6
+        },
+        "KALIKOT": {
+            "Male": 6,
+            "Female": 1
+        },
+        "KANCHANPUR": {
+            "Male": 32,
+            "Female": 5
+        },
+        "KAPILBASTU": {
+            "Male": 12,
+            "Female": 4
+        },
+        "KASKI": {
+            "Male": 34,
+            "Female": 8
+        },
+        "KATHMANDU": {
+            "Male": 95,
+            "Female": 78
+        },
+        "KAVREPALANCHOK": {
+            "Male": 19,
+            "Female": 7
+        },
+        "KHOTANG": {
+            "Male": 9,
+            "Female": 3
+        },
+        "LALITPUR": {
+            "Male": 36,
+            "Female": 30
+        },
+        "LAMJUNG": {
+            "Male": 22,
+            "Female": 10
+        },
+        "MAHOTTARI": {
+            "Male": 55,
+            "Female": 16
+        },
+        "MAKAWANPUR": {
+            "Male": 18,
+            "Female": 5
+        },
+        "MORANG": {
+            "Male": 44,
+            "Female": 15
+        },
+        "MUGU": {
+            "Male": 0,
+            "Female": 1
+        },
+        "MYAGDI": {
+            "Male": 3,
+            "Female": 1
+        },
+        "NAWALPARASI": {
+            "Male": 35,
+            "Female": 7
+        },
+        "NUWAKOT": {
+            "Male": 16,
+            "Female": 5
+        },
+        "OKHALDHUNGA": {
+            "Male": 6,
+            "Female": 7
+        },
+        "PALPA": {
+            "Male": 21,
+            "Female": 5
+        },
+        "PANCHTHAR": {
+            "Male": 6,
+            "Female": 0
+        },
+        "PARBAT": {
+            "Male": 19,
+            "Female": 7
+        },
+        "PARSA": {
+            "Male": 10,
+            "Female": 9
+        },
+        "PYUTHAN": {
+            "Male": 7,
+            "Female": 2
+        },
+        "RAMECHHAP": {
+            "Male": 11,
+            "Female": 2
+        },
+        "RASUWA": {
+            "Male": 4,
+            "Female": 1
+        },
+        "RAUTAHAT": {
+            "Male": 42,
+            "Female": 6
+        },
+        "ROLPA": {
+            "Male": 1,
+            "Female": 4
+        },
+        "RUKUM": {
+            "Male": 2,
+            "Female": 2
+        },
+        "RUPANDEHI": {
+            "Male": 44,
+            "Female": 13
+        },
+        "SALYAN": {
+            "Male": 2,
+            "Female": 1
+        },
+        "SANKHUWASABHA": {
+            "Male": 3,
+            "Female": 2
+        },
+        "SAPTARI": {
+            "Male": 51,
+            "Female": 12
+        },
+        "SARLAHI": {
+            "Male": 48,
+            "Female": 10
+        },
+        "SINDHULI": {
+            "Male": 8,
+            "Female": 5
+        },
+        "SINDHUPALCHOK": {
+            "Male": 16,
+            "Female": 5
+        },
+        "SIRAHA": {
+            "Male": 36,
+            "Female": 7
+        },
+        "SOLUKHUMBU": {
+            "Male": 5,
+            "Female": 2
+        },
+        "SUNSARI": {
+            "Male": 39,
+            "Female": 11
+        },
+        "SURKHET": {
+            "Male": 7,
+            "Female": 3
+        },
+        "SYANGJA": {
+            "Male": 27,
+            "Female": 9
+        },
+        "TANAHUN": {
+            "Male": 24,
+            "Female": 11
+        },
+        "TAPLEJUNG": {
+            "Male": 4,
+            "Female": 0
+        },
+        "TERHATHUM": {
+            "Male": 2,
+            "Female": 0
+        },
+        "UDAYAPUR": {
+            "Male": 11,
+            "Female": 4
+        }
+    },
+    "2081": {
+        "ACHHAM": {
+            "Male": 11,
+            "Female": 1
+        },
+        "ARGHAKHANCHI": {
+            "Male": 28,
+            "Female": 8
+        },
+        "BAGLUNG": {
+            "Male": 11,
+            "Female": 2
+        },
+        "BAITADI": {
+            "Male": 18,
+            "Female": 0
+        },
+        "BAJHANG": {
+            "Male": 7,
+            "Female": 3
+        },
+        "BAJURA": {
+            "Male": 4,
+            "Female": 0
+        },
+        "BANKE": {
+            "Male": 13,
+            "Female": 6
+        },
+        "BARA": {
+            "Male": 24,
+            "Female": 8
+        },
+        "BARDIYA": {
+            "Male": 19,
+            "Female": 2
+        },
+        "BHAKTAPUR": {
+            "Male": 22,
+            "Female": 21
+        },
+        "BHOJPUR": {
+            "Male": 6,
+            "Female": 3
+        },
+        "CHITAWAN": {
+            "Male": 46,
+            "Female": 16
+        },
+        "DADELDHURA": {
+            "Male": 1,
+            "Female": 3
+        },
+        "DAILEKH": {
+            "Male": 2,
+            "Female": 0
+        },
+        "DANG": {
+            "Male": 31,
+            "Female": 7
+        },
+        "DARCHULA": {
+            "Male": 5,
+            "Female": 0
+        },
+        "DHADING": {
+            "Male": 18,
+            "Female": 8
+        },
+        "DHANKUTA": {
+            "Male": 4,
+            "Female": 2
+        },
+        "DHANUSHA": {
+            "Male": 49,
+            "Female": 14
+        },
+        "DOLAKHA": {
+            "Male": 10,
+            "Female": 5
+        },
+        "DOLPA": {
+            "Male": 0,
+            "Female": 1
+        },
+        "DOTI": {
+            "Male": 2,
+            "Female": 0
+        },
+        "GORKHA": {
+            "Male": 14,
+            "Female": 7
+        },
+        "GULMI": {
+            "Male": 24,
+            "Female": 6
+        },
+        "HUMLA": {
+            "Male": 2,
+            "Female": 0
+        },
+        "ILAM": {
+            "Male": 13,
+            "Female": 4
+        },
+        "JAJARKOT": {
+            "Male": 2,
+            "Female": 0
+        },
+        "JHAPA": {
+            "Male": 46,
+            "Female": 15
+        },
+        "JUMLA": {
+            "Male": 5,
+            "Female": 0
+        },
+        "KAILALI": {
+            "Male": 33,
+            "Female": 8
+        },
+        "KALIKOT": {
+            "Male": 5,
+            "Female": 1
+        },
+        "KANCHANPUR": {
+            "Male": 24,
+            "Female": 6
+        },
+        "KAPILBASTU": {
+            "Male": 12,
+            "Female": 5
+        },
+        "KASKI": {
+            "Male": 36,
+            "Female": 17
+        },
+        "KATHMANDU": {
+            "Male": 114,
+            "Female": 59
+        },
+        "KAVREPALANCHOK": {
+            "Male": 12,
+            "Female": 7
+        },
+        "KHOTANG": {
+            "Male": 8,
+            "Female": 4
+        },
+        "LALITPUR": {
+            "Male": 35,
+            "Female": 29
+        },
+        "LAMJUNG": {
+            "Male": 12,
+            "Female": 4
+        },
+        "MAHOTTARI": {
+            "Male": 34,
+            "Female": 10
+        },
+        "MAKAWANPUR": {
+            "Male": 14,
+            "Female": 3
+        },
+        "MORANG": {
+            "Male": 56,
+            "Female": 16
+        },
+        "MUGU": {
+            "Male": 2,
+            "Female": 0
+        },
+        "MYAGDI": {
+            "Male": 4,
+            "Female": 0
+        },
+        "NAWALPARASI": {
+            "Male": 23,
+            "Female": 8
+        },
+        "NUWAKOT": {
+            "Male": 15,
+            "Female": 6
+        },
+        "OKHALDHUNGA": {
+            "Male": 10,
+            "Female": 5
+        },
+        "PALPA": {
+            "Male": 15,
+            "Female": 6
+        },
+        "PANCHTHAR": {
+            "Male": 3,
+            "Female": 1
+        },
+        "PARBAT": {
+            "Male": 28,
+            "Female": 8
+        },
+        "PARSA": {
+            "Male": 10,
+            "Female": 9
+        },
+        "PYUTHAN": {
+            "Male": 7,
+            "Female": 3
+        },
+        "RAMECHHAP": {
+            "Male": 13,
+            "Female": 5
+        },
+        "RASUWA": {
+            "Male": 1,
+            "Female": 0
+        },
+        "RAUTAHAT": {
+            "Male": 30,
+            "Female": 7
+        },
+        "ROLPA": {
+            "Male": 1,
+            "Female": 0
+        },
+        "RUKUM": {
+            "Male": 7,
+            "Female": 1
+        },
+        "RUPANDEHI": {
+            "Male": 40,
+            "Female": 10
+        },
+        "SALYAN": {
+            "Male": 3,
+            "Female": 2
+        },
+        "SANKHUWASABHA": {
+            "Male": 8,
+            "Female": 1
+        },
+        "SAPTARI": {
+            "Male": 38,
+            "Female": 15
+        },
+        "SARLAHI": {
+            "Male": 34,
+            "Female": 13
+        },
+        "SINDHULI": {
+            "Male": 12,
+            "Female": 4
+        },
+        "SINDHUPALCHOK": {
+            "Male": 15,
+            "Female": 3
+        },
+        "SIRAHA": {
+            "Male": 34,
+            "Female": 5
+        },
+        "SOLUKHUMBU": {
+            "Male": 5,
+            "Female": 2
+        },
+        "SUNSARI": {
+            "Male": 28,
+            "Female": 10
+        },
+        "SURKHET": {
+            "Male": 8,
+            "Female": 2
+        },
+        "SYANGJA": {
+            "Male": 29,
+            "Female": 9
+        },
+        "TANAHUN": {
+            "Male": 9,
+            "Female": 7
+        },
+        "TAPLEJUNG": {
+            "Male": 4,
+            "Female": 1
+        },
+        "TERHATHUM": {
+            "Male": 2,
+            "Female": 0
+        },
+        "UDAYAPUR": {
+            "Male": 8,
+            "Female": 3
+        }
+    }
+}

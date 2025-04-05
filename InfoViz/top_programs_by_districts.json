@@ -1,0 +1,5258 @@
+[
+    {
+        "District": "achham",
+        "year": 2077,
+        "Program": "Civil Engineering",
+        "Student Count": 9
+    },
+    {
+        "District": "achham",
+        "year": 2077,
+        "Program": "Electrical Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "achham",
+        "year": 2077,
+        "Program": "Mechanical Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "achham",
+        "year": 2078,
+        "Program": "Civil Engineering",
+        "Student Count": 4
+    },
+    {
+        "District": "achham",
+        "year": 2078,
+        "Program": "Aerospace Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "achham",
+        "year": 2078,
+        "Program": "Architecture",
+        "Student Count": 1
+    },
+    {
+        "District": "achham",
+        "year": 2079,
+        "Program": "Civil Engineering",
+        "Student Count": 3
+    },
+    {
+        "District": "achham",
+        "year": 2080,
+        "Program": "Computer Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "achham",
+        "year": 2081,
+        "Program": "Civil Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "arghakhanchi",
+        "year": 2077,
+        "Program": "Civil Engineering",
+        "Student Count": 12
+    },
+    {
+        "District": "arghakhanchi",
+        "year": 2077,
+        "Program": "Computer Engineering",
+        "Student Count": 10
+    },
+    {
+        "District": "arghakhanchi",
+        "year": 2077,
+        "Program": "Chemical Engineering",
+        "Student Count": 4
+    },
+    {
+        "District": "arghakhanchi",
+        "year": 2078,
+        "Program": "Computer Engineering",
+        "Student Count": 5
+    },
+    {
+        "District": "arghakhanchi",
+        "year": 2078,
+        "Program": "Aerospace Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "arghakhanchi",
+        "year": 2078,
+        "Program": "Architecture",
+        "Student Count": 1
+    },
+    {
+        "District": "arghakhanchi",
+        "year": 2079,
+        "Program": "Computer Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "arghakhanchi",
+        "year": 2079,
+        "Program": "Civil Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "arghakhanchi",
+        "year": 2080,
+        "Program": "Civil Engineering",
+        "Student Count": 3
+    },
+    {
+        "District": "arghakhanchi",
+        "year": 2080,
+        "Program": "Chemical Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "arghakhanchi",
+        "year": 2080,
+        "Program": "Electrical Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "arghakhanchi",
+        "year": 2081,
+        "Program": "Civil Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "arghakhanchi",
+        "year": 2081,
+        "Program": "Electrical Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "arghakhanchi",
+        "year": 2081,
+        "Program": "Mechanical Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "baglung",
+        "year": 2077,
+        "Program": "Civil Engineering",
+        "Student Count": 10
+    },
+    {
+        "District": "baglung",
+        "year": 2077,
+        "Program": "Computer Engineering",
+        "Student Count": 7
+    },
+    {
+        "District": "baglung",
+        "year": 2077,
+        "Program": "Architecture",
+        "Student Count": 3
+    },
+    {
+        "District": "baglung",
+        "year": 2078,
+        "Program": "Civil Engineering",
+        "Student Count": 4
+    },
+    {
+        "District": "baglung",
+        "year": 2078,
+        "Program": "Architecture",
+        "Student Count": 3
+    },
+    {
+        "District": "baglung",
+        "year": 2078,
+        "Program": "Computer Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "baglung",
+        "year": 2079,
+        "Program": "Civil Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "baglung",
+        "year": 2079,
+        "Program": "Aerospace Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "baglung",
+        "year": 2079,
+        "Program": "Architecture",
+        "Student Count": 1
+    },
+    {
+        "District": "baglung",
+        "year": 2080,
+        "Program": "Electrical Engineering",
+        "Student Count": 3
+    },
+    {
+        "District": "baglung",
+        "year": 2080,
+        "Program": "Electronics Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "baglung",
+        "year": 2081,
+        "Program": "Civil Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "baglung",
+        "year": 2081,
+        "Program": "Aerospace Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "baitadi",
+        "year": 2077,
+        "Program": "Civil Engineering",
+        "Student Count": 3
+    },
+    {
+        "District": "baitadi",
+        "year": 2077,
+        "Program": "Computer Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "baitadi",
+        "year": 2077,
+        "Program": "Architecture",
+        "Student Count": 1
+    },
+    {
+        "District": "baitadi",
+        "year": 2078,
+        "Program": "Aerospace Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "baitadi",
+        "year": 2078,
+        "Program": "Architecture",
+        "Student Count": 2
+    },
+    {
+        "District": "baitadi",
+        "year": 2078,
+        "Program": "Chemical Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "baitadi",
+        "year": 2079,
+        "Program": "Electrical Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "baitadi",
+        "year": 2080,
+        "Program": "Civil Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "baitadi",
+        "year": 2080,
+        "Program": "Aerospace Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "baitadi",
+        "year": 2080,
+        "Program": "Electrical Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "baitadi",
+        "year": 2081,
+        "Program": "Aerospace Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "baitadi",
+        "year": 2081,
+        "Program": "Chemical Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "bajhang",
+        "year": 2077,
+        "Program": "Civil Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "bajhang",
+        "year": 2077,
+        "Program": "Computer Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "bajhang",
+        "year": 2077,
+        "Program": "Electronics Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "bajhang",
+        "year": 2078,
+        "Program": "Civil Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "bajhang",
+        "year": 2078,
+        "Program": "Aerospace Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "bajhang",
+        "year": 2078,
+        "Program": "Electrical Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "bajhang",
+        "year": 2079,
+        "Program": "Civil Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "bajhang",
+        "year": 2079,
+        "Program": "Computer Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "bajhang",
+        "year": 2080,
+        "Program": "Civil Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "bajhang",
+        "year": 2081,
+        "Program": "Civil Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "bajhang",
+        "year": 2081,
+        "Program": "Chemical Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "bajhang",
+        "year": 2081,
+        "Program": "Computer Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "bajura",
+        "year": 2077,
+        "Program": "Aerospace Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "bajura",
+        "year": 2077,
+        "Program": "Electronics Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "bajura",
+        "year": 2079,
+        "Program": "Civil Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "bajura",
+        "year": 2079,
+        "Program": "Electrical Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "bajura",
+        "year": 2080,
+        "Program": "Civil Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "bajura",
+        "year": 2081,
+        "Program": "Aerospace Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "bajura",
+        "year": 2081,
+        "Program": "Mechanical Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "banke",
+        "year": 2077,
+        "Program": "Civil Engineering",
+        "Student Count": 8
+    },
+    {
+        "District": "banke",
+        "year": 2077,
+        "Program": "Aerospace Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "banke",
+        "year": 2077,
+        "Program": "Architecture",
+        "Student Count": 1
+    },
+    {
+        "District": "banke",
+        "year": 2078,
+        "Program": "Electronics Engineering",
+        "Student Count": 3
+    },
+    {
+        "District": "banke",
+        "year": 2078,
+        "Program": "Civil Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "banke",
+        "year": 2078,
+        "Program": "Architecture",
+        "Student Count": 1
+    },
+    {
+        "District": "banke",
+        "year": 2079,
+        "Program": "Architecture",
+        "Student Count": 3
+    },
+    {
+        "District": "banke",
+        "year": 2079,
+        "Program": "Aerospace Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "banke",
+        "year": 2079,
+        "Program": "Civil Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "banke",
+        "year": 2080,
+        "Program": "Architecture",
+        "Student Count": 1
+    },
+    {
+        "District": "banke",
+        "year": 2080,
+        "Program": "Civil Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "banke",
+        "year": 2081,
+        "Program": "Aerospace Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "banke",
+        "year": 2081,
+        "Program": "Computer Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "banke",
+        "year": 2081,
+        "Program": "Electronics Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "bara",
+        "year": 2077,
+        "Program": "Civil Engineering",
+        "Student Count": 8
+    },
+    {
+        "District": "bara",
+        "year": 2077,
+        "Program": "Computer Engineering",
+        "Student Count": 6
+    },
+    {
+        "District": "bara",
+        "year": 2077,
+        "Program": "Mechanical Engineering",
+        "Student Count": 4
+    },
+    {
+        "District": "bara",
+        "year": 2078,
+        "Program": "Civil Engineering",
+        "Student Count": 8
+    },
+    {
+        "District": "bara",
+        "year": 2078,
+        "Program": "Computer Engineering",
+        "Student Count": 7
+    },
+    {
+        "District": "bara",
+        "year": 2078,
+        "Program": "Aerospace Engineering",
+        "Student Count": 3
+    },
+    {
+        "District": "bara",
+        "year": 2079,
+        "Program": "Electrical Engineering",
+        "Student Count": 4
+    },
+    {
+        "District": "bara",
+        "year": 2079,
+        "Program": "Civil Engineering",
+        "Student Count": 3
+    },
+    {
+        "District": "bara",
+        "year": 2079,
+        "Program": "Computer Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "bara",
+        "year": 2080,
+        "Program": "Architecture",
+        "Student Count": 3
+    },
+    {
+        "District": "bara",
+        "year": 2080,
+        "Program": "Civil Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "bara",
+        "year": 2080,
+        "Program": "Aerospace Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "bara",
+        "year": 2081,
+        "Program": "Civil Engineering",
+        "Student Count": 3
+    },
+    {
+        "District": "bara",
+        "year": 2081,
+        "Program": "Computer Engineering",
+        "Student Count": 3
+    },
+    {
+        "District": "bara",
+        "year": 2081,
+        "Program": "Aerospace Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "bardiya",
+        "year": 2077,
+        "Program": "Computer Engineering",
+        "Student Count": 6
+    },
+    {
+        "District": "bardiya",
+        "year": 2077,
+        "Program": "Electronics Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "bardiya",
+        "year": 2077,
+        "Program": "Chemical Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "bardiya",
+        "year": 2078,
+        "Program": "Aerospace Engineering",
+        "Student Count": 4
+    },
+    {
+        "District": "bardiya",
+        "year": 2078,
+        "Program": "Architecture",
+        "Student Count": 2
+    },
+    {
+        "District": "bardiya",
+        "year": 2078,
+        "Program": "Computer Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "bardiya",
+        "year": 2079,
+        "Program": "Aerospace Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "bardiya",
+        "year": 2079,
+        "Program": "Architecture",
+        "Student Count": 2
+    },
+    {
+        "District": "bardiya",
+        "year": 2079,
+        "Program": "Civil Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "bardiya",
+        "year": 2080,
+        "Program": "Chemical Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "bardiya",
+        "year": 2080,
+        "Program": "Computer Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "bardiya",
+        "year": 2080,
+        "Program": "Electronics Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "bardiya",
+        "year": 2081,
+        "Program": "Chemical Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "bardiya",
+        "year": 2081,
+        "Program": "Computer Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "bardiya",
+        "year": 2081,
+        "Program": "Electrical Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "bhaktapur",
+        "year": 2077,
+        "Program": "Architecture",
+        "Student Count": 20
+    },
+    {
+        "District": "bhaktapur",
+        "year": 2077,
+        "Program": "Civil Engineering",
+        "Student Count": 19
+    },
+    {
+        "District": "bhaktapur",
+        "year": 2077,
+        "Program": "Computer Engineering",
+        "Student Count": 19
+    },
+    {
+        "District": "bhaktapur",
+        "year": 2078,
+        "Program": "Architecture",
+        "Student Count": 10
+    },
+    {
+        "District": "bhaktapur",
+        "year": 2078,
+        "Program": "Aerospace Engineering",
+        "Student Count": 4
+    },
+    {
+        "District": "bhaktapur",
+        "year": 2078,
+        "Program": "Computer Engineering",
+        "Student Count": 3
+    },
+    {
+        "District": "bhaktapur",
+        "year": 2079,
+        "Program": "Architecture",
+        "Student Count": 8
+    },
+    {
+        "District": "bhaktapur",
+        "year": 2079,
+        "Program": "Civil Engineering",
+        "Student Count": 4
+    },
+    {
+        "District": "bhaktapur",
+        "year": 2079,
+        "Program": "Computer Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "bhaktapur",
+        "year": 2080,
+        "Program": "Computer Engineering",
+        "Student Count": 4
+    },
+    {
+        "District": "bhaktapur",
+        "year": 2080,
+        "Program": "Architecture",
+        "Student Count": 2
+    },
+    {
+        "District": "bhaktapur",
+        "year": 2080,
+        "Program": "Aerospace Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "bhaktapur",
+        "year": 2081,
+        "Program": "Civil Engineering",
+        "Student Count": 5
+    },
+    {
+        "District": "bhaktapur",
+        "year": 2081,
+        "Program": "Computer Engineering",
+        "Student Count": 3
+    },
+    {
+        "District": "bhaktapur",
+        "year": 2081,
+        "Program": "Aerospace Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "bhojpur",
+        "year": 2077,
+        "Program": "Architecture",
+        "Student Count": 3
+    },
+    {
+        "District": "bhojpur",
+        "year": 2077,
+        "Program": "Civil Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "bhojpur",
+        "year": 2077,
+        "Program": "Mechanical Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "bhojpur",
+        "year": 2078,
+        "Program": "Architecture",
+        "Student Count": 2
+    },
+    {
+        "District": "bhojpur",
+        "year": 2078,
+        "Program": "Computer Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "bhojpur",
+        "year": 2079,
+        "Program": "Mechanical Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "bhojpur",
+        "year": 2080,
+        "Program": "Architecture",
+        "Student Count": 1
+    },
+    {
+        "District": "bhojpur",
+        "year": 2080,
+        "Program": "Civil Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "bhojpur",
+        "year": 2081,
+        "Program": "Civil Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "chitawan",
+        "year": 2077,
+        "Program": "Civil Engineering",
+        "Student Count": 30
+    },
+    {
+        "District": "chitawan",
+        "year": 2077,
+        "Program": "Computer Engineering",
+        "Student Count": 20
+    },
+    {
+        "District": "chitawan",
+        "year": 2077,
+        "Program": "Architecture",
+        "Student Count": 11
+    },
+    {
+        "District": "chitawan",
+        "year": 2078,
+        "Program": "Computer Engineering",
+        "Student Count": 6
+    },
+    {
+        "District": "chitawan",
+        "year": 2078,
+        "Program": "Electrical Engineering",
+        "Student Count": 5
+    },
+    {
+        "District": "chitawan",
+        "year": 2078,
+        "Program": "Aerospace Engineering",
+        "Student Count": 4
+    },
+    {
+        "District": "chitawan",
+        "year": 2079,
+        "Program": "Aerospace Engineering",
+        "Student Count": 4
+    },
+    {
+        "District": "chitawan",
+        "year": 2079,
+        "Program": "Civil Engineering",
+        "Student Count": 3
+    },
+    {
+        "District": "chitawan",
+        "year": 2079,
+        "Program": "Electrical Engineering",
+        "Student Count": 3
+    },
+    {
+        "District": "chitawan",
+        "year": 2080,
+        "Program": "Mechanical Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "chitawan",
+        "year": 2080,
+        "Program": "Aerospace Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "chitawan",
+        "year": 2080,
+        "Program": "Architecture",
+        "Student Count": 1
+    },
+    {
+        "District": "chitawan",
+        "year": 2081,
+        "Program": "Civil Engineering",
+        "Student Count": 4
+    },
+    {
+        "District": "chitawan",
+        "year": 2081,
+        "Program": "Computer Engineering",
+        "Student Count": 4
+    },
+    {
+        "District": "chitawan",
+        "year": 2081,
+        "Program": "Aerospace Engineering",
+        "Student Count": 3
+    },
+    {
+        "District": "dadeldhura",
+        "year": 2077,
+        "Program": "Civil Engineering",
+        "Student Count": 3
+    },
+    {
+        "District": "dadeldhura",
+        "year": 2077,
+        "Program": "Computer Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "dadeldhura",
+        "year": 2077,
+        "Program": "Aerospace Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "dadeldhura",
+        "year": 2079,
+        "Program": "Civil Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "dadeldhura",
+        "year": 2080,
+        "Program": "Electrical Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "dadeldhura",
+        "year": 2081,
+        "Program": "Computer Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "dadeldhura",
+        "year": 2081,
+        "Program": "Civil Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "dailekh",
+        "year": 2077,
+        "Program": "Civil Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "dailekh",
+        "year": 2077,
+        "Program": "Chemical Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "dailekh",
+        "year": 2078,
+        "Program": "Chemical Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "dailekh",
+        "year": 2078,
+        "Program": "Civil Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "dailekh",
+        "year": 2078,
+        "Program": "Mechanical Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "dailekh",
+        "year": 2079,
+        "Program": "Mechanical Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "dailekh",
+        "year": 2079,
+        "Program": "Civil Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "dailekh",
+        "year": 2080,
+        "Program": "Computer Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "dailekh",
+        "year": 2080,
+        "Program": "Mechanical Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "dang",
+        "year": 2077,
+        "Program": "Civil Engineering",
+        "Student Count": 17
+    },
+    {
+        "District": "dang",
+        "year": 2077,
+        "Program": "Computer Engineering",
+        "Student Count": 8
+    },
+    {
+        "District": "dang",
+        "year": 2077,
+        "Program": "Architecture",
+        "Student Count": 5
+    },
+    {
+        "District": "dang",
+        "year": 2078,
+        "Program": "Civil Engineering",
+        "Student Count": 5
+    },
+    {
+        "District": "dang",
+        "year": 2078,
+        "Program": "Aerospace Engineering",
+        "Student Count": 3
+    },
+    {
+        "District": "dang",
+        "year": 2078,
+        "Program": "Architecture",
+        "Student Count": 2
+    },
+    {
+        "District": "dang",
+        "year": 2079,
+        "Program": "Chemical Engineering",
+        "Student Count": 3
+    },
+    {
+        "District": "dang",
+        "year": 2079,
+        "Program": "Electrical Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "dang",
+        "year": 2079,
+        "Program": "Aerospace Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "dang",
+        "year": 2080,
+        "Program": "Computer Engineering",
+        "Student Count": 3
+    },
+    {
+        "District": "dang",
+        "year": 2080,
+        "Program": "Architecture",
+        "Student Count": 2
+    },
+    {
+        "District": "dang",
+        "year": 2080,
+        "Program": "Chemical Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "dang",
+        "year": 2081,
+        "Program": "Civil Engineering",
+        "Student Count": 3
+    },
+    {
+        "District": "dang",
+        "year": 2081,
+        "Program": "Architecture",
+        "Student Count": 2
+    },
+    {
+        "District": "dang",
+        "year": 2081,
+        "Program": "Electrical Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "darchula",
+        "year": 2077,
+        "Program": "Civil Engineering",
+        "Student Count": 5
+    },
+    {
+        "District": "darchula",
+        "year": 2077,
+        "Program": "Electrical Engineering",
+        "Student Count": 3
+    },
+    {
+        "District": "darchula",
+        "year": 2077,
+        "Program": "Chemical Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "darchula",
+        "year": 2078,
+        "Program": "Civil Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "darchula",
+        "year": 2078,
+        "Program": "Computer Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "darchula",
+        "year": 2078,
+        "Program": "Electrical Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "darchula",
+        "year": 2079,
+        "Program": "Aerospace Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "darchula",
+        "year": 2079,
+        "Program": "Electrical Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "darchula",
+        "year": 2079,
+        "Program": "Electronics Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "darchula",
+        "year": 2080,
+        "Program": "Aerospace Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "darchula",
+        "year": 2080,
+        "Program": "Computer Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "darchula",
+        "year": 2080,
+        "Program": "Electrical Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "dhading",
+        "year": 2077,
+        "Program": "Civil Engineering",
+        "Student Count": 14
+    },
+    {
+        "District": "dhading",
+        "year": 2077,
+        "Program": "Architecture",
+        "Student Count": 8
+    },
+    {
+        "District": "dhading",
+        "year": 2077,
+        "Program": "Chemical Engineering",
+        "Student Count": 5
+    },
+    {
+        "District": "dhading",
+        "year": 2078,
+        "Program": "Civil Engineering",
+        "Student Count": 4
+    },
+    {
+        "District": "dhading",
+        "year": 2078,
+        "Program": "Architecture",
+        "Student Count": 2
+    },
+    {
+        "District": "dhading",
+        "year": 2078,
+        "Program": "Computer Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "dhading",
+        "year": 2079,
+        "Program": "Architecture",
+        "Student Count": 2
+    },
+    {
+        "District": "dhading",
+        "year": 2079,
+        "Program": "Civil Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "dhading",
+        "year": 2079,
+        "Program": "Aerospace Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "dhading",
+        "year": 2080,
+        "Program": "Electrical Engineering",
+        "Student Count": 3
+    },
+    {
+        "District": "dhading",
+        "year": 2080,
+        "Program": "Aerospace Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "dhading",
+        "year": 2080,
+        "Program": "Architecture",
+        "Student Count": 1
+    },
+    {
+        "District": "dhading",
+        "year": 2081,
+        "Program": "Architecture",
+        "Student Count": 2
+    },
+    {
+        "District": "dhading",
+        "year": 2081,
+        "Program": "Computer Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "dhading",
+        "year": 2081,
+        "Program": "Civil Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "dhankuta",
+        "year": 2077,
+        "Program": "Chemical Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "dhankuta",
+        "year": 2077,
+        "Program": "Civil Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "dhankuta",
+        "year": 2077,
+        "Program": "Electrical Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "dhankuta",
+        "year": 2078,
+        "Program": "Aerospace Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "dhankuta",
+        "year": 2078,
+        "Program": "Architecture",
+        "Student Count": 1
+    },
+    {
+        "District": "dhankuta",
+        "year": 2078,
+        "Program": "Civil Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "dhankuta",
+        "year": 2079,
+        "Program": "Architecture",
+        "Student Count": 2
+    },
+    {
+        "District": "dhankuta",
+        "year": 2079,
+        "Program": "Civil Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "dhankuta",
+        "year": 2079,
+        "Program": "Computer Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "dhanusha",
+        "year": 2077,
+        "Program": "Civil Engineering",
+        "Student Count": 24
+    },
+    {
+        "District": "dhanusha",
+        "year": 2077,
+        "Program": "Computer Engineering",
+        "Student Count": 9
+    },
+    {
+        "District": "dhanusha",
+        "year": 2077,
+        "Program": "Electrical Engineering",
+        "Student Count": 9
+    },
+    {
+        "District": "dhanusha",
+        "year": 2078,
+        "Program": "Electrical Engineering",
+        "Student Count": 8
+    },
+    {
+        "District": "dhanusha",
+        "year": 2078,
+        "Program": "Computer Engineering",
+        "Student Count": 7
+    },
+    {
+        "District": "dhanusha",
+        "year": 2078,
+        "Program": "Aerospace Engineering",
+        "Student Count": 6
+    },
+    {
+        "District": "dhanusha",
+        "year": 2079,
+        "Program": "Civil Engineering",
+        "Student Count": 8
+    },
+    {
+        "District": "dhanusha",
+        "year": 2079,
+        "Program": "Computer Engineering",
+        "Student Count": 7
+    },
+    {
+        "District": "dhanusha",
+        "year": 2079,
+        "Program": "Architecture",
+        "Student Count": 6
+    },
+    {
+        "District": "dhanusha",
+        "year": 2080,
+        "Program": "Civil Engineering",
+        "Student Count": 9
+    },
+    {
+        "District": "dhanusha",
+        "year": 2080,
+        "Program": "Electrical Engineering",
+        "Student Count": 8
+    },
+    {
+        "District": "dhanusha",
+        "year": 2080,
+        "Program": "Computer Engineering",
+        "Student Count": 7
+    },
+    {
+        "District": "dhanusha",
+        "year": 2081,
+        "Program": "Computer Engineering",
+        "Student Count": 6
+    },
+    {
+        "District": "dhanusha",
+        "year": 2081,
+        "Program": "Aerospace Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "dhanusha",
+        "year": 2081,
+        "Program": "Chemical Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "dolakha",
+        "year": 2077,
+        "Program": "Computer Engineering",
+        "Student Count": 6
+    },
+    {
+        "District": "dolakha",
+        "year": 2077,
+        "Program": "Civil Engineering",
+        "Student Count": 5
+    },
+    {
+        "District": "dolakha",
+        "year": 2077,
+        "Program": "Chemical Engineering",
+        "Student Count": 3
+    },
+    {
+        "District": "dolakha",
+        "year": 2078,
+        "Program": "Civil Engineering",
+        "Student Count": 6
+    },
+    {
+        "District": "dolakha",
+        "year": 2078,
+        "Program": "Computer Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "dolakha",
+        "year": 2078,
+        "Program": "Aerospace Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "dolakha",
+        "year": 2079,
+        "Program": "Chemical Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "dolakha",
+        "year": 2079,
+        "Program": "Civil Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "dolakha",
+        "year": 2079,
+        "Program": "Mechanical Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "dolakha",
+        "year": 2080,
+        "Program": "Chemical Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "dolakha",
+        "year": 2081,
+        "Program": "Civil Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "dolakha",
+        "year": 2081,
+        "Program": "Computer Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "dolakha",
+        "year": 2081,
+        "Program": "Mechanical Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "dolkha",
+        "year": 2077,
+        "Program": "Civil Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "dolpa",
+        "year": 2077,
+        "Program": "Civil Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "dolpa",
+        "year": 2078,
+        "Program": "Civil Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "dolpa",
+        "year": 2078,
+        "Program": "Architecture",
+        "Student Count": 1
+    },
+    {
+        "District": "dolpa",
+        "year": 2079,
+        "Program": "Architecture",
+        "Student Count": 1
+    },
+    {
+        "District": "dolpa",
+        "year": 2079,
+        "Program": "Civil Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "doti",
+        "year": 2077,
+        "Program": "Civil Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "doti",
+        "year": 2077,
+        "Program": "Computer Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "doti",
+        "year": 2078,
+        "Program": "Architecture",
+        "Student Count": 1
+    },
+    {
+        "District": "doti",
+        "year": 2078,
+        "Program": "Civil Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "doti",
+        "year": 2078,
+        "Program": "Electronics Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "doti",
+        "year": 2079,
+        "Program": "Civil Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "doti",
+        "year": 2080,
+        "Program": "Civil Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "gorkha",
+        "year": 2077,
+        "Program": "Civil Engineering",
+        "Student Count": 22
+    },
+    {
+        "District": "gorkha",
+        "year": 2077,
+        "Program": "Computer Engineering",
+        "Student Count": 7
+    },
+    {
+        "District": "gorkha",
+        "year": 2077,
+        "Program": "Architecture",
+        "Student Count": 4
+    },
+    {
+        "District": "gorkha",
+        "year": 2078,
+        "Program": "Civil Engineering",
+        "Student Count": 5
+    },
+    {
+        "District": "gorkha",
+        "year": 2078,
+        "Program": "Architecture",
+        "Student Count": 3
+    },
+    {
+        "District": "gorkha",
+        "year": 2078,
+        "Program": "Computer Engineering",
+        "Student Count": 3
+    },
+    {
+        "District": "gorkha",
+        "year": 2079,
+        "Program": "Civil Engineering",
+        "Student Count": 4
+    },
+    {
+        "District": "gorkha",
+        "year": 2079,
+        "Program": "Aerospace Engineering",
+        "Student Count": 3
+    },
+    {
+        "District": "gorkha",
+        "year": 2079,
+        "Program": "Chemical Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "gorkha",
+        "year": 2080,
+        "Program": "Civil Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "gorkha",
+        "year": 2080,
+        "Program": "Aerospace Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "gorkha",
+        "year": 2080,
+        "Program": "Architecture",
+        "Student Count": 1
+    },
+    {
+        "District": "gorkha",
+        "year": 2081,
+        "Program": "Chemical Engineering",
+        "Student Count": 3
+    },
+    {
+        "District": "gorkha",
+        "year": 2081,
+        "Program": "Architecture",
+        "Student Count": 2
+    },
+    {
+        "District": "gorkha",
+        "year": 2081,
+        "Program": "Aerospace Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "gulmi",
+        "year": 2077,
+        "Program": "Civil Engineering",
+        "Student Count": 8
+    },
+    {
+        "District": "gulmi",
+        "year": 2077,
+        "Program": "Computer Engineering",
+        "Student Count": 7
+    },
+    {
+        "District": "gulmi",
+        "year": 2077,
+        "Program": "Mechanical Engineering",
+        "Student Count": 7
+    },
+    {
+        "District": "gulmi",
+        "year": 2078,
+        "Program": "Civil Engineering",
+        "Student Count": 4
+    },
+    {
+        "District": "gulmi",
+        "year": 2078,
+        "Program": "Aerospace Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "gulmi",
+        "year": 2078,
+        "Program": "Architecture",
+        "Student Count": 2
+    },
+    {
+        "District": "gulmi",
+        "year": 2079,
+        "Program": "Computer Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "gulmi",
+        "year": 2079,
+        "Program": "Mechanical Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "gulmi",
+        "year": 2079,
+        "Program": "Architecture",
+        "Student Count": 1
+    },
+    {
+        "District": "gulmi",
+        "year": 2080,
+        "Program": "Architecture",
+        "Student Count": 2
+    },
+    {
+        "District": "gulmi",
+        "year": 2080,
+        "Program": "Civil Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "gulmi",
+        "year": 2080,
+        "Program": "Computer Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "gulmi",
+        "year": 2081,
+        "Program": "Architecture",
+        "Student Count": 2
+    },
+    {
+        "District": "gulmi",
+        "year": 2081,
+        "Program": "Electrical Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "humla",
+        "year": 2077,
+        "Program": "Civil Engineering",
+        "Student Count": 3
+    },
+    {
+        "District": "humla",
+        "year": 2077,
+        "Program": "Architecture",
+        "Student Count": 1
+    },
+    {
+        "District": "humla",
+        "year": 2077,
+        "Program": "Computer Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "humla",
+        "year": 2078,
+        "Program": "Aerospace Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "humla",
+        "year": 2078,
+        "Program": "Civil Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "humla",
+        "year": 2078,
+        "Program": "Mechanical Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "humla",
+        "year": 2079,
+        "Program": "Chemical Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "humla",
+        "year": 2081,
+        "Program": "Civil Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "ilam",
+        "year": 2077,
+        "Program": "Computer Engineering",
+        "Student Count": 3
+    },
+    {
+        "District": "ilam",
+        "year": 2077,
+        "Program": "Civil Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "ilam",
+        "year": 2077,
+        "Program": "Aerospace Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "ilam",
+        "year": 2078,
+        "Program": "Civil Engineering",
+        "Student Count": 4
+    },
+    {
+        "District": "ilam",
+        "year": 2078,
+        "Program": "Architecture",
+        "Student Count": 2
+    },
+    {
+        "District": "ilam",
+        "year": 2078,
+        "Program": "Computer Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "ilam",
+        "year": 2079,
+        "Program": "Civil Engineering",
+        "Student Count": 4
+    },
+    {
+        "District": "ilam",
+        "year": 2079,
+        "Program": "Architecture",
+        "Student Count": 1
+    },
+    {
+        "District": "ilam",
+        "year": 2079,
+        "Program": "Chemical Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "ilam",
+        "year": 2080,
+        "Program": "Chemical Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "ilam",
+        "year": 2081,
+        "Program": "Chemical Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "jajarkot",
+        "year": 2077,
+        "Program": "Civil Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "jajarkot",
+        "year": 2077,
+        "Program": "Aerospace Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "jajarkot",
+        "year": 2079,
+        "Program": "Electrical Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "jajarkot",
+        "year": 2081,
+        "Program": "Computer Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "jhapa",
+        "year": 2077,
+        "Program": "Computer Engineering",
+        "Student Count": 19
+    },
+    {
+        "District": "jhapa",
+        "year": 2077,
+        "Program": "Civil Engineering",
+        "Student Count": 17
+    },
+    {
+        "District": "jhapa",
+        "year": 2077,
+        "Program": "Architecture",
+        "Student Count": 10
+    },
+    {
+        "District": "jhapa",
+        "year": 2078,
+        "Program": "Architecture",
+        "Student Count": 9
+    },
+    {
+        "District": "jhapa",
+        "year": 2078,
+        "Program": "Aerospace Engineering",
+        "Student Count": 5
+    },
+    {
+        "District": "jhapa",
+        "year": 2078,
+        "Program": "Chemical Engineering",
+        "Student Count": 4
+    },
+    {
+        "District": "jhapa",
+        "year": 2079,
+        "Program": "Aerospace Engineering",
+        "Student Count": 4
+    },
+    {
+        "District": "jhapa",
+        "year": 2079,
+        "Program": "Architecture",
+        "Student Count": 4
+    },
+    {
+        "District": "jhapa",
+        "year": 2079,
+        "Program": "Computer Engineering",
+        "Student Count": 4
+    },
+    {
+        "District": "jhapa",
+        "year": 2080,
+        "Program": "Mechanical Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "jhapa",
+        "year": 2080,
+        "Program": "Aerospace Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "jhapa",
+        "year": 2080,
+        "Program": "Architecture",
+        "Student Count": 1
+    },
+    {
+        "District": "jhapa",
+        "year": 2081,
+        "Program": "Chemical Engineering",
+        "Student Count": 3
+    },
+    {
+        "District": "jhapa",
+        "year": 2081,
+        "Program": "Aerospace Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "jhapa",
+        "year": 2081,
+        "Program": "Computer Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "jumla",
+        "year": 2077,
+        "Program": "Civil Engineering",
+        "Student Count": 5
+    },
+    {
+        "District": "jumla",
+        "year": 2077,
+        "Program": "Chemical Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "jumla",
+        "year": 2078,
+        "Program": "Civil Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "jumla",
+        "year": 2079,
+        "Program": "Civil Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "jumla",
+        "year": 2080,
+        "Program": "Computer Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "jumla",
+        "year": 2081,
+        "Program": "Civil Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "kailali",
+        "year": 2077,
+        "Program": "Computer Engineering",
+        "Student Count": 11
+    },
+    {
+        "District": "kailali",
+        "year": 2077,
+        "Program": "Civil Engineering",
+        "Student Count": 7
+    },
+    {
+        "District": "kailali",
+        "year": 2077,
+        "Program": "Electronics Engineering",
+        "Student Count": 3
+    },
+    {
+        "District": "kailali",
+        "year": 2078,
+        "Program": "Architecture",
+        "Student Count": 3
+    },
+    {
+        "District": "kailali",
+        "year": 2078,
+        "Program": "Civil Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "kailali",
+        "year": 2078,
+        "Program": "Aerospace Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "kailali",
+        "year": 2079,
+        "Program": "Civil Engineering",
+        "Student Count": 4
+    },
+    {
+        "District": "kailali",
+        "year": 2079,
+        "Program": "Computer Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "kailali",
+        "year": 2079,
+        "Program": "Architecture",
+        "Student Count": 1
+    },
+    {
+        "District": "kailali",
+        "year": 2080,
+        "Program": "Aerospace Engineering",
+        "Student Count": 3
+    },
+    {
+        "District": "kailali",
+        "year": 2080,
+        "Program": "Civil Engineering",
+        "Student Count": 3
+    },
+    {
+        "District": "kailali",
+        "year": 2080,
+        "Program": "Electrical Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "kailali",
+        "year": 2081,
+        "Program": "Electrical Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "kailali",
+        "year": 2081,
+        "Program": "Aerospace Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "kailali",
+        "year": 2081,
+        "Program": "Computer Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "kalikot",
+        "year": 2077,
+        "Program": "Chemical Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "kalikot",
+        "year": 2077,
+        "Program": "Civil Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "kalikot",
+        "year": 2078,
+        "Program": "Civil Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "kalikot",
+        "year": 2078,
+        "Program": "Architecture",
+        "Student Count": 1
+    },
+    {
+        "District": "kalikot",
+        "year": 2078,
+        "Program": "Chemical Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "kalikot",
+        "year": 2079,
+        "Program": "Civil Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "kalikot",
+        "year": 2080,
+        "Program": "Civil Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "kalikot",
+        "year": 2081,
+        "Program": "Computer Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "kanchanpur",
+        "year": 2077,
+        "Program": "Civil Engineering",
+        "Student Count": 6
+    },
+    {
+        "District": "kanchanpur",
+        "year": 2077,
+        "Program": "Architecture",
+        "Student Count": 5
+    },
+    {
+        "District": "kanchanpur",
+        "year": 2077,
+        "Program": "Computer Engineering",
+        "Student Count": 5
+    },
+    {
+        "District": "kanchanpur",
+        "year": 2078,
+        "Program": "Architecture",
+        "Student Count": 4
+    },
+    {
+        "District": "kanchanpur",
+        "year": 2078,
+        "Program": "Civil Engineering",
+        "Student Count": 4
+    },
+    {
+        "District": "kanchanpur",
+        "year": 2078,
+        "Program": "Aerospace Engineering",
+        "Student Count": 3
+    },
+    {
+        "District": "kanchanpur",
+        "year": 2079,
+        "Program": "Aerospace Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "kanchanpur",
+        "year": 2079,
+        "Program": "Chemical Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "kanchanpur",
+        "year": 2079,
+        "Program": "Civil Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "kanchanpur",
+        "year": 2080,
+        "Program": "Civil Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "kanchanpur",
+        "year": 2080,
+        "Program": "Architecture",
+        "Student Count": 1
+    },
+    {
+        "District": "kanchanpur",
+        "year": 2080,
+        "Program": "Chemical Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "kanchanpur",
+        "year": 2081,
+        "Program": "Civil Engineering",
+        "Student Count": 4
+    },
+    {
+        "District": "kanchanpur",
+        "year": 2081,
+        "Program": "Electrical Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "kapilbastu",
+        "year": 2077,
+        "Program": "Civil Engineering",
+        "Student Count": 5
+    },
+    {
+        "District": "kapilbastu",
+        "year": 2077,
+        "Program": "Aerospace Engineering",
+        "Student Count": 3
+    },
+    {
+        "District": "kapilbastu",
+        "year": 2077,
+        "Program": "Architecture",
+        "Student Count": 2
+    },
+    {
+        "District": "kapilbastu",
+        "year": 2078,
+        "Program": "Civil Engineering",
+        "Student Count": 6
+    },
+    {
+        "District": "kapilbastu",
+        "year": 2078,
+        "Program": "Aerospace Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "kapilbastu",
+        "year": 2078,
+        "Program": "Chemical Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "kapilbastu",
+        "year": 2079,
+        "Program": "Civil Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "kapilbastu",
+        "year": 2080,
+        "Program": "Electrical Engineering",
+        "Student Count": 3
+    },
+    {
+        "District": "kapilbastu",
+        "year": 2080,
+        "Program": "Chemical Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "kapilbastu",
+        "year": 2080,
+        "Program": "Civil Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "kapilbastu",
+        "year": 2081,
+        "Program": "Chemical Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "kapilbastu",
+        "year": 2081,
+        "Program": "Civil Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "kaski",
+        "year": 2077,
+        "Program": "Civil Engineering",
+        "Student Count": 21
+    },
+    {
+        "District": "kaski",
+        "year": 2077,
+        "Program": "Computer Engineering",
+        "Student Count": 21
+    },
+    {
+        "District": "kaski",
+        "year": 2077,
+        "Program": "Architecture",
+        "Student Count": 8
+    },
+    {
+        "District": "kaski",
+        "year": 2078,
+        "Program": "Architecture",
+        "Student Count": 10
+    },
+    {
+        "District": "kaski",
+        "year": 2078,
+        "Program": "Civil Engineering",
+        "Student Count": 7
+    },
+    {
+        "District": "kaski",
+        "year": 2078,
+        "Program": "Computer Engineering",
+        "Student Count": 6
+    },
+    {
+        "District": "kaski",
+        "year": 2079,
+        "Program": "Architecture",
+        "Student Count": 3
+    },
+    {
+        "District": "kaski",
+        "year": 2079,
+        "Program": "Civil Engineering",
+        "Student Count": 3
+    },
+    {
+        "District": "kaski",
+        "year": 2079,
+        "Program": "Aerospace Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "kaski",
+        "year": 2080,
+        "Program": "Chemical Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "kaski",
+        "year": 2080,
+        "Program": "Architecture",
+        "Student Count": 1
+    },
+    {
+        "District": "kaski",
+        "year": 2080,
+        "Program": "Computer Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "kaski",
+        "year": 2081,
+        "Program": "Civil Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "kaski",
+        "year": 2081,
+        "Program": "Electronics Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "kaski",
+        "year": 2081,
+        "Program": "Architecture",
+        "Student Count": 1
+    },
+    {
+        "District": "kathmandu",
+        "year": 2077,
+        "Program": "Computer Engineering",
+        "Student Count": 69
+    },
+    {
+        "District": "kathmandu",
+        "year": 2077,
+        "Program": "Civil Engineering",
+        "Student Count": 64
+    },
+    {
+        "District": "kathmandu",
+        "year": 2077,
+        "Program": "Architecture",
+        "Student Count": 46
+    },
+    {
+        "District": "kathmandu",
+        "year": 2078,
+        "Program": "Architecture",
+        "Student Count": 36
+    },
+    {
+        "District": "kathmandu",
+        "year": 2078,
+        "Program": "Computer Engineering",
+        "Student Count": 27
+    },
+    {
+        "District": "kathmandu",
+        "year": 2078,
+        "Program": "Civil Engineering",
+        "Student Count": 17
+    },
+    {
+        "District": "kathmandu",
+        "year": 2079,
+        "Program": "Civil Engineering",
+        "Student Count": 16
+    },
+    {
+        "District": "kathmandu",
+        "year": 2079,
+        "Program": "Computer Engineering",
+        "Student Count": 8
+    },
+    {
+        "District": "kathmandu",
+        "year": 2079,
+        "Program": "Architecture",
+        "Student Count": 6
+    },
+    {
+        "District": "kathmandu",
+        "year": 2080,
+        "Program": "Architecture",
+        "Student Count": 17
+    },
+    {
+        "District": "kathmandu",
+        "year": 2080,
+        "Program": "Civil Engineering",
+        "Student Count": 12
+    },
+    {
+        "District": "kathmandu",
+        "year": 2080,
+        "Program": "Computer Engineering",
+        "Student Count": 11
+    },
+    {
+        "District": "kathmandu",
+        "year": 2081,
+        "Program": "Computer Engineering",
+        "Student Count": 12
+    },
+    {
+        "District": "kathmandu",
+        "year": 2081,
+        "Program": "Architecture",
+        "Student Count": 6
+    },
+    {
+        "District": "kathmandu",
+        "year": 2081,
+        "Program": "Aerospace Engineering",
+        "Student Count": 5
+    },
+    {
+        "District": "kavrepalanchok",
+        "year": 2077,
+        "Program": "Computer Engineering",
+        "Student Count": 12
+    },
+    {
+        "District": "kavrepalanchok",
+        "year": 2077,
+        "Program": "Civil Engineering",
+        "Student Count": 9
+    },
+    {
+        "District": "kavrepalanchok",
+        "year": 2077,
+        "Program": "Aerospace Engineering",
+        "Student Count": 6
+    },
+    {
+        "District": "kavrepalanchok",
+        "year": 2078,
+        "Program": "Civil Engineering",
+        "Student Count": 4
+    },
+    {
+        "District": "kavrepalanchok",
+        "year": 2078,
+        "Program": "Computer Engineering",
+        "Student Count": 4
+    },
+    {
+        "District": "kavrepalanchok",
+        "year": 2078,
+        "Program": "Architecture",
+        "Student Count": 2
+    },
+    {
+        "District": "kavrepalanchok",
+        "year": 2079,
+        "Program": "Civil Engineering",
+        "Student Count": 3
+    },
+    {
+        "District": "kavrepalanchok",
+        "year": 2079,
+        "Program": "Aerospace Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "kavrepalanchok",
+        "year": 2079,
+        "Program": "Architecture",
+        "Student Count": 2
+    },
+    {
+        "District": "kavrepalanchok",
+        "year": 2080,
+        "Program": "Architecture",
+        "Student Count": 4
+    },
+    {
+        "District": "kavrepalanchok",
+        "year": 2080,
+        "Program": "Civil Engineering",
+        "Student Count": 3
+    },
+    {
+        "District": "kavrepalanchok",
+        "year": 2080,
+        "Program": "Aerospace Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "kavrepalanchok",
+        "year": 2081,
+        "Program": "Aerospace Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "kavrepalanchok",
+        "year": 2081,
+        "Program": "Architecture",
+        "Student Count": 1
+    },
+    {
+        "District": "kavrepalanchok",
+        "year": 2081,
+        "Program": "Electrical Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "khotang",
+        "year": 2077,
+        "Program": "Architecture",
+        "Student Count": 4
+    },
+    {
+        "District": "khotang",
+        "year": 2077,
+        "Program": "Civil Engineering",
+        "Student Count": 4
+    },
+    {
+        "District": "khotang",
+        "year": 2077,
+        "Program": "Computer Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "khotang",
+        "year": 2078,
+        "Program": "Civil Engineering",
+        "Student Count": 4
+    },
+    {
+        "District": "khotang",
+        "year": 2078,
+        "Program": "Architecture",
+        "Student Count": 1
+    },
+    {
+        "District": "khotang",
+        "year": 2078,
+        "Program": "Computer Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "khotang",
+        "year": 2080,
+        "Program": "Electrical Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "khotang",
+        "year": 2080,
+        "Program": "Civil Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "khotang",
+        "year": 2081,
+        "Program": "Architecture",
+        "Student Count": 1
+    },
+    {
+        "District": "khotang",
+        "year": 2081,
+        "Program": "Mechanical Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "lalitpur",
+        "year": 2077,
+        "Program": "Computer Engineering",
+        "Student Count": 28
+    },
+    {
+        "District": "lalitpur",
+        "year": 2077,
+        "Program": "Architecture",
+        "Student Count": 22
+    },
+    {
+        "District": "lalitpur",
+        "year": 2077,
+        "Program": "Civil Engineering",
+        "Student Count": 15
+    },
+    {
+        "District": "lalitpur",
+        "year": 2078,
+        "Program": "Architecture",
+        "Student Count": 17
+    },
+    {
+        "District": "lalitpur",
+        "year": 2078,
+        "Program": "Computer Engineering",
+        "Student Count": 13
+    },
+    {
+        "District": "lalitpur",
+        "year": 2078,
+        "Program": "Civil Engineering",
+        "Student Count": 9
+    },
+    {
+        "District": "lalitpur",
+        "year": 2079,
+        "Program": "Aerospace Engineering",
+        "Student Count": 6
+    },
+    {
+        "District": "lalitpur",
+        "year": 2079,
+        "Program": "Architecture",
+        "Student Count": 5
+    },
+    {
+        "District": "lalitpur",
+        "year": 2079,
+        "Program": "Computer Engineering",
+        "Student Count": 5
+    },
+    {
+        "District": "lalitpur",
+        "year": 2080,
+        "Program": "Architecture",
+        "Student Count": 8
+    },
+    {
+        "District": "lalitpur",
+        "year": 2080,
+        "Program": "Civil Engineering",
+        "Student Count": 5
+    },
+    {
+        "District": "lalitpur",
+        "year": 2080,
+        "Program": "Computer Engineering",
+        "Student Count": 4
+    },
+    {
+        "District": "lalitpur",
+        "year": 2081,
+        "Program": "Architecture",
+        "Student Count": 9
+    },
+    {
+        "District": "lalitpur",
+        "year": 2081,
+        "Program": "Civil Engineering",
+        "Student Count": 3
+    },
+    {
+        "District": "lalitpur",
+        "year": 2081,
+        "Program": "Computer Engineering",
+        "Student Count": 3
+    },
+    {
+        "District": "lamjung",
+        "year": 2077,
+        "Program": "Civil Engineering",
+        "Student Count": 10
+    },
+    {
+        "District": "lamjung",
+        "year": 2077,
+        "Program": "Computer Engineering",
+        "Student Count": 6
+    },
+    {
+        "District": "lamjung",
+        "year": 2077,
+        "Program": "Architecture",
+        "Student Count": 3
+    },
+    {
+        "District": "lamjung",
+        "year": 2078,
+        "Program": "Civil Engineering",
+        "Student Count": 3
+    },
+    {
+        "District": "lamjung",
+        "year": 2078,
+        "Program": "Computer Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "lamjung",
+        "year": 2078,
+        "Program": "Aerospace Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "lamjung",
+        "year": 2079,
+        "Program": "Architecture",
+        "Student Count": 2
+    },
+    {
+        "District": "lamjung",
+        "year": 2079,
+        "Program": "Aerospace Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "lamjung",
+        "year": 2079,
+        "Program": "Civil Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "lamjung",
+        "year": 2080,
+        "Program": "Chemical Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "lamjung",
+        "year": 2080,
+        "Program": "Computer Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "lamjung",
+        "year": 2080,
+        "Program": "Electrical Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "lamjung",
+        "year": 2081,
+        "Program": "Electrical Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "lamjung",
+        "year": 2081,
+        "Program": "Aerospace Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "lamjung",
+        "year": 2081,
+        "Program": "Civil Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "mahottari",
+        "year": 2077,
+        "Program": "Civil Engineering",
+        "Student Count": 19
+    },
+    {
+        "District": "mahottari",
+        "year": 2077,
+        "Program": "Electrical Engineering",
+        "Student Count": 9
+    },
+    {
+        "District": "mahottari",
+        "year": 2077,
+        "Program": "Architecture",
+        "Student Count": 6
+    },
+    {
+        "District": "mahottari",
+        "year": 2078,
+        "Program": "Civil Engineering",
+        "Student Count": 11
+    },
+    {
+        "District": "mahottari",
+        "year": 2078,
+        "Program": "Aerospace Engineering",
+        "Student Count": 6
+    },
+    {
+        "District": "mahottari",
+        "year": 2078,
+        "Program": "Architecture",
+        "Student Count": 4
+    },
+    {
+        "District": "mahottari",
+        "year": 2079,
+        "Program": "Civil Engineering",
+        "Student Count": 13
+    },
+    {
+        "District": "mahottari",
+        "year": 2079,
+        "Program": "Electrical Engineering",
+        "Student Count": 6
+    },
+    {
+        "District": "mahottari",
+        "year": 2079,
+        "Program": "Computer Engineering",
+        "Student Count": 4
+    },
+    {
+        "District": "mahottari",
+        "year": 2080,
+        "Program": "Civil Engineering",
+        "Student Count": 7
+    },
+    {
+        "District": "mahottari",
+        "year": 2080,
+        "Program": "Computer Engineering",
+        "Student Count": 5
+    },
+    {
+        "District": "mahottari",
+        "year": 2080,
+        "Program": "Aerospace Engineering",
+        "Student Count": 4
+    },
+    {
+        "District": "mahottari",
+        "year": 2081,
+        "Program": "Civil Engineering",
+        "Student Count": 3
+    },
+    {
+        "District": "mahottari",
+        "year": 2081,
+        "Program": "Electrical Engineering",
+        "Student Count": 3
+    },
+    {
+        "District": "mahottari",
+        "year": 2081,
+        "Program": "Aerospace Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "makawanpur",
+        "year": 2077,
+        "Program": "Architecture",
+        "Student Count": 8
+    },
+    {
+        "District": "makawanpur",
+        "year": 2077,
+        "Program": "Computer Engineering",
+        "Student Count": 8
+    },
+    {
+        "District": "makawanpur",
+        "year": 2077,
+        "Program": "Chemical Engineering",
+        "Student Count": 7
+    },
+    {
+        "District": "makawanpur",
+        "year": 2078,
+        "Program": "Mechanical Engineering",
+        "Student Count": 5
+    },
+    {
+        "District": "makawanpur",
+        "year": 2078,
+        "Program": "Architecture",
+        "Student Count": 4
+    },
+    {
+        "District": "makawanpur",
+        "year": 2078,
+        "Program": "Computer Engineering",
+        "Student Count": 3
+    },
+    {
+        "District": "makawanpur",
+        "year": 2079,
+        "Program": "Civil Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "makawanpur",
+        "year": 2079,
+        "Program": "Computer Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "makawanpur",
+        "year": 2079,
+        "Program": "Aerospace Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "makawanpur",
+        "year": 2080,
+        "Program": "Electronics Engineering",
+        "Student Count": 3
+    },
+    {
+        "District": "makawanpur",
+        "year": 2080,
+        "Program": "Mechanical Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "makawanpur",
+        "year": 2080,
+        "Program": "Aerospace Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "morang",
+        "year": 2077,
+        "Program": "Civil Engineering",
+        "Student Count": 16
+    },
+    {
+        "District": "morang",
+        "year": 2077,
+        "Program": "Chemical Engineering",
+        "Student Count": 8
+    },
+    {
+        "District": "morang",
+        "year": 2077,
+        "Program": "Computer Engineering",
+        "Student Count": 8
+    },
+    {
+        "District": "morang",
+        "year": 2078,
+        "Program": "Civil Engineering",
+        "Student Count": 8
+    },
+    {
+        "District": "morang",
+        "year": 2078,
+        "Program": "Aerospace Engineering",
+        "Student Count": 7
+    },
+    {
+        "District": "morang",
+        "year": 2078,
+        "Program": "Electrical Engineering",
+        "Student Count": 6
+    },
+    {
+        "District": "morang",
+        "year": 2079,
+        "Program": "Civil Engineering",
+        "Student Count": 5
+    },
+    {
+        "District": "morang",
+        "year": 2079,
+        "Program": "Chemical Engineering",
+        "Student Count": 4
+    },
+    {
+        "District": "morang",
+        "year": 2079,
+        "Program": "Aerospace Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "morang",
+        "year": 2080,
+        "Program": "Chemical Engineering",
+        "Student Count": 4
+    },
+    {
+        "District": "morang",
+        "year": 2080,
+        "Program": "Aerospace Engineering",
+        "Student Count": 3
+    },
+    {
+        "District": "morang",
+        "year": 2080,
+        "Program": "Computer Engineering",
+        "Student Count": 3
+    },
+    {
+        "District": "morang",
+        "year": 2081,
+        "Program": "Civil Engineering",
+        "Student Count": 5
+    },
+    {
+        "District": "morang",
+        "year": 2081,
+        "Program": "Aerospace Engineering",
+        "Student Count": 3
+    },
+    {
+        "District": "morang",
+        "year": 2081,
+        "Program": "Computer Engineering",
+        "Student Count": 3
+    },
+    {
+        "District": "mugu",
+        "year": 2077,
+        "Program": "Civil Engineering",
+        "Student Count": 3
+    },
+    {
+        "District": "mugu",
+        "year": 2078,
+        "Program": "Computer Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "mugu",
+        "year": 2079,
+        "Program": "Civil Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "mugu",
+        "year": 2080,
+        "Program": "Civil Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "mugu",
+        "year": 2081,
+        "Program": "Civil Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "mustang",
+        "year": 2077,
+        "Program": "Computer Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "mustang",
+        "year": 2077,
+        "Program": "Mechanical Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "myagdi",
+        "year": 2077,
+        "Program": "Civil Engineering",
+        "Student Count": 4
+    },
+    {
+        "District": "myagdi",
+        "year": 2077,
+        "Program": "Computer Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "myagdi",
+        "year": 2077,
+        "Program": "Mechanical Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "myagdi",
+        "year": 2078,
+        "Program": "Architecture",
+        "Student Count": 2
+    },
+    {
+        "District": "myagdi",
+        "year": 2078,
+        "Program": "Civil Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "myagdi",
+        "year": 2078,
+        "Program": "Computer Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "myagdi",
+        "year": 2079,
+        "Program": "Chemical Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "myagdi",
+        "year": 2080,
+        "Program": "Aerospace Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "myagdi",
+        "year": 2080,
+        "Program": "Chemical Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "myagdi",
+        "year": 2081,
+        "Program": "Computer Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "nawalparasi",
+        "year": 2077,
+        "Program": "Civil Engineering",
+        "Student Count": 16
+    },
+    {
+        "District": "nawalparasi",
+        "year": 2077,
+        "Program": "Architecture",
+        "Student Count": 6
+    },
+    {
+        "District": "nawalparasi",
+        "year": 2077,
+        "Program": "Computer Engineering",
+        "Student Count": 4
+    },
+    {
+        "District": "nawalparasi",
+        "year": 2078,
+        "Program": "Civil Engineering",
+        "Student Count": 5
+    },
+    {
+        "District": "nawalparasi",
+        "year": 2078,
+        "Program": "Chemical Engineering",
+        "Student Count": 4
+    },
+    {
+        "District": "nawalparasi",
+        "year": 2078,
+        "Program": "Computer Engineering",
+        "Student Count": 3
+    },
+    {
+        "District": "nawalparasi",
+        "year": 2079,
+        "Program": "Civil Engineering",
+        "Student Count": 4
+    },
+    {
+        "District": "nawalparasi",
+        "year": 2079,
+        "Program": "Aerospace Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "nawalparasi",
+        "year": 2079,
+        "Program": "Architecture",
+        "Student Count": 1
+    },
+    {
+        "District": "nawalparasi",
+        "year": 2080,
+        "Program": "Mechanical Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "nawalparasi",
+        "year": 2080,
+        "Program": "Aerospace Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "nawalparasi",
+        "year": 2080,
+        "Program": "Architecture",
+        "Student Count": 1
+    },
+    {
+        "District": "nawalparasi",
+        "year": 2081,
+        "Program": "Aerospace Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "nawalparasi",
+        "year": 2081,
+        "Program": "Chemical Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "nawalparasi",
+        "year": 2081,
+        "Program": "Electronics Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "nawalparasi",
+        "year": 2079,
+        "Program": "Chemical Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "nawalparasi",
+        "year": 2080,
+        "Program": "Chemical Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "nawalparasi",
+        "year": 2080,
+        "Program": "Electrical Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "nuwakot",
+        "year": 2077,
+        "Program": "Computer Engineering",
+        "Student Count": 6
+    },
+    {
+        "District": "nuwakot",
+        "year": 2077,
+        "Program": "Chemical Engineering",
+        "Student Count": 4
+    },
+    {
+        "District": "nuwakot",
+        "year": 2077,
+        "Program": "Civil Engineering",
+        "Student Count": 4
+    },
+    {
+        "District": "nuwakot",
+        "year": 2078,
+        "Program": "Aerospace Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "nuwakot",
+        "year": 2078,
+        "Program": "Architecture",
+        "Student Count": 2
+    },
+    {
+        "District": "nuwakot",
+        "year": 2078,
+        "Program": "Civil Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "nuwakot",
+        "year": 2079,
+        "Program": "Civil Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "nuwakot",
+        "year": 2079,
+        "Program": "Computer Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "nuwakot",
+        "year": 2079,
+        "Program": "Electrical Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "nuwakot",
+        "year": 2080,
+        "Program": "Chemical Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "nuwakot",
+        "year": 2080,
+        "Program": "Civil Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "nuwakot",
+        "year": 2080,
+        "Program": "Electrical Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "nuwakot",
+        "year": 2081,
+        "Program": "Civil Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "nuwakot",
+        "year": 2081,
+        "Program": "Architecture",
+        "Student Count": 1
+    },
+    {
+        "District": "nuwakot",
+        "year": 2081,
+        "Program": "Chemical Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "okhaldhunga",
+        "year": 2077,
+        "Program": "Architecture",
+        "Student Count": 2
+    },
+    {
+        "District": "okhaldhunga",
+        "year": 2077,
+        "Program": "Civil Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "okhaldhunga",
+        "year": 2077,
+        "Program": "Computer Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "okhaldhunga",
+        "year": 2078,
+        "Program": "Mechanical Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "okhaldhunga",
+        "year": 2079,
+        "Program": "Civil Engineering",
+        "Student Count": 4
+    },
+    {
+        "District": "okhaldhunga",
+        "year": 2079,
+        "Program": "Electronics Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "okhaldhunga",
+        "year": 2079,
+        "Program": "Aerospace Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "okhaldhunga",
+        "year": 2080,
+        "Program": "Civil Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "okhaldhunga",
+        "year": 2080,
+        "Program": "Architecture",
+        "Student Count": 1
+    },
+    {
+        "District": "okhaldhunga",
+        "year": 2080,
+        "Program": "Electrical Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "okhaldhunga",
+        "year": 2081,
+        "Program": "Architecture",
+        "Student Count": 1
+    },
+    {
+        "District": "okhaldhunga",
+        "year": 2081,
+        "Program": "Electrical Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "palpa",
+        "year": 2077,
+        "Program": "Civil Engineering",
+        "Student Count": 11
+    },
+    {
+        "District": "palpa",
+        "year": 2077,
+        "Program": "Computer Engineering",
+        "Student Count": 5
+    },
+    {
+        "District": "palpa",
+        "year": 2077,
+        "Program": "Electrical Engineering",
+        "Student Count": 4
+    },
+    {
+        "District": "palpa",
+        "year": 2078,
+        "Program": "Architecture",
+        "Student Count": 4
+    },
+    {
+        "District": "palpa",
+        "year": 2078,
+        "Program": "Civil Engineering",
+        "Student Count": 4
+    },
+    {
+        "District": "palpa",
+        "year": 2078,
+        "Program": "Aerospace Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "palpa",
+        "year": 2079,
+        "Program": "Civil Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "palpa",
+        "year": 2079,
+        "Program": "Aerospace Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "palpa",
+        "year": 2079,
+        "Program": "Architecture",
+        "Student Count": 1
+    },
+    {
+        "District": "palpa",
+        "year": 2080,
+        "Program": "Electrical Engineering",
+        "Student Count": 3
+    },
+    {
+        "District": "palpa",
+        "year": 2080,
+        "Program": "Computer Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "palpa",
+        "year": 2080,
+        "Program": "Mechanical Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "palpa",
+        "year": 2081,
+        "Program": "Mechanical Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "palpa",
+        "year": 2081,
+        "Program": "Architecture",
+        "Student Count": 1
+    },
+    {
+        "District": "palpa",
+        "year": 2081,
+        "Program": "Civil Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "panchthar",
+        "year": 2077,
+        "Program": "Computer Engineering",
+        "Student Count": 3
+    },
+    {
+        "District": "panchthar",
+        "year": 2077,
+        "Program": "Chemical Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "panchthar",
+        "year": 2077,
+        "Program": "Architecture",
+        "Student Count": 1
+    },
+    {
+        "District": "panchthar",
+        "year": 2078,
+        "Program": "Architecture",
+        "Student Count": 2
+    },
+    {
+        "District": "panchthar",
+        "year": 2078,
+        "Program": "Civil Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "panchthar",
+        "year": 2078,
+        "Program": "Electrical Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "panchthar",
+        "year": 2079,
+        "Program": "Aerospace Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "panchthar",
+        "year": 2079,
+        "Program": "Mechanical Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "panchthar",
+        "year": 2080,
+        "Program": "Civil Engineering",
+        "Student Count": 3
+    },
+    {
+        "District": "panchthar",
+        "year": 2080,
+        "Program": "Architecture",
+        "Student Count": 1
+    },
+    {
+        "District": "parbat",
+        "year": 2077,
+        "Program": "Civil Engineering",
+        "Student Count": 7
+    },
+    {
+        "District": "parbat",
+        "year": 2077,
+        "Program": "Chemical Engineering",
+        "Student Count": 5
+    },
+    {
+        "District": "parbat",
+        "year": 2077,
+        "Program": "Mechanical Engineering",
+        "Student Count": 5
+    },
+    {
+        "District": "parbat",
+        "year": 2078,
+        "Program": "Aerospace Engineering",
+        "Student Count": 3
+    },
+    {
+        "District": "parbat",
+        "year": 2078,
+        "Program": "Civil Engineering",
+        "Student Count": 3
+    },
+    {
+        "District": "parbat",
+        "year": 2078,
+        "Program": "Computer Engineering",
+        "Student Count": 3
+    },
+    {
+        "District": "parbat",
+        "year": 2079,
+        "Program": "Civil Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "parbat",
+        "year": 2079,
+        "Program": "Aerospace Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "parbat",
+        "year": 2079,
+        "Program": "Chemical Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "parbat",
+        "year": 2080,
+        "Program": "Civil Engineering",
+        "Student Count": 3
+    },
+    {
+        "District": "parbat",
+        "year": 2080,
+        "Program": "Aerospace Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "parbat",
+        "year": 2080,
+        "Program": "Architecture",
+        "Student Count": 1
+    },
+    {
+        "District": "parbat",
+        "year": 2081,
+        "Program": "Civil Engineering",
+        "Student Count": 3
+    },
+    {
+        "District": "parbat",
+        "year": 2081,
+        "Program": "Electronics Engineering",
+        "Student Count": 3
+    },
+    {
+        "District": "parbat",
+        "year": 2081,
+        "Program": "Architecture",
+        "Student Count": 2
+    },
+    {
+        "District": "parsa",
+        "year": 2077,
+        "Program": "Civil Engineering",
+        "Student Count": 6
+    },
+    {
+        "District": "parsa",
+        "year": 2077,
+        "Program": "Architecture",
+        "Student Count": 3
+    },
+    {
+        "District": "parsa",
+        "year": 2077,
+        "Program": "Computer Engineering",
+        "Student Count": 3
+    },
+    {
+        "District": "parsa",
+        "year": 2078,
+        "Program": "Computer Engineering",
+        "Student Count": 4
+    },
+    {
+        "District": "parsa",
+        "year": 2078,
+        "Program": "Chemical Engineering",
+        "Student Count": 3
+    },
+    {
+        "District": "parsa",
+        "year": 2078,
+        "Program": "Electronics Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "parsa",
+        "year": 2079,
+        "Program": "Electronics Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "parsa",
+        "year": 2079,
+        "Program": "Aerospace Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "parsa",
+        "year": 2079,
+        "Program": "Chemical Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "parsa",
+        "year": 2080,
+        "Program": "Chemical Engineering",
+        "Student Count": 3
+    },
+    {
+        "District": "parsa",
+        "year": 2080,
+        "Program": "Civil Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "parsa",
+        "year": 2080,
+        "Program": "Electrical Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "parsa",
+        "year": 2081,
+        "Program": "Computer Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "parsa",
+        "year": 2081,
+        "Program": "Aerospace Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "parsa",
+        "year": 2081,
+        "Program": "Architecture",
+        "Student Count": 1
+    },
+    {
+        "District": "pyuthan",
+        "year": 2077,
+        "Program": "Civil Engineering",
+        "Student Count": 4
+    },
+    {
+        "District": "pyuthan",
+        "year": 2077,
+        "Program": "Architecture",
+        "Student Count": 2
+    },
+    {
+        "District": "pyuthan",
+        "year": 2077,
+        "Program": "Computer Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "pyuthan",
+        "year": 2078,
+        "Program": "Aerospace Engineering",
+        "Student Count": 3
+    },
+    {
+        "District": "pyuthan",
+        "year": 2078,
+        "Program": "Chemical Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "pyuthan",
+        "year": 2078,
+        "Program": "Civil Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "pyuthan",
+        "year": 2079,
+        "Program": "Computer Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "pyuthan",
+        "year": 2079,
+        "Program": "Mechanical Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "pyuthan",
+        "year": 2080,
+        "Program": "Civil Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "pyuthan",
+        "year": 2080,
+        "Program": "Chemical Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "pyuthan",
+        "year": 2080,
+        "Program": "Electrical Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "pyuthan",
+        "year": 2081,
+        "Program": "Architecture",
+        "Student Count": 2
+    },
+    {
+        "District": "ramechhap",
+        "year": 2077,
+        "Program": "Civil Engineering",
+        "Student Count": 7
+    },
+    {
+        "District": "ramechhap",
+        "year": 2077,
+        "Program": "Aerospace Engineering",
+        "Student Count": 3
+    },
+    {
+        "District": "ramechhap",
+        "year": 2077,
+        "Program": "Architecture",
+        "Student Count": 3
+    },
+    {
+        "District": "ramechhap",
+        "year": 2078,
+        "Program": "Architecture",
+        "Student Count": 5
+    },
+    {
+        "District": "ramechhap",
+        "year": 2078,
+        "Program": "Chemical Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "ramechhap",
+        "year": 2078,
+        "Program": "Computer Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "ramechhap",
+        "year": 2079,
+        "Program": "Architecture",
+        "Student Count": 1
+    },
+    {
+        "District": "ramechhap",
+        "year": 2080,
+        "Program": "Civil Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "ramechhap",
+        "year": 2080,
+        "Program": "Architecture",
+        "Student Count": 1
+    },
+    {
+        "District": "ramechhap",
+        "year": 2080,
+        "Program": "Chemical Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "ramechhap",
+        "year": 2081,
+        "Program": "Chemical Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "ramechhap",
+        "year": 2081,
+        "Program": "Civil Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "rasuwa",
+        "year": 2077,
+        "Program": "Civil Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "rasuwa",
+        "year": 2077,
+        "Program": "Aerospace Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "rasuwa",
+        "year": 2077,
+        "Program": "Computer Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "rasuwa",
+        "year": 2078,
+        "Program": "Architecture",
+        "Student Count": 1
+    },
+    {
+        "District": "rasuwa",
+        "year": 2079,
+        "Program": "Electrical Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "rautahat",
+        "year": 2077,
+        "Program": "Civil Engineering",
+        "Student Count": 15
+    },
+    {
+        "District": "rautahat",
+        "year": 2077,
+        "Program": "Aerospace Engineering",
+        "Student Count": 5
+    },
+    {
+        "District": "rautahat",
+        "year": 2077,
+        "Program": "Computer Engineering",
+        "Student Count": 5
+    },
+    {
+        "District": "rautahat",
+        "year": 2078,
+        "Program": "Civil Engineering",
+        "Student Count": 5
+    },
+    {
+        "District": "rautahat",
+        "year": 2078,
+        "Program": "Computer Engineering",
+        "Student Count": 5
+    },
+    {
+        "District": "rautahat",
+        "year": 2078,
+        "Program": "Aerospace Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "rautahat",
+        "year": 2079,
+        "Program": "Civil Engineering",
+        "Student Count": 5
+    },
+    {
+        "District": "rautahat",
+        "year": 2079,
+        "Program": "Electrical Engineering",
+        "Student Count": 3
+    },
+    {
+        "District": "rautahat",
+        "year": 2079,
+        "Program": "Aerospace Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "rautahat",
+        "year": 2080,
+        "Program": "Civil Engineering",
+        "Student Count": 6
+    },
+    {
+        "District": "rautahat",
+        "year": 2080,
+        "Program": "Electrical Engineering",
+        "Student Count": 5
+    },
+    {
+        "District": "rautahat",
+        "year": 2080,
+        "Program": "Computer Engineering",
+        "Student Count": 3
+    },
+    {
+        "District": "rautahat",
+        "year": 2081,
+        "Program": "Civil Engineering",
+        "Student Count": 3
+    },
+    {
+        "District": "rautahat",
+        "year": 2081,
+        "Program": "Aerospace Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "rautahat",
+        "year": 2081,
+        "Program": "Computer Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "rolpa",
+        "year": 2077,
+        "Program": "Aerospace Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "rolpa",
+        "year": 2078,
+        "Program": "Civil Engineering",
+        "Student Count": 3
+    },
+    {
+        "District": "rolpa",
+        "year": 2079,
+        "Program": "Civil Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "rolpa",
+        "year": 2079,
+        "Program": "Computer Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "rolpa",
+        "year": 2080,
+        "Program": "Civil Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "rolpa",
+        "year": 2080,
+        "Program": "Chemical Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "rolpa",
+        "year": 2080,
+        "Program": "Electrical Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "rukum",
+        "year": 2077,
+        "Program": "Civil Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "rukum",
+        "year": 2077,
+        "Program": "Computer Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "rukum",
+        "year": 2079,
+        "Program": "Aerospace Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "rukum",
+        "year": 2079,
+        "Program": "Civil Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "rukum",
+        "year": 2080,
+        "Program": "Civil Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "rukum",
+        "year": 2080,
+        "Program": "Computer Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "rupandehi",
+        "year": 2077,
+        "Program": "Civil Engineering",
+        "Student Count": 19
+    },
+    {
+        "District": "rupandehi",
+        "year": 2077,
+        "Program": "Computer Engineering",
+        "Student Count": 13
+    },
+    {
+        "District": "rupandehi",
+        "year": 2077,
+        "Program": "Architecture",
+        "Student Count": 11
+    },
+    {
+        "District": "rupandehi",
+        "year": 2078,
+        "Program": "Computer Engineering",
+        "Student Count": 7
+    },
+    {
+        "District": "rupandehi",
+        "year": 2078,
+        "Program": "Architecture",
+        "Student Count": 5
+    },
+    {
+        "District": "rupandehi",
+        "year": 2078,
+        "Program": "Civil Engineering",
+        "Student Count": 4
+    },
+    {
+        "District": "rupandehi",
+        "year": 2079,
+        "Program": "Aerospace Engineering",
+        "Student Count": 4
+    },
+    {
+        "District": "rupandehi",
+        "year": 2079,
+        "Program": "Civil Engineering",
+        "Student Count": 3
+    },
+    {
+        "District": "rupandehi",
+        "year": 2079,
+        "Program": "Computer Engineering",
+        "Student Count": 3
+    },
+    {
+        "District": "rupandehi",
+        "year": 2080,
+        "Program": "Computer Engineering",
+        "Student Count": 4
+    },
+    {
+        "District": "rupandehi",
+        "year": 2080,
+        "Program": "Chemical Engineering",
+        "Student Count": 3
+    },
+    {
+        "District": "rupandehi",
+        "year": 2080,
+        "Program": "Aerospace Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "rupandehi",
+        "year": 2081,
+        "Program": "Civil Engineering",
+        "Student Count": 3
+    },
+    {
+        "District": "rupandehi",
+        "year": 2081,
+        "Program": "Computer Engineering",
+        "Student Count": 3
+    },
+    {
+        "District": "rupandehi",
+        "year": 2081,
+        "Program": "Electrical Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "salyan",
+        "year": 2077,
+        "Program": "Civil Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "salyan",
+        "year": 2077,
+        "Program": "Computer Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "salyan",
+        "year": 2078,
+        "Program": "Architecture",
+        "Student Count": 1
+    },
+    {
+        "District": "salyan",
+        "year": 2078,
+        "Program": "Civil Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "salyan",
+        "year": 2079,
+        "Program": "Civil Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "salyan",
+        "year": 2080,
+        "Program": "Civil Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "salyan",
+        "year": 2080,
+        "Program": "Computer Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "sankhuwasabha",
+        "year": 2077,
+        "Program": "Chemical Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "sankhuwasabha",
+        "year": 2077,
+        "Program": "Aerospace Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "sankhuwasabha",
+        "year": 2077,
+        "Program": "Civil Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "sankhuwasabha",
+        "year": 2078,
+        "Program": "Computer Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "sankhuwasabha",
+        "year": 2078,
+        "Program": "Chemical Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "sankhuwasabha",
+        "year": 2078,
+        "Program": "Civil Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "sankhuwasabha",
+        "year": 2079,
+        "Program": "Computer Engineering",
+        "Student Count": 3
+    },
+    {
+        "District": "sankhuwasabha",
+        "year": 2079,
+        "Program": "Mechanical Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "sankhuwasabha",
+        "year": 2080,
+        "Program": "Civil Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "saptari",
+        "year": 2077,
+        "Program": "Civil Engineering",
+        "Student Count": 19
+    },
+    {
+        "District": "saptari",
+        "year": 2077,
+        "Program": "Architecture",
+        "Student Count": 8
+    },
+    {
+        "District": "saptari",
+        "year": 2077,
+        "Program": "Computer Engineering",
+        "Student Count": 8
+    },
+    {
+        "District": "saptari",
+        "year": 2078,
+        "Program": "Civil Engineering",
+        "Student Count": 13
+    },
+    {
+        "District": "saptari",
+        "year": 2078,
+        "Program": "Aerospace Engineering",
+        "Student Count": 5
+    },
+    {
+        "District": "saptari",
+        "year": 2078,
+        "Program": "Electrical Engineering",
+        "Student Count": 5
+    },
+    {
+        "District": "saptari",
+        "year": 2079,
+        "Program": "Civil Engineering",
+        "Student Count": 14
+    },
+    {
+        "District": "saptari",
+        "year": 2079,
+        "Program": "Electrical Engineering",
+        "Student Count": 4
+    },
+    {
+        "District": "saptari",
+        "year": 2079,
+        "Program": "Aerospace Engineering",
+        "Student Count": 3
+    },
+    {
+        "District": "saptari",
+        "year": 2080,
+        "Program": "Civil Engineering",
+        "Student Count": 10
+    },
+    {
+        "District": "saptari",
+        "year": 2080,
+        "Program": "Electrical Engineering",
+        "Student Count": 5
+    },
+    {
+        "District": "saptari",
+        "year": 2080,
+        "Program": "Chemical Engineering",
+        "Student Count": 4
+    },
+    {
+        "District": "saptari",
+        "year": 2081,
+        "Program": "Civil Engineering",
+        "Student Count": 6
+    },
+    {
+        "District": "saptari",
+        "year": 2081,
+        "Program": "Aerospace Engineering",
+        "Student Count": 5
+    },
+    {
+        "District": "saptari",
+        "year": 2081,
+        "Program": "Computer Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "sarlahi",
+        "year": 2077,
+        "Program": "Civil Engineering",
+        "Student Count": 16
+    },
+    {
+        "District": "sarlahi",
+        "year": 2077,
+        "Program": "Computer Engineering",
+        "Student Count": 10
+    },
+    {
+        "District": "sarlahi",
+        "year": 2077,
+        "Program": "Aerospace Engineering",
+        "Student Count": 6
+    },
+    {
+        "District": "sarlahi",
+        "year": 2078,
+        "Program": "Civil Engineering",
+        "Student Count": 14
+    },
+    {
+        "District": "sarlahi",
+        "year": 2078,
+        "Program": "Computer Engineering",
+        "Student Count": 6
+    },
+    {
+        "District": "sarlahi",
+        "year": 2078,
+        "Program": "Architecture",
+        "Student Count": 3
+    },
+    {
+        "District": "sarlahi",
+        "year": 2079,
+        "Program": "Civil Engineering",
+        "Student Count": 7
+    },
+    {
+        "District": "sarlahi",
+        "year": 2079,
+        "Program": "Electrical Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "sarlahi",
+        "year": 2079,
+        "Program": "Aerospace Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "sarlahi",
+        "year": 2080,
+        "Program": "Civil Engineering",
+        "Student Count": 11
+    },
+    {
+        "District": "sarlahi",
+        "year": 2080,
+        "Program": "Electrical Engineering",
+        "Student Count": 4
+    },
+    {
+        "District": "sarlahi",
+        "year": 2080,
+        "Program": "Aerospace Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "sarlahi",
+        "year": 2081,
+        "Program": "Civil Engineering",
+        "Student Count": 8
+    },
+    {
+        "District": "sarlahi",
+        "year": 2081,
+        "Program": "Chemical Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "sarlahi",
+        "year": 2081,
+        "Program": "Computer Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "sindhuli",
+        "year": 2077,
+        "Program": "Civil Engineering",
+        "Student Count": 4
+    },
+    {
+        "District": "sindhuli",
+        "year": 2077,
+        "Program": "Computer Engineering",
+        "Student Count": 3
+    },
+    {
+        "District": "sindhuli",
+        "year": 2077,
+        "Program": "Aerospace Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "sindhuli",
+        "year": 2078,
+        "Program": "Civil Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "sindhuli",
+        "year": 2078,
+        "Program": "Computer Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "sindhuli",
+        "year": 2078,
+        "Program": "Electrical Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "sindhuli",
+        "year": 2079,
+        "Program": "Civil Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "sindhuli",
+        "year": 2079,
+        "Program": "Aerospace Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "sindhuli",
+        "year": 2079,
+        "Program": "Chemical Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "sindhuli",
+        "year": 2080,
+        "Program": "Civil Engineering",
+        "Student Count": 3
+    },
+    {
+        "District": "sindhuli",
+        "year": 2080,
+        "Program": "Architecture",
+        "Student Count": 1
+    },
+    {
+        "District": "sindhuli",
+        "year": 2080,
+        "Program": "Mechanical Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "sindhuli",
+        "year": 2081,
+        "Program": "Civil Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "sindhuli",
+        "year": 2081,
+        "Program": "Electrical Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "sindhupalchok",
+        "year": 2077,
+        "Program": "Civil Engineering",
+        "Student Count": 7
+    },
+    {
+        "District": "sindhupalchok",
+        "year": 2077,
+        "Program": "Computer Engineering",
+        "Student Count": 5
+    },
+    {
+        "District": "sindhupalchok",
+        "year": 2077,
+        "Program": "Aerospace Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "sindhupalchok",
+        "year": 2078,
+        "Program": "Civil Engineering",
+        "Student Count": 6
+    },
+    {
+        "District": "sindhupalchok",
+        "year": 2078,
+        "Program": "Aerospace Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "sindhupalchok",
+        "year": 2078,
+        "Program": "Architecture",
+        "Student Count": 2
+    },
+    {
+        "District": "sindhupalchok",
+        "year": 2079,
+        "Program": "Aerospace Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "sindhupalchok",
+        "year": 2079,
+        "Program": "Civil Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "sindhupalchok",
+        "year": 2079,
+        "Program": "Chemical Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "sindhupalchok",
+        "year": 2080,
+        "Program": "Architecture",
+        "Student Count": 1
+    },
+    {
+        "District": "sindhupalchok",
+        "year": 2080,
+        "Program": "Computer Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "sindhupalchok",
+        "year": 2081,
+        "Program": "Chemical Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "sindhupalchok",
+        "year": 2081,
+        "Program": "Civil Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "sindhupalchok",
+        "year": 2081,
+        "Program": "Computer Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "siraha",
+        "year": 2077,
+        "Program": "Civil Engineering",
+        "Student Count": 15
+    },
+    {
+        "District": "siraha",
+        "year": 2077,
+        "Program": "Computer Engineering",
+        "Student Count": 7
+    },
+    {
+        "District": "siraha",
+        "year": 2077,
+        "Program": "Chemical Engineering",
+        "Student Count": 4
+    },
+    {
+        "District": "siraha",
+        "year": 2078,
+        "Program": "Civil Engineering",
+        "Student Count": 8
+    },
+    {
+        "District": "siraha",
+        "year": 2078,
+        "Program": "Computer Engineering",
+        "Student Count": 5
+    },
+    {
+        "District": "siraha",
+        "year": 2078,
+        "Program": "Aerospace Engineering",
+        "Student Count": 3
+    },
+    {
+        "District": "siraha",
+        "year": 2079,
+        "Program": "Civil Engineering",
+        "Student Count": 7
+    },
+    {
+        "District": "siraha",
+        "year": 2079,
+        "Program": "Electrical Engineering",
+        "Student Count": 3
+    },
+    {
+        "District": "siraha",
+        "year": 2079,
+        "Program": "Aerospace Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "siraha",
+        "year": 2080,
+        "Program": "Electrical Engineering",
+        "Student Count": 3
+    },
+    {
+        "District": "siraha",
+        "year": 2080,
+        "Program": "Architecture",
+        "Student Count": 2
+    },
+    {
+        "District": "siraha",
+        "year": 2080,
+        "Program": "Civil Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "siraha",
+        "year": 2081,
+        "Program": "Architecture",
+        "Student Count": 2
+    },
+    {
+        "District": "siraha",
+        "year": 2081,
+        "Program": "Civil Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "siraha",
+        "year": 2081,
+        "Program": "Electrical Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "solukhumbu",
+        "year": 2077,
+        "Program": "Civil Engineering",
+        "Student Count": 5
+    },
+    {
+        "District": "solukhumbu",
+        "year": 2077,
+        "Program": "Aerospace Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "solukhumbu",
+        "year": 2077,
+        "Program": "Architecture",
+        "Student Count": 1
+    },
+    {
+        "District": "solukhumbu",
+        "year": 2078,
+        "Program": "Aerospace Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "solukhumbu",
+        "year": 2078,
+        "Program": "Civil Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "solukhumbu",
+        "year": 2078,
+        "Program": "Architecture",
+        "Student Count": 1
+    },
+    {
+        "District": "solukhumbu",
+        "year": 2079,
+        "Program": "Civil Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "solukhumbu",
+        "year": 2079,
+        "Program": "Electrical Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "solukhumbu",
+        "year": 2080,
+        "Program": "Civil Engineering",
+        "Student Count": 3
+    },
+    {
+        "District": "solukhumbu",
+        "year": 2080,
+        "Program": "Architecture",
+        "Student Count": 1
+    },
+    {
+        "District": "solukhumbu",
+        "year": 2081,
+        "Program": "Chemical Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "solukhumbu",
+        "year": 2081,
+        "Program": "Civil Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "sunsari",
+        "year": 2077,
+        "Program": "Civil Engineering",
+        "Student Count": 15
+    },
+    {
+        "District": "sunsari",
+        "year": 2077,
+        "Program": "Computer Engineering",
+        "Student Count": 12
+    },
+    {
+        "District": "sunsari",
+        "year": 2077,
+        "Program": "Chemical Engineering",
+        "Student Count": 6
+    },
+    {
+        "District": "sunsari",
+        "year": 2078,
+        "Program": "Civil Engineering",
+        "Student Count": 8
+    },
+    {
+        "District": "sunsari",
+        "year": 2078,
+        "Program": "Aerospace Engineering",
+        "Student Count": 3
+    },
+    {
+        "District": "sunsari",
+        "year": 2078,
+        "Program": "Computer Engineering",
+        "Student Count": 3
+    },
+    {
+        "District": "sunsari",
+        "year": 2079,
+        "Program": "Architecture",
+        "Student Count": 3
+    },
+    {
+        "District": "sunsari",
+        "year": 2079,
+        "Program": "Chemical Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "sunsari",
+        "year": 2079,
+        "Program": "Civil Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "sunsari",
+        "year": 2080,
+        "Program": "Chemical Engineering",
+        "Student Count": 4
+    },
+    {
+        "District": "sunsari",
+        "year": 2080,
+        "Program": "Aerospace Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "sunsari",
+        "year": 2080,
+        "Program": "Computer Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "sunsari",
+        "year": 2081,
+        "Program": "Electrical Engineering",
+        "Student Count": 3
+    },
+    {
+        "District": "sunsari",
+        "year": 2081,
+        "Program": "Aerospace Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "sunsari",
+        "year": 2081,
+        "Program": "Civil Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "surkhet",
+        "year": 2077,
+        "Program": "Computer Engineering",
+        "Student Count": 5
+    },
+    {
+        "District": "surkhet",
+        "year": 2077,
+        "Program": "Civil Engineering",
+        "Student Count": 4
+    },
+    {
+        "District": "surkhet",
+        "year": 2077,
+        "Program": "Chemical Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "surkhet",
+        "year": 2078,
+        "Program": "Architecture",
+        "Student Count": 2
+    },
+    {
+        "District": "surkhet",
+        "year": 2078,
+        "Program": "Civil Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "surkhet",
+        "year": 2079,
+        "Program": "Architecture",
+        "Student Count": 1
+    },
+    {
+        "District": "surkhet",
+        "year": 2080,
+        "Program": "Civil Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "surkhet",
+        "year": 2080,
+        "Program": "Chemical Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "surkhet",
+        "year": 2080,
+        "Program": "Computer Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "surkhet",
+        "year": 2081,
+        "Program": "Architecture",
+        "Student Count": 1
+    },
+    {
+        "District": "surkhet",
+        "year": 2081,
+        "Program": "Chemical Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "syangja",
+        "year": 2077,
+        "Program": "Civil Engineering",
+        "Student Count": 13
+    },
+    {
+        "District": "syangja",
+        "year": 2077,
+        "Program": "Computer Engineering",
+        "Student Count": 7
+    },
+    {
+        "District": "syangja",
+        "year": 2077,
+        "Program": "Architecture",
+        "Student Count": 6
+    },
+    {
+        "District": "syangja",
+        "year": 2078,
+        "Program": "Civil Engineering",
+        "Student Count": 5
+    },
+    {
+        "District": "syangja",
+        "year": 2078,
+        "Program": "Aerospace Engineering",
+        "Student Count": 3
+    },
+    {
+        "District": "syangja",
+        "year": 2078,
+        "Program": "Computer Engineering",
+        "Student Count": 3
+    },
+    {
+        "District": "syangja",
+        "year": 2079,
+        "Program": "Chemical Engineering",
+        "Student Count": 3
+    },
+    {
+        "District": "syangja",
+        "year": 2079,
+        "Program": "Aerospace Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "syangja",
+        "year": 2079,
+        "Program": "Civil Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "syangja",
+        "year": 2080,
+        "Program": "Computer Engineering",
+        "Student Count": 4
+    },
+    {
+        "District": "syangja",
+        "year": 2080,
+        "Program": "Mechanical Engineering",
+        "Student Count": 3
+    },
+    {
+        "District": "syangja",
+        "year": 2080,
+        "Program": "Electrical Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "syangja",
+        "year": 2081,
+        "Program": "Aerospace Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "syangja",
+        "year": 2081,
+        "Program": "Architecture",
+        "Student Count": 1
+    },
+    {
+        "District": "syangja",
+        "year": 2081,
+        "Program": "Chemical Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "tanahun",
+        "year": 2077,
+        "Program": "Civil Engineering",
+        "Student Count": 10
+    },
+    {
+        "District": "tanahun",
+        "year": 2077,
+        "Program": "Computer Engineering",
+        "Student Count": 6
+    },
+    {
+        "District": "tanahun",
+        "year": 2077,
+        "Program": "Architecture",
+        "Student Count": 3
+    },
+    {
+        "District": "tanahun",
+        "year": 2078,
+        "Program": "Civil Engineering",
+        "Student Count": 3
+    },
+    {
+        "District": "tanahun",
+        "year": 2078,
+        "Program": "Architecture",
+        "Student Count": 2
+    },
+    {
+        "District": "tanahun",
+        "year": 2078,
+        "Program": "Computer Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "tanahun",
+        "year": 2079,
+        "Program": "Aerospace Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "tanahun",
+        "year": 2079,
+        "Program": "Chemical Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "tanahun",
+        "year": 2079,
+        "Program": "Civil Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "tanahun",
+        "year": 2080,
+        "Program": "Chemical Engineering",
+        "Student Count": 3
+    },
+    {
+        "District": "tanahun",
+        "year": 2080,
+        "Program": "Civil Engineering",
+        "Student Count": 3
+    },
+    {
+        "District": "tanahun",
+        "year": 2080,
+        "Program": "Computer Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "tanahun",
+        "year": 2081,
+        "Program": "Mechanical Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "taplejung",
+        "year": 2077,
+        "Program": "Civil Engineering",
+        "Student Count": 4
+    },
+    {
+        "District": "taplejung",
+        "year": 2077,
+        "Program": "Architecture",
+        "Student Count": 2
+    },
+    {
+        "District": "taplejung",
+        "year": 2077,
+        "Program": "Aerospace Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "taplejung",
+        "year": 2078,
+        "Program": "Architecture",
+        "Student Count": 1
+    },
+    {
+        "District": "taplejung",
+        "year": 2078,
+        "Program": "Computer Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "taplejung",
+        "year": 2078,
+        "Program": "Electrical Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "taplejung",
+        "year": 2079,
+        "Program": "Civil Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "taplejung",
+        "year": 2080,
+        "Program": "Aerospace Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "taplejung",
+        "year": 2080,
+        "Program": "Civil Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "taplejung",
+        "year": 2080,
+        "Program": "Computer Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "terhathum",
+        "year": 2077,
+        "Program": "Civil Engineering",
+        "Student Count": 3
+    },
+    {
+        "District": "terhathum",
+        "year": 2077,
+        "Program": "Computer Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "terhathum",
+        "year": 2077,
+        "Program": "Chemical Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "terhathum",
+        "year": 2079,
+        "Program": "Civil Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "udayapur",
+        "year": 2077,
+        "Program": "Civil Engineering",
+        "Student Count": 4
+    },
+    {
+        "District": "udayapur",
+        "year": 2077,
+        "Program": "Chemical Engineering",
+        "Student Count": 3
+    },
+    {
+        "District": "udayapur",
+        "year": 2077,
+        "Program": "Aerospace Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "udayapur",
+        "year": 2078,
+        "Program": "Computer Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "udayapur",
+        "year": 2079,
+        "Program": "Computer Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "udayapur",
+        "year": 2079,
+        "Program": "Electrical Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "udayapur",
+        "year": 2079,
+        "Program": "Civil Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "udayapur",
+        "year": 2080,
+        "Program": "Computer Engineering",
+        "Student Count": 2
+    },
+    {
+        "District": "udayapur",
+        "year": 2080,
+        "Program": "Aerospace Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "udayapur",
+        "year": 2080,
+        "Program": "Civil Engineering",
+        "Student Count": 1
+    },
+    {
+        "District": "udayapur",
+        "year": 2081,
+        "Program": "Aerospace Engineering",
+        "Student Count": 1
+    }
+]

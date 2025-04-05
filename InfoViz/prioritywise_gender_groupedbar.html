@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grouped Bar Chart for Gender by Year and p1</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+            flex-direction: column;
+        }
+        #svg-container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+        #chart {
+            margin-top: 20px;
+            width: 90%;  /* Set the width to 100% to be responsive */
+            height: auto;  /* Make height auto to adjust based on the aspect ratio */
+        }
+        .bar { opacity: 0.8; }
+        .bar:hover { opacity: 1; }
+        .axis-label { font-size: 14px; }
+        .tooltip { 
+            position: absolute;
+            background-color: lightgray;
+            padding: 5px;
+            border-radius: 4px;
+            display: none;
+            pointer-events: none;
+            font-size: 12px;
+        }
+        .title {
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .legend {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .legend-item {
+            display: flex;
+            align-items: center;
+            margin-right: 20px;
+        }
+        .legend-color {
+            width: 10px;
+            height: 10px;
+            margin-right: 5px;
+        }
+        span{
+            font-size: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="title">
+        <!-- <h2>Grouped Bar Chart for Gender by Year and p1</h2> -->
+        <!-- Legend for Gender -->
+        <div class="legend">
+            <div class="legend-item">
+                <div class="legend-color" style="background-color: #1f77b4;"></div>
+                <span>Male</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background-color: #ff7f0e;"></div>
+                <span>Female</span>
+            </div>
+        </div>
+
+        <!-- Legend for p1 values (A, B, C, etc.) -->
+        <div class="legend">
+            <div class="legend-item">
+                <div class="legend-color"></div>
+                <span>A = Architecture</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" ></div>
+                <span>B = Electrical</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" ></div>
+                <span>C = Electronics</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color"></div>
+                <span>D = Civil</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color"></div>
+                <span>E = Mechanical</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color"></div>
+                <span>F = Computer</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color"></div>
+                <span>G = Aerospace</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color"></div>
+                <span>H = Chemical</span>
+            </div>
+        </div>
+    </div>
+
+    <div id="tooltip" class="tooltip"></div>
+    <!-- Set width to 100% to allow responsiveness, height will be calculated dynamically -->
+    <div id="svg-container">
+        <svg id="chart"></svg>
+    </div>
+    
+
+    <script>
+        d3.csv('combined_data.csv').then(function(data) {
+            // Mapping for p1 values
+            const mappingShort = {
+                3: 'A', 4: 'A',
+                5: 'B', 6: 'B',
+                7: 'C', 8: 'C',
+                1: 'D', 2: 'D',
+                9: 'E', 10: 'E',
+                11: 'F', 12: 'F',
+                27: 'G', 28: 'G',
+                29: 'H', 30: 'H'
+            };
+
+            const mappingFull = {
+                A: 'Architecture', B: 'Electrical', C: 'Electronics', D: 'Civil',
+                E: 'Mechanical', F: 'Computer', G: 'Aerospace', H: 'Chemical'
+            };
+
+            // Step 1: Group data by year and p1 value, then count male and female
+            const genderCountsByYear = {};
+
+            data.forEach(d => {
+                const p1Value = mappingShort[d.p1];
+
+                if (!genderCountsByYear[d.year]) {
+                    genderCountsByYear[d.year] = {};
+                }
+
+                if (!genderCountsByYear[d.year][p1Value]) {
+                    genderCountsByYear[d.year][p1Value] = { Male: 0, Female: 0 };
+                }
+
+                if (d.Gender === 'Male') {
+                    genderCountsByYear[d.year][p1Value].Male++;
+                } else if (d.Gender === 'Female') {
+                    genderCountsByYear[d.year][p1Value].Female++;
+                }
+            });
+
+            const chartData = [];
+            for (const year in genderCountsByYear) {
+                const yearData = genderCountsByYear[year];
+                for (const p1 in yearData) {
+                    chartData.push({
+                        year: year,
+                        p1: p1,
+                        male: yearData[p1].Male,
+                        female: yearData[p1].Female
+                    });
+                }
+            }
+
+            const margin = { top: 20, right: 30, bottom: 100, left: 70 };
+            const width = window.innerWidth * 0.9 - margin.left - margin.right;
+            const height = 400 - margin.top - margin.bottom;
+
+            const svg = d3.select('#chart')
+                .attr('width', '100%')  // Make width 100% for responsiveness
+                .attr('height', height + margin.top + margin.bottom)
+                .append('g')
+                .attr('transform', `translate(${margin.left},${margin.top})`)
+                .attr('viewBox', '0 0 960 500');  // Set a default viewBox for better scaling
+
+            // Sort p1 values alphabetically (A, B, C, D, ...)
+            const sortedP1Values = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'];
+
+            const x0Scale = d3.scaleBand()
+                .domain(chartData.map(d => d.year))
+                .range([0, width])
+                .padding(0.1);
+
+            const x1Scale = d3.scaleBand()
+                .domain(sortedP1Values)  // Use sorted values here
+                .range([0, x0Scale.bandwidth()])
+                .padding(0.1);
+
+            const yScale = d3.scaleLinear()
+                .domain([0, d3.max(chartData, d => d.male + d.female)])
+                .nice()
+                .range([height, 0]);
+
+            const colorScale = d3.scaleOrdinal()
+                .domain(['Male', 'Female'])
+                .range(['#1f77b4', '#ff7f0e']);
+
+            svg.selectAll('*').remove();
+
+            const yearGroups = svg.selectAll('.year')
+                .data(chartData)
+                .enter().append('g')
+                .attr('class', 'year')
+                .attr('transform', d => `translate(${x0Scale(d.year)}, 0)`);
+
+            yearGroups.each(function(d) {
+                const group = d3.select(this);
+
+                const maleBar = group.append('rect')
+                    .attr('x', x1Scale(d.p1))
+                    .attr('y', yScale(d.male))
+                    .attr('width', x1Scale.bandwidth())
+                    .attr('height', height - yScale(d.male))
+                    .attr('fill', colorScale('Male'))
+                    .attr('class', 'bar');
+
+                const femaleBar = group.append('rect')
+                    .attr('x', x1Scale(d.p1))
+                    .attr('y', yScale(d.male + d.female))
+                    .attr('width', x1Scale.bandwidth())
+                    .attr('height', height - yScale(d.female))
+                    .attr('fill', colorScale('Female'))
+                    .attr('class', 'bar');
+
+                // Add hover event for Male bars
+                maleBar.on('mouseover', function(event) {
+                    const tooltip = d3.select('#tooltip');
+                    tooltip
+                        .style('left', `${event.pageX + 10}px`)
+                        .style('top', `${event.pageY - 28}px`)
+                        .style('display', 'inline-block')
+                        .html(`Male: ${d.male}`);
+                    d3.select(this).attr('fill', 'green');
+                }).on('mouseout', function() {
+                    d3.select(this).attr('fill', colorScale('Male'));
+                    d3.select('#tooltip').style('display', 'none');
+                });
+
+                // Add hover event for Female bars
+                femaleBar.on('mouseover', function(event) {
+                    const tooltip = d3.select('#tooltip');
+                    tooltip
+                        .style('left', `${event.pageX + 10}px`)
+                        .style('top', `${event.pageY - 28}px`)
+                        .style('display', 'inline-block')
+                        .html(`Female: ${d.female}`);
+                    d3.select(this).attr('fill', 'green');
+                }).on('mouseout', function() {
+                    d3.select(this).attr('fill', colorScale('Female'));
+                    d3.select('#tooltip').style('display', 'none');
+                });
+
+                // Calculate total for male and female
+                const total = d.male + d.female;
+
+                // Add total sum above the bars
+                group.append('text')
+                    .attr('x', x1Scale(d.p1) + x1Scale.bandwidth() / 2)
+                    .attr('y', yScale(d.male + d.female) - 10)  // Position above the bar
+                    .attr('text-anchor', 'middle')
+                    .style('font-size', '12px')
+                    .text(total);
+            });
+
+            const yAxis = d3.axisLeft(yScale);
+            svg.append('g')
+                .call(yAxis);
+
+            const xAxis = d3.axisBottom(x0Scale)
+                .tickSize(0);
+
+            const xAxisGroup = svg.append('g')
+                .attr('transform', `translate(0,${height})`)
+                .call(xAxis);
+
+            svg.append('text')
+                .attr('transform', 'rotate(-90)')
+                .attr('y', -60)
+                .attr('x', -height / 2)
+                .attr('dy', '1em')
+                .style('text-anchor', 'middle')
+                .style('font-weight', 'bold')
+                .attr('font-size', '12px')
+                .text('Count');
+            
+            svg.selectAll('text')
+                .attr('font-size', '15px');
+            xAxisGroup.selectAll('text')
+                .attr('dy', '30px');
+
+            yearGroups.each(function(d) {
+                const group = d3.select(this);
+
+                // Adding p1 value below the male bar
+                group.append('text')
+                    .attr('x', x1Scale(d.p1) + x1Scale.bandwidth() / 2)
+                    .attr('y', height + 10)  // Position the label just below the bars
+                    .attr('text-anchor', 'middle')
+                    .style('font-size', '10px')
+                    .text(d.p1);
+            });
+
+        });
+    </script>
+</body>
+</html>

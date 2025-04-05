@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quota Tree Diagram</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0;
+    }
+
+    h2 {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    #controls {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+    }
+
+    #year-selector {
+      font-size: 16px;
+      padding: 8px;
+      margin-left: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #f9f9f9;
+      cursor: pointer;
+    }
+
+    #year-selector:hover {
+      border-color: #888;
+    }
+
+    svg {
+      width: 90%;
+      height: 600px;
+      max-width: 1200px;
+      margin-top: 40px;
+    }
+
+    .node circle {
+      fill: #999;
+    }
+
+    .node text {
+      font: 12px sans-serif;
+    }
+
+    .node--internal circle {
+      fill: #555;
+    }
+
+    .node--internal text {
+      text-shadow: 0 1px 0 #fff, 0 -1px 0 #fff, 1px 0 0 #fff, -1px 0 0 #fff;
+    }
+
+    .link {
+      fill: none;
+      stroke: #555;
+      stroke-opacity: 0.4;
+      stroke-width: 1.5px;
+    }
+
+  </style>
+</head>
+<body>
+  <div id="controls">
+    <!-- <h2>Applicant's Based on Quota</h2> -->
+    <select id="year-selector"></select>
+  </div>
+
+  <svg></svg>
+
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script>
+    var svg = d3.select("svg"),
+        margin = {top: 20, right: 60, bottom: 20, left: 150}, // Increase left margin
+        width = svg.node().getBoundingClientRect().width - margin.left - margin.right,
+        height = 600,
+        g = svg.append("g").attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+    var tree = d3.tree()
+        .size([height - 100, width - 100])
+        .separation(function(a, b) {
+            return a.parent === b.parent ? 20 : 40; // Decrease space between nodes
+        });
+
+    var allData = [];
+
+    function processData(data, year) {
+      data.forEach(function(d) {
+        d.combination = d.QuotaGroup + "." + d.QuotaType;
+      });
+
+      var filteredData = data.filter(function(d) {
+        return d.phaseNo === "1" && d.year === year;
+      });
+
+      var groupedData = {};
+
+      filteredData.forEach(function(d) {
+        var key = d.combination;
+        if (!groupedData[key]) {
+          groupedData[key] = { id: d.combination, count: 0 };
+        }
+        groupedData[key].count += 1;
+      });
+
+      var rootData = {
+        name: "Pulchowk Quota",
+        count: 0,
+        children: []
+      };
+
+      var quotaGroups = {};
+
+      for (var key in groupedData) {
+        var entry = groupedData[key];
+        var group = entry.id.split(".")[0];
+        var quotaType = entry.id.split(".")[1];
+
+        // Check if QuotaGroup and QuotaType are the same, except for "Open"
+        if (group === quotaType && group !== "Open") {
+          // Treat as a parent node only (no children for this node)
+          if (!quotaGroups[group]) {
+            quotaGroups[group] = { name: group, children: [], count: 0 };
+          }
+          quotaGroups[group].count += entry.count;
+          rootData.count += entry.count;
+        } else {
+          // Normal behavior: QuotaGroup has children (QuotaType)
+          if (!quotaGroups[group]) {
+            quotaGroups[group] = { name: group, children: [], count: 0 };
+          }
+
+          quotaGroups[group].children.push({
+            name: quotaType,
+            size: entry.count,
+            year: year
+          });
+
+          quotaGroups[group].count += entry.count;
+          rootData.count += entry.count;
+        }
+      }
+
+      for (var groupKey in quotaGroups) {
+        rootData.children.push(quotaGroups[groupKey]);
+      }
+
+      var root = d3.hierarchy(rootData);
+
+      svg.selectAll(".link").remove();
+      svg.selectAll(".node").remove();
+
+      var link = g.selectAll(".link")
+        .data(tree(root).links())
+        .enter().append("path")
+          .attr("class", "link")
+          .attr("d", d3.linkHorizontal()
+              .x(function(d) { return d.y; })
+              .y(function(d) { return d.x; }));
+
+      var node = g.selectAll(".node")
+        .data(root.descendants())
+        .enter().append("g")
+          .attr("class", function(d) { return "node" + (d.children ? " node--internal" : " node--leaf"); })
+          .attr("transform", function(d) { return "translate(" + d.y + "," + d.x + ")"; });
+
+      node.append("circle")
+          .attr("r", 2.5);
+
+      node.append("text")
+          .attr("dy", 3)
+          .attr("x", function(d) { return d.children ? -8 : 8; })
+          .style("text-anchor", function(d) { return d.children ? "end" : "start"; })
+          .text(function(d) { 
+            return d.data.name + " (" + (d.data.size !== undefined ? d.data.size : d.data.count) + ")";
+          });
+    }
+
+    d3.csv("combined_data.csv").then(function(data) {
+
+        data.forEach(function(d) {
+            if (d.QuotaGroup === "IOE/TU Teacher/Staff") {
+                    d.QuotaGroup = "IOE Staff";
+                } else if (d.QuotaGroup === "Reserverd Quota" || d.QuotaGroup === "Reserved Quota") {
+                    d.QuotaGroup = "Reserved";
+                }
+
+                // Data cleaning for QuotaType
+                if (d.QuotaType === "Female Quota") {
+                    d.QuotaType = "Female";
+                } else if (d.QuotaType === "IOE Staff Quota" || d.QuotaType === "IOE/TU Teacher/Staff Quota") {
+                    d.QuotaType = "IOE Staff";
+                }
+                else if (d.QuotaType === "Government Sponsored Quota") {
+                    d.QuotaType = "Government Sponsored";
+                }
+                else if (d.QuotaType === "Foreign Quota") {
+                    d.QuotaType = "Foreign";
+                }
+        });
+
+      allData = data;
+      var years = [...new Set(data.map(d => d.year))];
+      var yearSelector = d3.select("#year-selector");
+      yearSelector.selectAll("option")
+        .data(years)
+        .enter().append("option")
+        .attr("value", function(d) { return d; })
+        .text(function(d) { return d; });
+
+      var firstYear = years[0];
+      yearSelector.property("value", firstYear);
+      processData(data, firstYear);
+
+      yearSelector.on("change", function() {
+        var selectedYear = this.value;
+        processData(data, selectedYear);
+      });
+    }).catch(function(error) {
+      console.error("Error loading or processing data:", error);
+    });
+
+    window.addEventListener('resize', function() {
+      width = svg.node().getBoundingClientRect().width - margin.left - margin.right;
+      tree.size([height - 100, width - 100]);
+      processData(allData, document.getElementById('year-selector').value);
+    });
+  </script>
+</body>
+</html>

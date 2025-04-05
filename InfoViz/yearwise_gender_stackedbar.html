@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gender Ratio Stacked Bar Plot</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 10px;
+            flex-direction: column;
+        }
+        #chart {
+            margin-top: 10px;
+        }
+        .bar { opacity: 0.8; }
+        .bar:hover { opacity: 1; }
+        .axis-label { font-size: 14px; }
+        .tooltip { position: absolute; background-color: lightgray; padding: 5px; border-radius: 4px; display: none; }
+        .title {
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .legend {
+
+            display: flex;
+            justify-content: center;
+            margin-bottom: 10px; /* Space between the title and chart */
+        }
+        .legend-item {
+            display: flex;
+            align-items: center;
+            margin-right: 20px;
+        }
+        .legend-color {
+            width: 10px;
+            height: 10px;
+            margin-right: 5px;
+        }
+        span{
+            font-size: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="title">
+        <!-- <h2>Gender Ratio Stacked Bar Plot for All Years</h2> -->
+        <div class="legend">
+            <div class="legend-item">
+                <div class="legend-color" style="background-color: #1f77b4;"></div>
+                <span>Male</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background-color: #ff7f0e;"></div>
+                <span>Female</span>
+            </div>
+        </div>
+    </div>
+
+    <div id="tooltip" class="tooltip"></div>
+    <svg id="chart" width="600" height="400"></svg>
+
+    <script>
+        // Load CSV data
+        d3.csv('combined_data.csv').then(function(data) {
+            // Step 1: Group data by year and count males and females for unique ranks
+            const genderCountsByYear = {};
+
+            // Group data by year
+            data.forEach(d => {
+                // Initialize the structure if it doesn't exist for the year
+                if (!genderCountsByYear[d.year]) {
+                    genderCountsByYear[d.year] = { Male: 0, Female: 0, ranks: {} };
+                }
+
+                const yearData = genderCountsByYear[d.year];
+                const uniqueRanks = yearData.ranks;
+
+                // Only count unique ranks for each year
+                if (!uniqueRanks[d.Rank]) {
+                    uniqueRanks[d.Rank] = true; // Mark this rank as already seen
+
+                    // Count gender for the year
+                    if (d.Gender === 'Male') yearData.Male++;
+                    else if (d.Gender === 'Female') yearData.Female++;
+                }
+            });
+
+            // Prepare the chart data from the grouped genderCountsByYear object
+            const chartData = [];
+            for (const year in genderCountsByYear) {
+                chartData.push({
+                    year: year,
+                    male: genderCountsByYear[year].Male,
+                    female: genderCountsByYear[year].Female
+                });
+            }
+
+            // Set up the SVG dimensions
+            const margin = { top: 50, right: 30, bottom: 60, left: 50 };
+            const width = 600 - margin.left - margin.right;
+            const height = 400 - margin.top - margin.bottom;
+
+            // Create the SVG element
+            const svg = d3.select('#chart')
+                .attr('width', width + margin.left + margin.right)
+                .attr('height', height + margin.top + margin.bottom)
+                .append('g')
+                .attr('transform', `translate(${margin.left + 10},${margin.top})`);
+
+            // Set up the scales
+            const xScale = d3.scaleBand()
+                .domain(chartData.map(d => d.year)) // All years
+                .range([0, width])
+                .padding(0.05); // Reduce gap between bars
+
+            const yScale = d3.scaleLinear()
+                .domain([0, d3.max(chartData, d => d.male + d.female)]) // max count of male + female
+                .nice()
+                .range([height, 0]);
+
+            const colorScale = d3.scaleOrdinal()
+                .domain(['Male', 'Female'])
+                .range(['#1f77b4', '#ff7f0e']); // Blue for Male, Orange for Female
+
+            // Clear previous chart elements
+            svg.selectAll('*').remove();
+
+            // Create the stacked bars
+            const yearGroups = svg.selectAll('.year')
+                .data(chartData)
+                .enter().append('g')
+                .attr('class', 'year')
+                .attr('transform', d => `translate(${xScale(d.year)}, 0)`);
+
+            // Create the stacked bars for Male and Female
+            yearGroups.each(function(d) {
+                // Stacking logic: Male bars are placed first (start from 0)
+                let maleHeight = d.male;
+                let femaleHeight = d.female;
+
+                // Male bar
+                d3.select(this).append('rect')
+                    .attr('x', 0)
+                    .attr('y', yScale(maleHeight))
+                    .attr('width', xScale.bandwidth() * 0.7) // Reduce the width of the bar
+                    .attr('height', height - yScale(maleHeight))
+                    .attr('fill', colorScale('Male'))
+                    .attr('class', 'bar')
+                    .on('mouseover', function(event) {
+                        const tooltip = d3.select('#tooltip');
+                        tooltip.style('display', 'inline-block')
+                            .html(`Male: ${d.male}`)
+                            .style('left', `${event.pageX + 10}px`)
+                            .style('top', `${event.pageY - 30}px`);
+                    })
+                    .on('mouseout', function() {
+                        d3.select('#tooltip').style('display', 'none');
+                    });
+
+                // Female bar starts right after the Male bar
+                d3.select(this).append('rect')
+                    .attr('x', 0)
+                    .attr('y', yScale(maleHeight + femaleHeight)) // Female bar starts after Male
+                    .attr('width', xScale.bandwidth() * 0.7) // Reduce the width of the bar
+                    .attr('height', height - yScale(femaleHeight))
+                    .attr('fill', colorScale('Female'))
+                    .attr('class', 'bar')
+                    .on('mouseover', function(event) {
+                        const tooltip = d3.select('#tooltip');
+                        tooltip.style('display', 'inline-block')
+                            .html(`Female: ${d.female}`)
+                            .style('left', `${event.pageX + 10}px`)
+                            .style('top', `${event.pageY - 30}px`);
+                    })
+                    .on('mouseout', function() {
+                        d3.select('#tooltip').style('display', 'none');
+                    });
+
+                // Add total sum of male and female count at the top of the bar
+                const total = d.male + d.female;
+                d3.select(this).append('text')
+                    .attr('x', (xScale.bandwidth() / 2) - 15) // Centered on the bar group
+                    .attr('y', yScale(maleHeight + femaleHeight) - 5) // Position it slightly above the bars
+                    .attr('text-anchor', 'middle')
+                    .style('font-size', '12px')
+                    // .style('font-weight', 'bold')
+                    .text(total); // Display the total sum
+            });
+
+            // Add the y-axis
+            const yAxis = d3.axisLeft(yScale);
+            svg.append('g')
+                .call(yAxis);
+
+            // Add the x-axis
+            const xAxis = d3.axisBottom(xScale)
+                .tickSize(0); // Remove the tick lines
+
+            const xAxisGroup = svg.append('g')
+                .attr('transform', `translate(0,${height})`)
+                .call(xAxis);
+
+            // Label for the y-axis
+            svg.append('text')
+                .attr('transform', 'rotate(-90)')
+                .attr('y', -60)
+                .attr('x', -height / 2)
+                .attr('dy', '1em')
+                .style('text-anchor', 'middle')
+                .style('font-weight', 'bold')
+                .style('font-size', '16px') 
+                .text('Count');
+
+            // Label for the x-axis (decrease the distance between ticks and label)
+            svg.append('text')
+                .attr('transform', `translate(${(width / 2)},${height + margin.bottom - 10})`) // Reduced distance here
+                .style('text-anchor', 'middle')
+                .style('font-weight', 'bold')
+                .style('font-size', '16px') 
+                .text('Year');
+
+            // Adjust Year Labels (ticks) to be in the middle of each rectangle
+            xAxisGroup.selectAll('text')
+                .attr('x', function(d) {
+                    const bandWidth = xScale.bandwidth();
+                    return bandWidth / 2 - 60; // Move ticks to the center
+                })
+                .style('text-anchor', 'middle')
+                .attr('dy', '14px');
+
+            svg.selectAll('.tick text')
+                .style('font-size', '12px'); 
+        });
+    </script>
+</body>
+</html>

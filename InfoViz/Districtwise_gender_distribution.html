@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Districtwise Student Distribution by Gender</title>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="https://d3js.org/topojson.v3.min.js"></script>
+
+    <style>
+        /* General Styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .control-container {
+            margin-bottom: 15px;
+        }
+
+        select {
+            padding: 8px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        /* Map and addLegend Layout */
+        .content-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            padding: 10px;
+        }
+
+        .map-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* addLegend Styling */
+        .addLegend-container {
+            width: 70px;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .addLegend text {
+            font-size: 12px;
+        }
+
+        /* Map Styling */
+        svg {
+            border-radius: 8px;
+        }
+
+        /* District Borders - Blue Color */
+        .district {
+            stroke: #0057b7; /* Blue border */
+            stroke-width: 2px; /* Thicker border */
+            transition: fill 0.3s ease, stroke-width 0.2s ease;
+        }
+
+        .district:hover {
+            stroke: #003f88; /* Darker blue on hover */
+            stroke-width: 3px;
+            filter: brightness(1.2);
+        }
+
+        /* Tooltip Styling */
+        .tooltip {
+            position: absolute;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 8px;
+            border-radius: 5px;
+            font-size: 14px;
+            pointer-events: none;
+            display: none;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 900px) {
+            .map-container {
+                flex-direction: column;
+            }
+
+            svg {
+                width: 100%;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- <h2>Districtwise Student Distribution by Gender</h2> -->
+    
+    <!-- Dropdown for selecting year -->
+    <div class="control-container">
+        <label for="yearSelect">Select Year:</label>
+        <select id="yearSelect"></select>
+    </div>
+
+    <!-- Container for map and addLegend -->
+    <div class="content-container">
+        <div class="map-container">
+            <!-- addLegend -->
+            <div class="addLegend-container">
+                <svg id="addLegend" width="60" height="300"></svg>
+            </div>
+
+            <!-- Map -->
+            <svg id="map" width="700" height="500"></svg>
+        </div>
+    </div>
+
+    <!-- Tooltip for displaying district data -->
+    <div class="tooltip" style="display:none;"></div>
+
+    <script>
+        const width = 700, height = 500;
+        const svg = d3.select("#map");
+        const tooltip = d3.select(".tooltip");
+        let geoData, yearData;
+
+        // Load GeoJSON and data file
+        Promise.all([
+            d3.json("nepal-districts.geojson"),
+            d3.json("districtwise_gender_distribution.json")
+        ]).then(([nepalGeo, data]) => {
+            geoData = nepalGeo;
+            yearData = data;
+
+            const years = Object.keys(data);
+            d3.select("#yearSelect")
+                .selectAll("option")
+                .data(years)
+                .enter().append("option")
+                .text(d => d);
+
+            updateMap(years[0]);
+            d3.select("#yearSelect").on("change", function() { updateMap(this.value); });
+        });
+
+        function updateMap(year) {
+            const districtData = yearData[year];
+            const densities = Object.values(districtData).map(d => d.Male + d.Female);
+            const colorScale = d3.scaleSequential(d3.interpolateReds)
+                .domain([d3.min(densities), d3.max(densities)]);
+
+            const projection = d3.geoMercator().fitSize([width, height], geoData);
+            const path = d3.geoPath().projection(projection);
+
+            const districts = svg.selectAll(".district").data(geoData.features);
+
+            districts.enter()
+                .append("path")
+                .attr("class", "district")
+                .merge(districts)
+                .attr("d", path)
+                .attr("fill", d => {
+                    const name = d.properties.DISTRICT;
+                    return districtData[name] ? colorScale(districtData[name].Male + districtData[name].Female) : "#ccc";
+                })
+                .on("mouseover", (event, d) => {
+                    const name = d.properties.DISTRICT;
+                    const data = districtData[name] || { Male: 0, Female: 0 };
+                    const total = data.Male + data.Female;
+                    tooltip.style("display", "block")
+                        .html(`<strong>${name}</strong><br>Total: ${total}<br>Male: ${data.Male}<br>Female: ${data.Female}`)
+                        .style("left", `${event.pageX + 5}px`)
+                        .style("top", `${event.pageY + 5}px`);
+                })
+                .on("mouseout", () => tooltip.style("display", "none"));
+
+            addLegend(colorScale);
+        }
+
+        function addLegend(colorScale) {
+            const addLegendHeight = 300, addLegendWidth = 20;
+            const addLegendSvg = d3.select("#addLegend");
+            addLegendSvg.selectAll("*").remove();
+
+            const addLegendScale = d3.scaleLinear()
+                .domain(colorScale.domain())
+                .range([addLegendHeight, 0]);
+
+            const gradient = addLegendSvg.append("defs")
+                .append("linearGradient")
+                .attr("id", "addLegendGradient")
+                .attr("x1", "0%")
+                .attr("x2", "0%")
+                .attr("y1", "100%")
+                .attr("y2", "0%");
+
+            gradient.append("stop")
+                .attr("offset", "0%")
+                .attr("stop-color", colorScale.range()[0]);
+            gradient.append("stop")
+                .attr("offset", "100%")
+                .attr("stop-color", colorScale.range()[1]);
+
+            addLegendSvg.append("rect")
+                .attr("width", addLegendWidth)
+                .attr("height", addLegendHeight)
+                .style("fill", "url(#addLegendGradient)");
+
+            addLegendSvg.append("g")
+                .attr("transform", `translate(${addLegendWidth}, 0)`)
+                .call(d3.axisRight(addLegendScale).ticks(5));
+        }
+    </script>
+</body>
+</html>

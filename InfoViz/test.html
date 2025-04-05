@@ -1,0 +1,504 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Interest in Programs (Male & Female, Yearly)</title>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+        h2 {
+            color: #333;
+        }
+        .chart-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+        .year-container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        .year-container h3 {
+            color: #333;
+        }
+        .charts-wrapper {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+        .chart {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+        }
+        .chart:hover {
+            transform: scale(1.05);
+        }
+        svg {
+            display: block;
+            margin: auto;
+        }
+        #tooltip {
+            position: absolute;
+            background: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 14px;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s;
+        }
+        text {
+            font-size: 14px;
+            font-weight: bold;
+            fill: white;
+        }
+        .total-students {
+            font-size: 16px;
+            margin-top: 10px;
+            font-weight: bold;
+            color: #333;
+        }
+        .female-percentage, .male-percentage {
+            font-size: 16px;
+            margin-top: 10px;
+            font-weight: bold;
+            color: #007BFF;
+        }
+        .legend {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        .legend-item {
+            display: flex;
+            align-items: center;
+        }
+        .legend-color {
+            width: 20px;
+            height: 20px;
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Student Interest in Programs (Male & Female, Yearly)</h2>
+    <div class="chart-container" id="charts"></div>
+    <div id="tooltip"></div>
+
+    <script>
+        const width = 300, height = 300, radius = Math.min(width, height) / 2 - 20;
+        const color = d3.scaleOrdinal(d3.schemeCategory10);
+        const pie = d3.pie().value(d => d.value);
+        const arc = d3.arc().innerRadius(0).outerRadius(radius);
+
+        const programNames = {
+            1: 'Civil', 2: 'Civil',
+            3: 'Architecture', 4: 'Architecture',
+            5: 'Electrical', 6: 'Electrical',
+            7: 'Electronics', 8: 'Electronics',
+            9: 'Mechanical', 10: 'Mechanical',
+            11: 'Computer', 12: 'Computer',
+            27: 'Aerospace', 28: 'Aerospace',
+            29: 'Chemical', 30: 'Chemical'
+        };
+
+        fetch("combined_data.csv")
+            .then(response => response.text())
+            .then(data => {
+                const parsedData = d3.csvParse(data, d3.autoType);
+
+                let uniqueStudents = Array.from(new Map(parsedData.map(s => [`${s.year}-${s.Rank}`, s])).values());
+
+                let groupedData = d3.group(uniqueStudents, d => d.year);
+                let years = Array.from(groupedData.keys()).sort();
+
+                function createChart(container, pieData, totalStudents, count, percentage, gender) {
+                    pieData.sort((a, b) => b.value - a.value);
+
+                    const chart = container.append("div").attr("class", "chart");
+                    chart.append("h4").text(`${gender} Students`);
+
+                    const svg = chart.append("svg")
+                        .attr("width", width)
+                        .attr("height", height)
+                        .append("g")
+                        .attr("transform", `translate(${width / 2},${height / 2})`);
+
+                    const arcs = svg.selectAll(".arc")
+                        .data(pie(pieData))
+                        .enter()
+                        .append("g")
+                        .attr("class", "arc");
+
+                    arcs.append("path")
+                        .attr("d", arc)
+                        .attr("fill", d => color(d.data.program))
+                        .on("mouseover", (event, d) => {
+                            d3.select("#tooltip")
+                              .style("left", (event.pageX + 10) + "px")
+                              .style("top", (event.pageY - 10) + "px")
+                              .style("opacity", 1)
+                              .html(`<strong>${d.data.program}</strong><br>${gender}: ${d.data.value}`);
+                        })
+                        .on("mouseout", () => d3.select("#tooltip").style("opacity", 0));
+
+                    arcs.append("text")
+                        .attr("transform", d => `translate(${arc.centroid(d)})`)
+                        .attr("text-anchor", "middle")
+                        .text(d => `${d.data.value}`);
+
+                    chart.append("div").attr("class", "total-students").text(`Total Students: ${totalStudents}`);
+                    chart.append("div").attr("class", `${gender.toLowerCase()}-percentage`).text(`${gender} Students: ${percentage.toFixed(2)}%`);
+
+                    const legend = chart.append("div").attr("class", "legend");
+                    pieData.forEach(d => {
+                        const legendItem = legend.append("div").attr("class", "legend-item");
+                        legendItem.append("div")
+                            .attr("class", "legend-color")
+                            .style("background-color", color(d.program));
+                        legendItem.append("span").text(d.program);
+                    });
+                }
+
+                years.forEach(year => {
+                    let femalePieData = new Map();
+                    let malePieData = new Map();
+                    let totalUniqueStudents = 0;
+                    let femaleCount = 0;
+                    let maleCount = 0;
+
+                    if (groupedData.has(year)) {
+                        let studentsForYear = groupedData.get(year);
+                        totalUniqueStudents = studentsForYear.length;
+
+                        studentsForYear.forEach(student => {
+                            let program = programNames[student.p1] || "Unknown";
+                            if (!femalePieData.has(program)) {
+                                femalePieData.set(program, { program, value: 0 });
+                            }
+                            if (!malePieData.has(program)) {
+                                malePieData.set(program, { program, value: 0 });
+                            }
+                            if (student.Gender === "Female") {
+                                femalePieData.get(program).value++;
+                                femaleCount++;
+                            } else if (student.Gender === "Male") {
+                                malePieData.get(program).value++;
+                                maleCount++;
+                            }
+                        });
+                    }
+
+                    let femalePercentage = (femaleCount / totalUniqueStudents) * 100;
+                    let malePercentage = (maleCount / totalUniqueStudents) * 100;
+
+                    const yearContainer = d3.select("#charts").append("div").attr("class", "year-container");
+                    yearContainer.append("h3").text(`Year: ${year}`);
+
+                    const chartsWrapper = yearContainer.append("div").attr("class", "charts-wrapper");
+
+                    createChart(chartsWrapper, Array.from(femalePieData.values()), totalUniqueStudents, femaleCount, femalePercentage, "Female");
+                    createChart(chartsWrapper, Array.from(malePieData.values()), totalUniqueStudents, maleCount, malePercentage, "Male");
+                });
+            });
+    </script>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grouped Bar Chart for Gender by Year and Program</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+            flex-direction: column;
+        }
+        #svg-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+        #chart {
+            margin-top: 20px;
+            width: 90%;  /* Set the width to 100% to be responsive */
+            height: auto;  /* Make height auto to adjust based on the aspect ratio */
+        }
+        .bar { opacity: 0.8; }
+        .bar:hover { opacity: 1; }
+        .axis-label { font-size: 14px; }
+        .tooltip { 
+            position: absolute;
+            background-color: lightgray;
+            padding: 5px;
+            border-radius: 4px;
+            display: none;
+            pointer-events: none;
+            font-size: 12px;
+        }
+        .title {
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .legend {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .legend-item {
+            display: flex;
+            align-items: center;
+            margin-right: 20px;
+        }
+        .legend-color {
+            width: 10px;
+            height: 10px;
+            margin-right: 5px;
+        }
+        span {
+            font-size: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="title">
+        <!-- Legend for Gender -->
+        <div class="legend">
+            <div class="legend-item">
+                <div class="legend-color" style="background-color: #1f77b4;"></div>
+                <span>Male</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background-color: #ff7f0e;"></div>
+                <span>Female</span>
+            </div>
+        </div>
+    </div>
+
+    <div id="tooltip" class="tooltip"></div>
+    <!-- Set width to 100% to allow responsiveness, height will be calculated dynamically -->
+    <div id="svg-container">
+        <svg id="chart"></svg>
+    </div>
+    
+    <script>
+        d3.csv('combined_data.csv').then(function(data) {
+            // Mapping for p1 values to program names
+            const programNames = {
+                1: 'Civil', 2: 'Civil',
+                3: 'Architecture', 4: 'Architecture',
+                5: 'Electrical', 6: 'Electrical',
+                7: 'Electronics', 8: 'Electronics',
+                9: 'Mechanical', 10: 'Mechanical',
+                11: 'Computer', 12: 'Computer',
+                27: 'Aerospace', 28: 'Aerospace',
+                29: 'Chemical', 30: 'Chemical'
+            };
+
+            // Step 1: Group data by year and p1 value, then count male and female
+            const genderCountsByYear = {};
+
+            data.forEach(d => {
+                const program = programNames[d.p1];
+
+                if (!genderCountsByYear[d.year]) {
+                    genderCountsByYear[d.year] = {};
+                }
+
+                if (!genderCountsByYear[d.year][program]) {
+                    genderCountsByYear[d.year][program] = { Male: 0, Female: 0 };
+                }
+
+                if (d.Gender === 'Male') {
+                    genderCountsByYear[d.year][program].Male++;
+                } else if (d.Gender === 'Female') {
+                    genderCountsByYear[d.year][program].Female++;
+                }
+            });
+
+            const chartData = [];
+            for (const year in genderCountsByYear) {
+                const yearData = genderCountsByYear[year];
+                for (const program in yearData) {
+                    chartData.push({
+                        year: year,
+                        program: program,
+                        male: yearData[program].Male,
+                        female: yearData[program].Female
+                    });
+                }
+            }
+
+            // Sort the data in decreasing order of total count (male + female)
+            chartData.sort((a, b) => (b.male + b.female) - (a.male + a.female));
+
+            const margin = { top: 20, right: 30, bottom: 150, left: 70 }; // Increased bottom margin for vertical labels
+            const width = window.innerWidth * 0.9 - margin.left - margin.right;
+            const height = 400 - margin.top - margin.bottom;
+
+            const svg = d3.select('#chart')
+                .attr('width', '100%')  // Make width 100% for responsiveness
+                .attr('height', height + margin.top + margin.bottom)
+                .append('g')
+                .attr('transform', `translate(${margin.left},${margin.top})`)
+                .attr('viewBox', '0 0 960 500');  // Set a default viewBox for better scaling
+
+            // Create a set of unique programs sorted by total counts
+            const sortedPrograms = Array.from(new Set(chartData.map(d => d.program)))
+                .sort((a, b) => {
+                    const totalA = chartData.filter(d => d.program === a).reduce((sum, d) => sum + d.male + d.female, 0);
+                    const totalB = chartData.filter(d => d.program === b).reduce((sum, d) => sum + d.male + d.female, 0);
+                    return totalB - totalA;
+                });
+
+            const x0Scale = d3.scaleBand()
+                .domain(sortedPrograms)  // Use sorted programs
+                .range([0, width])
+                .padding(0.1);
+
+            const x1Scale = d3.scaleBand()
+                .domain(chartData.map(d => d.year))  // Use years
+                .range([0, x0Scale.bandwidth()])
+                .padding(0.1);
+
+            const yScale = d3.scaleLinear()
+                .domain([0, d3.max(chartData, d => d.male + d.female)])
+                .nice()
+                .range([height, 0]);
+
+            const colorScale = d3.scaleOrdinal()
+                .domain(['Male', 'Female'])
+                .range(['#1f77b4', '#ff7f0e']);
+
+            svg.selectAll('*').remove();
+
+            const programGroups = svg.selectAll('.program')
+                .data(sortedPrograms)
+                .enter().append('g')
+                .attr('class', 'program')
+                .attr('transform', d => `translate(${x0Scale(d)}, 0)`);
+
+            programGroups.each(function(program) {
+                const group = d3.select(this);
+                const programData = chartData.filter(d => d.program === program);
+
+                programData.forEach(d => {
+                    const maleBar = group.append('rect')
+                        .attr('x', x1Scale(d.year))
+                        .attr('y', yScale(d.male))
+                        .attr('width', x1Scale.bandwidth())
+                        .attr('height', height - yScale(d.male))
+                        .attr('fill', colorScale('Male'))
+                        .attr('class', 'bar');
+
+                    const femaleBar = group.append('rect')
+                        .attr('x', x1Scale(d.year))
+                        .attr('y', yScale(d.male + d.female))
+                        .attr('width', x1Scale.bandwidth())
+                        .attr('height', height - yScale(d.female))
+                        .attr('fill', colorScale('Female'))
+                        .attr('class', 'bar');
+
+                    // Add hover event for Male bars
+                    maleBar.on('mouseover', function(event) {
+                        const tooltip = d3.select('#tooltip');
+                        tooltip
+                            .style('left', `${event.pageX + 10}px`)
+                            .style('top', `${event.pageY - 28}px`)
+                            .style('display', 'inline-block')
+                            .html(`Male: ${d.male}`);
+                        d3.select(this).attr('fill', 'green');
+                    }).on('mouseout', function() {
+                        d3.select(this).attr('fill', colorScale('Male'));
+                        d3.select('#tooltip').style('display', 'none');
+                    });
+
+                    // Add hover event for Female bars
+                    femaleBar.on('mouseover', function(event) {
+                        const tooltip = d3.select('#tooltip');
+                        tooltip
+                            .style('left', `${event.pageX + 10}px`)
+                            .style('top', `${event.pageY - 28}px`)
+                            .style('display', 'inline-block')
+                            .html(`Female: ${d.female}`);
+                        d3.select(this).attr('fill', 'green');
+                    }).on('mouseout', function() {
+                        d3.select(this).attr('fill', colorScale('Female'));
+                        d3.select('#tooltip').style('display', 'none');
+                    });
+
+                    // Calculate total for male and female
+                    const total = d.male + d.female;
+
+                    // Add total sum above the bars
+                    group.append('text')
+                        .attr('x', x1Scale(d.year) + x1Scale.bandwidth() / 2)
+                        .attr('y', yScale(d.male + d.female) - 10)  // Position above the bar
+                        .attr('text-anchor', 'middle')
+                        .style('font-size', '12px')
+                        .text(total);
+                });
+
+                // Adding program name below the bars in vertical orientation
+                group.append('text')
+                    .attr('x', x0Scale.bandwidth() / 2)
+                    .attr('y', height + 40)  // Position the label below the bars
+                    .attr('text-anchor', 'middle')
+                    .style('font-size', '12px')
+                    .attr('transform', `rotate(-90, ${x0Scale.bandwidth() / 2}, ${height + 40})`)
+                    .text(program);
+            });
+
+            const yAxis = d3.axisLeft(yScale);
+            svg.append('g')
+                .call(yAxis);
+
+            const xAxis = d3.axisBottom(x0Scale)
+                .tickSize(0);
+
+            const xAxisGroup = svg.append('g')
+                .attr('transform', `translate(0,${height})`)
+                .call(xAxis);
+
+            svg.append('text')
+                .attr('transform', 'rotate(-90)')
+                .attr('y', -60)
+                .attr('x', -height / 2)
+                .attr('dy', '1em')
+                .style('text-anchor', 'middle')
+                .style('font-weight', 'bold')
+                .attr('font-size', '12px')
+                .text('Count');
+            
+            svg.selectAll('text')
+                .attr('font-size', '15px');
+            xAxisGroup.selectAll('text')
+                .attr('dy', '30px');
+        });
+    </script>
+</body>
+</html>

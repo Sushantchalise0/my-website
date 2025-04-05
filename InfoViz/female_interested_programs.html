@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Female Student Interest Pie Charts</title>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+        h2 {
+            color: #333;
+        }
+        .chart-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+        .chart {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+        }
+        .chart:hover {
+            transform: scale(1.05);
+        }
+        svg {
+            display: block;
+            margin: auto;
+        }
+        #tooltip {
+            position: absolute;
+            background: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 14px;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s;
+        }
+        text {
+            font-size: 14px;
+            font-weight: bold;
+            fill: white;
+        }
+        .total-students {
+            font-size: 16px;
+            margin-top: 10px;
+            font-weight: bold;
+            color: #333;
+        }
+        .female-percentage {
+            font-size: 16px;
+            margin-top: 10px;
+            font-weight: bold;
+            color: #007BFF;
+        }
+        .legend {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        .legend-item {
+            display: flex;
+            align-items: center;
+        }
+        .legend-color {
+            width: 20px;
+            height: 20px;
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <!-- <h2>Student Interest in Programs (Female, Yearly)</h2> -->
+    <div class="chart-container" id="charts"></div>
+    <div id="tooltip"></div>
+    
+    <script>
+        const width = 300, height = 300, radius = Math.min(width, height) / 2 - 20;
+        const color = d3.scaleOrdinal(d3.schemeCategory10);
+        const pie = d3.pie().value(d => d.female); // Change to 'female' to base on female count
+        const arc = d3.arc().innerRadius(0).outerRadius(radius);
+
+        const programNames = {
+            1: 'Civil', 2: 'Civil',
+            3: 'Architecture', 4: 'Architecture',
+            5: 'Electrical', 6: 'Electrical',
+            7: 'Electronics', 8: 'Electronics',
+            9: 'Mechanical', 10: 'Mechanical',
+            11: 'Computer', 12: 'Computer',
+            27: 'Aerospace', 28: 'Aerospace',
+            29: 'Chemical', 30: 'Chemical'
+        };
+        
+        fetch("combined_data.csv")
+            .then(response => response.text())
+            .then(data => {
+                const parsedData = d3.csvParse(data, d3.autoType);
+                
+                let uniqueStudents = Array.from(new Map(parsedData.map(s => [`${s.year}-${s.Rank}`, s])).values());
+                
+                let groupedData = d3.group(uniqueStudents, d => d.year);
+                let years = Array.from(groupedData.keys()).sort();
+                
+                function createChart(year, pieData, totalStudents, femaleCount, femalePercentage) {
+                    // Sort pieData by female count in descending order
+                    pieData.sort((a, b) => b.female - a.female);
+                    
+                    const container = d3.select("#charts").append("div").attr("class", "chart");
+                    container.append("h3").text(`Year: ${year}`);
+                    
+                    const svg = container.append("svg")
+                        .attr("width", width)
+                        .attr("height", height)
+                        .append("g")
+                        .attr("transform", `translate(${width / 2},${height / 2})`);
+                    
+                    const arcs = svg.selectAll(".arc")
+                        .data(pie(pieData))
+                        .enter()
+                        .append("g")
+                        .attr("class", "arc");
+                    
+                    arcs.append("path")
+                        .attr("d", arc)
+                        .attr("fill", d => color(d.data.program))
+                        .on("mouseover", (event, d) => {
+                            d3.select("#tooltip")
+                              .style("left", (event.pageX + 10) + "px")
+                              .style("top", (event.pageY - 10) + "px")
+                              .style("opacity", 1)
+                              .html(`<strong>${d.data.program}</strong><br>Female: ${d.data.female}`);
+                        })
+                        .on("mouseout", () => d3.select("#tooltip").style("opacity", 0));
+                    
+                    arcs.append("text")
+                        .attr("transform", d => `translate(${arc.centroid(d)})`)
+                        .attr("text-anchor", "middle")
+                        .text(d => `${d.data.female}`);
+                    
+                    // Display total unique students for the year below the pie chart
+                    container.append("div").attr("class", "total-students").text(`Total Students: ${totalStudents}`);
+                    
+                    // Display female percentage below the pie chart
+                    container.append("div").attr("class", "female-percentage").text(`Female Students: ${femalePercentage.toFixed(2)}%`);
+
+                    // Create legend
+                    const legend = container.append("div").attr("class", "legend");
+                    pieData.forEach(d => {
+                        const legendItem = legend.append("div").attr("class", "legend-item");
+                        legendItem.append("div")
+                            .attr("class", "legend-color")
+                            .style("background-color", color(d.program));
+                        legendItem.append("span").text(d.program);
+                    });
+                }
+                
+                years.forEach(year => {
+                    let pieData = new Map();
+                    let totalUniqueStudents = 0;
+                    let femaleCount = 0;
+                    
+                    if (groupedData.has(year)) {
+                        let studentsForYear = groupedData.get(year);
+                        totalUniqueStudents = studentsForYear.length;
+                        
+                        studentsForYear.forEach(student => {
+                            let program = programNames[student.p1] || "Unknown";
+                            if (!pieData.has(program)) {
+                                pieData.set(program, { program, male: 0, female: 0, total: 0 });
+                            }
+                            let entry = pieData.get(program);
+                            if (student.Gender === "Female") {
+                                entry.female++;
+                                femaleCount++;
+                            }
+                            entry.total++;
+                        });
+                    }
+
+                    // Calculate female percentage
+                    let femalePercentage = (femaleCount / totalUniqueStudents) * 100;
+
+                    createChart(year, Array.from(pieData.values()), totalUniqueStudents, femaleCount, femalePercentage);
+                });
+            });
+    </script>
+</body>
+</html>

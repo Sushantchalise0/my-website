@@ -1,0 +1,482 @@
+[
+    {
+        "year":2077,
+        "Program":"Aerospace",
+        "Fee Type":"Full Fee",
+        "Count":91
+    },
+    {
+        "year":2077,
+        "Program":"Aerospace",
+        "Fee Type":"Regular",
+        "Count":80
+    },
+    {
+        "year":2077,
+        "Program":"Architecture",
+        "Fee Type":"Full Fee",
+        "Count":162
+    },
+    {
+        "year":2077,
+        "Program":"Architecture",
+        "Fee Type":"Regular",
+        "Count":144
+    },
+    {
+        "year":2077,
+        "Program":"Chemical",
+        "Fee Type":"Full Fee",
+        "Count":92
+    },
+    {
+        "year":2077,
+        "Program":"Chemical",
+        "Fee Type":"Regular",
+        "Count":77
+    },
+    {
+        "year":2077,
+        "Program":"Civil",
+        "Fee Type":"Full Fee",
+        "Count":250
+    },
+    {
+        "year":2077,
+        "Program":"Civil",
+        "Fee Type":"Regular",
+        "Count":435
+    },
+    {
+        "year":2077,
+        "Program":"Computer",
+        "Fee Type":"Full Fee",
+        "Count":210
+    },
+    {
+        "year":2077,
+        "Program":"Computer",
+        "Fee Type":"Regular",
+        "Count":263
+    },
+    {
+        "year":2077,
+        "Program":"Electrical",
+        "Fee Type":"Full Fee",
+        "Count":89
+    },
+    {
+        "year":2077,
+        "Program":"Electrical",
+        "Fee Type":"Regular",
+        "Count":73
+    },
+    {
+        "year":2077,
+        "Program":"Electronics",
+        "Fee Type":"Full Fee",
+        "Count":73
+    },
+    {
+        "year":2077,
+        "Program":"Electronics",
+        "Fee Type":"Regular",
+        "Count":72
+    },
+    {
+        "year":2077,
+        "Program":"Mechanical",
+        "Fee Type":"Full Fee",
+        "Count":58
+    },
+    {
+        "year":2077,
+        "Program":"Mechanical",
+        "Fee Type":"Regular",
+        "Count":65
+    },
+    {
+        "year":2078,
+        "Program":"Aerospace",
+        "Fee Type":"Full Fee",
+        "Count":98
+    },
+    {
+        "year":2078,
+        "Program":"Aerospace",
+        "Fee Type":"Regular",
+        "Count":59
+    },
+    {
+        "year":2078,
+        "Program":"Architecture",
+        "Fee Type":"Full Fee",
+        "Count":170
+    },
+    {
+        "year":2078,
+        "Program":"Architecture",
+        "Fee Type":"Regular",
+        "Count":110
+    },
+    {
+        "year":2078,
+        "Program":"Chemical",
+        "Fee Type":"Full Fee",
+        "Count":39
+    },
+    {
+        "year":2078,
+        "Program":"Chemical",
+        "Fee Type":"Regular",
+        "Count":35
+    },
+    {
+        "year":2078,
+        "Program":"Civil",
+        "Fee Type":"Full Fee",
+        "Count":235
+    },
+    {
+        "year":2078,
+        "Program":"Civil",
+        "Fee Type":"Regular",
+        "Count":421
+    },
+    {
+        "year":2078,
+        "Program":"Computer",
+        "Fee Type":"Full Fee",
+        "Count":208
+    },
+    {
+        "year":2078,
+        "Program":"Computer",
+        "Fee Type":"Regular",
+        "Count":234
+    },
+    {
+        "year":2078,
+        "Program":"Electrical",
+        "Fee Type":"Full Fee",
+        "Count":103
+    },
+    {
+        "year":2078,
+        "Program":"Electrical",
+        "Fee Type":"Regular",
+        "Count":77
+    },
+    {
+        "year":2078,
+        "Program":"Electronics",
+        "Fee Type":"Full Fee",
+        "Count":94
+    },
+    {
+        "year":2078,
+        "Program":"Electronics",
+        "Fee Type":"Regular",
+        "Count":59
+    },
+    {
+        "year":2078,
+        "Program":"Mechanical",
+        "Fee Type":"Full Fee",
+        "Count":36
+    },
+    {
+        "year":2078,
+        "Program":"Mechanical",
+        "Fee Type":"Regular",
+        "Count":51
+    },
+    {
+        "year":2079,
+        "Program":"Aerospace",
+        "Fee Type":"Full Fee",
+        "Count":80
+    },
+    {
+        "year":2079,
+        "Program":"Aerospace",
+        "Fee Type":"Regular",
+        "Count":67
+    },
+    {
+        "year":2079,
+        "Program":"Architecture",
+        "Fee Type":"Full Fee",
+        "Count":85
+    },
+    {
+        "year":2079,
+        "Program":"Architecture",
+        "Fee Type":"Regular",
+        "Count":93
+    },
+    {
+        "year":2079,
+        "Program":"Chemical",
+        "Fee Type":"Full Fee",
+        "Count":33
+    },
+    {
+        "year":2079,
+        "Program":"Chemical",
+        "Fee Type":"Regular",
+        "Count":46
+    },
+    {
+        "year":2079,
+        "Program":"Civil",
+        "Fee Type":"Full Fee",
+        "Count":286
+    },
+    {
+        "year":2079,
+        "Program":"Civil",
+        "Fee Type":"Regular",
+        "Count":342
+    },
+    {
+        "year":2079,
+        "Program":"Computer",
+        "Fee Type":"Full Fee",
+        "Count":196
+    },
+    {
+        "year":2079,
+        "Program":"Computer",
+        "Fee Type":"Regular",
+        "Count":204
+    },
+    {
+        "year":2079,
+        "Program":"Electrical",
+        "Fee Type":"Full Fee",
+        "Count":128
+    },
+    {
+        "year":2079,
+        "Program":"Electrical",
+        "Fee Type":"Regular",
+        "Count":69
+    },
+    {
+        "year":2079,
+        "Program":"Electronics",
+        "Fee Type":"Full Fee",
+        "Count":72
+    },
+    {
+        "year":2079,
+        "Program":"Electronics",
+        "Fee Type":"Regular",
+        "Count":54
+    },
+    {
+        "year":2079,
+        "Program":"Mechanical",
+        "Fee Type":"Full Fee",
+        "Count":53
+    },
+    {
+        "year":2079,
+        "Program":"Mechanical",
+        "Fee Type":"Regular",
+        "Count":50
+    },
+    {
+        "year":2080,
+        "Program":"Aerospace",
+        "Fee Type":"Full Fee",
+        "Count":72
+    },
+    {
+        "year":2080,
+        "Program":"Aerospace",
+        "Fee Type":"Regular",
+        "Count":51
+    },
+    {
+        "year":2080,
+        "Program":"Architecture",
+        "Fee Type":"Full Fee",
+        "Count":85
+    },
+    {
+        "year":2080,
+        "Program":"Architecture",
+        "Fee Type":"Regular",
+        "Count":86
+    },
+    {
+        "year":2080,
+        "Program":"Chemical",
+        "Fee Type":"Full Fee",
+        "Count":58
+    },
+    {
+        "year":2080,
+        "Program":"Chemical",
+        "Fee Type":"Regular",
+        "Count":56
+    },
+    {
+        "year":2080,
+        "Program":"Civil",
+        "Fee Type":"Full Fee",
+        "Count":277
+    },
+    {
+        "year":2080,
+        "Program":"Civil",
+        "Fee Type":"Regular",
+        "Count":291
+    },
+    {
+        "year":2080,
+        "Program":"Computer",
+        "Fee Type":"Full Fee",
+        "Count":232
+    },
+    {
+        "year":2080,
+        "Program":"Computer",
+        "Fee Type":"Regular",
+        "Count":223
+    },
+    {
+        "year":2080,
+        "Program":"Electrical",
+        "Fee Type":"Full Fee",
+        "Count":155
+    },
+    {
+        "year":2080,
+        "Program":"Electrical",
+        "Fee Type":"Regular",
+        "Count":113
+    },
+    {
+        "year":2080,
+        "Program":"Electronics",
+        "Fee Type":"Full Fee",
+        "Count":62
+    },
+    {
+        "year":2080,
+        "Program":"Electronics",
+        "Fee Type":"Regular",
+        "Count":92
+    },
+    {
+        "year":2080,
+        "Program":"Mechanical",
+        "Fee Type":"Full Fee",
+        "Count":64
+    },
+    {
+        "year":2080,
+        "Program":"Mechanical",
+        "Fee Type":"Regular",
+        "Count":78
+    },
+    {
+        "year":2081,
+        "Program":"Aerospace",
+        "Fee Type":"Full Fee",
+        "Count":100
+    },
+    {
+        "year":2081,
+        "Program":"Aerospace",
+        "Fee Type":"Regular",
+        "Count":87
+    },
+    {
+        "year":2081,
+        "Program":"Architecture",
+        "Fee Type":"Full Fee",
+        "Count":69
+    },
+    {
+        "year":2081,
+        "Program":"Architecture",
+        "Fee Type":"Regular",
+        "Count":74
+    },
+    {
+        "year":2081,
+        "Program":"Chemical",
+        "Fee Type":"Full Fee",
+        "Count":41
+    },
+    {
+        "year":2081,
+        "Program":"Chemical",
+        "Fee Type":"Regular",
+        "Count":48
+    },
+    {
+        "year":2081,
+        "Program":"Civil",
+        "Fee Type":"Full Fee",
+        "Count":269
+    },
+    {
+        "year":2081,
+        "Program":"Civil",
+        "Fee Type":"Regular",
+        "Count":290
+    },
+    {
+        "year":2081,
+        "Program":"Computer",
+        "Fee Type":"Full Fee",
+        "Count":248
+    },
+    {
+        "year":2081,
+        "Program":"Computer",
+        "Fee Type":"Regular",
+        "Count":242
+    },
+    {
+        "year":2081,
+        "Program":"Electrical",
+        "Fee Type":"Full Fee",
+        "Count":92
+    },
+    {
+        "year":2081,
+        "Program":"Electrical",
+        "Fee Type":"Regular",
+        "Count":75
+    },
+    {
+        "year":2081,
+        "Program":"Electronics",
+        "Fee Type":"Full Fee",
+        "Count":81
+    },
+    {
+        "year":2081,
+        "Program":"Electronics",
+        "Fee Type":"Regular",
+        "Count":70
+    },
+    {
+        "year":2081,
+        "Program":"Mechanical",
+        "Fee Type":"Full Fee",
+        "Count":65
+    },
+    {
+        "year":2081,
+        "Program":"Mechanical",
+        "Fee Type":"Regular",
+        "Count":54
+    }
+]

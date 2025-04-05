@@ -1,0 +1,2938 @@
+[
+    {
+        "year": 2077,
+        "District": "Achham",
+        "female_applied": 0,
+        "male_applied": 12,
+        "female_admitted": 0,
+        "male_admitted": 4
+    },
+    {
+        "year": 2077,
+        "District": "Arghakhanchi",
+        "female_applied": 9,
+        "male_applied": 26,
+        "female_admitted": 2,
+        "male_admitted": 10
+    },
+    {
+        "year": 2077,
+        "District": "Baglung",
+        "female_applied": 7,
+        "male_applied": 18,
+        "female_admitted": 1,
+        "male_admitted": 8
+    },
+    {
+        "year": 2077,
+        "District": "Baitadi",
+        "female_applied": 2,
+        "male_applied": 6,
+        "female_admitted": 0,
+        "male_admitted": 3
+    },
+    {
+        "year": 2077,
+        "District": "Bajhang",
+        "female_applied": 0,
+        "male_applied": 5,
+        "female_admitted": 0,
+        "male_admitted": 1
+    },
+    {
+        "year": 2077,
+        "District": "Bajura",
+        "female_applied": 0,
+        "male_applied": 2,
+        "female_admitted": 0,
+        "male_admitted": 1
+    },
+    {
+        "year": 2077,
+        "District": "Banke",
+        "female_applied": 2,
+        "male_applied": 11,
+        "female_admitted": 0,
+        "male_admitted": 1
+    },
+    {
+        "year": 2077,
+        "District": "Bara",
+        "female_applied": 3,
+        "male_applied": 23,
+        "female_admitted": 0,
+        "male_admitted": 4
+    },
+    {
+        "year": 2077,
+        "District": "Bardiya",
+        "female_applied": 0,
+        "male_applied": 11,
+        "female_admitted": 0,
+        "male_admitted": 4
+    },
+    {
+        "year": 2077,
+        "District": "Bhaktapur",
+        "female_applied": 38,
+        "male_applied": 43,
+        "female_admitted": 5,
+        "male_admitted": 13
+    },
+    {
+        "year": 2077,
+        "District": "Bhojpur",
+        "female_applied": 3,
+        "male_applied": 6,
+        "female_admitted": 0,
+        "male_admitted": 3
+    },
+    {
+        "year": 2077,
+        "District": "Chitawan",
+        "female_applied": 24,
+        "male_applied": 72,
+        "female_admitted": 6,
+        "male_admitted": 31
+    },
+    {
+        "year": 2077,
+        "District": "Dadeldhura",
+        "female_applied": 1,
+        "male_applied": 7,
+        "female_admitted": 1,
+        "male_admitted": 2
+    },
+    {
+        "year": 2077,
+        "District": "Dailekh",
+        "female_applied": 0,
+        "male_applied": 3,
+        "female_admitted": 0,
+        "male_admitted": 1
+    },
+    {
+        "year": 2077,
+        "District": "Dang",
+        "female_applied": 8,
+        "male_applied": 28,
+        "female_admitted": 4,
+        "male_admitted": 13
+    },
+    {
+        "year": 2077,
+        "District": "Darchula",
+        "female_applied": 1,
+        "male_applied": 8,
+        "female_admitted": 0,
+        "male_admitted": 1
+    },
+    {
+        "year": 2077,
+        "District": "Dhading",
+        "female_applied": 12,
+        "male_applied": 24,
+        "female_admitted": 2,
+        "male_admitted": 6
+    },
+    {
+        "year": 2077,
+        "District": "Dhankuta",
+        "female_applied": 1,
+        "male_applied": 2,
+        "female_admitted": 0,
+        "male_admitted": 1
+    },
+    {
+        "year": 2077,
+        "District": "Dhanusha",
+        "female_applied": 12,
+        "male_applied": 45,
+        "female_admitted": 1,
+        "male_admitted": 11
+    },
+    {
+        "year": 2077,
+        "District": "Dolakha",
+        "female_applied": 6,
+        "male_applied": 14,
+        "female_admitted": 2,
+        "male_admitted": 0
+    },
+    {
+        "year": 2077,
+        "District": "Dolkha",
+        "female_applied": 0,
+        "male_applied": 1,
+        "female_admitted": 0,
+        "male_admitted": 1
+    },
+    {
+        "year": 2077,
+        "District": "Dolpa",
+        "female_applied": 0,
+        "male_applied": 1,
+        "female_admitted": 0,
+        "male_admitted": 0
+    },
+    {
+        "year": 2077,
+        "District": "Doti",
+        "female_applied": 1,
+        "male_applied": 2,
+        "female_admitted": 0,
+        "male_admitted": 0
+    },
+    {
+        "year": 2077,
+        "District": "Gorkha",
+        "female_applied": 8,
+        "male_applied": 32,
+        "female_admitted": 4,
+        "male_admitted": 16
+    },
+    {
+        "year": 2077,
+        "District": "Gulmi",
+        "female_applied": 7,
+        "male_applied": 31,
+        "female_admitted": 4,
+        "male_admitted": 9
+    },
+    {
+        "year": 2077,
+        "District": "Humla",
+        "female_applied": 2,
+        "male_applied": 3,
+        "female_admitted": 0,
+        "male_admitted": 1
+    },
+    {
+        "year": 2077,
+        "District": "Ilam",
+        "female_applied": 2,
+        "male_applied": 5,
+        "female_admitted": 1,
+        "male_admitted": 2
+    },
+    {
+        "year": 2077,
+        "District": "Jajarkot",
+        "female_applied": 2,
+        "male_applied": 1,
+        "female_admitted": 0,
+        "male_admitted": 0
+    },
+    {
+        "year": 2077,
+        "District": "Jhapa",
+        "female_applied": 23,
+        "male_applied": 45,
+        "female_admitted": 4,
+        "male_admitted": 16
+    },
+    {
+        "year": 2077,
+        "District": "Jumla",
+        "female_applied": 0,
+        "male_applied": 6,
+        "female_admitted": 0,
+        "male_admitted": 2
+    },
+    {
+        "year": 2077,
+        "District": "Kailali",
+        "female_applied": 2,
+        "male_applied": 24,
+        "female_admitted": 1,
+        "male_admitted": 8
+    },
+    {
+        "year": 2077,
+        "District": "Kalikot",
+        "female_applied": 1,
+        "male_applied": 1,
+        "female_admitted": 1,
+        "male_admitted": 1
+    },
+    {
+        "year": 2077,
+        "District": "Kanchanpur",
+        "female_applied": 3,
+        "male_applied": 15,
+        "female_admitted": 1,
+        "male_admitted": 8
+    },
+    {
+        "year": 2077,
+        "District": "Kapilbastu",
+        "female_applied": 3,
+        "male_applied": 12,
+        "female_admitted": 2,
+        "male_admitted": 2
+    },
+    {
+        "year": 2077,
+        "District": "Kaski",
+        "female_applied": 24,
+        "male_applied": 43,
+        "female_admitted": 7,
+        "male_admitted": 17
+    },
+    {
+        "year": 2077,
+        "District": "Kathmandu",
+        "female_applied": 80,
+        "male_applied": 165,
+        "female_admitted": 18,
+        "male_admitted": 61
+    },
+    {
+        "year": 2077,
+        "District": "Kavrepalanchok",
+        "female_applied": 12,
+        "male_applied": 27,
+        "female_admitted": 2,
+        "male_admitted": 6
+    },
+    {
+        "year": 2077,
+        "District": "Khotang",
+        "female_applied": 2,
+        "male_applied": 8,
+        "female_admitted": 0,
+        "male_admitted": 2
+    },
+    {
+        "year": 2077,
+        "District": "Lalitpur",
+        "female_applied": 38,
+        "male_applied": 45,
+        "female_admitted": 12,
+        "male_admitted": 16
+    },
+    {
+        "year": 2077,
+        "District": "Lamjung",
+        "female_applied": 7,
+        "male_applied": 18,
+        "female_admitted": 0,
+        "male_admitted": 10
+    },
+    {
+        "year": 2077,
+        "District": "Mahottari",
+        "female_applied": 13,
+        "male_applied": 39,
+        "female_admitted": 2,
+        "male_admitted": 5
+    },
+    {
+        "year": 2077,
+        "District": "Makawanpur",
+        "female_applied": 13,
+        "male_applied": 19,
+        "female_admitted": 3,
+        "male_admitted": 4
+    },
+    {
+        "year": 2077,
+        "District": "Morang",
+        "female_applied": 15,
+        "male_applied": 40,
+        "female_admitted": 3,
+        "male_admitted": 16
+    },
+    {
+        "year": 2077,
+        "District": "Mugu",
+        "female_applied": 0,
+        "male_applied": 3,
+        "female_admitted": 0,
+        "male_admitted": 0
+    },
+    {
+        "year": 2077,
+        "District": "Mustang",
+        "female_applied": 1,
+        "male_applied": 1,
+        "female_admitted": 0,
+        "male_admitted": 0
+    },
+    {
+        "year": 2077,
+        "District": "Myagdi",
+        "female_applied": 1,
+        "male_applied": 5,
+        "female_admitted": 0,
+        "male_admitted": 2
+    },
+    {
+        "year": 2077,
+        "District": "Nawalparasi",
+        "female_applied": 9,
+        "male_applied": 24,
+        "female_admitted": 3,
+        "male_admitted": 7
+    },
+    {
+        "year": 2077,
+        "District": "Nuwakot",
+        "female_applied": 3,
+        "male_applied": 20,
+        "female_admitted": 0,
+        "male_admitted": 9
+    },
+    {
+        "year": 2077,
+        "District": "Okhaldhunga",
+        "female_applied": 0,
+        "male_applied": 8,
+        "female_admitted": 0,
+        "male_admitted": 3
+    },
+    {
+        "year": 2077,
+        "District": "Palpa",
+        "female_applied": 9,
+        "male_applied": 21,
+        "female_admitted": 3,
+        "male_admitted": 7
+    },
+    {
+        "year": 2077,
+        "District": "Panchthar",
+        "female_applied": 0,
+        "male_applied": 8,
+        "female_admitted": 0,
+        "male_admitted": 2
+    },
+    {
+        "year": 2077,
+        "District": "Parbat",
+        "female_applied": 4,
+        "male_applied": 22,
+        "female_admitted": 2,
+        "male_admitted": 6
+    },
+    {
+        "year": 2077,
+        "District": "Parsa",
+        "female_applied": 2,
+        "male_applied": 14,
+        "female_admitted": 0,
+        "male_admitted": 4
+    },
+    {
+        "year": 2077,
+        "District": "Pyuthan",
+        "female_applied": 3,
+        "male_applied": 8,
+        "female_admitted": 1,
+        "male_admitted": 3
+    },
+    {
+        "year": 2077,
+        "District": "Ramechhap",
+        "female_applied": 4,
+        "male_applied": 14,
+        "female_admitted": 0,
+        "male_admitted": 5
+    },
+    {
+        "year": 2077,
+        "District": "Rasuwa",
+        "female_applied": 0,
+        "male_applied": 5,
+        "female_admitted": 0,
+        "male_admitted": 0
+    },
+    {
+        "year": 2077,
+        "District": "Rautahat",
+        "female_applied": 6,
+        "male_applied": 25,
+        "female_admitted": 0,
+        "male_admitted": 9
+    },
+    {
+        "year": 2077,
+        "District": "Rolpa",
+        "female_applied": 0,
+        "male_applied": 1,
+        "female_admitted": 0,
+        "male_admitted": 1
+    },
+    {
+        "year": 2077,
+        "District": "Rukum",
+        "female_applied": 0,
+        "male_applied": 3,
+        "female_admitted": 0,
+        "male_admitted": 2
+    },
+    {
+        "year": 2077,
+        "District": "Rupandehi",
+        "female_applied": 22,
+        "male_applied": 40,
+        "female_admitted": 4,
+        "male_admitted": 14
+    },
+    {
+        "year": 2077,
+        "District": "Salyan",
+        "female_applied": 0,
+        "male_applied": 3,
+        "female_admitted": 0,
+        "male_admitted": 2
+    },
+    {
+        "year": 2077,
+        "District": "Sankhuwasabha",
+        "female_applied": 2,
+        "male_applied": 3,
+        "female_admitted": 0,
+        "male_admitted": 0
+    },
+    {
+        "year": 2077,
+        "District": "Saptari",
+        "female_applied": 9,
+        "male_applied": 40,
+        "female_admitted": 0,
+        "male_admitted": 10
+    },
+    {
+        "year": 2077,
+        "District": "Sarlahi",
+        "female_applied": 6,
+        "male_applied": 42,
+        "female_admitted": 0,
+        "male_admitted": 15
+    },
+    {
+        "year": 2077,
+        "District": "Sindhuli",
+        "female_applied": 6,
+        "male_applied": 7,
+        "female_admitted": 1,
+        "male_admitted": 3
+    },
+    {
+        "year": 2077,
+        "District": "Sindhupalchok",
+        "female_applied": 5,
+        "male_applied": 16,
+        "female_admitted": 2,
+        "male_admitted": 2
+    },
+    {
+        "year": 2077,
+        "District": "Siraha",
+        "female_applied": 6,
+        "male_applied": 28,
+        "female_admitted": 0,
+        "male_admitted": 8
+    },
+    {
+        "year": 2077,
+        "District": "Solukhumbu",
+        "female_applied": 2,
+        "male_applied": 8,
+        "female_admitted": 1,
+        "male_admitted": 5
+    },
+    {
+        "year": 2077,
+        "District": "Sunsari",
+        "female_applied": 6,
+        "male_applied": 38,
+        "female_admitted": 0,
+        "male_admitted": 12
+    },
+    {
+        "year": 2077,
+        "District": "Surkhet",
+        "female_applied": 0,
+        "male_applied": 12,
+        "female_admitted": 0,
+        "male_admitted": 3
+    },
+    {
+        "year": 2077,
+        "District": "Syangja",
+        "female_applied": 6,
+        "male_applied": 27,
+        "female_admitted": 1,
+        "male_admitted": 11
+    },
+    {
+        "year": 2077,
+        "District": "Tanahun",
+        "female_applied": 8,
+        "male_applied": 22,
+        "female_admitted": 4,
+        "male_admitted": 6
+    },
+    {
+        "year": 2077,
+        "District": "Taplejung",
+        "female_applied": 2,
+        "male_applied": 6,
+        "female_admitted": 1,
+        "male_admitted": 0
+    },
+    {
+        "year": 2077,
+        "District": "Tehrathum",
+        "female_applied": 0,
+        "male_applied": 6,
+        "female_admitted": 0,
+        "male_admitted": 3
+    },
+    {
+        "year": 2077,
+        "District": "Udayapur",
+        "female_applied": 4,
+        "male_applied": 8,
+        "female_admitted": 1,
+        "male_admitted": 2
+    },
+    {
+        "year": 2078,
+        "District": "Achham",
+        "female_applied": 3,
+        "male_applied": 8,
+        "female_admitted": 1,
+        "male_admitted": 3
+    },
+    {
+        "year": 2078,
+        "District": "Arghakhanchi",
+        "female_applied": 5,
+        "male_applied": 19,
+        "female_admitted": 3,
+        "male_admitted": 8
+    },
+    {
+        "year": 2078,
+        "District": "Baglung",
+        "female_applied": 4,
+        "male_applied": 21,
+        "female_admitted": 1,
+        "male_admitted": 7
+    },
+    {
+        "year": 2078,
+        "District": "Baitadi",
+        "female_applied": 2,
+        "male_applied": 12,
+        "female_admitted": 0,
+        "male_admitted": 3
+    },
+    {
+        "year": 2078,
+        "District": "Bajhang",
+        "female_applied": 1,
+        "male_applied": 7,
+        "female_admitted": 0,
+        "male_admitted": 2
+    },
+    {
+        "year": 2078,
+        "District": "Banke",
+        "female_applied": 3,
+        "male_applied": 11,
+        "female_admitted": 0,
+        "male_admitted": 5
+    },
+    {
+        "year": 2078,
+        "District": "Bara",
+        "female_applied": 9,
+        "male_applied": 40,
+        "female_admitted": 2,
+        "male_admitted": 17
+    },
+    {
+        "year": 2078,
+        "District": "Bardiya",
+        "female_applied": 4,
+        "male_applied": 10,
+        "female_admitted": 1,
+        "male_admitted": 3
+    },
+    {
+        "year": 2078,
+        "District": "Bhaktapur",
+        "female_applied": 15,
+        "male_applied": 20,
+        "female_admitted": 4,
+        "male_admitted": 8
+    },
+    {
+        "year": 2078,
+        "District": "Bhojpur",
+        "female_applied": 5,
+        "male_applied": 3,
+        "female_admitted": 3,
+        "male_admitted": 2
+    },
+    {
+        "year": 2078,
+        "District": "Chitawan",
+        "female_applied": 21,
+        "male_applied": 40,
+        "female_admitted": 5,
+        "male_admitted": 16
+    },
+    {
+        "year": 2078,
+        "District": "Dadeldhura",
+        "female_applied": 0,
+        "male_applied": 6,
+        "female_admitted": 0,
+        "male_admitted": 4
+    },
+    {
+        "year": 2078,
+        "District": "Dailekh",
+        "female_applied": 0,
+        "male_applied": 4,
+        "female_admitted": 0,
+        "male_admitted": 0
+    },
+    {
+        "year": 2078,
+        "District": "Dang",
+        "female_applied": 10,
+        "male_applied": 23,
+        "female_admitted": 5,
+        "male_admitted": 11
+    },
+    {
+        "year": 2078,
+        "District": "Darchula",
+        "female_applied": 3,
+        "male_applied": 3,
+        "female_admitted": 1,
+        "male_admitted": 2
+    },
+    {
+        "year": 2078,
+        "District": "Dhading",
+        "female_applied": 6,
+        "male_applied": 16,
+        "female_admitted": 1,
+        "male_admitted": 9
+    },
+    {
+        "year": 2078,
+        "District": "Dhankuta",
+        "female_applied": 2,
+        "male_applied": 3,
+        "female_admitted": 1,
+        "male_admitted": 0
+    },
+    {
+        "year": 2078,
+        "District": "Dhanusha",
+        "female_applied": 22,
+        "male_applied": 56,
+        "female_admitted": 2,
+        "male_admitted": 20
+    },
+    {
+        "year": 2078,
+        "District": "Dolakha",
+        "female_applied": 3,
+        "male_applied": 13,
+        "female_admitted": 1,
+        "male_admitted": 5
+    },
+    {
+        "year": 2078,
+        "District": "Dolpa",
+        "female_applied": 0,
+        "male_applied": 4,
+        "female_admitted": 0,
+        "male_admitted": 1
+    },
+    {
+        "year": 2078,
+        "District": "Doti",
+        "female_applied": 1,
+        "male_applied": 5,
+        "female_admitted": 0,
+        "male_admitted": 0
+    },
+    {
+        "year": 2078,
+        "District": "Gorkha",
+        "female_applied": 11,
+        "male_applied": 26,
+        "female_admitted": 3,
+        "male_admitted": 10
+    },
+    {
+        "year": 2078,
+        "District": "Gulmi",
+        "female_applied": 8,
+        "male_applied": 43,
+        "female_admitted": 3,
+        "male_admitted": 20
+    },
+    {
+        "year": 2078,
+        "District": "Humla",
+        "female_applied": 0,
+        "male_applied": 4,
+        "female_admitted": 0,
+        "male_admitted": 0
+    },
+    {
+        "year": 2078,
+        "District": "Ilam",
+        "female_applied": 9,
+        "male_applied": 7,
+        "female_admitted": 2,
+        "male_admitted": 1
+    },
+    {
+        "year": 2078,
+        "District": "Jajarkot",
+        "female_applied": 1,
+        "male_applied": 0,
+        "female_admitted": 1,
+        "male_admitted": 0
+    },
+    {
+        "year": 2078,
+        "District": "Jhapa",
+        "female_applied": 20,
+        "male_applied": 39,
+        "female_admitted": 3,
+        "male_admitted": 20
+    },
+    {
+        "year": 2078,
+        "District": "Jumla",
+        "female_applied": 0,
+        "male_applied": 4,
+        "female_admitted": 0,
+        "male_admitted": 2
+    },
+    {
+        "year": 2078,
+        "District": "Kailali",
+        "female_applied": 8,
+        "male_applied": 23,
+        "female_admitted": 4,
+        "male_admitted": 12
+    },
+    {
+        "year": 2078,
+        "District": "Kalikot",
+        "female_applied": 1,
+        "male_applied": 4,
+        "female_admitted": 0,
+        "male_admitted": 1
+    },
+    {
+        "year": 2078,
+        "District": "Kanchanpur",
+        "female_applied": 10,
+        "male_applied": 31,
+        "female_admitted": 2,
+        "male_admitted": 14
+    },
+    {
+        "year": 2078,
+        "District": "Kapilbastu",
+        "female_applied": 6,
+        "male_applied": 17,
+        "female_admitted": 2,
+        "male_admitted": 9
+    },
+    {
+        "year": 2078,
+        "District": "Kaski",
+        "female_applied": 25,
+        "male_applied": 42,
+        "female_admitted": 2,
+        "male_admitted": 18
+    },
+    {
+        "year": 2078,
+        "District": "Kathmandu",
+        "female_applied": 82,
+        "male_applied": 104,
+        "female_admitted": 19,
+        "male_admitted": 27
+    },
+    {
+        "year": 2078,
+        "District": "Kavrepalanchok",
+        "female_applied": 7,
+        "male_applied": 16,
+        "female_admitted": 1,
+        "male_admitted": 6
+    },
+    {
+        "year": 2078,
+        "District": "Khotang",
+        "female_applied": 4,
+        "male_applied": 9,
+        "female_admitted": 1,
+        "male_admitted": 4
+    },
+    {
+        "year": 2078,
+        "District": "Lalitpur",
+        "female_applied": 34,
+        "male_applied": 31,
+        "female_admitted": 5,
+        "male_admitted": 13
+    },
+    {
+        "year": 2078,
+        "District": "Lamjung",
+        "female_applied": 3,
+        "male_applied": 12,
+        "female_admitted": 0,
+        "male_admitted": 3
+    },
+    {
+        "year": 2078,
+        "District": "Mahottari",
+        "female_applied": 19,
+        "male_applied": 42,
+        "female_admitted": 2,
+        "male_admitted": 20
+    },
+    {
+        "year": 2078,
+        "District": "Makawanpur",
+        "female_applied": 9,
+        "male_applied": 21,
+        "female_admitted": 1,
+        "male_admitted": 8
+    },
+    {
+        "year": 2078,
+        "District": "Morang",
+        "female_applied": 10,
+        "male_applied": 54,
+        "female_admitted": 1,
+        "male_admitted": 21
+    },
+    {
+        "year": 2078,
+        "District": "Mugu",
+        "female_applied": 1,
+        "male_applied": 0,
+        "female_admitted": 0,
+        "male_admitted": 0
+    },
+    {
+        "year": 2078,
+        "District": "Myagdi",
+        "female_applied": 1,
+        "male_applied": 10,
+        "female_admitted": 0,
+        "male_admitted": 6
+    },
+    {
+        "year": 2078,
+        "District": "Nawalparasi",
+        "female_applied": 10,
+        "male_applied": 33,
+        "female_admitted": 3,
+        "male_admitted": 15
+    },
+    {
+        "year": 2078,
+        "District": "Nuwakot",
+        "female_applied": 4,
+        "male_applied": 21,
+        "female_admitted": 1,
+        "male_admitted": 5
+    },
+    {
+        "year": 2078,
+        "District": "Okhaldhunga",
+        "female_applied": 4,
+        "male_applied": 12,
+        "female_admitted": 1,
+        "male_admitted": 8
+    },
+    {
+        "year": 2078,
+        "District": "Okhaldunga",
+        "female_applied": 0,
+        "male_applied": 1,
+        "female_admitted": 0,
+        "male_admitted": 1
+    },
+    {
+        "year": 2078,
+        "District": "Palpa",
+        "female_applied": 4,
+        "male_applied": 25,
+        "female_admitted": 1,
+        "male_admitted": 14
+    },
+    {
+        "year": 2078,
+        "District": "Panchthar",
+        "female_applied": 1,
+        "male_applied": 4,
+        "female_admitted": 0,
+        "male_admitted": 1
+    },
+    {
+        "year": 2078,
+        "District": "Parbat",
+        "female_applied": 10,
+        "male_applied": 15,
+        "female_admitted": 1,
+        "male_admitted": 8
+    },
+    {
+        "year": 2078,
+        "District": "Parsa",
+        "female_applied": 4,
+        "male_applied": 19,
+        "female_admitted": 1,
+        "male_admitted": 9
+    },
+    {
+        "year": 2078,
+        "District": "Pyuthan",
+        "female_applied": 4,
+        "male_applied": 7,
+        "female_admitted": 0,
+        "male_admitted": 3
+    },
+    {
+        "year": 2078,
+        "District": "Ramechhap",
+        "female_applied": 6,
+        "male_applied": 13,
+        "female_admitted": 2,
+        "male_admitted": 8
+    },
+    {
+        "year": 2078,
+        "District": "Rasuwa",
+        "female_applied": 1,
+        "male_applied": 2,
+        "female_admitted": 0,
+        "male_admitted": 2
+    },
+    {
+        "year": 2078,
+        "District": "Rautahat",
+        "female_applied": 7,
+        "male_applied": 24,
+        "female_admitted": 2,
+        "male_admitted": 6
+    },
+    {
+        "year": 2078,
+        "District": "Rolpa",
+        "female_applied": 3,
+        "male_applied": 0,
+        "female_admitted": 1,
+        "male_admitted": 0
+    },
+    {
+        "year": 2078,
+        "District": "Rukum",
+        "female_applied": 0,
+        "male_applied": 2,
+        "female_admitted": 0,
+        "male_admitted": 2
+    },
+    {
+        "year": 2078,
+        "District": "Rupandehi",
+        "female_applied": 8,
+        "male_applied": 52,
+        "female_admitted": 4,
+        "male_admitted": 20
+    },
+    {
+        "year": 2078,
+        "District": "Salyan",
+        "female_applied": 1,
+        "male_applied": 6,
+        "female_admitted": 0,
+        "male_admitted": 4
+    },
+    {
+        "year": 2078,
+        "District": "Sankhuwasabha",
+        "female_applied": 0,
+        "male_applied": 9,
+        "female_admitted": 0,
+        "male_admitted": 1
+    },
+    {
+        "year": 2078,
+        "District": "Saptari",
+        "female_applied": 4,
+        "male_applied": 48,
+        "female_admitted": 0,
+        "male_admitted": 8
+    },
+    {
+        "year": 2078,
+        "District": "Sarlahi",
+        "female_applied": 11,
+        "male_applied": 37,
+        "female_admitted": 0,
+        "male_admitted": 10
+    },
+    {
+        "year": 2078,
+        "District": "Sindhuli",
+        "female_applied": 2,
+        "male_applied": 11,
+        "female_admitted": 0,
+        "male_admitted": 0
+    },
+    {
+        "year": 2078,
+        "District": "Sindhupalchok",
+        "female_applied": 5,
+        "male_applied": 18,
+        "female_admitted": 0,
+        "male_admitted": 7
+    },
+    {
+        "year": 2078,
+        "District": "Siraha",
+        "female_applied": 8,
+        "male_applied": 36,
+        "female_admitted": 1,
+        "male_admitted": 9
+    },
+    {
+        "year": 2078,
+        "District": "Solukhumbu",
+        "female_applied": 2,
+        "male_applied": 7,
+        "female_admitted": 0,
+        "male_admitted": 5
+    },
+    {
+        "year": 2078,
+        "District": "Sunsari",
+        "female_applied": 9,
+        "male_applied": 29,
+        "female_admitted": 1,
+        "male_admitted": 11
+    },
+    {
+        "year": 2078,
+        "District": "Surkhet",
+        "female_applied": 2,
+        "male_applied": 9,
+        "female_admitted": 0,
+        "male_admitted": 3
+    },
+    {
+        "year": 2078,
+        "District": "Syangja",
+        "female_applied": 8,
+        "male_applied": 30,
+        "female_admitted": 2,
+        "male_admitted": 12
+    },
+    {
+        "year": 2078,
+        "District": "Tanahun",
+        "female_applied": 6,
+        "male_applied": 16,
+        "female_admitted": 3,
+        "male_admitted": 11
+    },
+    {
+        "year": 2078,
+        "District": "Taplejung",
+        "female_applied": 1,
+        "male_applied": 8,
+        "female_admitted": 0,
+        "male_admitted": 3
+    },
+    {
+        "year": 2078,
+        "District": "Tehrathum",
+        "female_applied": 1,
+        "male_applied": 2,
+        "female_admitted": 0,
+        "male_admitted": 1
+    },
+    {
+        "year": 2078,
+        "District": "Udayapur",
+        "female_applied": 3,
+        "male_applied": 5,
+        "female_admitted": 1,
+        "male_admitted": 3
+    },
+    {
+        "year": 2079,
+        "District": "Achham",
+        "female_applied": 1,
+        "male_applied": 6,
+        "female_admitted": 0,
+        "male_admitted": 0
+    },
+    {
+        "year": 2079,
+        "District": "Arghakhanchi",
+        "female_applied": 3,
+        "male_applied": 19,
+        "female_admitted": 1,
+        "male_admitted": 13
+    },
+    {
+        "year": 2079,
+        "District": "Baglung",
+        "female_applied": 3,
+        "male_applied": 15,
+        "female_admitted": 1,
+        "male_admitted": 5
+    },
+    {
+        "year": 2079,
+        "District": "Baitadi",
+        "female_applied": 3,
+        "male_applied": 4,
+        "female_admitted": 1,
+        "male_admitted": 1
+    },
+    {
+        "year": 2079,
+        "District": "Bajhang",
+        "female_applied": 1,
+        "male_applied": 9,
+        "female_admitted": 0,
+        "male_admitted": 2
+    },
+    {
+        "year": 2079,
+        "District": "Bajura",
+        "female_applied": 1,
+        "male_applied": 5,
+        "female_admitted": 0,
+        "male_admitted": 1
+    },
+    {
+        "year": 2079,
+        "District": "Banke",
+        "female_applied": 7,
+        "male_applied": 10,
+        "female_admitted": 1,
+        "male_admitted": 3
+    },
+    {
+        "year": 2079,
+        "District": "Bara",
+        "female_applied": 3,
+        "male_applied": 35,
+        "female_admitted": 1,
+        "male_admitted": 11
+    },
+    {
+        "year": 2079,
+        "District": "Bardiya",
+        "female_applied": 6,
+        "male_applied": 8,
+        "female_admitted": 3,
+        "male_admitted": 2
+    },
+    {
+        "year": 2079,
+        "District": "Bhaktapur",
+        "female_applied": 18,
+        "male_applied": 34,
+        "female_admitted": 5,
+        "male_admitted": 16
+    },
+    {
+        "year": 2079,
+        "District": "Bhojpur",
+        "female_applied": 4,
+        "male_applied": 3,
+        "female_admitted": 1,
+        "male_admitted": 1
+    },
+    {
+        "year": 2079,
+        "District": "Chitawan",
+        "female_applied": 16,
+        "male_applied": 49,
+        "female_admitted": 11,
+        "male_admitted": 25
+    },
+    {
+        "year": 2079,
+        "District": "Dadeldhura",
+        "female_applied": 3,
+        "male_applied": 5,
+        "female_admitted": 1,
+        "male_admitted": 1
+    },
+    {
+        "year": 2079,
+        "District": "Dailekh",
+        "female_applied": 0,
+        "male_applied": 8,
+        "female_admitted": 0,
+        "male_admitted": 2
+    },
+    {
+        "year": 2079,
+        "District": "Dang",
+        "female_applied": 6,
+        "male_applied": 27,
+        "female_admitted": 4,
+        "male_admitted": 12
+    },
+    {
+        "year": 2079,
+        "District": "Darchula",
+        "female_applied": 4,
+        "male_applied": 5,
+        "female_admitted": 2,
+        "male_admitted": 1
+    },
+    {
+        "year": 2079,
+        "District": "Dhading",
+        "female_applied": 3,
+        "male_applied": 20,
+        "female_admitted": 1,
+        "male_admitted": 6
+    },
+    {
+        "year": 2079,
+        "District": "Dhankuta",
+        "female_applied": 5,
+        "male_applied": 5,
+        "female_admitted": 1,
+        "male_admitted": 2
+    },
+    {
+        "year": 2079,
+        "District": "Dhanusha",
+        "female_applied": 23,
+        "male_applied": 52,
+        "female_admitted": 2,
+        "male_admitted": 21
+    },
+    {
+        "year": 2079,
+        "District": "Dolakha",
+        "female_applied": 2,
+        "male_applied": 16,
+        "female_admitted": 1,
+        "male_admitted": 10
+    },
+    {
+        "year": 2079,
+        "District": "Dolpa",
+        "female_applied": 2,
+        "male_applied": 0,
+        "female_admitted": 2,
+        "male_admitted": 0
+    },
+    {
+        "year": 2079,
+        "District": "Doti",
+        "female_applied": 0,
+        "male_applied": 5,
+        "female_admitted": 0,
+        "male_admitted": 2
+    },
+    {
+        "year": 2079,
+        "District": "Gorkha",
+        "female_applied": 7,
+        "male_applied": 21,
+        "female_admitted": 2,
+        "male_admitted": 9
+    },
+    {
+        "year": 2079,
+        "District": "Gulmi",
+        "female_applied": 6,
+        "male_applied": 18,
+        "female_admitted": 3,
+        "male_admitted": 11
+    },
+    {
+        "year": 2079,
+        "District": "Humla",
+        "female_applied": 0,
+        "male_applied": 1,
+        "female_admitted": 0,
+        "male_admitted": 0
+    },
+    {
+        "year": 2079,
+        "District": "Ilam",
+        "female_applied": 4,
+        "male_applied": 12,
+        "female_admitted": 0,
+        "male_admitted": 5
+    },
+    {
+        "year": 2079,
+        "District": "Jajarkot",
+        "female_applied": 0,
+        "male_applied": 1,
+        "female_admitted": 0,
+        "male_admitted": 1
+    },
+    {
+        "year": 2079,
+        "District": "Jhapa",
+        "female_applied": 12,
+        "male_applied": 55,
+        "female_admitted": 2,
+        "male_admitted": 29
+    },
+    {
+        "year": 2079,
+        "District": "Jumla",
+        "female_applied": 0,
+        "male_applied": 8,
+        "female_admitted": 0,
+        "male_admitted": 2
+    },
+    {
+        "year": 2079,
+        "District": "Kailali",
+        "female_applied": 8,
+        "male_applied": 27,
+        "female_admitted": 3,
+        "male_admitted": 16
+    },
+    {
+        "year": 2079,
+        "District": "Kalikot",
+        "female_applied": 0,
+        "male_applied": 4,
+        "female_admitted": 0,
+        "male_admitted": 2
+    },
+    {
+        "year": 2079,
+        "District": "Kanchanpur",
+        "female_applied": 3,
+        "male_applied": 35,
+        "female_admitted": 2,
+        "male_admitted": 13
+    },
+    {
+        "year": 2079,
+        "District": "Kapilbastu",
+        "female_applied": 1,
+        "male_applied": 8,
+        "female_admitted": 0,
+        "male_admitted": 5
+    },
+    {
+        "year": 2079,
+        "District": "Kaski",
+        "female_applied": 16,
+        "male_applied": 31,
+        "female_admitted": 3,
+        "male_admitted": 13
+    },
+    {
+        "year": 2079,
+        "District": "Kathmandu",
+        "female_applied": 45,
+        "male_applied": 75,
+        "female_admitted": 6,
+        "male_admitted": 38
+    },
+    {
+        "year": 2079,
+        "District": "Kavrepalanchok",
+        "female_applied": 6,
+        "male_applied": 17,
+        "female_admitted": 0,
+        "male_admitted": 7
+    },
+    {
+        "year": 2079,
+        "District": "Khotang",
+        "female_applied": 1,
+        "male_applied": 5,
+        "female_admitted": 0,
+        "male_admitted": 3
+    },
+    {
+        "year": 2079,
+        "District": "Lalitpur",
+        "female_applied": 25,
+        "male_applied": 29,
+        "female_admitted": 2,
+        "male_admitted": 15
+    },
+    {
+        "year": 2079,
+        "District": "Lamjung",
+        "female_applied": 6,
+        "male_applied": 7,
+        "female_admitted": 1,
+        "male_admitted": 6
+    },
+    {
+        "year": 2079,
+        "District": "Mahottari",
+        "female_applied": 22,
+        "male_applied": 37,
+        "female_admitted": 5,
+        "male_admitted": 13
+    },
+    {
+        "year": 2079,
+        "District": "Makawanpur",
+        "female_applied": 5,
+        "male_applied": 18,
+        "female_admitted": 2,
+        "male_admitted": 8
+    },
+    {
+        "year": 2079,
+        "District": "Morang",
+        "female_applied": 14,
+        "male_applied": 42,
+        "female_admitted": 10,
+        "male_admitted": 25
+    },
+    {
+        "year": 2079,
+        "District": "Mugu",
+        "female_applied": 1,
+        "male_applied": 1,
+        "female_admitted": 0,
+        "male_admitted": 0
+    },
+    {
+        "year": 2079,
+        "District": "Myagdi",
+        "female_applied": 2,
+        "male_applied": 4,
+        "female_admitted": 1,
+        "male_admitted": 2
+    },
+    {
+        "year": 2079,
+        "District": "Nawalparasi",
+        "female_applied": 9,
+        "male_applied": 28,
+        "female_admitted": 5,
+        "male_admitted": 10
+    },
+    {
+        "year": 2079,
+        "District": "Nuwakot",
+        "female_applied": 4,
+        "male_applied": 14,
+        "female_admitted": 2,
+        "male_admitted": 7
+    },
+    {
+        "year": 2079,
+        "District": "Okhaldhunga",
+        "female_applied": 4,
+        "male_applied": 9,
+        "female_admitted": 1,
+        "male_admitted": 3
+    },
+    {
+        "year": 2079,
+        "District": "Palpa",
+        "female_applied": 2,
+        "male_applied": 13,
+        "female_admitted": 0,
+        "male_admitted": 6
+    },
+    {
+        "year": 2079,
+        "District": "Panchthar",
+        "female_applied": 0,
+        "male_applied": 3,
+        "female_admitted": 0,
+        "male_admitted": 1
+    },
+    {
+        "year": 2079,
+        "District": "Parbat",
+        "female_applied": 8,
+        "male_applied": 14,
+        "female_admitted": 1,
+        "male_admitted": 7
+    },
+    {
+        "year": 2079,
+        "District": "Parsa",
+        "female_applied": 7,
+        "male_applied": 12,
+        "female_admitted": 3,
+        "male_admitted": 6
+    },
+    {
+        "year": 2079,
+        "District": "Pyuthan",
+        "female_applied": 4,
+        "male_applied": 8,
+        "female_admitted": 3,
+        "male_admitted": 3
+    },
+    {
+        "year": 2079,
+        "District": "Ramechhap",
+        "female_applied": 2,
+        "male_applied": 9,
+        "female_admitted": 1,
+        "male_admitted": 4
+    },
+    {
+        "year": 2079,
+        "District": "Rasuwa",
+        "female_applied": 1,
+        "male_applied": 1,
+        "female_admitted": 0,
+        "male_admitted": 0
+    },
+    {
+        "year": 2079,
+        "District": "Rautahat",
+        "female_applied": 7,
+        "male_applied": 32,
+        "female_admitted": 2,
+        "male_admitted": 8
+    },
+    {
+        "year": 2079,
+        "District": "Rolpa",
+        "female_applied": 1,
+        "male_applied": 3,
+        "female_admitted": 0,
+        "male_admitted": 0
+    },
+    {
+        "year": 2079,
+        "District": "Rukum",
+        "female_applied": 1,
+        "male_applied": 3,
+        "female_admitted": 1,
+        "male_admitted": 1
+    },
+    {
+        "year": 2079,
+        "District": "Rupandehi",
+        "female_applied": 14,
+        "male_applied": 46,
+        "female_admitted": 4,
+        "male_admitted": 25
+    },
+    {
+        "year": 2079,
+        "District": "Salyan",
+        "female_applied": 0,
+        "male_applied": 6,
+        "female_admitted": 0,
+        "male_admitted": 3
+    },
+    {
+        "year": 2079,
+        "District": "Sankhuwasabha",
+        "female_applied": 3,
+        "male_applied": 6,
+        "female_admitted": 0,
+        "male_admitted": 2
+    },
+    {
+        "year": 2079,
+        "District": "Saptari",
+        "female_applied": 7,
+        "male_applied": 45,
+        "female_admitted": 2,
+        "male_admitted": 12
+    },
+    {
+        "year": 2079,
+        "District": "Sarlahi",
+        "female_applied": 7,
+        "male_applied": 24,
+        "female_admitted": 3,
+        "male_admitted": 12
+    },
+    {
+        "year": 2079,
+        "District": "Sindhuli",
+        "female_applied": 8,
+        "male_applied": 8,
+        "female_admitted": 3,
+        "male_admitted": 4
+    },
+    {
+        "year": 2079,
+        "District": "Sindhupalchok",
+        "female_applied": 7,
+        "male_applied": 14,
+        "female_admitted": 3,
+        "male_admitted": 6
+    },
+    {
+        "year": 2079,
+        "District": "Siraha",
+        "female_applied": 13,
+        "male_applied": 43,
+        "female_admitted": 2,
+        "male_admitted": 16
+    },
+    {
+        "year": 2079,
+        "District": "Solukhumbu",
+        "female_applied": 4,
+        "male_applied": 2,
+        "female_admitted": 1,
+        "male_admitted": 0
+    },
+    {
+        "year": 2079,
+        "District": "Sunsari",
+        "female_applied": 7,
+        "male_applied": 29,
+        "female_admitted": 0,
+        "male_admitted": 11
+    },
+    {
+        "year": 2079,
+        "District": "Surkhet",
+        "female_applied": 2,
+        "male_applied": 2,
+        "female_admitted": 0,
+        "male_admitted": 1
+    },
+    {
+        "year": 2079,
+        "District": "Syangja",
+        "female_applied": 12,
+        "male_applied": 20,
+        "female_admitted": 5,
+        "male_admitted": 5
+    },
+    {
+        "year": 2079,
+        "District": "Tanahun",
+        "female_applied": 7,
+        "male_applied": 20,
+        "female_admitted": 2,
+        "male_admitted": 12
+    },
+    {
+        "year": 2079,
+        "District": "Taplejung",
+        "female_applied": 1,
+        "male_applied": 1,
+        "female_admitted": 0,
+        "male_admitted": 0
+    },
+    {
+        "year": 2079,
+        "District": "Tehrathum",
+        "female_applied": 0,
+        "male_applied": 4,
+        "female_admitted": 0,
+        "male_admitted": 1
+    },
+    {
+        "year": 2079,
+        "District": "Udayapur",
+        "female_applied": 2,
+        "male_applied": 7,
+        "female_admitted": 0,
+        "male_admitted": 1
+    },
+    {
+        "year": 2080,
+        "District": "Achham",
+        "female_applied": 2,
+        "male_applied": 3,
+        "female_admitted": 0,
+        "male_admitted": 2
+    },
+    {
+        "year": 2080,
+        "District": "Arghakhanchi",
+        "female_applied": 1,
+        "male_applied": 20,
+        "female_admitted": 0,
+        "male_admitted": 8
+    },
+    {
+        "year": 2080,
+        "District": "Baglung",
+        "female_applied": 3,
+        "male_applied": 16,
+        "female_admitted": 2,
+        "male_admitted": 6
+    },
+    {
+        "year": 2080,
+        "District": "Baitadi",
+        "female_applied": 3,
+        "male_applied": 14,
+        "female_admitted": 2,
+        "male_admitted": 5
+    },
+    {
+        "year": 2080,
+        "District": "Bajhang",
+        "female_applied": 0,
+        "male_applied": 6,
+        "female_admitted": 0,
+        "male_admitted": 4
+    },
+    {
+        "year": 2080,
+        "District": "Bajura",
+        "female_applied": 1,
+        "male_applied": 4,
+        "female_admitted": 1,
+        "male_admitted": 1
+    },
+    {
+        "year": 2080,
+        "District": "Banke",
+        "female_applied": 3,
+        "male_applied": 12,
+        "female_admitted": 0,
+        "male_admitted": 5
+    },
+    {
+        "year": 2080,
+        "District": "Bara",
+        "female_applied": 10,
+        "male_applied": 28,
+        "female_admitted": 0,
+        "male_admitted": 13
+    },
+    {
+        "year": 2080,
+        "District": "Bardiya",
+        "female_applied": 0,
+        "male_applied": 7,
+        "female_admitted": 0,
+        "male_admitted": 3
+    },
+    {
+        "year": 2080,
+        "District": "Bhaktapur",
+        "female_applied": 15,
+        "male_applied": 28,
+        "female_admitted": 6,
+        "male_admitted": 11
+    },
+    {
+        "year": 2080,
+        "District": "Bhojpur",
+        "female_applied": 2,
+        "male_applied": 4,
+        "female_admitted": 1,
+        "male_admitted": 3
+    },
+    {
+        "year": 2080,
+        "District": "Chitawan",
+        "female_applied": 16,
+        "male_applied": 42,
+        "female_admitted": 3,
+        "male_admitted": 22
+    },
+    {
+        "year": 2080,
+        "District": "Dadeldhura",
+        "female_applied": 1,
+        "male_applied": 3,
+        "female_admitted": 0,
+        "male_admitted": 0
+    },
+    {
+        "year": 2080,
+        "District": "Dailekh",
+        "female_applied": 0,
+        "male_applied": 6,
+        "female_admitted": 0,
+        "male_admitted": 2
+    },
+    {
+        "year": 2080,
+        "District": "Dang",
+        "female_applied": 11,
+        "male_applied": 28,
+        "female_admitted": 6,
+        "male_admitted": 16
+    },
+    {
+        "year": 2080,
+        "District": "Darchula",
+        "female_applied": 2,
+        "male_applied": 8,
+        "female_admitted": 1,
+        "male_admitted": 2
+    },
+    {
+        "year": 2080,
+        "District": "Dhading",
+        "female_applied": 6,
+        "male_applied": 17,
+        "female_admitted": 1,
+        "male_admitted": 5
+    },
+    {
+        "year": 2080,
+        "District": "Dhankuta",
+        "female_applied": 1,
+        "male_applied": 3,
+        "female_admitted": 1,
+        "male_admitted": 2
+    },
+    {
+        "year": 2080,
+        "District": "Dhanusha",
+        "female_applied": 20,
+        "male_applied": 46,
+        "female_admitted": 2,
+        "male_admitted": 10
+    },
+    {
+        "year": 2080,
+        "District": "Dolakha",
+        "female_applied": 2,
+        "male_applied": 9,
+        "female_admitted": 0,
+        "male_admitted": 4
+    },
+    {
+        "year": 2080,
+        "District": "Dolpa",
+        "female_applied": 0,
+        "male_applied": 1,
+        "female_admitted": 0,
+        "male_admitted": 0
+    },
+    {
+        "year": 2080,
+        "District": "Doti",
+        "female_applied": 0,
+        "male_applied": 4,
+        "female_admitted": 0,
+        "male_admitted": 3
+    },
+    {
+        "year": 2080,
+        "District": "Gorkha",
+        "female_applied": 8,
+        "male_applied": 21,
+        "female_admitted": 3,
+        "male_admitted": 7
+    },
+    {
+        "year": 2080,
+        "District": "Gulmi",
+        "female_applied": 10,
+        "male_applied": 28,
+        "female_admitted": 3,
+        "male_admitted": 13
+    },
+    {
+        "year": 2080,
+        "District": "Humla",
+        "female_applied": 2,
+        "male_applied": 3,
+        "female_admitted": 2,
+        "male_admitted": 2
+    },
+    {
+        "year": 2080,
+        "District": "Ilam",
+        "female_applied": 3,
+        "male_applied": 10,
+        "female_admitted": 3,
+        "male_admitted": 8
+    },
+    {
+        "year": 2080,
+        "District": "Jajarkot",
+        "female_applied": 0,
+        "male_applied": 3,
+        "female_admitted": 0,
+        "male_admitted": 1
+    },
+    {
+        "year": 2080,
+        "District": "Jhapa",
+        "female_applied": 12,
+        "male_applied": 36,
+        "female_admitted": 6,
+        "male_admitted": 17
+    },
+    {
+        "year": 2080,
+        "District": "Jumla",
+        "female_applied": 0,
+        "male_applied": 6,
+        "female_admitted": 0,
+        "male_admitted": 4
+    },
+    {
+        "year": 2080,
+        "District": "Kailali",
+        "female_applied": 6,
+        "male_applied": 32,
+        "female_admitted": 2,
+        "male_admitted": 8
+    },
+    {
+        "year": 2080,
+        "District": "Kalikot",
+        "female_applied": 1,
+        "male_applied": 6,
+        "female_admitted": 0,
+        "male_admitted": 3
+    },
+    {
+        "year": 2080,
+        "District": "Kanchanpur",
+        "female_applied": 5,
+        "male_applied": 32,
+        "female_admitted": 0,
+        "male_admitted": 14
+    },
+    {
+        "year": 2080,
+        "District": "Kapilbastu",
+        "female_applied": 4,
+        "male_applied": 12,
+        "female_admitted": 1,
+        "male_admitted": 3
+    },
+    {
+        "year": 2080,
+        "District": "Kaski",
+        "female_applied": 8,
+        "male_applied": 34,
+        "female_admitted": 2,
+        "male_admitted": 17
+    },
+    {
+        "year": 2080,
+        "District": "Kathmandu",
+        "female_applied": 78,
+        "male_applied": 95,
+        "female_admitted": 19,
+        "male_admitted": 41
+    },
+    {
+        "year": 2080,
+        "District": "Kavrepalanchok",
+        "female_applied": 7,
+        "male_applied": 19,
+        "female_admitted": 2,
+        "male_admitted": 8
+    },
+    {
+        "year": 2080,
+        "District": "Khotang",
+        "female_applied": 3,
+        "male_applied": 9,
+        "female_admitted": 1,
+        "male_admitted": 6
+    },
+    {
+        "year": 2080,
+        "District": "Lalitpur",
+        "female_applied": 30,
+        "male_applied": 36,
+        "female_admitted": 8,
+        "male_admitted": 12
+    },
+    {
+        "year": 2080,
+        "District": "Lamjung",
+        "female_applied": 10,
+        "male_applied": 22,
+        "female_admitted": 3,
+        "male_admitted": 11
+    },
+    {
+        "year": 2080,
+        "District": "Mahottari",
+        "female_applied": 16,
+        "male_applied": 55,
+        "female_admitted": 3,
+        "male_admitted": 13
+    },
+    {
+        "year": 2080,
+        "District": "Makawanpur",
+        "female_applied": 5,
+        "male_applied": 18,
+        "female_admitted": 1,
+        "male_admitted": 7
+    },
+    {
+        "year": 2080,
+        "District": "Morang",
+        "female_applied": 15,
+        "male_applied": 44,
+        "female_admitted": 8,
+        "male_admitted": 23
+    },
+    {
+        "year": 2080,
+        "District": "Mugu",
+        "female_applied": 1,
+        "male_applied": 0,
+        "female_admitted": 0,
+        "male_admitted": 0
+    },
+    {
+        "year": 2080,
+        "District": "Myagdi",
+        "female_applied": 1,
+        "male_applied": 3,
+        "female_admitted": 0,
+        "male_admitted": 3
+    },
+    {
+        "year": 2080,
+        "District": "Nawalparasi",
+        "female_applied": 7,
+        "male_applied": 35,
+        "female_admitted": 0,
+        "male_admitted": 14
+    },
+    {
+        "year": 2080,
+        "District": "Nuwakot",
+        "female_applied": 5,
+        "male_applied": 16,
+        "female_admitted": 2,
+        "male_admitted": 11
+    },
+    {
+        "year": 2080,
+        "District": "Okhaldhunga",
+        "female_applied": 7,
+        "male_applied": 6,
+        "female_admitted": 2,
+        "male_admitted": 4
+    },
+    {
+        "year": 2080,
+        "District": "Palpa",
+        "female_applied": 5,
+        "male_applied": 21,
+        "female_admitted": 2,
+        "male_admitted": 8
+    },
+    {
+        "year": 2080,
+        "District": "Panchthar",
+        "female_applied": 0,
+        "male_applied": 6,
+        "female_admitted": 0,
+        "male_admitted": 1
+    },
+    {
+        "year": 2080,
+        "District": "Parbat",
+        "female_applied": 7,
+        "male_applied": 19,
+        "female_admitted": 1,
+        "male_admitted": 11
+    },
+    {
+        "year": 2080,
+        "District": "Parsa",
+        "female_applied": 9,
+        "male_applied": 10,
+        "female_admitted": 3,
+        "male_admitted": 3
+    },
+    {
+        "year": 2080,
+        "District": "Pyuthan",
+        "female_applied": 2,
+        "male_applied": 7,
+        "female_admitted": 0,
+        "male_admitted": 2
+    },
+    {
+        "year": 2080,
+        "District": "Ramechhap",
+        "female_applied": 2,
+        "male_applied": 11,
+        "female_admitted": 0,
+        "male_admitted": 4
+    },
+    {
+        "year": 2080,
+        "District": "Rasuwa",
+        "female_applied": 1,
+        "male_applied": 4,
+        "female_admitted": 0,
+        "male_admitted": 4
+    },
+    {
+        "year": 2080,
+        "District": "Rautahat",
+        "female_applied": 6,
+        "male_applied": 42,
+        "female_admitted": 2,
+        "male_admitted": 9
+    },
+    {
+        "year": 2080,
+        "District": "Rolpa",
+        "female_applied": 4,
+        "male_applied": 1,
+        "female_admitted": 0,
+        "male_admitted": 0
+    },
+    {
+        "year": 2080,
+        "District": "Rukum",
+        "female_applied": 2,
+        "male_applied": 2,
+        "female_admitted": 0,
+        "male_admitted": 1
+    },
+    {
+        "year": 2080,
+        "District": "Rupandehi",
+        "female_applied": 13,
+        "male_applied": 44,
+        "female_admitted": 4,
+        "male_admitted": 19
+    },
+    {
+        "year": 2080,
+        "District": "Salyan",
+        "female_applied": 1,
+        "male_applied": 2,
+        "female_admitted": 0,
+        "male_admitted": 0
+    },
+    {
+        "year": 2080,
+        "District": "Sankhuwasabha",
+        "female_applied": 2,
+        "male_applied": 3,
+        "female_admitted": 0,
+        "male_admitted": 1
+    },
+    {
+        "year": 2080,
+        "District": "Saptari",
+        "female_applied": 12,
+        "male_applied": 51,
+        "female_admitted": 1,
+        "male_admitted": 11
+    },
+    {
+        "year": 2080,
+        "District": "Sarlahi",
+        "female_applied": 10,
+        "male_applied": 48,
+        "female_admitted": 3,
+        "male_admitted": 13
+    },
+    {
+        "year": 2080,
+        "District": "Sindhuli",
+        "female_applied": 5,
+        "male_applied": 8,
+        "female_admitted": 1,
+        "male_admitted": 3
+    },
+    {
+        "year": 2080,
+        "District": "Sindhupalchok",
+        "female_applied": 5,
+        "male_applied": 16,
+        "female_admitted": 0,
+        "male_admitted": 5
+    },
+    {
+        "year": 2080,
+        "District": "Siraha",
+        "female_applied": 7,
+        "male_applied": 36,
+        "female_admitted": 2,
+        "male_admitted": 10
+    },
+    {
+        "year": 2080,
+        "District": "Solukhumbu",
+        "female_applied": 2,
+        "male_applied": 5,
+        "female_admitted": 0,
+        "male_admitted": 0
+    },
+    {
+        "year": 2080,
+        "District": "Sunsari",
+        "female_applied": 11,
+        "male_applied": 39,
+        "female_admitted": 3,
+        "male_admitted": 18
+    },
+    {
+        "year": 2080,
+        "District": "Surkhet",
+        "female_applied": 3,
+        "male_applied": 7,
+        "female_admitted": 0,
+        "male_admitted": 2
+    },
+    {
+        "year": 2080,
+        "District": "Syangja",
+        "female_applied": 9,
+        "male_applied": 27,
+        "female_admitted": 2,
+        "male_admitted": 8
+    },
+    {
+        "year": 2080,
+        "District": "Tanahun",
+        "female_applied": 11,
+        "male_applied": 24,
+        "female_admitted": 6,
+        "male_admitted": 10
+    },
+    {
+        "year": 2080,
+        "District": "Taplejung",
+        "female_applied": 0,
+        "male_applied": 4,
+        "female_admitted": 0,
+        "male_admitted": 1
+    },
+    {
+        "year": 2080,
+        "District": "Tehrathum",
+        "female_applied": 0,
+        "male_applied": 2,
+        "female_admitted": 0,
+        "male_admitted": 2
+    },
+    {
+        "year": 2080,
+        "District": "Udayapur",
+        "female_applied": 4,
+        "male_applied": 11,
+        "female_admitted": 1,
+        "male_admitted": 5
+    },
+    {
+        "year": 2081,
+        "District": "Achham",
+        "female_applied": 1,
+        "male_applied": 11,
+        "female_admitted": 0,
+        "male_admitted": 2
+    },
+    {
+        "year": 2081,
+        "District": "Arghakhanchi",
+        "female_applied": 8,
+        "male_applied": 28,
+        "female_admitted": 2,
+        "male_admitted": 14
+    },
+    {
+        "year": 2081,
+        "District": "Baglung",
+        "female_applied": 2,
+        "male_applied": 11,
+        "female_admitted": 0,
+        "male_admitted": 7
+    },
+    {
+        "year": 2081,
+        "District": "Baitadi",
+        "female_applied": 0,
+        "male_applied": 18,
+        "female_admitted": 0,
+        "male_admitted": 10
+    },
+    {
+        "year": 2081,
+        "District": "Bajhang",
+        "female_applied": 3,
+        "male_applied": 7,
+        "female_admitted": 0,
+        "male_admitted": 1
+    },
+    {
+        "year": 2081,
+        "District": "Bajura",
+        "female_applied": 0,
+        "male_applied": 4,
+        "female_admitted": 0,
+        "male_admitted": 1
+    },
+    {
+        "year": 2081,
+        "District": "Banke",
+        "female_applied": 6,
+        "male_applied": 13,
+        "female_admitted": 2,
+        "male_admitted": 6
+    },
+    {
+        "year": 2081,
+        "District": "Bara",
+        "female_applied": 8,
+        "male_applied": 24,
+        "female_admitted": 4,
+        "male_admitted": 11
+    },
+    {
+        "year": 2081,
+        "District": "Bardiya",
+        "female_applied": 2,
+        "male_applied": 19,
+        "female_admitted": 0,
+        "male_admitted": 9
+    },
+    {
+        "year": 2081,
+        "District": "Bhaktapur",
+        "female_applied": 21,
+        "male_applied": 22,
+        "female_admitted": 4,
+        "male_admitted": 6
+    },
+    {
+        "year": 2081,
+        "District": "Bhojpur",
+        "female_applied": 3,
+        "male_applied": 6,
+        "female_admitted": 3,
+        "male_admitted": 2
+    },
+    {
+        "year": 2081,
+        "District": "Chitawan",
+        "female_applied": 16,
+        "male_applied": 46,
+        "female_admitted": 4,
+        "male_admitted": 15
+    },
+    {
+        "year": 2081,
+        "District": "Dadeldhura",
+        "female_applied": 3,
+        "male_applied": 1,
+        "female_admitted": 0,
+        "male_admitted": 0
+    },
+    {
+        "year": 2081,
+        "District": "Dailekh",
+        "female_applied": 0,
+        "male_applied": 2,
+        "female_admitted": 0,
+        "male_admitted": 2
+    },
+    {
+        "year": 2081,
+        "District": "Dang",
+        "female_applied": 7,
+        "male_applied": 31,
+        "female_admitted": 3,
+        "male_admitted": 17
+    },
+    {
+        "year": 2081,
+        "District": "Darchula",
+        "female_applied": 0,
+        "male_applied": 5,
+        "female_admitted": 0,
+        "male_admitted": 3
+    },
+    {
+        "year": 2081,
+        "District": "Dhading",
+        "female_applied": 8,
+        "male_applied": 18,
+        "female_admitted": 5,
+        "male_admitted": 8
+    },
+    {
+        "year": 2081,
+        "District": "Dhankuta",
+        "female_applied": 2,
+        "male_applied": 4,
+        "female_admitted": 1,
+        "male_admitted": 1
+    },
+    {
+        "year": 2081,
+        "District": "Dhanusha",
+        "female_applied": 14,
+        "male_applied": 49,
+        "female_admitted": 4,
+        "male_admitted": 18
+    },
+    {
+        "year": 2081,
+        "District": "Dolakha",
+        "female_applied": 5,
+        "male_applied": 10,
+        "female_admitted": 1,
+        "male_admitted": 4
+    },
+    {
+        "year": 2081,
+        "District": "Dolpa",
+        "female_applied": 1,
+        "male_applied": 0,
+        "female_admitted": 0,
+        "male_admitted": 0
+    },
+    {
+        "year": 2081,
+        "District": "Doti",
+        "female_applied": 0,
+        "male_applied": 2,
+        "female_admitted": 0,
+        "male_admitted": 2
+    },
+    {
+        "year": 2081,
+        "District": "Gorkha",
+        "female_applied": 7,
+        "male_applied": 14,
+        "female_admitted": 1,
+        "male_admitted": 2
+    },
+    {
+        "year": 2081,
+        "District": "Gulmi",
+        "female_applied": 6,
+        "male_applied": 24,
+        "female_admitted": 0,
+        "male_admitted": 18
+    },
+    {
+        "year": 2081,
+        "District": "Humla",
+        "female_applied": 0,
+        "male_applied": 2,
+        "female_admitted": 0,
+        "male_admitted": 0
+    },
+    {
+        "year": 2081,
+        "District": "Ilam",
+        "female_applied": 4,
+        "male_applied": 13,
+        "female_admitted": 1,
+        "male_admitted": 8
+    },
+    {
+        "year": 2081,
+        "District": "Jajarkot",
+        "female_applied": 0,
+        "male_applied": 2,
+        "female_admitted": 0,
+        "male_admitted": 1
+    },
+    {
+        "year": 2081,
+        "District": "Jhapa",
+        "female_applied": 15,
+        "male_applied": 46,
+        "female_admitted": 3,
+        "male_admitted": 24
+    },
+    {
+        "year": 2081,
+        "District": "Jumla",
+        "female_applied": 0,
+        "male_applied": 5,
+        "female_admitted": 0,
+        "male_admitted": 2
+    },
+    {
+        "year": 2081,
+        "District": "Kailali",
+        "female_applied": 8,
+        "male_applied": 33,
+        "female_admitted": 2,
+        "male_admitted": 15
+    },
+    {
+        "year": 2081,
+        "District": "Kalikot",
+        "female_applied": 1,
+        "male_applied": 5,
+        "female_admitted": 0,
+        "male_admitted": 3
+    },
+    {
+        "year": 2081,
+        "District": "Kanchanpur",
+        "female_applied": 6,
+        "male_applied": 24,
+        "female_admitted": 1,
+        "male_admitted": 8
+    },
+    {
+        "year": 2081,
+        "District": "Kapilbastu",
+        "female_applied": 5,
+        "male_applied": 12,
+        "female_admitted": 3,
+        "male_admitted": 5
+    },
+    {
+        "year": 2081,
+        "District": "Kaski",
+        "female_applied": 17,
+        "male_applied": 36,
+        "female_admitted": 3,
+        "male_admitted": 13
+    },
+    {
+        "year": 2081,
+        "District": "Kathmandu",
+        "female_applied": 59,
+        "male_applied": 114,
+        "female_admitted": 19,
+        "male_admitted": 50
+    },
+    {
+        "year": 2081,
+        "District": "Kavrepalanchok",
+        "female_applied": 7,
+        "male_applied": 12,
+        "female_admitted": 2,
+        "male_admitted": 5
+    },
+    {
+        "year": 2081,
+        "District": "Khotang",
+        "female_applied": 4,
+        "male_applied": 8,
+        "female_admitted": 0,
+        "male_admitted": 4
+    },
+    {
+        "year": 2081,
+        "District": "Lalitpur",
+        "female_applied": 29,
+        "male_applied": 35,
+        "female_admitted": 12,
+        "male_admitted": 10
+    },
+    {
+        "year": 2081,
+        "District": "Lamjung",
+        "female_applied": 4,
+        "male_applied": 12,
+        "female_admitted": 1,
+        "male_admitted": 3
+    },
+    {
+        "year": 2081,
+        "District": "Mahottari",
+        "female_applied": 10,
+        "male_applied": 34,
+        "female_admitted": 4,
+        "male_admitted": 7
+    },
+    {
+        "year": 2081,
+        "District": "Makawanpur",
+        "female_applied": 3,
+        "male_applied": 14,
+        "female_admitted": 0,
+        "male_admitted": 8
+    },
+    {
+        "year": 2081,
+        "District": "Morang",
+        "female_applied": 16,
+        "male_applied": 56,
+        "female_admitted": 3,
+        "male_admitted": 18
+    },
+    {
+        "year": 2081,
+        "District": "Mugu",
+        "female_applied": 0,
+        "male_applied": 2,
+        "female_admitted": 0,
+        "male_admitted": 0
+    },
+    {
+        "year": 2081,
+        "District": "Myagdi",
+        "female_applied": 0,
+        "male_applied": 4,
+        "female_admitted": 0,
+        "male_admitted": 1
+    },
+    {
+        "year": 2081,
+        "District": "Nawalparasi",
+        "female_applied": 8,
+        "male_applied": 23,
+        "female_admitted": 4,
+        "male_admitted": 13
+    },
+    {
+        "year": 2081,
+        "District": "Nuwakot",
+        "female_applied": 6,
+        "male_applied": 15,
+        "female_admitted": 1,
+        "male_admitted": 7
+    },
+    {
+        "year": 2081,
+        "District": "Okhaldhunga",
+        "female_applied": 5,
+        "male_applied": 10,
+        "female_admitted": 2,
+        "male_admitted": 6
+    },
+    {
+        "year": 2081,
+        "District": "Palpa",
+        "female_applied": 6,
+        "male_applied": 15,
+        "female_admitted": 1,
+        "male_admitted": 9
+    },
+    {
+        "year": 2081,
+        "District": "Panchthar",
+        "female_applied": 1,
+        "male_applied": 3,
+        "female_admitted": 0,
+        "male_admitted": 2
+    },
+    {
+        "year": 2081,
+        "District": "Parbat",
+        "female_applied": 8,
+        "male_applied": 28,
+        "female_admitted": 2,
+        "male_admitted": 12
+    },
+    {
+        "year": 2081,
+        "District": "Parsa",
+        "female_applied": 9,
+        "male_applied": 10,
+        "female_admitted": 2,
+        "male_admitted": 3
+    },
+    {
+        "year": 2081,
+        "District": "Pyuthan",
+        "female_applied": 3,
+        "male_applied": 7,
+        "female_admitted": 0,
+        "male_admitted": 4
+    },
+    {
+        "year": 2081,
+        "District": "Ramechhap",
+        "female_applied": 5,
+        "male_applied": 13,
+        "female_admitted": 1,
+        "male_admitted": 6
+    },
+    {
+        "year": 2081,
+        "District": "Rasuwa",
+        "female_applied": 0,
+        "male_applied": 1,
+        "female_admitted": 0,
+        "male_admitted": 1
+    },
+    {
+        "year": 2081,
+        "District": "Rautahat",
+        "female_applied": 7,
+        "male_applied": 30,
+        "female_admitted": 2,
+        "male_admitted": 5
+    },
+    {
+        "year": 2081,
+        "District": "Rolpa",
+        "female_applied": 0,
+        "male_applied": 1,
+        "female_admitted": 0,
+        "male_admitted": 0
+    },
+    {
+        "year": 2081,
+        "District": "Rukum",
+        "female_applied": 1,
+        "male_applied": 7,
+        "female_admitted": 0,
+        "male_admitted": 5
+    },
+    {
+        "year": 2081,
+        "District": "Rupandehi",
+        "female_applied": 10,
+        "male_applied": 40,
+        "female_admitted": 1,
+        "male_admitted": 15
+    },
+    {
+        "year": 2081,
+        "District": "Salyan",
+        "female_applied": 2,
+        "male_applied": 3,
+        "female_admitted": 2,
+        "male_admitted": 2
+    },
+    {
+        "year": 2081,
+        "District": "Sankhuwasabha",
+        "female_applied": 1,
+        "male_applied": 8,
+        "female_admitted": 0,
+        "male_admitted": 3
+    },
+    {
+        "year": 2081,
+        "District": "Saptari",
+        "female_applied": 15,
+        "male_applied": 38,
+        "female_admitted": 2,
+        "male_admitted": 15
+    },
+    {
+        "year": 2081,
+        "District": "Sarlahi",
+        "female_applied": 13,
+        "male_applied": 34,
+        "female_admitted": 3,
+        "male_admitted": 8
+    },
+    {
+        "year": 2081,
+        "District": "Sindhuli",
+        "female_applied": 4,
+        "male_applied": 12,
+        "female_admitted": 1,
+        "male_admitted": 3
+    },
+    {
+        "year": 2081,
+        "District": "Sindhupalchok",
+        "female_applied": 3,
+        "male_applied": 15,
+        "female_admitted": 0,
+        "male_admitted": 7
+    },
+    {
+        "year": 2081,
+        "District": "Siraha",
+        "female_applied": 5,
+        "male_applied": 34,
+        "female_admitted": 0,
+        "male_admitted": 13
+    },
+    {
+        "year": 2081,
+        "District": "Solukhumbu",
+        "female_applied": 2,
+        "male_applied": 5,
+        "female_admitted": 2,
+        "male_admitted": 3
+    },
+    {
+        "year": 2081,
+        "District": "Sunsari",
+        "female_applied": 10,
+        "male_applied": 28,
+        "female_admitted": 2,
+        "male_admitted": 11
+    },
+    {
+        "year": 2081,
+        "District": "Surkhet",
+        "female_applied": 2,
+        "male_applied": 8,
+        "female_admitted": 0,
+        "male_admitted": 2
+    },
+    {
+        "year": 2081,
+        "District": "Syangja",
+        "female_applied": 9,
+        "male_applied": 29,
+        "female_admitted": 1,
+        "male_admitted": 13
+    },
+    {
+        "year": 2081,
+        "District": "Tanahun",
+        "female_applied": 7,
+        "male_applied": 9,
+        "female_admitted": 2,
+        "male_admitted": 4
+    },
+    {
+        "year": 2081,
+        "District": "Taplejung",
+        "female_applied": 1,
+        "male_applied": 4,
+        "female_admitted": 0,
+        "male_admitted": 3
+    },
+    {
+        "year": 2081,
+        "District": "Tehrathum",
+        "female_applied": 0,
+        "male_applied": 2,
+        "female_admitted": 0,
+        "male_admitted": 1
+    },
+    {
+        "year": 2081,
+        "District": "Udayapur",
+        "female_applied": 3,
+        "male_applied": 8,
+        "female_admitted": 0,
+        "male_admitted": 3
+    }
+]

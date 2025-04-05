@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choropleth Map - Top 3 Programs</title>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <style>
+        body { 
+            font-family: 'Poppins', sans-serif;
+            text-align: center; 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: #f4f4f9;
+            color: #333;
+        }
+        #tooltip {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #333;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+            display: none;
+        }
+        #controls {
+            margin-bottom: 20px;
+            background: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        select {
+            padding: 5px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+        svg {
+            display: block;
+            margin: auto;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .legend {
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+        }
+        .legend-scale {
+            width: 200px;
+            height: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- <h2>Top 3 Programs by District</h2> -->
+    <div id="controls">
+        <label for="yearSelector">Select Year: </label>
+        <select id="yearSelector"></select>
+    </div>
+    <svg width="1000" height="530"></svg>
+    <div id="tooltip"></div>
+    <div class="legend">
+        <span>Low</span>
+        <svg class="legend-scale"></svg>
+        <span>High</span>
+    </div>
+
+    <script>
+        const width = 1000, height = 530;
+        const svg = d3.select("svg");
+
+        const projection = d3.geoMercator()
+            .center([84, 28])
+            .scale(5300)
+            .translate([width / 2, height / 2]);
+
+        const path = d3.geoPath().projection(projection);
+
+        let data, geojson;
+
+        Promise.all([
+            d3.json("nepal-districts.geojson"),
+            d3.json("top_programs_by_districts.json")
+        ]).then(([geoData, jsonData]) => {
+            geojson = geoData;
+            data = jsonData;
+
+            const years = [...new Set(data.map(d => d.year))].sort();
+            d3.select("#yearSelector")
+                .selectAll("option")
+                .data(years)
+                .enter()
+                .append("option")
+                .text(d => d);
+
+            function drawMap(selectedYear) {
+                const yearData = data.filter(d => d.year == selectedYear);
+                const maxStudentCount = d3.max(yearData, d => d["Student Count"]) || 1;
+                const colorScale = d3.scaleSequential(d3.interpolateBlues)
+                    .domain([0, maxStudentCount]);
+
+                const districts = svg.selectAll(".district")
+                    .data(geojson.features)
+                    .join("g")
+                    .attr("class", "district");
+
+                districts.append("path")
+                    .attr("d", path)
+                    .attr("fill", d => {
+                        let districtKey = d.properties.DISTRICT.trim().toLowerCase();
+                        let districtData = yearData.filter(entry => entry.District === districtKey);
+                        let totalStudents = districtData.reduce((sum, p) => sum + p["Student Count"], 0);
+                        return totalStudents > 0 ? colorScale(totalStudents) : "#e0e0e0";
+                    })
+                    .attr("stroke", "#333")
+                    .attr("stroke-width", 1.5)
+                    .on("mouseover", (event, d) => {
+                        let districtKey = d.properties.DISTRICT.trim().toLowerCase();
+                        let districtData = yearData.filter(entry => entry.District === districtKey);
+                        d3.select("#tooltip").style("display", "block")
+                            .html(`<strong>${d.properties.DISTRICT}</strong><br>` +
+                                  districtData.map(p => `${p.Program}: ${p["Student Count"]} students`).join("<br>"))
+                            .style("left", `${event.pageX + 10}px`)
+                            .style("top", `${event.pageY + 10}px`);
+                    })
+                    .on("mouseout", () => d3.select("#tooltip").style("display", "none"));
+                
+                drawLegend(colorScale, maxStudentCount);
+            }
+
+            function drawLegend(colorScale, maxValue) {
+                const legendWidth = 200, legendHeight = 20;
+                const legendSvg = d3.select(".legend-scale")
+                    .attr("width", legendWidth)
+                    .attr("height", legendHeight);
+                
+                const gradient = legendSvg.append("defs")
+                    .append("linearGradient")
+                    .attr("id", "legend-gradient")
+                    .attr("x1", "0%").attr("y1", "0%")
+                    .attr("x2", "100%").attr("y2", "0%");
+                
+                gradient.append("stop")
+                    .attr("offset", "0%")
+                    .attr("stop-color", colorScale(0));
+                
+                gradient.append("stop")
+                    .attr("offset", "100%")
+                    .attr("stop-color", colorScale(maxValue));
+                
+                legendSvg.append("rect")
+                    .attr("width", legendWidth)
+                    .attr("height", legendHeight)
+                    .style("fill", "url(#legend-gradient)");
+            }
+            
+            d3.select("#yearSelector").on("change", function() {
+                const selectedYear = this.value;
+                drawMap(selectedYear);
+            });
+
+            drawMap(years[0]);
+        });
+    </script>
+</body>
+</html>

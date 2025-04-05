@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regular vs Full Fee Program-wise Donut Chart Visualization</title>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+        svg {
+            display: block;
+            margin: auto;
+            background-color: #f9f9f9;
+        }
+        .legend {
+            display: flex;
+            justify-content: center;
+            flex-wrap: nowrap;
+            margin-bottom: 20px;
+        }
+        .legend-item {
+            display: flex;
+            align-items: center;
+            margin-right: 15px;
+        }
+        .legend-color {
+            width: 20px;
+            height: 20px;
+            margin-right: 5px;
+        }
+        .chart-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 20px;
+        }
+        .chart {
+            margin: 10px;
+            text-align: center;
+        }
+        .total {
+            font-size: 14px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        .program-name {
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .arc path {
+            stroke: #fff;
+            stroke-width: 2;
+        }
+        .arc:hover path {
+            opacity: 0.8;
+            cursor: pointer;
+        }
+        .tooltip {
+            position: absolute;
+            text-align: center;
+            padding: 8px;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            border-radius: 4px;
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+    </style>
+</head>
+<body>
+    <label for="yearSelect">Select Year:</label>
+    <select id="yearSelect"></select>
+    <div id="legend" class="legend"></div>
+    <div class="chart-container"></div>
+    <div class="tooltip" id="tooltip"></div>
+    
+    <script>
+        const margin = { top: 40, right: 30, bottom: 70, left: 60 },
+              width = 200,  // Adjusted width for donuts
+              height = 200, // Adjusted height for donuts
+              radius = Math.min(width, height) / 2; // Adjusted radius
+
+        const color = d3.scaleOrdinal(["#1f77b4", "#ff7f0e"]); // Regular, Full Fee
+
+        const arc = d3.arc()
+            .innerRadius(radius - 50)  // Inner radius
+            .outerRadius(radius - 10); // Outer radius
+
+        const pie = d3.pie()
+            .value(d => d.count)
+            .sort(null);
+
+        const svgContainer = d3.select(".chart-container");
+        const tooltip = d3.select("#tooltip");
+
+        d3.json("regular_vs_full_fee_data.json").then(data => {
+            const nestedData = d3.group(data, d => d.year);
+            let year = Math.min(...data.map(d => d.year)); // Default to earliest year
+            updateCharts(nestedData.get(year));
+            createLegend();
+
+            function updateCharts(yearData) {
+                if (!yearData) return;
+
+                const programs = ["Civil", "Architecture", "Electrical", "Electronics", "Mechanical", "Computer", "Aerospace", "Chemical"];
+                svgContainer.html("");  // Clear existing charts
+
+                programs.forEach(program => {
+                    const programData = feeDistribution(yearData, program);
+
+                    const chartContainer = svgContainer.append("div")
+                        .attr("class", "chart");
+
+                    const svg = chartContainer.append("svg")
+                        .attr("width", width)
+                        .attr("height", height)
+                        .append("g")
+                        .attr("transform", `translate(${width / 2},${height / 2})`);
+
+                    const arcs = svg.selectAll(".arc").data(pie(programData));
+
+                    // Draw the donut slices with a smooth transition
+                    arcs.enter().append("g").attr("class", "arc")
+                        .append("path")
+                        .attr("d", arc)
+                        .attr("fill", d => color(d.data.feeType))
+                        .style("transition", "opacity 0.5s ease") // Smooth transition
+                        .each(function(d) { this._current = d; })
+                        .on("mouseover", function(event, d) {
+                            tooltip.transition().duration(200).style("opacity", 1);
+                            tooltip.html(`${d.data.feeType}: ${d.data.count} applications`)
+                                .style("left", (event.pageX + 5) + "px")
+                                .style("top", (event.pageY - 28) + "px");
+                        })
+                        .on("mouseout", function() {
+                            tooltip.transition().duration(500).style("opacity", 0);
+                        });
+
+                    // Add count value inside the slice
+                    arcs.enter().append("g").attr("class", "arc")
+                        .append("text")
+                        .attr("transform", d => `translate(${arc.centroid(d)})`)
+                        .attr("text-anchor", "middle")
+                        .style("font-size", "14px")
+                        .style("fill", "white")
+                        .text(d => d.data.count);
+
+                    // Add total count and program name below the chart
+                    chartContainer.append("div")
+                        .attr("class", "program-name")
+                        .text(program);
+
+                    chartContainer.append("div")
+                        .attr("class", "total")
+                        .text(`Total: ${programData[0].total}`);
+                });
+            }
+
+            function feeDistribution(yearData, program) {
+                const feeTypes = ["Regular", "Full Fee"];
+                const regularCount = d3.sum(yearData.filter(d => d.Program === program && d["Fee Type"] === "Regular"), d => d.Count);
+                const fullFeeCount = d3.sum(yearData.filter(d => d.Program === program && d["Fee Type"] === "Full Fee"), d => d.Count);
+
+                const feeCounts = [
+                    { feeType: "Regular", count: regularCount },
+                    { feeType: "Full Fee", count: fullFeeCount }
+                ];
+
+                const totalCount = regularCount + fullFeeCount;
+
+                feeCounts.forEach(d => d.total = totalCount); // Add total to each slice
+
+                return feeCounts;
+            }
+
+            function createLegend() {
+                const legendData = ["Regular", "Full Fee"];
+                const legend = d3.select("#legend").selectAll(".legend-item")
+                    .data(legendData)
+                    .enter()
+                    .append("div")
+                    .attr("class", "legend-item");
+
+                legend.append("div")
+                    .attr("class", "legend-color")
+                    .style("background-color", d => color(d));
+
+                legend.append("span")
+                    .text(d => d);
+            }
+
+            const years = [...new Set(data.map(d => d.year))];
+            d3.select("#yearSelect")
+                .on("change", function() {
+                    year = +this.value;
+                    updateCharts(nestedData.get(year));
+                })
+                .selectAll("option")
+                .data(years)
+                .enter()
+                .append("option")
+                .text(d => d);
+        });
+    </script>
+</body>
+</html>
