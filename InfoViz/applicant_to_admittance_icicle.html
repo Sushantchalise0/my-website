@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive Icicle Plot Example</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+      body {
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f4f4f4;
+        font-family: sans-serif;
+      }
+
+      h2 {
+        margin: 0;
+        padding: 20px 0;
+        font-size: 24px;
+        font-weight: bold;
+        text-align: center;
+        color: #333;
+      }
+
+      .tooltip {
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.75);
+        color: white;
+        padding: 7px;
+        border-radius: 5px;
+        visibility: hidden;
+        pointer-events: none;
+        font-size: 12px;
+      }
+
+      .icicle rect {
+        stroke: #fff;
+        fill-opacity: 0.8;
+      }
+
+      .icicle text {
+        fill: #000;
+        /* font-weight: bold; */
+        font-size: 12px;
+      }
+
+      svg {
+        display: block;
+        width: 100%;
+        height: 600px;
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <h2>First Priority List Admittance Rate</h2> -->
+
+    <!-- The SVG element where the icicle plot will be rendered -->
+    <svg class="icicle"></svg>
+    <div class="tooltip"></div>
+    <!-- Tooltip div -->
+
+    <script>
+      // Load the combined_data.csv file
+      d3.csv("combined_data.csv")
+        .then(function (data) {
+          const mapping = {
+            3: "Architecture",
+            4: "Architecture",
+            5: "Electrical",
+            6: "Electrical",
+            7: "Electronics",
+            8: "Electronics",
+            1: "Civil",
+            2: "Civil",
+            9: "Mechanical",
+            10: "Mechanical",
+            11: "Computer",
+            12: "Computer",
+            27: "Aerospace",
+            28: "Aerospace",
+            29: "Chemical",
+            30: "Chemical",
+          };
+
+          // Parse the data from CSV
+          data.forEach((d) => {
+            d.Rank = +d.Rank; // Convert Rank to number
+            d.phaseNo = +d.phaseNo; // Convert phaseNo to number
+            d.year = +d.year; // Convert year to number
+            d.admitted = +d.admitted; // Convert admitted to number
+            d.p1Category = mapping[d.p1] || "Unknown"; // Map p1 to category
+          });
+
+          // Step 1: Keep only records with phaseNo = 1
+          const filteredData = data.filter((d) => d.phaseNo === 1);
+
+          // Step 2: Create unique records by year, category, and rank
+          const uniqueData = [];
+          const seen = new Map();
+          filteredData.forEach((d) => {
+            const key = `${d.year}_${d.p1Category}_${d.Rank}`;
+            if (!seen.has(key)) {
+              seen.set(key, d); // Save the first occurrence
+            }
+          });
+
+          // Push the unique records to uniqueData
+          uniqueData.push(...seen.values());
+
+          // Step 3: Aggregate data by year and category
+          const aggregatedData = {};
+          uniqueData.forEach((d) => {
+            const key = `${d.year}_${d.p1Category}`;
+            if (!aggregatedData[key]) {
+              aggregatedData[key] = { total: 0, admitted: 0, notAdmitted: 0 };
+            }
+
+            aggregatedData[key].total++;
+            if (d.admitted === 1) {
+              aggregatedData[key].admitted++;
+            } else {
+              aggregatedData[key].notAdmitted++;
+            }
+          });
+
+          // Step 4: Build hierarchical data structure
+          const hierarchyData = [];
+          Object.keys(aggregatedData).forEach((key) => {
+            const [year, p1Category] = key.split("_");
+            const admitted = aggregatedData[key].admitted;
+            const notAdmitted = aggregatedData[key].notAdmitted;
+
+            let yearNode = hierarchyData.find((d) => d.name === year);
+            if (!yearNode) {
+              yearNode = { name: year, children: [] };
+              hierarchyData.push(yearNode);
+            }
+
+            let categoryNode = yearNode.children.find(
+              (d) => d.name === p1Category
+            );
+            if (!categoryNode) {
+              categoryNode = { name: p1Category, children: [] };
+              yearNode.children.push(categoryNode);
+            }
+
+            const admittedNode = { name: "Admitted", value: admitted };
+            const notAdmittedNode = {
+              name: "Not Admitted",
+              value: notAdmitted,
+            };
+
+            categoryNode.children.push(admittedNode);
+            categoryNode.children.push(notAdmittedNode);
+          });
+
+          // Create the chart’s dimensions
+          const width = window.innerWidth; // Make width responsive to window width
+          const height = 600; // Set height to a fixed value
+
+          // Create the color scale
+          const color = d3.scaleOrdinal(
+            d3.quantize(d3.interpolateRainbow, hierarchyData.length + 1)
+          );
+
+          // Compute the layout
+          const hierarchy = d3
+            .hierarchy({ children: hierarchyData })
+            .sum((d) => d.value)
+            .sort((a, b) => b.height - a.height || b.value - a.value);
+
+          const root = d3.partition().size([height, width])(hierarchy);
+
+          // Create the SVG container
+          const svg = d3
+            .select(".icicle")
+            .attr("viewBox", [0, 0, width, height])
+            .attr("width", "100%")
+            .attr("height", height)
+            .attr(
+              "style",
+              "max-width: 100%; height: auto; font: 10px sans-serif;"
+            );
+
+          // Append cells
+          const cell = svg
+            .selectAll("g")
+            .data(root.descendants())
+            .join("g")
+            .attr("transform", (d) => `translate(${d.y0},${d.x0})`);
+
+          const rect = cell
+            .append("rect")
+            .attr("width", (d) => d.y1 - d.y0 - 1)
+            .attr("height", (d) => rectHeight(d))
+            .attr("fill-opacity", 0.6)
+            .attr("fill", (d) => {
+              if (!d.depth) return "#ccc";
+              while (d.depth > 1) d = d.parent;
+              return color(d.data.name);
+            })
+            .style("cursor", "pointer")
+            .on("click", clicked);
+
+          const text = cell
+            .append("text")
+            .style("user-select", "none")
+            .attr("pointer-events", "none")
+            .attr("x", 4)
+            .attr("y", 13)
+            .attr("fill-opacity", (d) => +labelVisible(d));
+
+          text.append("tspan").text((d) => d.data.name);
+
+          const format = d3.format(",d");
+          const tspan = text
+            .append("tspan")
+            .attr("fill-opacity", (d) => labelVisible(d) * 0.7)
+            .text((d) => ` ${format(d.value)}`);
+
+          //   cell.append("title").text(
+          //     (d) =>
+          //       `${d
+          //         .ancestors()
+          //         .map((d) => d.data.name)
+          //         .reverse()
+          //         .join("/")}\n${format(d.value)}`
+          //   );
+
+          // On click, change the focus and transition it into view
+          let focus = root;
+          function clicked(event, p) {
+            focus = focus === p ? (p = p.parent) : p;
+
+            root.each(
+              (d) =>
+                (d.target = {
+                  x0: ((d.x0 - p.x0) / (p.x1 - p.x0)) * height,
+                  x1: ((d.x1 - p.x0) / (p.x1 - p.x0)) * height,
+                  y0: d.y0 - p.y0,
+                  y1: d.y1 - p.y0,
+                })
+            );
+
+            const t = cell
+              .transition()
+              .duration(750)
+              .attr(
+                "transform",
+                (d) => `translate(${d.target.y0},${d.target.x0})`
+              );
+
+            rect.transition(t).attr("height", (d) => rectHeight(d.target));
+            text
+              .transition(t)
+              .attr("fill-opacity", (d) => +labelVisible(d.target));
+            tspan
+              .transition(t)
+              .attr("fill-opacity", (d) => labelVisible(d.target) * 0.7);
+          }
+
+          // Tooltip logic on hover
+          const tooltip = d3.select(".tooltip");
+
+          cell.on("mouseover", function (event, d) {
+            tooltip.style("visibility", "visible").html(`
+        
+           ${`${d
+             .ancestors()
+             .map((d) => d.data.name)
+             .reverse()
+             .join("<br>")}\n:${d.value}`}<br>
+        `);
+          });
+
+          cell.on("mousemove", function (event) {
+            tooltip
+              .style("top", event.pageY + 10 + "px")
+              .style("left", event.pageX + 10 + "px");
+          });
+
+          cell.on("mouseout", function () {
+            tooltip.style("visibility", "hidden");
+          });
+
+          function labelVisible(d) {
+            return d.y1 <= width && d.y0 >= 0 && d.x1 - d.x0 > 16;
+          }
+
+          function rectHeight(d) {
+            return d.x1 - d.x0 - Math.min(1, (d.x1 - d.x0) / 2);
+          }
+        })
+        .catch(function (error) {
+          console.error("Error loading the CSV files:", error);
+        });
+    </script>
+  </body>
+</html>

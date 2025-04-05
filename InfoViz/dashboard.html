@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pulchowk Campus Admission Priority Dashboard</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #f4f4f4;
+        }
+        .menu-container {
+            overflow-x: auto;
+            white-space: nowrap;
+            width: 90vw;
+            margin: 20px 0;
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            border-radius: 10px;
+            background: #fff;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        }
+        .menu-container::-webkit-scrollbar {
+            height: 8px;
+        }
+        .menu-container::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+        .menu-container::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 10px;
+        }
+        .menu-container::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+        .menu {
+            display: flex;
+            gap: 10px;
+            padding: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            border: none;
+            background: #007BFF;
+            color: white;
+            cursor: pointer;
+            border-radius: 25px;
+            transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+            font-weight: bold;
+            white-space: nowrap;
+            font-size: 14px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        button:hover {
+            background: #0056b3;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+        }
+        .active {
+            background: #FF5733 !important;
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+            transform: translateY(-2px);
+        }
+        iframe {
+            width: 90vw;
+            height: 80vh;
+            border: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            margin-top: 10px;
+            transition: opacity 0.5s ease;
+        }
+        h2 {
+            color: #222;
+            margin-top: 20px;
+            font-size: 28px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        @media (max-width: 768px) {
+            h2 {
+                font-size: 24px;
+            }
+            button {
+                padding: 8px 15px;
+                font-size: 12px;
+            }
+            .menu-container {
+                width: 95vw;
+            }
+            iframe {
+                width: 95vw;
+                height: 70vh;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h2>Pulchowk Campus Admission Priority Dashboard</h2>
+    <div class="menu-container">
+        <div class="menu" id="menu"></div>
+    </div>
+    <iframe id="iframe" src=""></iframe>
+
+    <script>
+        const visualizations = {
+            "Rank to Priority Parallel": "rank_to_priority_parallel.html",
+            "Student Rank vs Admission Scatter": "student_rank_admission_scatter.html",
+            "Yearwise Gender Stacked Bar": "yearwise_gender_stackedbar.html",
+            "Amount Collected Line Plot": "Amount_Collected_line_plot.html",
+            "Applicant to Admittance Icicle": "applicant_to_admittance_icicle.html",
+            "Prioritywise Gender Grouped Bar": "prioritywise_gender_groupedbar.html",
+            "Quotawise Tidy Tree": "Quotawise_tidy_tree.html",
+            "Districtwise Gender Distribution": "Districtwise_gender_distribution.html",
+            "Student Interest Over Years": "students_interest_over_years.html",
+            "Regular vs Full Fee Application Comparision": "Regular_vs_Full_Fee_Application_Comparision.html",
+            "Student Top 3 Program Choice Districtwise": "top_program_choice.html",
+            "Student Admission Rate Districtwise by Gender": "Districtwise_Admission_Rate_Genderwise.html",
+            "Bar Race based on Programs": "barrace.html",
+            "Bar Race based on Districts": "barrace_programs.html"
+        };
+
+        const menu = document.querySelector("#menu");
+        const iframe = document.querySelector("#iframe");
+
+        let activeButton = null;
+
+        Object.entries(visualizations).forEach(([title, file], index) => {
+            const button = document.createElement("button");
+            button.textContent = title;
+            button.addEventListener("click", function() {
+                iframe.style.opacity = 0; // Fade out iframe
+                setTimeout(() => {
+                    iframe.src = file;
+                    iframe.style.opacity = 1; // Fade in iframe
+                }, 300); // Match the transition duration
+
+                if (activeButton) {
+                    activeButton.classList.remove("active");
+                }
+                this.classList.add("active");
+                activeButton = this;
+            });
+            menu.appendChild(button);
+            if (index === 0) {
+                iframe.src = file; // Load first visualization by default
+                button.classList.add("active");
+                activeButton = button;
+            }
+        });
+    </script>
+</body>
+</html>

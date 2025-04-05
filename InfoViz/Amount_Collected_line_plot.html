@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yearly Sum of Amount with Inline Labels (Line Plot)</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            flex-direction: column;
+        }
+        #chart {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="title">
+        <!-- <h2>Amount Collected From Prority Form (NPR)</h2> -->
+    </div>
+
+    <svg id="chart" width="600" height="400"></svg>
+
+    <script>
+        // Step 1: Load the CSV data
+        d3.csv('combined_data.csv').then(function(data) {
+            // Step 2: Initialize an empty object to store the sums for each year
+            const yearlyData = {};
+
+            // Step 3: Iterate through the data and accumulate the sum for each year
+            data.forEach(d => {
+                const year = d.year;
+                const amount = +d.amount; // Convert Amount to number
+
+                // If the year already exists in the object, add the amount to it
+                if (yearlyData[year]) {
+                    yearlyData[year] += amount;
+                } else {
+                    // Otherwise, initialize the sum with the current amount
+                    yearlyData[year] = amount;
+                }
+            });
+
+            // Step 4: Convert the object into an array of objects for easier charting
+            const chartData = Object.keys(yearlyData).map(year => ({
+                year: year,
+                amount: yearlyData[year]
+            }));
+
+            // Log the data to check the object format
+            console.log(chartData); // This will print the array of objects [{ year: "2020", amount: 250 }, ...]
+
+            // Step 5: Set up SVG dimensions for the chart
+            const margin = { top: 50, right: 30, bottom: 60, left: 50 };
+            const width = 600 - margin.left - margin.right;
+            const height = 400 - margin.top - margin.bottom;
+
+            const svg = d3.select('#chart')
+                .attr('width', width + margin.left + margin.right)
+                .attr('height', height + margin.top + margin.bottom)
+                .append('g')
+                .attr('transform', `translate(${margin.left},${margin.top})`);
+
+            // Step 6: Set up the scales for the x-axis and y-axis
+            const xScale = d3.scaleBand()
+                .domain(chartData.map(d => d.year))
+                .range([0, width])
+                .padding(0.1);
+
+            const yScale = d3.scaleLinear()
+                .domain([0, d3.max(chartData, d => d.amount)])
+                .nice()
+                .range([height, 0]);
+
+            // Step 7: Define the line generator
+            const line = d3.line()
+                .x(d => xScale(d.year) + xScale.bandwidth() / 2) // Position in the center of the x-axis
+                .y(d => yScale(d.amount));
+
+            // Step 8: Create the line for the chart
+            svg.append('path')
+                .data([chartData])
+                .attr('class', 'line')
+                .attr('d', line)
+                .attr('fill', 'none')
+                .attr('stroke', '#1f77b4')
+                .attr('stroke-width', 2);
+
+            // Step 9: Add dots for each point in the line
+            svg.selectAll('.dot')
+                .data(chartData)
+                .enter().append('circle')
+                .attr('class', 'dot')
+                .attr('cx', d => xScale(d.year) + xScale.bandwidth() / 2)
+                .attr('cy', d => yScale(d.amount))
+                .attr('r', 5)
+                .attr('fill', '#1f77b4');
+
+            // Step 10: Add inline labels (amount values) on each point
+            const formatAmount = d3.format(","); 
+            svg.selectAll('.label')
+                .data(chartData)
+                .enter().append('text')
+                .attr('class', 'label')
+                .attr('x', d => xScale(d.year) + xScale.bandwidth() / 2)
+                .attr('y', d => yScale(d.amount) - 10) // Position the label just above the dot
+                .attr('text-anchor', 'middle')
+                .style('font-size', '13px')
+                .style('font-weight', 'bold')
+                .text(d => formatAmount(d.amount));
+
+            // Step 11: Add axes to the chart
+         
+
+            const xAxis = d3.axisBottom(xScale)
+                .tickSize(0); // Hide the tick lines
+
+            const xAxisGroup = svg.append('g')
+                .attr('transform', `translate(0,${height})`)
+                .call(xAxis);
+
+            xAxisGroup.selectAll('text')
+            .style('font-weight', 'bold')
+            .style('font-size', '15px')
+       
+
+        });
+    </script>
+
+</body>
+</html>
