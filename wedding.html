@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Sushant weds — Wedding Celebration</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --cream: #faf6f0;
+      --warm-white: #fffdf9;
+      --blush: #e8c4b0;
+      --blush-dark: #c9956e;
+      --sage: #8a9e8a;
+      --sage-light: #d4e0d4;
+      --deep: #2c2218;
+      --mid: #6b5744;
+      --gold: #c4a96b;
+      --gold-light: #efe0c0;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Jost', sans-serif;
+      background: var(--cream);
+      color: var(--deep);
+      overflow-x: hidden;
+    }
+
+    /* ── HERO ── */
+    .hero {
+      min-height: 100vh;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      overflow: hidden;
+      padding: 2rem;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background-image:
+        url('https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=1600&q=80');
+      background-size: cover;
+      background-position: center;
+      filter: brightness(0.35) saturate(0.7);
+      z-index: 0;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, rgba(44,34,24,0.3) 0%, rgba(44,34,24,0.7) 100%);
+      z-index: 1;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 800px;
+    }
+
+    .hero-preheading {
+      font-family: 'Jost', sans-serif;
+      font-weight: 300;
+      font-size: 0.8rem;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: var(--blush);
+      margin-bottom: 1.5rem;
+      opacity: 0;
+      animation: fadeUp 0.8s 0.2s forwards;
+    }
+
+    .hero-names {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(3.5rem, 9vw, 7rem);
+      font-weight: 300;
+      color: #faf6f0;
+      line-height: 1.05;
+      opacity: 0;
+      animation: fadeUp 0.9s 0.4s forwards;
+    }
+
+    .hero-names em {
+      font-style: italic;
+      color: var(--blush);
+    }
+
+    .hero-ampersand {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.5rem, 6vw, 4.5rem);
+      color: var(--gold);
+      display: block;
+      margin: 0.2rem 0;
+    }
+
+    .hero-divider {
+      width: 80px;
+      height: 1px;
+      background: var(--blush);
+      margin: 2rem auto;
+      opacity: 0;
+      animation: fadeUp 0.8s 0.6s forwards;
+    }
+
+    .hero-date {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.2rem, 3vw, 1.8rem);
+      font-weight: 300;
+      color: var(--gold-light);
+      letter-spacing: 0.1em;
+      opacity: 0;
+      animation: fadeUp 0.8s 0.8s forwards;
+    }
+
+    .hero-scroll {
+      position: absolute;
+      bottom: 2.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+      opacity: 0;
+      animation: fadeIn 1s 1.5s forwards;
+    }
+
+    .hero-scroll span {
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--blush);
+    }
+
+    .scroll-line {
+      width: 1px;
+      height: 40px;
+      background: var(--blush);
+      animation: scrollPulse 2s infinite;
+    }
+
+    /* ── SECTION BASE ── */
+    section {
+      padding: 6rem 2rem;
+      position: relative;
+    }
+
+    .section-label {
+      font-size: 0.7rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--sage);
+      margin-bottom: 1rem;
+      display: block;
+    }
+
+    .section-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.2rem, 5vw, 3.5rem);
+      font-weight: 300;
+      color: var(--deep);
+      line-height: 1.2;
+      margin-bottom: 1.5rem;
+    }
+
+    .section-title em { font-style: italic; color: var(--blush-dark); }
+
+    .thin-line {
+      width: 60px;
+      height: 1px;
+      background: var(--gold);
+      margin-bottom: 2rem;
+    }
+
+    /* ── INTRO ── */
+    .intro {
+      background: var(--warm-white);
+      text-align: center;
+    }
+
+    .intro .inner {
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    .intro .thin-line { margin: 0 auto 2rem; }
+
+    .intro p {
+      font-size: 1.05rem;
+      line-height: 1.9;
+      color: var(--mid);
+      font-weight: 300;
+    }
+
+    .floral-divider {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.5rem;
+      color: var(--gold);
+      letter-spacing: 0.5em;
+      margin: 2.5rem 0;
+    }
+
+    /* ── EVENTS ── */
+    .events {
+      background: var(--cream);
+    }
+
+    .events .inner {
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    .events-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .event-card {
+      background: var(--warm-white);
+      border: 1px solid var(--gold-light);
+      position: relative;
+      padding: 3rem 2.5rem;
+      overflow: hidden;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .event-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 50px rgba(44,34,24,0.1);
+    }
+
+    .event-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 4px; height: 100%;
+      background: var(--gold);
+    }
+
+    .event-card::after {
+      content: '';
+      position: absolute;
+      bottom: -30px; right: -30px;
+      width: 120px; height: 120px;
+      border: 1px solid var(--gold-light);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .event-tag {
+      display: inline-block;
+      font-size: 0.65rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      background: var(--sage-light);
+      color: var(--sage);
+      padding: 0.3rem 0.8rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .event-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2rem;
+      font-weight: 400;
+      color: var(--deep);
+      margin-bottom: 0.5rem;
+    }
+
+    .event-date-line {
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--blush-dark);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 1.5rem;
+    }
+
+    .event-details {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.9rem;
+    }
+
+    .event-details li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.8rem;
+      font-size: 0.9rem;
+      color: var(--mid);
+      line-height: 1.6;
+    }
+
+    .event-icon {
+      width: 16px;
+      height: 16px;
+      flex-shrink: 0;
+      margin-top: 2px;
+      fill: var(--gold);
+    }
+
+    .map-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-top: 2rem;
+      padding: 0.6rem 1.4rem;
+      border: 1px solid var(--gold);
+      color: var(--deep);
+      text-decoration: none;
+      font-size: 0.78rem;
+      font-family: 'Jost', sans-serif;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      transition: background 0.2s, color 0.2s;
+    }
+
+    .map-btn:hover {
+      background: var(--gold);
+      color: var(--warm-white);
+    }
+
+    /* ── PHOTO STRIP ── */
+    .photo-strip {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      height: 320px;
+      overflow: hidden;
+    }
+
+    .photo-strip-item {
+      overflow: hidden;
+      position: relative;
+    }
+
+    .photo-strip-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s;
+      filter: saturate(0.8);
+    }
+
+    .photo-strip-item:hover img { transform: scale(1.06); filter: saturate(1); }
+
+    /* ── DRESS CODE ── */
+    .dress-code {
+      background: var(--deep);
+      text-align: center;
+      padding: 5rem 2rem;
+    }
+
+    .dress-code .section-label { color: var(--blush); }
+    .dress-code .section-title { color: var(--cream); }
+    .dress-code .section-title em { color: var(--gold); }
+    .dress-code .thin-line { background: var(--gold); margin: 0 auto 2rem; }
+
+    .dress-code p {
+      color: rgba(250,246,240,0.7);
+      font-weight: 300;
+      font-size: 0.95rem;
+      max-width: 540px;
+      margin: 0 auto 2.5rem;
+      line-height: 1.8;
+    }
+
+    .color-swatches {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 1.5rem;
+    }
+
+    .swatch {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .swatch-circle {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      border: 2px solid rgba(250,246,240,0.15);
+    }
+
+    .swatch span {
+      font-size: 0.65rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(250,246,240,0.5);
+    }
+
+    /* ── RSVP NOTE ── */
+    .rsvp-note {
+      background: var(--warm-white);
+      text-align: center;
+      padding: 5rem 2rem;
+      border-top: 1px solid var(--gold-light);
+    }
+
+    .rsvp-note .inner { max-width: 600px; margin: 0 auto; }
+
+    .rsvp-note p {
+      color: var(--mid);
+      font-size: 0.95rem;
+      line-height: 1.9;
+      font-weight: 300;
+      margin-bottom: 1.5rem;
+    }
+
+    .contact-block {
+      display: inline-flex;
+      flex-direction: column;
+      gap: 0.4rem;
+      text-align: left;
+      background: var(--gold-light);
+      padding: 1.2rem 2rem;
+    }
+
+    .contact-block span {
+      font-size: 0.8rem;
+      color: var(--mid);
+    }
+
+    .contact-block strong {
+      color: var(--deep);
+      font-size: 1rem;
+      font-weight: 500;
+    }
+
+    /* ── FOOTER ── */
+    .wedding-footer {
+      background: var(--deep);
+      text-align: center;
+      padding: 3rem 2rem;
+    }
+
+    .wedding-footer .names {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2rem;
+      font-style: italic;
+      color: var(--gold);
+      margin-bottom: 0.5rem;
+    }
+
+    .wedding-footer p {
+      font-size: 0.75rem;
+      letter-spacing: 0.2em;
+      color: rgba(250,246,240,0.4);
+      text-transform: uppercase;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 2rem;
+      color: rgba(250,246,240,0.5);
+      text-decoration: none;
+      font-size: 0.78rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      border-bottom: 1px solid rgba(250,246,240,0.2);
+      transition: color 0.2s;
+    }
+
+    .back-link:hover { color: var(--blush); }
+
+    /* ── ANIMATIONS ── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes scrollPulse {
+      0%, 100% { opacity: 0.4; transform: scaleY(1); }
+      50% { opacity: 1; transform: scaleY(1.2); }
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 600px) {
+      .events-grid { grid-template-columns: 1fr; }
+      .photo-strip { grid-template-columns: 1fr; height: auto; }
+      .photo-strip-item { height: 200px; }
+      .event-card { padding: 2rem 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── HERO ── -->
+<div class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <p class="hero-preheading">We're getting married</p>
+    <h1 class="hero-names">
+      <em>Sushant</em>
+      <span class="hero-ampersand">&</span>
+      <em>[Bride's Name]</em>
+    </h1>
+    <div class="hero-divider"></div>
+    <p class="hero-date">8 Baishak 2082 &nbsp;·&nbsp; Kathmandu, Nepal</p>
+  </div>
+  <div class="hero-scroll">
+    <div class="scroll-line"></div>
+    <span>Scroll</span>
+  </div>
+</div>
+
+<!-- ── INTRO ── -->
+<section class="intro">
+  <div class="inner">
+    <span class="section-label">Our celebration</span>
+    <h2 class="section-title">Together, at last</h2>
+    <div class="thin-line"></div>
+    <p>
+      With overflowing joy and the blessings of our families, we joyfully invite you
+      to witness and celebrate the beginning of our journey together as one.
+      Your presence on these two special days will make the occasion truly complete.
+    </p>
+    <div class="floral-divider">❧ ❦ ❧</div>
+    <p>
+      Two ceremonies, one love story — we would be honoured to share these moments with you.
+    </p>
+  </div>
+</section>
+
+<!-- ── PHOTO STRIP ── -->
+<div class="photo-strip">
+  <div class="photo-strip-item">
+    <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=600&q=80" alt="Wedding flowers">
+  </div>
+  <div class="photo-strip-item">
+    <img src="https://images.unsplash.com/photo-1606800052052-a08af7148866?w=600&q=80" alt="Wedding ceremony">
+  </div>
+  <div class="photo-strip-item">
+    <img src="https://images.unsplash.com/photo-1464699908537-0954e50791ee?w=600&q=80" alt="Wedding details">
+  </div>
+</div>
+
+<!-- ── EVENTS ── -->
+<section class="events">
+  <div class="inner">
+    <div class="reveal">
+      <span class="section-label">Save the dates</span>
+      <h2 class="section-title">Two <em>celebrations</em></h2>
+      <div class="thin-line"></div>
+    </div>
+    <div class="events-grid">
+
+      <!-- Wedding Ceremony -->
+      <div class="event-card reveal">
+        <span class="event-tag">Ceremony</span>
+        <h3 class="event-title">Wedding Day</h3>
+        <p class="event-date-line">25 Baishak 2082 &nbsp;·&nbsp; [Day], May 2025</p>
+        <ul class="event-details">
+          <li>
+            <svg class="event-icon" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            <span><strong>Venue:</strong> [Ceremony Venue Name], Kathmandu</span>
+          </li>
+          <li>
+            <svg class="event-icon" viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z"/></svg>
+            <span><strong>Time:</strong> [Start Time] onward</span>
+          </li>
+          <li>
+            <svg class="event-icon" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+            <span>Family and close friends are warmly invited</span>
+          </li>
+        </ul>
+        <a class="map-btn" href="https://maps.google.com/?q=Kathmandu+Nepal" target="_blank">
+          ↗ View on map
+        </a>
+      </div>
+
+      <!-- Wedding Reception -->
+      <div class="event-card reveal">
+        <span class="event-tag">Reception</span>
+        <h3 class="event-title">Wedding Reception</h3>
+        <p class="event-date-line">27 Baishak 2082 &nbsp;·&nbsp; [Day], May 2025</p>
+        <ul class="event-details">
+          <li>
+            <svg class="event-icon" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            <span><strong>Venue:</strong> [Reception Venue Name], Kathmandu</span>
+          </li>
+          <li>
+            <svg class="event-icon" viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z"/></svg>
+            <span><strong>Time:</strong> [Start Time] onward</span>
+          </li>
+          <li>
+            <svg class="event-icon" viewBox="0 0 24 24"><path d="M18 3a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3H6a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3V6a3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3h12a3 3 0 0 0 3-3 3 3 0 0 0-3-3z"/></svg>
+            <span>Dinner, music, and celebration with extended family &amp; friends</span>
+          </li>
+        </ul>
+        <a class="map-btn" href="https://maps.google.com/?q=Kathmandu+Nepal" target="_blank">
+          ↗ View on map
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── SECOND PHOTO STRIP ── -->
+<div class="photo-strip">
+  <div class="photo-strip-item">
+    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80" alt="Couple">
+  </div>
+  <div class="photo-strip-item">
+    <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=600&q=80" alt="Wedding rings">
+  </div>
+  <div class="photo-strip-item">
+    <img src="https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?w=600&q=80" alt="Wedding celebration">
+  </div>
+</div>
+
+<!-- ── DRESS CODE ── -->
+<section class="dress-code">
+  <div class="reveal">
+    <span class="section-label">A note on attire</span>
+    <h2 class="section-title">Dress <em>Code</em></h2>
+    <div class="thin-line"></div>
+    <p>
+      We invite you to celebrate in festive traditional or formal wear.
+      For the wedding ceremony, traditional Nepali or South Asian attire is warmly encouraged.
+      The reception is smart-formal — feel free to dress in your finest.
+    </p>
+    <div class="color-swatches">
+      <div class="swatch">
+        <div class="swatch-circle" style="background:#7a4a6b;"></div>
+        <span>Maroon</span>
+      </div>
+      <div class="swatch">
+        <div class="swatch-circle" style="background:#c4a96b;"></div>
+        <span>Gold</span>
+      </div>
+      <div class="swatch">
+        <div class="swatch-circle" style="background:#3d6b58;"></div>
+        <span>Sage</span>
+      </div>
+      <div class="swatch">
+        <div class="swatch-circle" style="background:#e8c4b0;"></div>
+        <span>Blush</span>
+      </div>
+      <div class="swatch">
+        <div class="swatch-circle" style="background:#2c2218;"></div>
+        <span>Navy</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── RSVP NOTE ── -->
+<section class="rsvp-note">
+  <div class="inner reveal">
+    <span class="section-label">Let us know you're coming</span>
+    <h2 class="section-title" style="font-size:2rem;">RSVP &amp; <em>enquiries</em></h2>
+    <div class="thin-line"></div>
+    <p>
+      Kindly confirm your attendance by reaching out to us directly.
+      We would love to know you'll be joining us on these special days.
+    </p>
+    <div class="contact-block">
+      <span>Reach us at</span>
+      <strong>+977-9849959075</strong>
+      <span>or</span>
+      <strong>sushant.chalise@pcampus.edu.np</strong>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer class="wedding-footer">
+  <p class="names">Sushant &amp; [Bride's Name]</p>
+  <p>25 &amp; 27 Baishak 2082 &nbsp;·&nbsp; Kathmandu, Nepal</p>
+  <a class="back-link" href="index.html">← Back to Sushant's website</a>
+</footer>
+
+<script>
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((e, i) => {
+      if (e.isIntersecting) {
+        setTimeout(() => e.target.classList.add('visible'), i * 120);
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  reveals.forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
