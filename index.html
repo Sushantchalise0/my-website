@@ -37,9 +37,294 @@
     Author: BootstrapMade.com
     Author URL: https://bootstrapmade.com
   ======================================================= -->
+
+  <style id="wedding-styles-to-paste">
+  /* ── Wedding Popup ── */
+  #wedding-popup {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    background: rgba(20, 12, 6, 0.72);
+    backdrop-filter: blur(4px);
+    opacity: 0;
+    animation: popupFadeIn 0.6s 0.8s forwards;
+  }
+
+  @keyframes popupFadeIn {
+    to { opacity: 1; }
+  }
+
+  .popup-card {
+    background: #fffdf9;
+    max-width: 480px;
+    width: 100%;
+    position: relative;
+    text-align: center;
+    padding: 3.5rem 3rem;
+    animation: popupSlideUp 0.6s 0.8s both;
+    font-family: 'Jost', 'Poppins', sans-serif;
+  }
+
+  @keyframes popupSlideUp {
+    from { transform: translateY(30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+
+  .popup-card::before {
+    content: '';
+    position: absolute;
+    inset: 6px;
+    border: 1px solid #e8d5be;
+    pointer-events: none;
+  }
+
+  .popup-close {
+    position: absolute;
+    top: 1rem; right: 1.2rem;
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    color: #9b8776;
+    cursor: pointer;
+    line-height: 1;
+    transition: color 0.2s;
+  }
+  .popup-close:hover { color: #2c2218; }
+
+  .popup-eyebrow {
+    font-size: 0.65rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: #8a9e8a;
+    margin-bottom: 1rem;
+  }
+
+  .popup-headline {
+    font-family: 'Playfair Display', 'Cormorant Garamond', Georgia, serif;
+    font-size: 2.2rem;
+    font-weight: 400;
+    font-style: italic;
+    color: #2c2218;
+    line-height: 1.2;
+    margin-bottom: 0.3rem;
+  }
+
+  .popup-headline em {
+    color: #c9956e;
+  }
+
+  .popup-dates {
+    font-size: 0.8rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #c4a96b;
+    margin: 1rem 0;
+  }
+
+  .popup-divider {
+    width: 50px;
+    height: 1px;
+    background: #c4a96b;
+    margin: 0 auto 1.2rem;
+  }
+
+  .popup-text {
+    font-size: 0.88rem;
+    color: #6b5744;
+    line-height: 1.8;
+    font-weight: 300;
+    margin-bottom: 2rem;
+  }
+
+  .popup-btn {
+    display: inline-block;
+    background: #2c2218;
+    color: #fffdf9;
+    text-decoration: none;
+    padding: 0.75rem 2rem;
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    transition: background 0.2s;
+    font-family: inherit;
+  }
+  .popup-btn:hover { background: #c4a96b; }
+
+  .popup-dismiss {
+    display: block;
+    margin-top: 1rem;
+    font-size: 0.72rem;
+    color: #9b8776;
+    cursor: pointer;
+    text-decoration: underline;
+    background: none;
+    border: none;
+    font-family: inherit;
+  }
+  .popup-dismiss:hover { color: #2c2218; }
+
+  /* ── Wedding Section (in main page) ── */
+  #wedding {
+    background: #2c2218;
+    padding: 80px 0;
+    position: relative;
+    overflow: hidden;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  #wedding::before {
+    content: '';
+    position: absolute;
+    top: -60px; right: -60px;
+    width: 300px; height: 300px;
+    border: 1px solid rgba(196,169,107,0.15);
+    border-radius: 50%;
+  }
+
+  #wedding::after {
+    content: '';
+    position: absolute;
+    bottom: -80px; left: -80px;
+    width: 400px; height: 400px;
+    border: 1px solid rgba(196,169,107,0.1);
+    border-radius: 50%;
+  }
+
+  .wedding-section-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    position: relative;
+    z-index: 2;
+  }
+
+  .wedding-section-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+  }
+
+  .wedding-section-text .eyebrow {
+    font-size: 0.65rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: #8a9e8a;
+    display: block;
+    margin-bottom: 1rem;
+  }
+
+  .wedding-section-text h2 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 2.6rem;
+    font-weight: 400;
+    font-style: italic;
+    color: #faf6f0;
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+  }
+
+  .wedding-section-text h2 em {
+    color: #c4a96b;
+    font-style: italic;
+  }
+
+  .wedding-gold-line {
+    width: 50px;
+    height: 1px;
+    background: #c4a96b;
+    margin: 1.5rem 0;
+  }
+
+  .wedding-section-text p {
+    color: rgba(250,246,240,0.6);
+    font-size: 0.9rem;
+    line-height: 1.9;
+    font-weight: 300;
+    margin-bottom: 2rem;
+  }
+
+  .wedding-section-link {
+    display: inline-block;
+    border: 1px solid #c4a96b;
+    color: #c4a96b;
+    text-decoration: none;
+    padding: 0.65rem 1.6rem;
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    transition: background 0.2s, color 0.2s;
+  }
+  .wedding-section-link:hover {
+    background: #c4a96b;
+    color: #2c2218;
+  }
+
+  .wedding-events-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+
+  .wedding-event-item {
+    background: rgba(250,246,240,0.05);
+    border-left: 3px solid #c4a96b;
+    padding: 1.2rem 1.5rem;
+  }
+
+  .wedding-event-item .tag {
+    font-size: 0.6rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #8a9e8a;
+    margin-bottom: 0.3rem;
+    display: block;
+  }
+
+  .wedding-event-item .ev-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.25rem;
+    font-style: italic;
+    color: #faf6f0;
+    margin-bottom: 0.3rem;
+  }
+
+  .wedding-event-item .ev-date {
+    font-size: 0.78rem;
+    color: #c4a96b;
+    letter-spacing: 0.08em;
+  }
+
+  @media (max-width: 650px) {
+    .wedding-section-grid { grid-template-columns: 1fr; gap: 2rem; }
+    .popup-card { padding: 2.5rem 1.5rem; }
+    .popup-headline { font-size: 1.8rem; }
+  }
+</style>
 </head>
 
 <body>
+
+  <div id="wedding-popup" style="display:none;">
+  <div class="popup-card">
+    <button class="popup-close" onclick="closePopup()" aria-label="Close">✕</button>
+
+    <p class="popup-eyebrow">Joyful announcement</p>
+    <h2 class="popup-headline">We're getting<br><em>married!</em></h2>
+    <div class="popup-divider"></div>
+    <p class="popup-dates">25 Baishak · Wedding &nbsp;&nbsp;|&nbsp;&nbsp; 27 Baishak · Reception</p>
+    <p class="popup-text">
+      Sushant Chalise joyfully announces his upcoming wedding. 
+      We warmly invite you to celebrate with us in Kathmandu.
+    </p>
+    <a href="wedding.html" class="popup-btn">View celebration details</a>
+    <button class="popup-dismiss" onclick="closePopup()">Maybe later</button>
+  </div>
+</div>
 
   <!-- start section navbar -->
   <nav id="main-nav">
@@ -115,6 +400,40 @@
     </div>
   </div>
   <!-- end section about us -->
+
+
+  <div id="wedding">
+  <div class="wedding-section-inner">
+    <div class="wedding-section-grid">
+
+      <div class="wedding-section-text">
+        <span class="eyebrow">A personal announcement</span>
+        <h2>Getting <em>married</em></h2>
+        <div class="wedding-gold-line"></div>
+        <p>
+          I am overjoyed to announce that I will be getting married this Baishak. 
+          Two celebrations are planned — the wedding ceremony and the reception. 
+          Your warm wishes and presence mean the world to us.
+        </p>
+        <a href="wedding.html" class="wedding-section-link">View full details →</a>
+      </div>
+
+      <div class="wedding-events-list">
+        <div class="wedding-event-item">
+          <span class="tag">Wedding Ceremony</span>
+          <p class="ev-title">The Big Day</p>
+          <p class="ev-date">25 Baishak 2082 &nbsp;·&nbsp; Kathmandu</p>
+        </div>
+        <div class="wedding-event-item">
+          <span class="tag">Wedding Reception</span>
+          <p class="ev-title">Celebration Evening</p>
+          <p class="ev-date">27 Baishak 2082 &nbsp;·&nbsp; Kathmandu</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
 
 
   <!-- start section services -->
@@ -389,6 +708,38 @@
 
   <!-- Template Main Javascript File -->
   <script src="js/main.js"></script>
+
+  <script id="wedding-script-to-paste">
+  (function() {
+    var popup = document.getElementById('wedding-popup');
+    if (!popup) return;
+
+    // Show popup after 1.2s (only once per session)
+    var seen = sessionStorage.getItem('weddingPopupSeen');
+    if (!seen) {
+      popup.style.display = 'flex';
+      setTimeout(function() {
+        popup.style.opacity = '';
+      }, 50);
+      sessionStorage.setItem('weddingPopupSeen', '1');
+    }
+  })();
+
+  function closePopup() {
+    var popup = document.getElementById('wedding-popup');
+    if (popup) {
+      popup.style.transition = 'opacity 0.3s';
+      popup.style.opacity = '0';
+      setTimeout(function() { popup.style.display = 'none'; }, 320);
+    }
+  }
+
+  // Close on backdrop click
+  document.getElementById('wedding-popup') && 
+  document.getElementById('wedding-popup').addEventListener('click', function(e) {
+    if (e.target === this) closePopup();
+  });
+</script>
 
 </body>
 
