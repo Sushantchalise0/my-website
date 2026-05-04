@@ -800,6 +800,93 @@
   </div>
 </section>
 
+
+<!-- ── RSVP ── -->
+<section class="rsvp" id="rsvp">
+  <div class="inn">
+    <div class="rsvp-hdr reveal">
+      <span class="section-label">Let us know you're coming</span>
+      <h2 class="section-title">RSVP &amp; <em>Enquiries</em></h2>
+      <div class="tl"></div>
+    </div>
+
+    <div class="rsvp-card reveal">
+      <form id="rsvp-form" action="https://formspree.io/f/mnjwpvqw" method="POST">
+
+        <input type="hidden" name="_subject" value="New Wedding RSVP 💍">
+        <input type="hidden" name="_next" value="https://yourusername.github.io/wedding.html#rsvp">
+
+        <div class="f-row">
+          <label class="f-label" for="f-name">Full Name *</label>
+          <input class="f-input" type="text" id="f-name" name="name" placeholder="Your full name" required>
+        </div>
+
+        <div class="f-row">
+          <label class="f-label" for="f-phone">Phone Number <span style="opacity:0.5;font-size:0.55rem;">(optional)</span></label>
+          <input class="f-input" type="tel" id="f-phone" name="phone" placeholder="+977 98XXXXXXXX">
+        </div>
+
+        <div class="f-row">
+          <label class="f-label">Will you be attending? *</label>
+          <div class="att-grid">
+            <div class="att-opt">
+              <input type="radio" name="attendance" id="att-yes" value="Attending" required>
+              <label class="att-lbl" for="att-yes">
+                <span class="ali">🎉</span>
+                <span class="alt">Attending</span>
+                <span class="als">Wouldn't miss it</span>
+              </label>
+            </div>
+            <div class="att-opt">
+              <input type="radio" name="attendance" id="att-maybe" value="Not Sure">
+              <label class="att-lbl" for="att-maybe">
+                <span class="ali">🤔</span>
+                <span class="alt">Not Sure</span>
+                <span class="als">Will confirm later</span>
+              </label>
+            </div>
+            <div class="att-opt">
+              <input type="radio" name="attendance" id="att-no" value="Not Attending">
+              <label class="att-lbl" for="att-no">
+                <span class="ali">💌</span>
+                <span class="alt">Can't Attend</span>
+                <span class="als">Sending wishes</span>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="f-row" id="ev-row">
+          <label class="f-label">Which event(s) will you attend?</label>
+          <div class="ev-checks">
+            <label class="ev-chk">
+              <input type="checkbox" name="events" value="Wedding Ceremony (25 Baishak)">
+              <span>Wedding Ceremony — 25 Baishak (8 May 2025)</span>
+            </label>
+            <label class="ev-chk">
+              <input type="checkbox" name="events" value="Wedding Reception (27 Baishak)">
+              <span>Wedding Reception — 27 Baishak (10 May 2025)</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="f-row">
+          <label class="f-label" for="f-msg">Message / Wishes <span style="opacity:0.5;font-size:0.55rem;">(optional)</span></label>
+          <textarea class="f-input" id="f-msg" name="message" rows="3" placeholder="Your wishes or any note for the couple…" style="resize:vertical;"></textarea>
+        </div>
+
+        <button class="f-submit" type="submit" id="f-btn">Send RSVP →</button>
+        <div class="f-status" id="f-status"></div>
+      </form>
+
+      <p class="rsvp-note">
+        Responses are saved privately and only visible to Sushant &amp; Suwarna.<br>
+        Direct enquiries: <strong>+977-9849959075</strong> &nbsp;·&nbsp; <strong>sushant.chalise@pcampus.edu.np</strong>
+      </p>
+    </div>
+  </div>
+</section>
+
 <!-- ── FOOTER ── -->
 <footer class="wedding-footer">
   <p class="names">Sushant &amp; Rabina</p>
