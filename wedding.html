@@ -210,6 +210,48 @@
       margin: 2.5rem 0;
     }
 
+
+
+ /* ─── GALLERY ─── */
+    .gallery { background: var(--cream); padding: 5rem 2rem; }
+    .gallery .inn { max-width: 1100px; margin: 0 auto; }
+    .gallery-hdr { text-align: center; margin-bottom: 3rem; }
+
+    .photo-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+    }
+
+    .pi {
+      overflow: hidden; position: relative; cursor: pointer;
+    }
+    .pi::after {
+      content: ''; position: absolute; inset: 0;
+      background: rgba(44,34,24,0); transition: background 0.4s;
+    }
+    .pi:hover::after { background: rgba(44,34,24,0.18); }
+    .pi img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.6s ease; }
+    .pi:hover img { transform: scale(1.05); }
+
+    .pi:nth-child(1) { grid-column: 1; grid-row: 1; aspect-ratio: 3/4; }
+    .pi:nth-child(2) { grid-column: 2; grid-row: 1; aspect-ratio: 3/4; }
+    .pi:nth-child(3) { grid-column: 3; grid-row: 1; aspect-ratio: 3/4; }
+    .pi:nth-child(4) { grid-column: 1 / 3; grid-row: 2; aspect-ratio: 16/9; }
+    .pi:nth-child(5) { grid-column: 3; grid-row: 2; aspect-ratio: 1; }
+
+    .pi-cap {
+      position: absolute; bottom: 0; left: 0; right: 0;
+      padding: 1.5rem 1rem 0.8rem;
+      background: linear-gradient(to top, rgba(44,34,24,0.7), transparent);
+      color: rgba(250,246,240,0.9); font-size: 0.68rem;
+      letter-spacing: 0.18em; text-transform: uppercase;
+      transform: translateY(4px); opacity: 0;
+      transition: all 0.3s; z-index: 2;
+    }
+    .pi:hover .pi-cap { transform: translateY(0); opacity: 1; }
+
+
     /* ── EVENTS ── */
     .events {
       background: var(--cream);
@@ -554,7 +596,7 @@
 </section>
 
 <!-- ── PHOTO STRIP ── -->
-<div class="photo-strip">
+<!-- <div class="photo-strip">
   <div class="photo-strip-item">
     <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=600&q=80" alt="Wedding flowers">
   </div>
@@ -564,7 +606,40 @@
   <div class="photo-strip-item">
     <img src="https://images.unsplash.com/photo-1464699908537-0954e50791ee?w=600&q=80" alt="Wedding details">
   </div>
-</div>
+</div> -->
+
+<!-- ── GALLERY ── -->
+<section class="gallery">
+  <div class="inn">
+    <div class="gallery-hdr reveal">
+      <span class="section-label">Our moments</span>
+      <h2 class="section-title">A glimpse of <em>us</em></h2>
+      <div class="tl c"></div>
+    </div>
+    <div class="photo-grid reveal">
+      <div class="pi">
+        <img src="images/wedding/wedding_backtoback.jpg" alt="Together" style="object-position:center 20%;">
+        <div class="pi-cap">Together</div>
+      </div>
+      <div class="pi">
+        <img src="images/wedding/wedding_garland.jpg" alt="The garland" style="object-position:center 15%;">
+        <div class="pi-cap">The garland</div>
+      </div>
+      <div class="pi">
+        <img src="images/wedding/wedding_ceremony.jpg" alt="Ceremony" style="object-position:center 8%;">
+        <div class="pi-cap">The ceremony</div>
+      </div>
+      <div class="pi">
+        <img src="images/wedding/wedding_g1.jpg" alt="Our day" style="object-position:center 20%;">
+        <div class="pi-cap">Our day</div>
+      </div>
+      <div class="pi">
+        <img src="images/wedding/wedding_g2.jpg" alt="Portrait" style="object-position:center 15%;">
+        <div class="pi-cap">Joy</div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- ── EVENTS ── -->
 <section class="events">
@@ -628,54 +703,7 @@
   </div>
 </section>
 
-<!-- ── SECOND PHOTO STRIP ── -->
-<div class="photo-strip">
-  <div class="photo-strip-item">
-    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80" alt="Couple">
-  </div>
-  <div class="photo-strip-item">
-    <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=600&q=80" alt="Wedding rings">
-  </div>
-  <div class="photo-strip-item">
-    <img src="https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?w=600&q=80" alt="Wedding celebration">
-  </div>
-</div>
 
-<!-- ── DRESS CODE ── -->
-<section class="dress-code">
-  <div class="reveal">
-    <span class="section-label">A note on attire</span>
-    <h2 class="section-title">Dress <em>Code</em></h2>
-    <div class="thin-line"></div>
-    <p>
-      We invite you to celebrate in festive traditional or formal wear.
-      For the wedding ceremony, traditional Nepali or South Asian attire is warmly encouraged.
-      The reception is smart-formal — feel free to dress in your finest.
-    </p>
-    <div class="color-swatches">
-      <div class="swatch">
-        <div class="swatch-circle" style="background:#7a4a6b;"></div>
-        <span>Maroon</span>
-      </div>
-      <div class="swatch">
-        <div class="swatch-circle" style="background:#c4a96b;"></div>
-        <span>Gold</span>
-      </div>
-      <div class="swatch">
-        <div class="swatch-circle" style="background:#3d6b58;"></div>
-        <span>Sage</span>
-      </div>
-      <div class="swatch">
-        <div class="swatch-circle" style="background:#e8c4b0;"></div>
-        <span>Blush</span>
-      </div>
-      <div class="swatch">
-        <div class="swatch-circle" style="background:#2c2218;"></div>
-        <span>Navy</span>
-      </div>
-    </div>
-  </div>
-</section>
 
 <!-- ── RSVP NOTE ── -->
 <section class="rsvp-note">
