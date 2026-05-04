@@ -448,7 +448,7 @@
     }
 
     /* ── RSVP NOTE ── */
-    .rsvp-note {
+    /* .rsvp-note {
       background: var(--warm-white);
       text-align: center;
       padding: 5rem 2rem;
@@ -483,7 +483,83 @@
       color: var(--deep);
       font-size: 1rem;
       font-weight: 500;
+    } */
+
+/* ─── RSVP ─── */
+    .rsvp { background: var(--warm-white); padding: 6rem 2rem; }
+    .rsvp .inn { max-width: 700px; margin: 0 auto; }
+    .rsvp-hdr { margin-bottom: 3rem; }
+
+    .rsvp-card {
+      background: var(--cream); border: 1px solid var(--gold-light);
+      padding: 3rem; position: relative;
     }
+    .rsvp-card::before {
+      content: ''; position: absolute; inset: 8px;
+      border: 1px solid rgba(196,169,107,0.2); pointer-events: none;
+    }
+
+    .f-row { margin-bottom: 1.5rem; }
+
+    .f-label {
+      display: block; font-size: 0.63rem; letter-spacing: 0.22em;
+      text-transform: uppercase; color: var(--sage); margin-bottom: 0.55rem; font-weight: 500;
+    }
+
+    .f-input {
+      width: 100%; padding: 0.75rem 1rem;
+      border: 1px solid var(--gold-light); background: var(--warm-white);
+      color: var(--deep); font-family: 'Jost', sans-serif;
+      font-size: 0.92rem; font-weight: 300; outline: none; transition: border-color 0.2s;
+    }
+    .f-input:focus { border-color: var(--gold); }
+    .f-input::placeholder { color: rgba(107,87,68,0.35); }
+
+    .att-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.75rem; }
+
+    .att-opt { position: relative; }
+    .att-opt input[type="radio"] { position: absolute; opacity: 0; }
+
+    .att-lbl {
+      display: flex; flex-direction: column; align-items: center;
+      padding: 1.1rem 0.8rem;
+      border: 1px solid var(--gold-light); background: var(--warm-white);
+      cursor: pointer; text-align: center; transition: all 0.2s;
+    }
+    .att-lbl .ali { font-size: 1.4rem; margin-bottom: 0.4rem; }
+    .att-lbl .alt { font-size: 0.72rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--mid); }
+    .att-lbl .als { font-size: 0.6rem; color: rgba(107,87,68,0.45); margin-top: 0.2rem; }
+    .att-opt input:checked + .att-lbl { border-color: var(--gold); background: var(--gold-light); }
+    .att-opt input:checked + .att-lbl .alt { color: var(--deep); }
+
+    .ev-checks { display: flex; flex-direction: column; gap: 0.7rem; }
+    .ev-chk { display: flex; align-items: center; gap: 0.75rem; cursor: pointer; }
+    .ev-chk input[type="checkbox"] { width: 16px; height: 16px; accent-color: var(--gold); cursor: pointer; }
+    .ev-chk span { font-size: 0.88rem; color: var(--mid); font-weight: 300; }
+
+    .f-submit {
+      width: 100%; padding: 1rem;
+      background: var(--deep); color: var(--cream);
+      border: none; cursor: pointer;
+      font-family: 'Jost', sans-serif; font-size: 0.78rem;
+      letter-spacing: 0.2em; text-transform: uppercase; font-weight: 500;
+      transition: background 0.2s; margin-top: 0.5rem;
+    }
+    .f-submit:hover { background: var(--gold); color: var(--deep); }
+    .f-submit:disabled { opacity: 0.6; cursor: not-allowed; }
+
+    .f-status {
+      display: none; margin-top: 1rem; padding: 0.9rem 1rem;
+      font-size: 0.85rem; font-weight: 300; text-align: center;
+    }
+    .f-status.success { background: var(--sage-light); color: #3d5c3d; display: block; }
+    .f-status.error { background: #fde8e8; color: #7a2020; display: block; }
+
+    .rsvp-note {
+      margin-top: 1.5rem; font-size: 0.78rem; color: var(--mid);
+      text-align: center; line-height: 1.7; font-weight: 300;
+    }
+
 
     /* ── FOOTER ── */
     .wedding-footer {
@@ -706,7 +782,7 @@
 
 
 <!-- ── RSVP NOTE ── -->
-<section class="rsvp-note">
+<!-- <section class="rsvp-note">
   <div class="inner reveal">
     <span class="section-label">Let us know you're coming</span>
     <h2 class="section-title" style="font-size:2rem;">RSVP &amp; <em>enquiries</em></h2>
@@ -720,6 +796,90 @@
       <strong>+977-9849959075</strong>
       <span>or</span>
       <strong>sushant.chalise@pcampus.edu.np</strong>
+    </div>
+  </div>
+</section> -->
+
+
+<!-- ── RSVP ── -->
+<section class="rsvp" id="rsvp">
+  <div class="inn">
+    <div class="rsvp-hdr reveal">
+      <span class="section-label">Let us know you're coming</span>
+      <h2 class="section-title">RSVP &amp; <em>Enquiries</em></h2>
+      <div class="tl"></div>
+    </div>
+
+    <div class="rsvp-card reveal">
+      <form id="rsvp-form" autocomplete="off">
+
+        <div class="f-row">
+          <label class="f-label" for="f-name">Full Name *</label>
+          <input class="f-input" type="text" id="f-name" name="name" placeholder="Your full name" required>
+        </div>
+
+        <div class="f-row">
+          <label class="f-label" for="f-phone">Phone Number <span style="opacity:0.5;font-size:0.55rem;">(optional)</span></label>
+          <input class="f-input" type="tel" id="f-phone" name="phone" placeholder="+977 98XXXXXXXX">
+        </div>
+
+        <div class="f-row">
+          <label class="f-label">Will you be attending? *</label>
+          <div class="att-grid">
+            <div class="att-opt">
+              <input type="radio" name="attendance" id="att-yes" value="Attending" required>
+              <label class="att-lbl" for="att-yes">
+                <span class="ali">🎉</span>
+                <span class="alt">Attending</span>
+                <span class="als">Wouldn't miss it</span>
+              </label>
+            </div>
+            <div class="att-opt">
+              <input type="radio" name="attendance" id="att-maybe" value="Not Sure">
+              <label class="att-lbl" for="att-maybe">
+                <span class="ali">🤔</span>
+                <span class="alt">Not Sure</span>
+                <span class="als">Will confirm later</span>
+              </label>
+            </div>
+            <div class="att-opt">
+              <input type="radio" name="attendance" id="att-no" value="Not Attending">
+              <label class="att-lbl" for="att-no">
+                <span class="ali">💌</span>
+                <span class="alt">Can't Attend</span>
+                <span class="als">Sending wishes</span>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="f-row" id="ev-row">
+          <label class="f-label">Which event(s) will you attend?</label>
+          <div class="ev-checks">
+            <label class="ev-chk">
+              <input type="checkbox" name="events" value="Wedding Ceremony (25 Baishak)">
+              <span>Wedding Ceremony — 25 Baishak (8 May 2025)</span>
+            </label>
+            <label class="ev-chk">
+              <input type="checkbox" name="events" value="Wedding Reception (27 Baishak)">
+              <span>Wedding Reception — 27 Baishak (10 May 2025)</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="f-row">
+          <label class="f-label" for="f-msg">Message / Wishes <span style="opacity:0.5;font-size:0.55rem;">(optional)</span></label>
+          <textarea class="f-input" id="f-msg" name="message" rows="3" placeholder="Your wishes or any note for the couple…" style="resize:vertical;"></textarea>
+        </div>
+
+        <button class="f-submit" type="submit" id="f-btn">Send RSVP →</button>
+        <div class="f-status" id="f-status"></div>
+      </form>
+
+      <p class="rsvp-note">
+        Responses are saved privately and only visible to Sushant &amp; Suwarna.<br>
+        Direct enquiries: <strong>+977-9849959075</strong> &nbsp;·&nbsp; <strong>sushant.chalise@pcampus.edu.np</strong>
+      </p>
     </div>
   </div>
 </section>
