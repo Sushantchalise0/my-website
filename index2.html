@@ -1,0 +1,1322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sushant Chalise — Engineer · Researcher · Educator</title>
+  <meta name="description" content="Sushant Chalise — System Engineer, Researcher, and Educator at Pulchowk Campus, IOE, Tribhuvan University, Nepal.">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet">
+
+  <!-- Existing libs (keep paths as-is) -->
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="lib/magnific-popup/magnific-popup.css" rel="stylesheet">
+  <link rel="shortcut icon" href="images/favicon.png">
+
+  <style>
+    /* ════════════════════════════════════════
+       TOKENS
+    ════════════════════════════════════════ */
+    :root {
+      --ink:       #0e1117;
+      --ink-soft:  #3a3f4a;
+      --ink-muted: #6e7585;
+      --paper:     #f8f7f4;
+      --paper-2:   #ffffff;
+      --rule:      #e4e2dc;
+      --accent:    #1a56db;
+      --accent-lt: #dbeafe;
+      --accent-dk: #1e40af;
+      --gold:      #d97706;
+      --gold-lt:   #fef3c7;
+      --green:     #059669;
+      --green-lt:  #d1fae5;
+      --red:       #dc2626;
+
+      --ff-serif: 'DM Serif Display', Georgia, serif;
+      --ff-sans:  'DM Sans', system-ui, sans-serif;
+
+      --r-sm: 4px;
+      --r-md: 8px;
+      --r-lg: 16px;
+
+      --shadow-sm: 0 1px 3px rgba(14,17,23,.07), 0 1px 2px rgba(14,17,23,.05);
+      --shadow-md: 0 4px 16px rgba(14,17,23,.09), 0 2px 6px rgba(14,17,23,.06);
+      --shadow-lg: 0 16px 48px rgba(14,17,23,.12), 0 4px 12px rgba(14,17,23,.07);
+    }
+
+    /* ════════════════════════════════════════
+       RESET & BASE
+    ════════════════════════════════════════ */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+
+    body {
+      font-family: var(--ff-sans);
+      background: var(--paper);
+      color: var(--ink);
+      line-height: 1.65;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img { display: block; max-width: 100%; }
+    a { color: inherit; text-decoration: none; }
+
+    /* ════════════════════════════════════════
+       UTILITY
+    ════════════════════════════════════════ */
+    .container-w { width: 100%; max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
+    .container-narrow { max-width: 720px; margin: 0 auto; padding: 0 2rem; }
+    .section-pad { padding: 6rem 0; }
+    .section-pad-sm { padding: 4rem 0; }
+
+    .tag {
+      display: inline-flex; align-items: center; gap: 0.35rem;
+      font-size: 0.72rem; font-weight: 500; letter-spacing: 0.06em;
+      text-transform: uppercase; padding: 0.25rem 0.7rem;
+      border-radius: 99px;
+    }
+    .tag-blue  { background: var(--accent-lt); color: var(--accent-dk); }
+    .tag-gold  { background: var(--gold-lt);   color: #92400e; }
+    .tag-green { background: var(--green-lt);  color: #065f46; }
+    .tag-ink   { background: var(--ink); color: #fff; }
+
+    .eyebrow {
+      display: block; font-size: 0.72rem; font-weight: 600;
+      letter-spacing: 0.14em; text-transform: uppercase;
+      color: var(--accent); margin-bottom: 0.75rem;
+    }
+
+    .section-title {
+      font-family: var(--ff-serif);
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 400; line-height: 1.15;
+      color: var(--ink); margin-bottom: 1rem;
+    }
+
+    .section-subtitle {
+      font-size: 1.05rem; color: var(--ink-soft);
+      font-weight: 300; line-height: 1.75;
+      max-width: 56ch;
+    }
+
+    .divider { height: 1px; background: var(--rule); margin: 0; }
+
+    /* reveal animation */
+    .reveal { opacity: 0; transform: translateY(22px); transition: opacity .65s ease, transform .65s ease; }
+    .reveal.up { opacity: 1; transform: translateY(0); }
+    .reveal-d1 { transition-delay: .1s; }
+    .reveal-d2 { transition-delay: .2s; }
+    .reveal-d3 { transition-delay: .3s; }
+
+    /* ════════════════════════════════════════
+       NAVBAR
+    ════════════════════════════════════════ */
+    #nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+      background: rgba(248,247,244,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--rule);
+      transition: box-shadow .3s;
+    }
+    #nav.scrolled { box-shadow: var(--shadow-sm); }
+
+    .nav-inner {
+      display: flex; align-items: center; justify-content: space-between;
+      height: 60px; max-width: 1100px; margin: 0 auto; padding: 0 2rem;
+    }
+
+    .nav-brand {
+      font-family: var(--ff-serif); font-size: 1.15rem;
+      color: var(--ink); font-style: italic;
+    }
+
+    .nav-links { display: flex; align-items: center; gap: 0.25rem; list-style: none; }
+    .nav-links a {
+      font-size: 0.85rem; font-weight: 500; padding: 0.4rem 0.85rem;
+      border-radius: var(--r-sm); color: var(--ink-soft);
+      transition: color .2s, background .2s;
+    }
+    .nav-links a:hover { color: var(--ink); background: rgba(14,17,23,.05); }
+
+    .nav-cta {
+      font-size: 0.82rem; font-weight: 600; padding: 0.45rem 1.1rem;
+      background: var(--ink); color: #fff; border-radius: var(--r-sm);
+      transition: background .2s;
+    }
+    .nav-cta:hover { background: var(--accent); color: #fff; }
+
+    .nav-mobile-btn {
+      display: none; background: none; border: none; cursor: pointer;
+      font-size: 1.4rem; color: var(--ink);
+    }
+
+    /* ════════════════════════════════════════
+       HERO
+    ════════════════════════════════════════ */
+    #hero {
+      padding-top: 100px;
+      min-height: 100vh;
+      display: flex; align-items: center;
+      background: var(--paper);
+      position: relative; overflow: hidden;
+    }
+
+    /* Subtle grid texture */
+    #hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background-image:
+        linear-gradient(rgba(14,17,23,.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(14,17,23,.04) 1px, transparent 1px);
+      background-size: 40px 40px;
+      pointer-events: none;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 420px;
+      gap: 5rem; align-items: center;
+    }
+
+    .hero-kicker {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      font-size: 0.78rem; font-weight: 600; letter-spacing: 0.12em;
+      text-transform: uppercase; color: var(--accent);
+      border: 1px solid var(--accent-lt);
+      background: var(--accent-lt); padding: 0.3rem 0.8rem;
+      border-radius: 99px; margin-bottom: 1.5rem;
+    }
+    .hero-kicker::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
+
+    .hero-name {
+      font-family: var(--ff-serif);
+      font-size: clamp(3rem, 6vw, 5rem);
+      line-height: 1.05; font-weight: 400;
+      color: var(--ink); margin-bottom: 0.5rem;
+    }
+
+    .hero-name em { font-style: italic; color: var(--accent); }
+
+    .hero-role {
+      font-size: 1.1rem; font-weight: 300; color: var(--ink-soft);
+      letter-spacing: 0.02em; margin-bottom: 1.75rem;
+    }
+
+    .hero-role span { color: var(--ink); font-weight: 500; }
+
+    .hero-bio {
+      font-size: 1rem; color: var(--ink-soft); line-height: 1.8;
+      max-width: 52ch; margin-bottom: 2rem; font-weight: 300;
+    }
+
+    .hero-stats {
+      display: flex; gap: 2rem; margin-bottom: 2.5rem;
+      padding: 1.25rem 0; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule);
+    }
+
+    .stat-num {
+      font-family: var(--ff-serif); font-size: 1.9rem;
+      color: var(--ink); line-height: 1;
+    }
+    .stat-label { font-size: 0.75rem; color: var(--ink-muted); margin-top: 0.2rem; font-weight: 400; }
+
+    .hero-actions { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+
+    .btn-primary {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      background: var(--ink); color: #fff;
+      font-size: 0.88rem; font-weight: 600; padding: 0.7rem 1.4rem;
+      border-radius: var(--r-sm); transition: background .2s;
+    }
+    .btn-primary:hover { background: var(--accent); }
+
+    .btn-outline {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      border: 1.5px solid var(--rule); color: var(--ink-soft);
+      font-size: 0.88rem; font-weight: 500; padding: 0.7rem 1.4rem;
+      border-radius: var(--r-sm); transition: border-color .2s, color .2s;
+    }
+    .btn-outline:hover { border-color: var(--ink); color: var(--ink); }
+
+    /* Hero image card */
+    .hero-image-wrap {
+      position: relative;
+    }
+
+    .hero-photo {
+      width: 100%; aspect-ratio: 4/5;
+      object-fit: cover; object-position: center top;
+      border-radius: var(--r-lg);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .hero-badge {
+      position: absolute; bottom: -1.5rem; left: -1.5rem;
+      background: var(--paper-2); border: 1px solid var(--rule);
+      border-radius: var(--r-md); padding: 1rem 1.25rem;
+      box-shadow: var(--shadow-md);
+      display: flex; align-items: center; gap: 0.75rem;
+    }
+
+    .hero-badge-icon {
+      width: 40px; height: 40px; border-radius: var(--r-sm);
+      background: var(--gold-lt); display: flex; align-items: center; justify-content: center;
+      font-size: 1.25rem; flex-shrink: 0;
+    }
+
+    .hero-badge-text strong { display: block; font-size: 0.82rem; font-weight: 600; color: var(--ink); }
+    .hero-badge-text span   { font-size: 0.72rem; color: var(--ink-muted); }
+
+    .hero-ieee {
+      position: absolute; top: 1.25rem; right: -1.25rem;
+      background: var(--ink); color: #fff;
+      border-radius: var(--r-sm); padding: 0.6rem 0.9rem;
+      box-shadow: var(--shadow-md);
+      font-size: 0.72rem; font-weight: 600; letter-spacing: 0.06em;
+      text-transform: uppercase; text-align: center; line-height: 1.3;
+    }
+
+    /* Social row */
+    .hero-social { display: flex; gap: 0.5rem; margin-top: 1.5rem; }
+    .soc-btn {
+      width: 36px; height: 36px; border-radius: var(--r-sm);
+      border: 1px solid var(--rule); display: flex; align-items: center; justify-content: center;
+      color: var(--ink-muted); font-size: 1rem;
+      transition: border-color .2s, color .2s;
+    }
+    .soc-btn:hover { border-color: var(--ink); color: var(--ink); }
+
+    /* ════════════════════════════════════════
+       ABOUT / PROFILE STRIP
+    ════════════════════════════════════════ */
+    #about { background: var(--paper-2); }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 2px; border: 1px solid var(--rule); border-radius: var(--r-lg); overflow: hidden;
+      background: var(--rule);
+    }
+
+    .about-cell {
+      background: var(--paper-2); padding: 2rem 1.75rem;
+    }
+
+    .about-cell-icon {
+      font-size: 1.5rem; margin-bottom: 0.75rem;
+    }
+    .about-cell h3 {
+      font-family: var(--ff-serif); font-size: 1.15rem;
+      color: var(--ink); margin-bottom: 0.5rem;
+    }
+    .about-cell p { font-size: 0.9rem; color: var(--ink-soft); font-weight: 300; line-height: 1.7; }
+
+    .about-long {
+      display: grid; grid-template-columns: 3fr 2fr;
+      gap: 4rem; align-items: start; margin-top: 4rem;
+    }
+
+    .about-long p {
+      font-size: 1rem; color: var(--ink-soft); line-height: 1.85;
+      font-weight: 300; margin-bottom: 1.25rem;
+    }
+
+    .about-long p strong { color: var(--ink); font-weight: 500; }
+
+    .skills-list { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+    .skill-chip {
+      font-size: 0.78rem; font-weight: 500; padding: 0.28rem 0.75rem;
+      border: 1px solid var(--rule); border-radius: 99px;
+      color: var(--ink-soft); background: var(--paper);
+    }
+
+    /* Timeline (education / experience) */
+    .timeline { display: flex; flex-direction: column; gap: 0; }
+
+    .tl-item {
+      display: grid; grid-template-columns: 110px 1px 1fr;
+      gap: 0 1.25rem; padding-bottom: 2rem;
+    }
+    .tl-item:last-child { padding-bottom: 0; }
+
+    .tl-year {
+      font-size: 0.78rem; font-weight: 600; color: var(--ink-muted);
+      padding-top: 0.2rem; text-align: right; letter-spacing: 0.04em;
+    }
+
+    .tl-line-wrap { display: flex; flex-direction: column; align-items: center; }
+    .tl-dot {
+      width: 10px; height: 10px; border-radius: 50%;
+      background: var(--accent); flex-shrink: 0; margin-top: 0.35rem;
+    }
+    .tl-line { flex: 1; width: 1px; background: var(--rule); margin-top: 4px; }
+    .tl-item:last-child .tl-line { display: none; }
+
+    .tl-body {}
+    .tl-role { font-size: 0.95rem; font-weight: 600; color: var(--ink); margin-bottom: 0.1rem; }
+    .tl-org  { font-size: 0.85rem; color: var(--ink-soft); margin-bottom: 0.35rem; }
+    .tl-desc { font-size: 0.83rem; color: var(--ink-muted); line-height: 1.65; }
+
+    /* ════════════════════════════════════════
+       RESEARCH / PUBLICATIONS
+    ════════════════════════════════════════ */
+    #research { background: var(--ink); }
+    #research .eyebrow { color: #93c5fd; }
+    #research .section-title { color: #fff; }
+    #research .section-subtitle { color: rgba(255,255,255,.55); }
+
+    .research-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 1.5px; background: rgba(255,255,255,.08);
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: var(--r-lg); overflow: hidden;
+      margin-top: 3rem;
+    }
+
+    .pub-card {
+      background: #161b27; padding: 2rem 1.75rem;
+      display: flex; flex-direction: column; gap: 0.75rem;
+      transition: background .2s;
+    }
+    .pub-card:hover { background: #1d2438; }
+
+    .pub-year {
+      font-size: 0.72rem; font-weight: 600; letter-spacing: 0.1em;
+      text-transform: uppercase; color: #60a5fa;
+    }
+
+    .pub-title {
+      font-size: 0.95rem; font-weight: 500; color: #f1f5f9;
+      line-height: 1.5;
+    }
+
+    .pub-venue {
+      font-size: 0.8rem; color: rgba(255,255,255,.4);
+      font-style: italic; margin-top: auto; padding-top: 0.5rem;
+      border-top: 1px solid rgba(255,255,255,.06);
+    }
+
+    .pub-authors { font-size: 0.78rem; color: rgba(255,255,255,.3); }
+
+    .pub-link {
+      display: inline-flex; align-items: center; gap: 0.3rem;
+      font-size: 0.75rem; font-weight: 500; color: #60a5fa;
+      transition: color .2s; margin-top: 0.25rem;
+    }
+    .pub-link:hover { color: #93c5fd; }
+
+    /* Erasmus highlight */
+    .erasmus-banner {
+      margin-top: 3rem;
+      background: linear-gradient(135deg, #1e3a5f 0%, #1a3050 100%);
+      border: 1px solid rgba(96,165,250,.2);
+      border-radius: var(--r-lg); padding: 2.5rem;
+      display: grid; grid-template-columns: auto 1fr; gap: 2rem; align-items: center;
+    }
+
+    .erasmus-flag { font-size: 3rem; }
+
+    .erasmus-body h3 {
+      font-family: var(--ff-serif); font-size: 1.35rem;
+      color: #f1f5f9; margin-bottom: 0.5rem;
+    }
+    .erasmus-body p { font-size: 0.9rem; color: rgba(255,255,255,.55); line-height: 1.75; }
+
+    /* ════════════════════════════════════════
+       WORK / PROJECTS
+    ════════════════════════════════════════ */
+    #work { background: var(--paper); }
+
+    .work-grid {
+      display: grid; grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem; margin-top: 3rem;
+    }
+
+    .work-card {
+      background: var(--paper-2); border: 1px solid var(--rule);
+      border-radius: var(--r-lg); overflow: hidden;
+      transition: box-shadow .25s, transform .25s;
+    }
+    .work-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-3px); }
+
+    .work-card-img {
+      width: 100%; height: 180px; object-fit: cover;
+      background: var(--rule);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 2.5rem; color: var(--ink-muted);
+    }
+
+    .work-card-body { padding: 1.5rem; }
+    .work-card-client { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-muted); margin-bottom: 0.4rem; }
+    .work-card-title { font-size: 1rem; font-weight: 600; color: var(--ink); margin-bottom: 0.5rem; line-height: 1.4; }
+    .work-card-desc  { font-size: 0.85rem; color: var(--ink-soft); line-height: 1.65; margin-bottom: 1rem; }
+    .work-card-tags  { display: flex; flex-wrap: wrap; gap: 0.35rem; }
+
+    /* ════════════════════════════════════════
+       AWARDS & RECOGNITION
+    ════════════════════════════════════════ */
+    #awards { background: var(--paper-2); }
+
+    .awards-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem; margin-top: 3rem;
+    }
+
+    .award-card {
+      border: 1px solid var(--rule); border-radius: var(--r-lg);
+      padding: 1.5rem; position: relative; overflow: hidden;
+      transition: border-color .2s, box-shadow .2s;
+    }
+    .award-card:hover { border-color: var(--accent); box-shadow: 0 0 0 4px var(--accent-lt); }
+
+    .award-pos {
+      font-family: var(--ff-serif); font-size: 2.5rem;
+      color: var(--rule); position: absolute; top: 1rem; right: 1.25rem;
+      line-height: 1;
+    }
+
+    .award-icon { font-size: 1.5rem; margin-bottom: 0.75rem; }
+    .award-title { font-size: 0.95rem; font-weight: 600; color: var(--ink); margin-bottom: 0.25rem; }
+    .award-event { font-size: 0.82rem; color: var(--ink-soft); }
+    .award-year  { font-size: 0.75rem; color: var(--ink-muted); margin-top: 0.5rem; }
+
+    /* ════════════════════════════════════════
+       INSIGHTS / BLOG
+    ════════════════════════════════════════ */
+    #insights { background: var(--paper); }
+
+    .insights-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem; margin-top: 3rem;
+    }
+
+    .insight-card {
+      background: var(--paper-2); border: 1px solid var(--rule);
+      border-radius: var(--r-lg); overflow: hidden;
+      display: flex; flex-direction: column;
+      transition: box-shadow .25s, transform .25s;
+    }
+    .insight-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
+
+    .insight-img {
+      width: 100%; height: 180px; object-fit: cover;
+      background: var(--rule);
+    }
+
+    .insight-body { padding: 1.35rem; flex: 1; display: flex; flex-direction: column; gap: 0.5rem; }
+    .insight-cat  { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); }
+    .insight-title { font-size: 0.97rem; font-weight: 600; color: var(--ink); line-height: 1.45; }
+    .insight-desc  { font-size: 0.83rem; color: var(--ink-soft); line-height: 1.65; flex: 1; }
+    .insight-link  { font-size: 0.8rem; font-weight: 600; color: var(--accent); display: flex; align-items: center; gap: 0.3rem; margin-top: 0.5rem; }
+
+    /* ════════════════════════════════════════
+       CONTACT
+    ════════════════════════════════════════ */
+    #contact { background: var(--ink); padding: 5rem 0; }
+
+    .contact-inner {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 5rem; align-items: start;
+    }
+
+    #contact .eyebrow { color: #93c5fd; }
+    #contact .section-title { color: #fff; }
+    #contact .section-subtitle { color: rgba(255,255,255,.5); }
+
+    .contact-details { display: flex; flex-direction: column; gap: 1rem; margin-top: 2rem; }
+
+    .contact-item {
+      display: flex; align-items: center; gap: 1rem;
+      padding: 1rem 1.25rem;
+      background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.07);
+      border-radius: var(--r-md);
+    }
+    .contact-item-icon {
+      width: 36px; height: 36px; border-radius: var(--r-sm);
+      background: rgba(96,165,250,.12); display: flex; align-items: center; justify-content: center;
+      font-size: 1rem; color: #60a5fa; flex-shrink: 0;
+    }
+    .contact-item-text small { display: block; font-size: 0.7rem; color: rgba(255,255,255,.35); letter-spacing: 0.06em; text-transform: uppercase; }
+    .contact-item-text span  { font-size: 0.9rem; color: rgba(255,255,255,.75); font-weight: 400; }
+
+    /* ════════════════════════════════════════
+       WEDDING SECTION (unchanged logic)
+    ════════════════════════════════════════ */
+    #wedding {
+      background: #1a0e06;
+      padding: 5rem 0;
+      position: relative; overflow: hidden;
+    }
+    #wedding::before {
+      content: ''; position: absolute;
+      top: -80px; right: -80px; width: 400px; height: 400px;
+      border: 1px solid rgba(196,169,107,.12); border-radius: 50%;
+    }
+    #wedding::after {
+      content: ''; position: absolute;
+      bottom: -100px; left: -100px; width: 500px; height: 500px;
+      border: 1px solid rgba(196,169,107,.08); border-radius: 50%;
+    }
+
+    .wedding-inner {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 4rem; align-items: center; position: relative; z-index: 2;
+    }
+
+    .wedding-eyebrow {
+      font-size: 0.7rem; letter-spacing: 0.3em; text-transform: uppercase;
+      color: #8a9e8a; display: block; margin-bottom: 1rem;
+    }
+    .wedding-title {
+      font-family: var(--ff-serif); font-size: 2.6rem; font-style: italic;
+      color: #faf6f0; line-height: 1.15; margin-bottom: 0.25rem;
+    }
+    .wedding-title em { color: #c4a96b; }
+    .wedding-rule { width: 48px; height: 1px; background: #c4a96b; margin: 1.5rem 0; }
+    .wedding-text { color: rgba(250,246,240,.55); font-size: 0.9rem; line-height: 1.85; font-weight: 300; margin-bottom: 2rem; }
+
+    .wedding-link {
+      display: inline-block; border: 1px solid #c4a96b; color: #c4a96b;
+      font-size: 0.78rem; letter-spacing: 0.14em; text-transform: uppercase;
+      padding: 0.65rem 1.5rem; transition: background .2s, color .2s;
+    }
+    .wedding-link:hover { background: #c4a96b; color: #1a0e06; }
+
+    .wedding-events { display: flex; flex-direction: column; gap: 1rem; }
+    .wedding-ev {
+      background: rgba(250,246,240,.04); border-left: 3px solid #c4a96b;
+      padding: 1.2rem 1.5rem;
+    }
+    .wedding-ev .we-tag { font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase; color: #8a9e8a; display: block; margin-bottom: 0.3rem; }
+    .wedding-ev .we-name { font-family: var(--ff-serif); font-size: 1.2rem; font-style: italic; color: #faf6f0; }
+    .wedding-ev .we-date { font-size: 0.78rem; color: #c4a96b; margin-top: 0.2rem; }
+
+    /* ════════════════════════════════════════
+       FOOTER
+    ════════════════════════════════════════ */
+    #footer {
+      background: #070a10; padding: 2.5rem 0;
+      border-top: 1px solid rgba(255,255,255,.06);
+    }
+
+    .footer-inner {
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 1rem;
+    }
+
+    .footer-brand { font-family: var(--ff-serif); font-style: italic; color: rgba(255,255,255,.4); font-size: 0.95rem; }
+    .footer-links { display: flex; gap: 1.5rem; }
+    .footer-links a { font-size: 0.8rem; color: rgba(255,255,255,.3); transition: color .2s; }
+    .footer-links a:hover { color: rgba(255,255,255,.7); }
+    .footer-copy { font-size: 0.75rem; color: rgba(255,255,255,.2); }
+
+    /* ════════════════════════════════════════
+       POPUP (kept from original)
+    ════════════════════════════════════════ */
+    #wedding-popup {
+      position: fixed; inset: 0; z-index: 9999;
+      display: none; align-items: center; justify-content: center;
+      padding: 1rem;
+      background: rgba(7,10,16,.8); backdrop-filter: blur(6px);
+    }
+    #wedding-popup.open { display: flex; }
+
+    .popup-card {
+      background: #fffdf9; max-width: 460px; width: 100%;
+      position: relative; text-align: center;
+      padding: 3rem 2.5rem; border-radius: var(--r-lg);
+      box-shadow: 0 32px 80px rgba(0,0,0,.4);
+      animation: popUp .4s ease;
+    }
+    @keyframes popUp { from { transform: translateY(20px) scale(.97); opacity: 0; } to { transform: none; opacity: 1; } }
+
+    .popup-card::before { content: ''; position: absolute; inset: 8px; border: 1px solid #e8d5be; border-radius: 10px; pointer-events: none; }
+    .popup-close { position: absolute; top: 1rem; right: 1.25rem; background: none; border: none; font-size: 1.1rem; cursor: pointer; color: #9b8776; }
+    .popup-eyebrow { font-size: 0.65rem; letter-spacing: 0.3em; text-transform: uppercase; color: #8a9e8a; margin-bottom: 1rem; }
+    .popup-headline { font-family: var(--ff-serif); font-size: 2.1rem; color: #2c2218; line-height: 1.2; margin-bottom: 0.25rem; }
+    .popup-headline em { color: #c9956e; }
+    .popup-divider { width: 48px; height: 1px; background: #c4a96b; margin: 1rem auto; }
+    .popup-dates { font-size: 0.78rem; letter-spacing: 0.14em; text-transform: uppercase; color: #c4a96b; margin-bottom: 1.25rem; }
+    .popup-text { font-size: 0.87rem; color: #6b5744; line-height: 1.8; font-weight: 300; margin-bottom: 2rem; }
+    .popup-btn { display: inline-block; background: #2c2218; color: #fffdf9; padding: 0.72rem 2rem; font-size: 0.75rem; letter-spacing: 0.18em; text-transform: uppercase; border-radius: 4px; transition: background .2s; }
+    .popup-btn:hover { background: #c4a96b; }
+    .popup-dismiss { display: block; margin-top: 0.9rem; font-size: 0.72rem; color: #9b8776; cursor: pointer; background: none; border: none; text-decoration: underline; }
+
+    /* ════════════════════════════════════════
+       RESPONSIVE
+    ════════════════════════════════════════ */
+    @media (max-width: 900px) {
+      .hero-grid { grid-template-columns: 1fr; }
+      .hero-image-wrap { max-width: 340px; margin: 0 auto; }
+      .hero-ieee { right: 0; }
+      .about-grid { grid-template-columns: 1fr; }
+      .about-long { grid-template-columns: 1fr; gap: 2rem; }
+      .research-grid { grid-template-columns: 1fr; }
+      .work-grid { grid-template-columns: 1fr; }
+      .awards-grid { grid-template-columns: 1fr 1fr; }
+      .insights-grid { grid-template-columns: 1fr; }
+      .contact-inner { grid-template-columns: 1fr; gap: 3rem; }
+      .wedding-inner { grid-template-columns: 1fr; }
+      .nav-links { display: none; }
+      .nav-mobile-btn { display: block; }
+    }
+
+    @media (max-width: 600px) {
+      .hero-stats { gap: 1.25rem; }
+      .awards-grid { grid-template-columns: 1fr; }
+      .erasmus-banner { grid-template-columns: 1fr; }
+      .footer-inner { flex-direction: column; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ════ POPUP ════ -->
+<div id="wedding-popup">
+  <div class="popup-card">
+    <button class="popup-close" onclick="closePopup()" aria-label="Close">✕</button>
+    <p class="popup-eyebrow">Joyful announcement</p>
+    <h2 class="popup-headline">We're getting<br><em>married!</em></h2>
+    <div class="popup-divider"></div>
+    <p class="popup-dates">25 Baishak · Wedding &nbsp;|&nbsp; 27 Baishak · Reception</p>
+    <p class="popup-text">Sushant Chalise joyfully announces his upcoming wedding. We warmly invite you to celebrate with us in Kathmandu.</p>
+    <a href="wedding.html" class="popup-btn">View celebration details</a>
+    <button class="popup-dismiss" onclick="closePopup()">Maybe later</button>
+  </div>
+</div>
+
+<!-- ════ NAV ════ -->
+<nav id="nav">
+  <div class="nav-inner">
+    <span class="nav-brand">Sushant Chalise</span>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#research">Research</a></li>
+      <li><a href="#work">Work</a></li>
+      <li><a href="#awards">Awards</a></li>
+      <li><a href="#insights">Insights</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="wedding.html" style="color:#c4a96b;">💍 Wedding</a></li>
+    </ul>
+    <a href="CV_Sushant.pdf" target="_blank" class="nav-cta">Download CV ↗</a>
+    <button class="nav-mobile-btn" onclick="toggleMobileNav()">☰</button>
+  </div>
+  <!-- mobile dropdown -->
+  <div id="mobile-nav" style="display:none; padding: 0.5rem 1.5rem 1rem; border-top: 1px solid var(--rule);">
+    <a href="#about" style="display:block;padding:.5rem 0;font-size:.9rem;color:var(--ink-soft);" onclick="toggleMobileNav()">About</a>
+    <a href="#research" style="display:block;padding:.5rem 0;font-size:.9rem;color:var(--ink-soft);" onclick="toggleMobileNav()">Research</a>
+    <a href="#work" style="display:block;padding:.5rem 0;font-size:.9rem;color:var(--ink-soft);" onclick="toggleMobileNav()">Work</a>
+    <a href="#awards" style="display:block;padding:.5rem 0;font-size:.9rem;color:var(--ink-soft);" onclick="toggleMobileNav()">Awards</a>
+    <a href="#insights" style="display:block;padding:.5rem 0;font-size:.9rem;color:var(--ink-soft);" onclick="toggleMobileNav()">Insights</a>
+    <a href="#contact" style="display:block;padding:.5rem 0;font-size:.9rem;color:var(--ink-soft);" onclick="toggleMobileNav()">Contact</a>
+    <a href="wedding.html" style="display:block;padding:.5rem 0;font-size:.9rem;color:#c4a96b;">💍 Wedding</a>
+  </div>
+</nav>
+
+<!-- ════ HERO ════ -->
+<section id="hero">
+  <div class="container-w">
+    <div class="hero-grid">
+
+      <!-- TEXT COLUMN -->
+      <div>
+        <div class="hero-kicker reveal">Engineer &middot; Researcher &middot; Educator</div>
+
+        <h1 class="hero-name reveal reveal-d1">
+          Sushant<br><em>Chalise</em>
+        </h1>
+
+        <p class="hero-role reveal reveal-d2">
+          <span>Instructor &amp; System Administrator</span> at Pulchowk Campus, IOE · Tribhuvan University
+        </p>
+
+        <p class="hero-bio reveal reveal-d2">
+          ECE &amp; Data Science researcher with a decade of experience across academia, government systems, and climate-tech entrepreneurship. Currently pursuing M.Sc. in Computer Engineering (Data Science &amp; Analytics) while leading Samsung Innovation Campus courses and conducting research at the intersection of intelligent systems and urban infrastructure.
+        </p>
+
+        <div class="hero-stats reveal reveal-d2">
+          <div>
+            <div class="stat-num">3</div>
+            <div class="stat-label">Peer-reviewed<br>publications</div>
+          </div>
+          <div>
+            <div class="stat-num">10+</div>
+            <div class="stat-label">Years in<br>academia &amp; industry</div>
+          </div>
+          <div>
+            <div class="stat-num">2</div>
+            <div class="stat-label">Master's<br>degrees</div>
+          </div>
+          <div>
+            <div class="stat-num">5+</div>
+            <div class="stat-label">National &amp;<br>global awards</div>
+          </div>
+        </div>
+
+        <div class="hero-actions reveal reveal-d3">
+          <a href="#research" class="btn-primary">View Research ↓</a>
+          <a href="CV_Sushant.pdf" target="_blank" class="btn-outline">Download CV ↗</a>
+        </div>
+
+        <div class="hero-social reveal reveal-d3">
+          <a href="https://www.facebook.com/sushantwith.direction/" class="soc-btn" title="Facebook"><i class="ion-social-facebook"></i></a>
+          <a href="https://www.instagram.com/sushantchalise/" class="soc-btn" title="Instagram"><i class="ion-social-instagram"></i></a>
+          <a href="https://scholar.google.com/citations?user=6ObsaHgAAAAJ&hl=en" target="_blank" class="soc-btn" title="Google Scholar">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm0-24L0 9.5l4.838 3.94A8 8 0 0 1 12 10a8 8 0 0 1 7.162 3.44L24 9.5z"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/sushant-chalise/" target="_blank" class="soc-btn" title="LinkedIn"><i class="ion-social-linkedin"></i></a>
+        </div>
+      </div>
+
+      <!-- IMAGE COLUMN -->
+      <div class="hero-image-wrap reveal reveal-d1">
+        <div class="hero-ieee">IEEE Young<br>Professionals<br>Chair</div>
+        <img src="images/me.jpg" alt="Sushant Chalise" class="hero-photo">
+        <div class="hero-badge">
+          <div class="hero-badge-icon">🇮🇹</div>
+          <div class="hero-badge-text">
+            <strong>Erasmus+ Researcher</strong>
+            <span>Italy · 3 months · 2020–21</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ════ ABOUT ════ -->
+<section id="about" class="section-pad">
+  <div class="container-w">
+
+    <div class="reveal">
+      <span class="eyebrow">About</span>
+      <h2 class="section-title">Background &amp; Expertise</h2>
+    </div>
+
+    <div class="about-grid reveal reveal-d1" style="margin-top:2.5rem;">
+      <div class="about-cell">
+        <div class="about-cell-icon">🎓</div>
+        <h3>3 Degrees in Progress &amp; Complete</h3>
+        <p>B.E. in Electronics &amp; Communication (IoE, TU) · M.Sc. Climate Change &amp; Sustainable Dev. (GPA 3.3/4) · Currently: M.Sc. Computer Engineering — Data Science &amp; Analytics</p>
+      </div>
+      <div class="about-cell">
+        <div class="about-cell-icon">🔬</div>
+        <h3>Research Interests</h3>
+        <p>Solar radiation modelling · Machine learning for climate systems · Graph-based urban mobility · ICT infrastructure &amp; smart city development · Data visualisation</p>
+      </div>
+      <div class="about-cell">
+        <div class="about-cell-icon">🏛️</div>
+        <h3>Institutional Roles</h3>
+        <p>System Administrator, Pulchowk Campus (2019–present) · Samsung Innovation Campus Instructor · Consultant Engineer, National Planning Commission (LPBMIS/PPBMIS)</p>
+      </div>
+    </div>
+
+    <div class="about-long reveal" style="margin-top:4rem;">
+      <div>
+        <p>Er. Sushant Chalise is an engineer, researcher, and educator based at the <strong>Institute of Engineering, Tribhuvan University</strong> — Nepal's premier technical institution. With a career spanning over a decade, he bridges the worlds of systems engineering, applied research, and technology entrepreneurship.</p>
+
+        <p>His academic journey began with a B.E. in Electronics &amp; Communication Engineering, followed by an <strong>M.Sc. in Climate Change and Sustainable Development</strong>, during which he was awarded an <strong>Erasmus+ mobility grant</strong> to conduct thesis research in Italy for three months — studying solar radiation estimation using hybrid AI models. His thesis, supervised by Prof. Dr. Khem Narayan Poudyal and Asst. Prof. Aayush Bhattarai, proposed novel ANN-based approaches for solar resource assessment in Nepal.</p>
+
+        <p>He is currently pursuing a second master's in <strong>Data Science &amp; Analytics</strong> (Computer Engineering) at Pulchowk Campus, continuing to publish at the intersection of intelligent systems and urban infrastructure. He also serves as <strong>IEEE Young Professionals Chair</strong> and was a co-founder &amp; CTO of Green Coins Pvt. Ltd., a social enterprise recognised at Climate Launchpad South Asia.</p>
+
+        <div class="skills-list" style="margin-top:1.5rem;">
+          <span class="skill-chip">Python</span>
+          <span class="skill-chip">Node.js</span>
+          <span class="skill-chip">Machine Learning</span>
+          <span class="skill-chip">R Programming</span>
+          <span class="skill-chip">Data Visualisation</span>
+          <span class="skill-chip">Graph Algorithms</span>
+          <span class="skill-chip">Solar Radiation Modelling</span>
+          <span class="skill-chip">ICT Infrastructure</span>
+          <span class="skill-chip">System Administration</span>
+          <span class="skill-chip">CCNA</span>
+          <span class="skill-chip">Deep Learning</span>
+          <span class="skill-chip">UI/UX</span>
+        </div>
+      </div>
+
+      <!-- Timeline -->
+      <div>
+        <p style="font-size:0.72rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-muted);margin-bottom:1.5rem;">Experience Timeline</p>
+        <div class="timeline">
+          <div class="tl-item">
+            <div class="tl-year">2024–Now</div>
+            <div class="tl-line-wrap"><div class="tl-dot"></div><div class="tl-line"></div></div>
+            <div class="tl-body">
+              <div class="tl-role">M.Sc. Computer Engineering (Data Science)</div>
+              <div class="tl-org">Pulchowk Campus, IOE, TU</div>
+              <div class="tl-desc">Samsung Innovation Campus — Coding, Advanced Data Science</div>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-year">2023–2024</div>
+            <div class="tl-line-wrap"><div class="tl-dot"></div><div class="tl-line"></div></div>
+            <div class="tl-body">
+              <div class="tl-role">Consultant Engineer</div>
+              <div class="tl-org">National Planning Commission — LPBMIS/PPBMIS</div>
+              <div class="tl-desc">Delivered orientation &amp; training to government employees at local &amp; provincial level</div>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-year">2019–Now</div>
+            <div class="tl-line-wrap"><div class="tl-dot"></div><div class="tl-line"></div></div>
+            <div class="tl-body">
+              <div class="tl-role">System Administrator</div>
+              <div class="tl-org">Pulchowk Campus, IOE, TU</div>
+              <div class="tl-desc">ICT infrastructure, software development, internet services &amp; research</div>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-year">2019–2021</div>
+            <div class="tl-line-wrap"><div class="tl-dot"></div><div class="tl-line"></div></div>
+            <div class="tl-body">
+              <div class="tl-role">M.Sc. Climate Change &amp; Sustainable Dev.</div>
+              <div class="tl-org">Pulchowk Campus, IOE · <span style="color:var(--accent)">+ Erasmus+ Italy</span></div>
+              <div class="tl-desc">GPA 3.3/4 · Thesis: Solar Radiation using ANN Hybrid Models</div>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-year">2018–2020</div>
+            <div class="tl-line-wrap"><div class="tl-dot"></div><div class="tl-line"></div></div>
+            <div class="tl-body">
+              <div class="tl-role">Co-Founder &amp; CTO</div>
+              <div class="tl-org">Green Coins Pvt. Ltd.</div>
+              <div class="tl-desc">Climate-tech startup · UNDP Accelerator Lab · Climate Launchpad 1st Runner-Up</div>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-year">2014–2017</div>
+            <div class="tl-line-wrap"><div class="tl-dot"></div><div class="tl-line"></div></div>
+            <div class="tl-body">
+              <div class="tl-role">B.E. Electronics &amp; Communication Eng.</div>
+              <div class="tl-org">Kantipur Engineering College, IOE, TU</div>
+              <div class="tl-desc">Final Project: Smart City using IoT · CCNA certified 2016</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ════ RESEARCH ════ -->
+<section id="research" class="section-pad">
+  <div class="container-w">
+    <div class="reveal">
+      <span class="eyebrow">Research &amp; Publications</span>
+      <h2 class="section-title" style="color:#fff;">Peer-Reviewed Work</h2>
+      <p class="section-subtitle">Research spanning solar energy systems, ICT infrastructure, urban mobility, and smart city development — published in international journals and conferences.</p>
+    </div>
+
+    <div class="research-grid reveal reveal-d1">
+
+      <div class="pub-card">
+        <div class="pub-year">2025</div>
+        <div class="pub-title">An Optimized Graph Based Implementation for Efficient Journey Planning with Public Transport in Kathmandu Valley</div>
+        <div class="pub-authors">Parajuli M.P., Sharma M., <strong style="color:#93c5fd;">Chalise S.</strong>, Giri S.</div>
+        <div class="pub-venue">International Journal on Engineering Technology, 2(2), 296–305</div>
+        <a class="pub-link" href="https://www.nepjol.info/index.php/injet/article/download/78657/60248/226223" target="_blank">Read paper ↗</a>
+      </div>
+
+      <div class="pub-card">
+        <div class="pub-year">2024</div>
+        <div class="pub-title">ICT Infrastructure Analysis and E-Readiness for Smart City Development in Nepal</div>
+        <div class="pub-authors">Gautam G., Shrestha S., <strong style="color:#93c5fd;">Chalise S.</strong></div>
+        <div class="pub-venue">12th International Conference on Advanced Engineering and ICT-Convergence 2024</div>
+        <a class="pub-link" href="#" target="_blank">Conference paper ↗</a>
+      </div>
+
+      <div class="pub-card">
+        <div class="pub-year">2021</div>
+        <div class="pub-title">Prediction of Solar Radiation: A Case Study at Hill Station Kushma, Nepal using Artificial Neural Networks (ANNs)</div>
+        <div class="pub-authors"><strong style="color:#93c5fd;">Chalise S.</strong>, Bhattrai A., Neupane P., Chalise A., Bhattarai N., Poudyal K.N.</div>
+        <div class="pub-venue">Proceedings of 10th IOE Graduate Conference, Vol. 10, pp. 1065–1070</div>
+        <a class="pub-link" href="#" target="_blank">Conference paper ↗</a>
+      </div>
+
+    </div>
+
+    <!-- Erasmus Banner -->
+    <div class="erasmus-banner reveal reveal-d2">
+      <div class="erasmus-flag">🇮🇹</div>
+      <div class="erasmus-body">
+        <h3>Erasmus+ International Mobility — Italy</h3>
+        <p>Awarded a prestigious <strong style="color:#93c5fd;">Erasmus+ mobility grant</strong> to conduct thesis research at a partner institution in Italy for three months (2020–21). The research focused on estimating global solar radiation potential across Nepal using hybrid AI models — combining Angstrom-Prescott empirical models with Artificial Neural Networks. This work contributed to a 3.3 GPA master's thesis under the supervision of Prof. Dr. Khem Narayan Poudyal and Asst. Prof. Aayush Bhattarai at Pulchowk Campus, IOE.</p>
+      </div>
+    </div>
+
+    <div style="text-align:center;margin-top:2.5rem;">
+      <a href="https://scholar.google.com/citations?user=6ObsaHgAAAAJ&hl=en" target="_blank" class="btn-outline" style="color:rgba(255,255,255,.5);border-color:rgba(255,255,255,.15);">View Google Scholar profile ↗</a>
+    </div>
+  </div>
+</section>
+
+<div class="divider" style="background:rgba(255,255,255,.06);"></div>
+
+<!-- ════ WORK ════ -->
+<section id="work" class="section-pad">
+  <div class="container-w">
+    <div class="reveal">
+      <span class="eyebrow">Work</span>
+      <h2 class="section-title">Delivered Projects</h2>
+      <p class="section-subtitle">From government information systems to climate-tech platforms — a selection of impactful projects built across sectors.</p>
+    </div>
+
+    <div class="work-grid reveal reveal-d1">
+
+      <div class="work-card">
+        <div class="work-card-img" style="background:#f0f4ff;">
+          <img src="images/project_bank_logo.png" alt="Project Bank MIS" style="width:100%;height:180px;object-fit:contain;padding:1.5rem;">
+        </div>
+        <div class="work-card-body">
+          <div class="work-card-client">National Planning Commission, Nepal</div>
+          <div class="work-card-title">Local/Provincial Project Bank Management Information System</div>
+          <div class="work-card-desc">Designed and deployed a nationwide MIS enabling government project tracking at local and provincial levels. Delivered orientation and training to policy makers and government employees across Nepal.</div>
+          <div class="work-card-tags">
+            <span class="tag tag-blue">Government</span>
+            <span class="tag tag-ink">MIS</span>
+            <span class="tag tag-gold">Policy</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="work-card">
+        <div class="work-card-img" style="background:#f0fdf4;">
+          <img src="images/greencoins_logo.png" alt="GreenCoins" style="width:100%;height:180px;object-fit:contain;padding:1.5rem;">
+        </div>
+        <div class="work-card-body">
+          <div class="work-card-client">Green Coins Pvt. Ltd. — Co-founder &amp; CTO</div>
+          <div class="work-card-title">GreenCoins — Climate-Tech Social Enterprise</div>
+          <div class="work-card-desc">Co-founded a social business with UNDP Accelerator Lab partnership. Built platforms including Walkman, Hariyobazar, and GreenPartner Interface. Winner at Climate Launchpad Nepal; Top 11 in South Asia.</div>
+          <div class="work-card-tags">
+            <span class="tag tag-green">Climate Tech</span>
+            <span class="tag tag-blue">UNDP</span>
+            <span class="tag tag-gold">Startup</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="work-card">
+        <div class="work-card-img" style="background:#fafafa;">
+          <img src="images/infoviz.png" alt="Info Viz" style="width:100%;height:180px;object-fit:contain;padding:1.5rem;">
+        </div>
+        <div class="work-card-body">
+          <div class="work-card-client">MSDSA · Pulchowk Campus</div>
+          <div class="work-card-title">Visualisation of Priorities at Pulchowk Campus</div>
+          <div class="work-card-desc">Interactive data visualisation dashboard developed for academic decision-making. Supervised by Asst. Prof. Aman Shakya, with team members Suraj Kalu and Yatru Magar.</div>
+          <div class="work-card-tags">
+            <span class="tag tag-blue">Data Viz</span>
+            <span class="tag tag-ink">Dashboard</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="work-card">
+        <div class="work-card-img" style="background:#fef9f0;">
+          <img src="images/work-4.jpg" alt="Nextlite" style="width:100%;height:180px;object-fit:cover;">
+        </div>
+        <div class="work-card-body">
+          <div class="work-card-client">Nextlite</div>
+          <div class="work-card-title">Custom Video Editing &amp; Upload Web App</div>
+          <div class="work-card-desc">Built a full-stack web application for professional video editing and cloud upload workflows. Implemented custom processing pipelines for media management.</div>
+          <div class="work-card-tags">
+            <span class="tag tag-blue">Node.js</span>
+            <span class="tag tag-ink">Web App</span>
+            <span class="tag tag-gold">Media</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ════ AWARDS ════ -->
+<section id="awards" class="section-pad">
+  <div class="container-w">
+    <div class="reveal">
+      <span class="eyebrow">Awards &amp; Recognition</span>
+      <h2 class="section-title">Achievements</h2>
+    </div>
+
+    <div class="awards-grid reveal reveal-d1">
+
+      <div class="award-card">
+        <div class="award-pos">1</div>
+        <div class="award-icon">⚽</div>
+        <div class="award-title">IoE Football Cup — First Place</div>
+        <div class="award-event">Institute of Engineering, Nepal</div>
+        <div class="award-year">2022</div>
+      </div>
+
+      <div class="award-card">
+        <div class="award-pos">2</div>
+        <div class="award-icon">🌍</div>
+        <div class="award-title">Climate Launchpad Nepal — 1st Runner-Up</div>
+        <div class="award-event">Green Coins · National Climate Competition</div>
+        <div class="award-year">2020</div>
+      </div>
+
+      <div class="award-card">
+        <div class="award-pos">11</div>
+        <div class="award-icon">🌏</div>
+        <div class="award-title">Climate Launchpad South Asia — Top 11</div>
+        <div class="award-event">Regional Climate Innovation Programme</div>
+        <div class="award-year">2020</div>
+      </div>
+
+      <div class="award-card">
+        <div class="award-pos">20</div>
+        <div class="award-icon">🇨🇳</div>
+        <div class="award-title">Belt and Road Entrepreneurial Stories — Top 20</div>
+        <div class="award-event">International Entrepreneurship Competition, China</div>
+        <div class="award-year">2019</div>
+      </div>
+
+      <div class="award-card">
+        <div class="award-pos">5</div>
+        <div class="award-icon">🏆</div>
+        <div class="award-title">Startup ICT Award — Top 5</div>
+        <div class="award-event">Nepal ICT Startup Competition</div>
+        <div class="award-year">2019</div>
+      </div>
+
+      <div class="award-card" style="border-color:var(--accent-lt);background:var(--accent-lt);">
+        <div class="award-icon">🇮🇹</div>
+        <div class="award-title">Erasmus+ International Mobility Grant</div>
+        <div class="award-event">Research stay in Italy · Thesis on Solar Radiation &amp; ANN</div>
+        <div class="award-year">2020–2021</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ════ INSIGHTS (BLOG) ════ -->
+<section id="insights" class="section-pad">
+  <div class="container-w">
+    <div class="reveal">
+      <span class="eyebrow">Insights</span>
+      <h2 class="section-title">Writing &amp; Tutorials</h2>
+      <p class="section-subtitle">Technical writing on cloud infrastructure, data visualisation, and engineering topics.</p>
+    </div>
+
+    <div class="insights-grid reveal reveal-d1">
+
+      <div class="insight-card">
+        <img src="images/aws-blog/hdfs-yarn-ec2.png" alt="Hadoop on AWS" class="insight-img">
+        <div class="insight-body">
+          <div class="insight-cat">Cloud Infrastructure</div>
+          <div class="insight-title">How to Setup a Hadoop Cluster and Configure on AWS</div>
+          <div class="insight-desc">Step-by-step guide to provisioning EC2 instances, configuring HDFS, YARN, and deploying Apache Hadoop in a multi-node cluster on Amazon Web Services.</div>
+          <a href="blog-aws.html" class="insight-link">Read article →</a>
+        </div>
+      </div>
+
+      <div class="insight-card">
+        <img src="images/dataviz-blog/Designer.png" alt="Data Visualisation" class="insight-img" style="object-fit:cover;height:180px;">
+        <div class="insight-body">
+          <div class="insight-cat">Data Science</div>
+          <div class="insight-title">Data Visualisation: History, Evolution &amp; Modern Practice</div>
+          <div class="insight-desc">An exploration of how data visualisation has evolved from early statistical graphics to modern interactive dashboards — and why it matters for communicating research.</div>
+          <a href="blog-dataviz.html" class="insight-link">Read article →</a>
+        </div>
+      </div>
+
+      <div class="insight-card" style="border-style:dashed;background:var(--paper);">
+        <div class="insight-body" style="justify-content:center;align-items:center;min-height:280px;text-align:center;">
+          <div style="font-size:2rem;margin-bottom:1rem;">✍️</div>
+          <div class="insight-title" style="color:var(--ink-muted);">More articles coming soon</div>
+          <div class="insight-desc" style="text-align:center;">Working on posts about solar radiation modelling, graph algorithms for transit networks, and teaching data science at IoE.</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ════ WEDDING ════ -->
+<section id="wedding">
+  <div class="container-w">
+    <div class="wedding-inner">
+      <div>
+        <span class="wedding-eyebrow">A personal announcement</span>
+        <h2 class="wedding-title">Getting <em>married</em></h2>
+        <div class="wedding-rule"></div>
+        <p class="wedding-text">I am overjoyed to share that I am getting married this Baishak. Two celebrations are planned — the wedding ceremony and a reception. Your warm wishes and presence mean the world to us.</p>
+        <a href="wedding.html" class="wedding-link">View celebration details →</a>
+      </div>
+      <div class="wedding-events">
+        <div class="wedding-ev">
+          <span class="we-tag">Wedding Ceremony</span>
+          <div class="we-name">The Big Day</div>
+          <div class="we-date">25 Baishak 2082 &nbsp;·&nbsp; Chitwan → Kathmandu</div>
+        </div>
+        <div class="wedding-ev">
+          <span class="we-tag">Wedding Reception</span>
+          <div class="we-name">Celebration Evening</div>
+          <div class="we-date">27 Baishak 2082 &nbsp;·&nbsp; Kathmandu</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════ CONTACT ════ -->
+<section id="contact" class="section-pad">
+  <div class="container-w">
+    <div class="contact-inner">
+      <div>
+        <span class="eyebrow">Contact</span>
+        <h2 class="section-title">Get in Touch</h2>
+        <p class="section-subtitle">Open to research collaborations, speaking invitations, consulting enquiries, and teaching opportunities.</p>
+
+        <div class="contact-details">
+          <div class="contact-item">
+            <div class="contact-item-icon"><i class="ion-ios-location-outline"></i></div>
+            <div class="contact-item-text">
+              <small>Location</small>
+              <span>Kageshwori Manohara, Kathmandu, Nepal</span>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon"><i class="ion-ios-telephone-outline"></i></div>
+            <div class="contact-item-text">
+              <small>Phone</small>
+              <span>+977-9849959075</span>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon"><i class="ion-ios-email-outline"></i></div>
+            <div class="contact-item-text">
+              <small>Email</small>
+              <span>sushant.chalise@pcampus.edu.np</span>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm0-24L0 9.5l4.838 3.94A8 8 0 0 1 12 10a8 8 0 0 1 7.162 3.44L24 9.5z"/></svg>
+            </div>
+            <div class="contact-item-text">
+              <small>Google Scholar</small>
+              <span><a href="https://scholar.google.com/citations?user=6ObsaHgAAAAJ&hl=en" target="_blank" style="color:#60a5fa;">View publications ↗</a></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <p style="font-size:0.72rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:1.5rem;">Also find me at</p>
+        <div style="display:flex;flex-direction:column;gap:0.75rem;">
+          <a href="https://www.linkedin.com/in/sushant-chalise/" target="_blank" style="display:flex;align-items:center;gap:1rem;padding:1rem 1.25rem;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:8px;color:rgba(255,255,255,.6);font-size:.9rem;transition:border-color .2s;" onmouseover="this.style.borderColor='rgba(255,255,255,.2)'" onmouseout="this.style.borderColor='rgba(255,255,255,.07)'">
+            <i class="ion-social-linkedin" style="font-size:1.25rem;color:#0a66c2;"></i>
+            LinkedIn — Sushant Chalise
+          </a>
+          <a href="https://www.facebook.com/sushantwith.direction/" target="_blank" style="display:flex;align-items:center;gap:1rem;padding:1rem 1.25rem;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:8px;color:rgba(255,255,255,.6);font-size:.9rem;transition:border-color .2s;" onmouseover="this.style.borderColor='rgba(255,255,255,.2)'" onmouseout="this.style.borderColor='rgba(255,255,255,.07)'">
+            <i class="ion-social-facebook" style="font-size:1.25rem;color:#1877f2;"></i>
+            Facebook — Sushant Chalise
+          </a>
+          <a href="https://www.instagram.com/sushantchalise/" target="_blank" style="display:flex;align-items:center;gap:1rem;padding:1rem 1.25rem;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:8px;color:rgba(255,255,255,.6);font-size:.9rem;transition:border-color .2s;" onmouseover="this.style.borderColor='rgba(255,255,255,.2)'" onmouseout="this.style.borderColor='rgba(255,255,255,.07)'">
+            <i class="ion-social-instagram" style="font-size:1.25rem;color:#e4405f;"></i>
+            Instagram — @sushantchalise
+          </a>
+        </div>
+
+        <!-- Certifications -->
+        <div style="margin-top:2rem;">
+          <p style="font-size:0.72rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:1rem;">Certifications</p>
+          <div style="display:flex;flex-wrap:wrap;gap:.5rem;">
+            <span class="tag tag-blue">CCNA 200-215</span>
+            <span class="tag" style="background:rgba(255,255,255,.07);color:rgba(255,255,255,.5);">Neural Networks &amp; Deep Learning</span>
+            <span class="tag" style="background:rgba(255,255,255,.07);color:rgba(255,255,255,.5);">Data Scientist's Toolbox</span>
+            <span class="tag" style="background:rgba(255,255,255,.07);color:rgba(255,255,255,.5);">R Programming</span>
+            <span class="tag" style="background:rgba(255,255,255,.07);color:rgba(255,255,255,.5);">IT Infrastructure</span>
+            <span class="tag" style="background:rgba(255,255,255,.07);color:rgba(255,255,255,.5);">Computer Networking</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════ FOOTER ════ -->
+<footer id="footer">
+  <div class="container-w">
+    <div class="footer-inner">
+      <span class="footer-brand">Sushant Chalise</span>
+      <div class="footer-links">
+        <a href="#hero">Home</a>
+        <a href="#research">Research</a>
+        <a href="#work">Work</a>
+        <a href="wedding.html">Wedding</a>
+        <a href="CV_Sushant.pdf" target="_blank">CV</a>
+      </div>
+      <span class="footer-copy">© 2025 Sushant Chalise · Kathmandu, Nepal</span>
+    </div>
+  </div>
+</footer>
+
+<!-- JS Libraries -->
+<script src="lib/jquery/jquery.min.js"></script>
+<script src="lib/jquery/jquery-migrate.min.js"></script>
+<script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="lib/typed/typed.js"></script>
+
+<script>
+/* ── Navbar scroll shadow ── */
+window.addEventListener('scroll', () => {
+  document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 20);
+});
+
+/* ── Scroll reveal ── */
+const revealObs = new IntersectionObserver(entries => {
+  entries.forEach((e, i) => {
+    if (e.isIntersecting) {
+      setTimeout(() => e.target.classList.add('up'), i * 80);
+      revealObs.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.09 });
+document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
+
+/* ── Mobile nav ── */
+function toggleMobileNav() {
+  const mn = document.getElementById('mobile-nav');
+  mn.style.display = mn.style.display === 'none' ? 'block' : 'none';
+}
+
+/* ── Wedding popup (once per session) ── */
+(function() {
+  if (!sessionStorage.getItem('weddingPopupSeen')) {
+    setTimeout(() => {
+      document.getElementById('wedding-popup').classList.add('open');
+      sessionStorage.setItem('weddingPopupSeen', '1');
+    }, 2000);
+  }
+})();
+
+function closePopup() {
+  document.getElementById('wedding-popup').classList.remove('open');
+}
+document.getElementById('wedding-popup').addEventListener('click', function(e) {
+  if (e.target === this) closePopup();
+});
+</script>
+</body>
+</html>
