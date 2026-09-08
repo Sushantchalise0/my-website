@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sushant Chalise — Engineer · Researcher · Educator</title>
-  <meta name="description" content="Sushant Chalise — System Engineer, Researcher, and Educator at Pulchowk Campus, IOE, Tribhuvan University, Nepal.">
+  <title>Sushant Chalise — Researcher · Engineer · Educator</title>
+  <meta name="description" content="Sushant Chalise — Computer Vision & AI researcher, Instructor and System Administrator at Pulchowk Campus, IOE, Tribhuvan University, Nepal.">
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet">
@@ -410,7 +410,7 @@
     }
     .pub-link:hover { color: #93c5fd; }
 
-    /* Erasmus highlight */
+    /* Erasmus / collaboration highlight banners */
     .erasmus-banner {
       margin-top: 3rem;
       background: linear-gradient(135deg, #1e3a5f 0%, #1a3050 100%);
@@ -458,7 +458,7 @@
     .work-card-tags  { display: flex; flex-wrap: wrap; gap: 0.35rem; }
 
     /* ════════════════════════════════════════
-       AWARDS & RECOGNITION
+       AWARDS & PAST EXPERIENCE
     ════════════════════════════════════════ */
     #awards { background: var(--paper-2); }
 
@@ -485,10 +485,58 @@
     .award-event { font-size: 0.82rem; color: var(--ink-soft); }
     .award-year  { font-size: 0.75rem; color: var(--ink-muted); margin-top: 0.5rem; }
 
+    /* Past experience — same card language, quieter treatment */
+    .past-heading {
+      display: flex; align-items: baseline; gap: 0.75rem;
+      margin-top: 3.5rem; margin-bottom: 0.5rem;
+    }
+    .past-heading h3 {
+      font-family: var(--ff-serif); font-size: 1.4rem; color: var(--ink-soft); font-weight: 400;
+    }
+    .past-heading span {
+      font-size: 0.8rem; color: var(--ink-muted); font-weight: 300;
+    }
+    .past-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 1.25rem; margin-top: 1.5rem;
+    }
+    .past-card {
+      border: 1px dashed var(--rule); border-radius: var(--r-lg);
+      padding: 1.35rem; background: var(--paper);
+    }
+    .past-year { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-muted); }
+    .past-title { font-size: 0.9rem; font-weight: 600; color: var(--ink-soft); margin: 0.35rem 0 0.35rem; }
+    .past-desc { font-size: 0.8rem; color: var(--ink-muted); line-height: 1.6; }
+
+    /* ════════════════════════════════════════
+       GALLERY
+    ════════════════════════════════════════ */
+    #gallery { background: var(--paper); }
+
+    .gallery-filters { display: flex; gap: .5rem; margin: 2rem 0 0; flex-wrap: wrap; }
+    .filter-btn {
+      border: 1px solid var(--rule); background: transparent; color: var(--ink-soft);
+      padding: .4rem 1.1rem; border-radius: 999px; cursor: pointer; font-size: .8rem;
+      font-family: var(--ff-sans); transition: background .2s, color .2s, border-color .2s;
+    }
+    .filter-btn.active, .filter-btn:hover { background: var(--ink); color: #fff; border-color: var(--ink); }
+
+    .gallery-grid {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 1rem; margin-top: 1.5rem;
+    }
+    .gallery-item { margin: 0; overflow: hidden; border-radius: var(--r-lg); position: relative; background: var(--rule); }
+    .gallery-item img { width: 100%; height: 260px; object-fit: cover; display: block; transition: transform .35s ease; }
+    .gallery-item:hover img { transform: scale(1.06); }
+    .gallery-item figcaption {
+      position: absolute; bottom: 0; left: 0; right: 0; padding: .7rem .9rem;
+      background: linear-gradient(transparent, rgba(0,0,0,.75)); color: #fff; font-size: .78rem;
+    }
+
     /* ════════════════════════════════════════
        INSIGHTS / BLOG
     ════════════════════════════════════════ */
-    #insights { background: var(--paper); }
+    #insights { background: var(--paper-2); }
 
     .insights-grid {
       display: grid; grid-template-columns: repeat(3, 1fr);
@@ -528,6 +576,12 @@
     #contact .section-title { color: #fff; }
     #contact .section-subtitle { color: rgba(255,255,255,.5); }
 
+    .phd-banner {
+      margin-top: 1.75rem; padding: 1.1rem 1.35rem;
+      background: rgba(96,165,250,.1); border: 1px solid rgba(96,165,250,.25);
+      border-radius: var(--r-md); font-size: 0.88rem; color: #dbeafe; line-height: 1.6;
+    }
+
     .contact-details { display: flex; flex-direction: column; gap: 1rem; margin-top: 2rem; }
 
     .contact-item {
@@ -565,10 +619,6 @@
     .footer-copy { font-size: 0.75rem; color: rgba(255,255,255,.2); }
 
     /* ════════════════════════════════════════
-       POPUP (kept from original)
-    ════════════════════════════════════════ */
-    
-    /* ════════════════════════════════════════
        RESPONSIVE
     ════════════════════════════════════════ */
     @media (max-width: 900px) {
@@ -580,6 +630,7 @@
       .research-grid { grid-template-columns: 1fr; }
       .work-grid { grid-template-columns: 1fr; }
       .awards-grid { grid-template-columns: 1fr 1fr; }
+      .past-grid { grid-template-columns: 1fr 1fr; }
       .insights-grid { grid-template-columns: 1fr; }
       .contact-inner { grid-template-columns: 1fr; gap: 3rem; }
       .nav-links { display: none; }
@@ -589,6 +640,7 @@
     @media (max-width: 600px) {
       .hero-stats { gap: 1.25rem; }
       .awards-grid { grid-template-columns: 1fr; }
+      .past-grid { grid-template-columns: 1fr; }
       .erasmus-banner { grid-template-columns: 1fr; }
       .footer-inner { flex-direction: column; text-align: center; }
     }
@@ -609,6 +661,7 @@
       <li><a href="#research">Research</a></li>
       <li><a href="#work">Work</a></li>
       <li><a href="#awards">Awards</a></li>
+      <li><a href="#gallery">Gallery</a></li>
       <li><a href="#insights">Insights</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
@@ -621,6 +674,7 @@
     <a href="#research" style="display:block;padding:.5rem 0;font-size:.9rem;color:var(--ink-soft);" onclick="toggleMobileNav()">Research</a>
     <a href="#work" style="display:block;padding:.5rem 0;font-size:.9rem;color:var(--ink-soft);" onclick="toggleMobileNav()">Work</a>
     <a href="#awards" style="display:block;padding:.5rem 0;font-size:.9rem;color:var(--ink-soft);" onclick="toggleMobileNav()">Awards</a>
+    <a href="#gallery" style="display:block;padding:.5rem 0;font-size:.9rem;color:var(--ink-soft);" onclick="toggleMobileNav()">Gallery</a>
     <a href="#insights" style="display:block;padding:.5rem 0;font-size:.9rem;color:var(--ink-soft);" onclick="toggleMobileNav()">Insights</a>
     <a href="#contact" style="display:block;padding:.5rem 0;font-size:.9rem;color:var(--ink-soft);" onclick="toggleMobileNav()">Contact</a>
   </div>
@@ -633,7 +687,7 @@
 
       <!-- TEXT COLUMN -->
       <div>
-        <div class="hero-kicker reveal">Engineer &middot; Researcher &middot; Educator</div>
+        <div class="hero-kicker reveal">Researcher &middot; Engineer &middot; Educator</div>
 
         <h1 class="hero-name reveal reveal-d1">
           Sushant<br><em>Chalise</em>
@@ -644,17 +698,17 @@
         </p>
 
         <p class="hero-bio reveal reveal-d2">
-          ECE &amp; Data Science researcher with a decade of experience across academia, government systems, and climate-tech entrepreneurship. Currently pursuing M.Sc. in Computer Engineering (Data Science &amp; Analytics) while leading Samsung Innovation Campus courses and conducting research at the intersection of intelligent systems and urban infrastructure.
+          Computer Engineering and Data Science researcher working at the intersection of AI, computer vision, and structural health monitoring. Holds two Master's degrees from Tribhuvan University and completed an Erasmus+ research mobility at the University of Sannio, Italy. Currently instructs Samsung Innovation Campus courses at Pulchowk Campus, IOE, and contributes to SOI Asia's DHASH project on digital cultural heritage, collaborating with researchers across Japan, Thailand, Malaysia, and the Philippines.
         </p>
 
         <div class="hero-stats reveal reveal-d2">
           <div>
-            <div class="stat-num">3</div>
+            <div class="stat-num">7</div>
             <div class="stat-label">Peer-reviewed<br>publications</div>
           </div>
           <div>
-            <div class="stat-num">10+</div>
-            <div class="stat-label">Years in<br>academia &amp; industry</div>
+            <div class="stat-num">7+</div>
+            <div class="stat-label">Years in<br>academia</div>
           </div>
           <div>
             <div class="stat-num">2</div>
@@ -678,6 +732,9 @@
             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm0-24L0 9.5l4.838 3.94A8 8 0 0 1 12 10a8 8 0 0 1 7.162 3.44L24 9.5z"/></svg>
           </a>
           <a href="https://www.linkedin.com/in/sushant-chalise/" target="_blank" class="soc-btn" title="LinkedIn"><i class="ion-social-linkedin"></i></a>
+          <a href="https://orcid.org/0009-0002-0922-6586" target="_blank" class="soc-btn" title="ORCID">
+            <svg width="16" height="16" viewBox="0 0 256 256" fill="currentColor"><path d="M128,0C57.3,0,0,57.3,0,128s57.3,128,128,128,128-57.3,128-128S198.7,0,128,0Z"/></svg>
+          </a>
         </div>
       </div>
 
@@ -689,7 +746,7 @@
           <div class="hero-badge-icon">🇮🇹</div>
           <div class="hero-badge-text">
             <strong>Erasmus+ Researcher</strong>
-            <span>Italy · 3 months · 2020–21</span>
+            <span>University of Sannio, Italy · Jan-Apr 2026</span>
           </div>
         </div>
       </div>
@@ -712,42 +769,42 @@
     <div class="about-grid reveal reveal-d1" style="margin-top:2.5rem;">
       <div class="about-cell">
         <div class="about-cell-icon">🎓</div>
-        <h3>3 Degrees in Progress &amp; Complete</h3>
-        <p>B.E. in Electronics &amp; Communication (IoE, TU) · M.Sc. Climate Change &amp; Sustainable Dev. (GPA 3.3/4) · Currently: M.Sc. Computer Engineering — Data Science &amp; Analytics</p>
+        <h3>2 Master's Degrees, Completed</h3>
+        <p>B.E. in Electronics &amp; Communication (IoE, TU) · M.Sc. Climate Change &amp; Sustainable Dev. (GPA 3.3/4) · M.Sc. Computer Engineering — Data Science &amp; Analytics (GPA 3.5/4), thesis: Marker-Based Vision System for Pose Estimation and Tracking of Civil Structures</p>
       </div>
       <div class="about-cell">
         <div class="about-cell-icon">🔬</div>
         <h3>Research Interests</h3>
-        <p>Solar radiation modelling · Machine learning for climate systems · Graph-based urban mobility · ICT infrastructure &amp; smart city development · Data visualisation</p>
+        <p>AI &amp; Machine Learning · Computer Vision &amp; Vision-Based Sensing · Structural Health Monitoring · Sensor-Based Infrastructure Assessment · Digital Twins · 3D Reconstruction &amp; Digital Heritage · Sustainable Infrastructure</p>
       </div>
       <div class="about-cell">
         <div class="about-cell-icon">🏛️</div>
         <h3>Institutional Roles</h3>
-        <p>System Administrator, Pulchowk Campus (2019–present) · Samsung Innovation Campus Instructor · Consultant Engineer, National Planning Commission (LPBMIS/PPBMIS)</p>
+        <p>System Administrator, Pulchowk Campus (2019–present) · Instructor, Samsung Innovation Campus (2023–present) · Research Contributor, SOI Asia / DHASH (2023–present)</p>
       </div>
     </div>
 
     <div class="about-long reveal" style="margin-top:4rem;">
       <div>
-        <p>Er. Sushant Chalise is an engineer, researcher, and educator based at the <strong>Institute of Engineering, Tribhuvan University</strong> — Nepal's premier technical institution. With a career spanning over a decade, he bridges the worlds of systems engineering, applied research, and technology entrepreneurship.</p>
+        <p>Er. Sushant Chalise is an engineer, researcher, and educator based at the <strong>Institute of Engineering, Tribhuvan University</strong> — Nepal's premier technical institution. His current research sits at the intersection of computer vision, structural health monitoring, and AI: his M.Sc. thesis developed a low-cost, marker-based computer-vision system for pose estimation and dynamic-response tracking of civil structures, carried out in part during an <strong>Erasmus+ research mobility</strong> in the Civil Structures Laboratory at the University of Sannio, Italy.</p>
 
-        <p>His academic journey began with a B.E. in Electronics &amp; Communication Engineering, followed by an <strong>M.Sc. in Climate Change and Sustainable Development</strong>, during which he was awarded an <strong>Erasmus+ mobility grant</strong> to conduct thesis research in Italy for three months — studying solar radiation estimation using hybrid AI models. His thesis, supervised by Prof. Dr. Khem Narayan Poudyal and Asst. Prof. Aayush Bhattarai, proposed novel ANN-based approaches for solar resource assessment in Nepal.</p>
+        <p>Alongside this, he is a <strong>Research Contributor to SOI Asia's DHASH project</strong> on digital cultural heritage and open science, collaborating with institutions across the Asia-Pacific and presenting DHASH work in Yokohama, Japan and at the Asian Institute of Technology, Thailand. He also instructs <strong>Samsung Innovation Campus</strong> courses in programming, data science, and big data analytics at Pulchowk Campus, where he has served in system administration and ICT infrastructure roles since 2019.</p>
 
-        <p>He is currently pursuing a second master's in <strong>Data Science &amp; Analytics</strong> (Computer Engineering) at Pulchowk Campus, continuing to publish at the intersection of intelligent systems and urban infrastructure. He also serves as <strong>IEEE Young Professionals Chair</strong> and was a co-founder &amp; CTO of Green Coins Pvt. Ltd., a social enterprise recognised at Climate Launchpad South Asia.</p>
+        <p>His research path began with an M.Sc. in Climate Change and Sustainable Development, for which he received an earlier Erasmus+ mobility grant to conduct thesis research in Italy on solar radiation estimation using hybrid AI models. He also co-founded <strong>Green Coins Pvt. Ltd.</strong>, a climate-tech social enterprise developed with the UNDP Accelerator Lab, and serves as IEEE Young Professionals Chair.</p>
 
         <div class="skills-list" style="margin-top:1.5rem;">
           <span class="skill-chip">Python</span>
-          <span class="skill-chip">Node.js</span>
-          <span class="skill-chip">Machine Learning</span>
-          <span class="skill-chip">R Programming</span>
-          <span class="skill-chip">Data Visualisation</span>
-          <span class="skill-chip">Graph Algorithms</span>
-          <span class="skill-chip">Solar Radiation Modelling</span>
-          <span class="skill-chip">ICT Infrastructure</span>
-          <span class="skill-chip">System Administration</span>
-          <span class="skill-chip">CCNA</span>
+          <span class="skill-chip">OpenCV</span>
+          <span class="skill-chip">DeepTag / Marker Tracking</span>
           <span class="skill-chip">Deep Learning</span>
-          <span class="skill-chip">UI/UX</span>
+          <span class="skill-chip">Transfer Learning</span>
+          <span class="skill-chip">Signal Processing</span>
+          <span class="skill-chip">Gaussian Splatting</span>
+          <span class="skill-chip">3D Computer Vision</span>
+          <span class="skill-chip">NumPy / Pandas / SciPy</span>
+          <span class="skill-chip">Data Visualisation</span>
+          <span class="skill-chip">Linux / Server Administration</span>
+          <span class="skill-chip">CCNA</span>
         </div>
       </div>
 
@@ -756,21 +813,39 @@
         <p style="font-size:0.72rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-muted);margin-bottom:1.5rem;">Experience Timeline</p>
         <div class="timeline">
           <div class="tl-item">
-            <div class="tl-year">2024–Now</div>
+            <div class="tl-year">2024–2026</div>
             <div class="tl-line-wrap"><div class="tl-dot"></div><div class="tl-line"></div></div>
             <div class="tl-body">
               <div class="tl-role">M.Sc. Computer Engineering (Data Science)</div>
-              <div class="tl-org">Pulchowk Campus, IOE, TU</div>
-              <div class="tl-desc">Samsung Innovation Campus — Coding, Advanced Data Science</div>
+              <div class="tl-org">Pulchowk Campus, IOE, TU — completed, GPA 3.5/4.0</div>
+              <div class="tl-desc">Thesis: Marker-Based Vision System for Pose Estimation and Tracking of Civil Structures</div>
             </div>
           </div>
           <div class="tl-item">
-            <div class="tl-year">2023–2024</div>
+            <div class="tl-year">Jan-Apr, 2026</div>
             <div class="tl-line-wrap"><div class="tl-dot"></div><div class="tl-line"></div></div>
             <div class="tl-body">
-              <div class="tl-role">Consultant Engineer</div>
-              <div class="tl-org">National Planning Commission — LPBMIS/PPBMIS</div>
-              <div class="tl-desc">Delivered orientation &amp; training to government employees at local &amp; provincial level</div>
+              <div class="tl-role">Erasmus+ Researcher</div>
+              <div class="tl-org">University of Sannio, Italy</div>
+              <div class="tl-desc">Vision-based structural dynamic testing, Civil Structures Laboratory</div>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-year">2023–Now</div>
+            <div class="tl-line-wrap"><div class="tl-dot"></div><div class="tl-line"></div></div>
+            <div class="tl-body">
+              <div class="tl-role">Instructor</div>
+              <div class="tl-org">Institute of Engineering, TU</div>
+              <div class="tl-desc">Samsung Innovation Campus — Coding, Data Science, Big Data Analytics</div>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-year">2023–Now</div>
+            <div class="tl-line-wrap"><div class="tl-dot"></div><div class="tl-line"></div></div>
+            <div class="tl-body">
+              <div class="tl-role">Research Contributor</div>
+              <div class="tl-org">SOI Asia / DHASH</div>
+              <div class="tl-desc">Digital cultural heritage, open science, Asia-Pacific collaboration</div>
             </div>
           </div>
           <div class="tl-item">
@@ -779,7 +854,7 @@
             <div class="tl-body">
               <div class="tl-role">System Administrator</div>
               <div class="tl-org">Pulchowk Campus, IOE, TU</div>
-              <div class="tl-desc">ICT infrastructure, software development, internet services &amp; research</div>
+              <div class="tl-desc">ICT infrastructure, network &amp; web services, software development</div>
             </div>
           </div>
           <div class="tl-item">
@@ -806,7 +881,7 @@
             <div class="tl-body">
               <div class="tl-role">B.E. Electronics &amp; Communication Eng.</div>
               <div class="tl-org">Kantipur Engineering College, IOE, TU</div>
-              <div class="tl-desc">Final Project: Smart City using IoT · CCNA certified 2016</div>
+              <div class="tl-desc">Final Project: Smart City using IoT · CCNA certified</div>
             </div>
           </div>
         </div>
@@ -823,10 +898,42 @@
     <div class="reveal">
       <span class="eyebrow">Research &amp; Publications</span>
       <h2 class="section-title" style="color:#fff;">Peer-Reviewed Work</h2>
-      <p class="section-subtitle">Research spanning solar energy systems, ICT infrastructure, urban mobility, and smart city development — published in international journals and conferences.</p>
+      <p class="section-subtitle">Research spanning computer vision, structural health monitoring, digital cultural heritage, and AI-driven infrastructure assessment — published in international journals and conferences.</p>
     </div>
 
     <div class="research-grid reveal reveal-d1">
+
+      <div class="pub-card">
+        <div class="pub-year">2026</div>
+        <div class="pub-title">Preliminary Assessment of a Low-Cost DeepTag-Based Vision System for Structural Dynamic Testing</div>
+        <div class="pub-authors"><strong style="color:#93c5fd;">Chalise S.</strong>, Joshi B., Balestrieri E., Monaco M., Picariello F., Neyestani A., D'Arco M.</div>
+        <div class="pub-venue">IEEE MetroLivEnv 2026</div>
+        <a class="pub-link" href="https://ieeexplore.ieee.org/abstract/document/11659861" target="_blank" title="Add publication link">Read paper ↗</a>
+      </div>
+
+      <div class="pub-card">
+        <div class="pub-year">2026</div>
+        <div class="pub-title">A Transfer Learning-Based Approach for Automatic Monument Detection</div>
+        <div class="pub-authors">Giri S., Purbey J., Adhikari S., Pokharel P., Dawadi B.R., Pati B.M., Ito A., <strong style="color:#93c5fd;">Chalise S.</strong>, Satyal S.</div>
+        <div class="pub-venue">IAES International Journal of Artificial Intelligence, 15(4), 3326–3341</div>
+        <a class="pub-link" href="http://doi.org/10.11591/ijai.v15.i4.pp3326-3341" target="_blank" title="Add publication link">Read paper ↗</a>
+      </div>
+
+      <div class="pub-card">
+        <div class="pub-year">2025</div>
+        <div class="pub-title">Efficient 3D Scene Reconstruction from Multi-View RGB Images Using Optimized Gaussian Splatting</div>
+        <div class="pub-authors">Aryal A., Giri S., Panday S.P., Sharma S., Dawadi B., <strong style="color:#93c5fd;">Chalise S.</strong></div>
+        <div class="pub-venue">IEEE Access</div>
+        <a class="pub-link" href="https://ieeexplore.ieee.org/document/11314521" target="_blank" title="Add publication link">Read paper ↗</a>
+      </div>
+
+      <div class="pub-card">
+        <div class="pub-year">2025</div>
+        <div class="pub-title">Automatic Monument Detection: Leveraging Deep Learning for Cultural Heritage Applications</div>
+        <div class="pub-authors">Giri S., Purbey J., Adhikari S., Ito A., Dawadi B., <strong style="color:#93c5fd;">Chalise S.</strong>, Satyal S.</div>
+        <div class="pub-venue">CANDAR 2025</div>
+        <a class="pub-link" href="https://ieeexplore.ieee.org/abstract/document/11318896" target="_blank" title="Add publication link">Read paper ↗</a>
+      </div>
 
       <div class="pub-card">
         <div class="pub-year">2025</div>
@@ -836,35 +943,45 @@
         <a class="pub-link" href="https://www.nepjol.info/index.php/injet/article/download/78657/60248/226223" target="_blank">Read paper ↗</a>
       </div>
 
-      <div class="pub-card">
-        <div class="pub-year">2024</div>
+      <!-- <div class="pub-card">
+        <div class="pub-year">2023</div>
         <div class="pub-title">ICT Infrastructure Analysis and E-Readiness for Smart City Development in Nepal</div>
         <div class="pub-authors">Gautam G., Shrestha S., <strong style="color:#93c5fd;">Chalise S.</strong></div>
         <div class="pub-venue">12th International Conference on Advanced Engineering and ICT-Convergence 2024</div>
-        <a class="pub-link" href="#" target="_blank">Conference paper ↗</a>
-      </div>
+        <a class="pub-link" href="#" target="_blank" title="Add publication link">Conference paper ↗</a>
+      </div> -->
 
       <div class="pub-card">
         <div class="pub-year">2021</div>
         <div class="pub-title">Prediction of Solar Radiation: A Case Study at Hill Station Kushma, Nepal using Artificial Neural Networks (ANNs)</div>
         <div class="pub-authors"><strong style="color:#93c5fd;">Chalise S.</strong>, Bhattrai A., Neupane P., Chalise A., Bhattarai N., Poudyal K.N.</div>
         <div class="pub-venue">Proceedings of 10th IOE Graduate Conference, Vol. 10, pp. 1065–1070</div>
-        <a class="pub-link" href="#" target="_blank">Conference paper ↗</a>
+        <a class="pub-link" href="https://conference.ioe.edu.np/ioegc10/papers/ioegc-10-135-10177.pdf" target="_blank" title="Add publication link">Conference paper ↗</a>
       </div>
 
     </div>
 
-    <!-- Erasmus Banner -->
+    <!-- Erasmus+ Sannio Banner -->
     <div class="erasmus-banner reveal reveal-d2">
       <div class="erasmus-flag">🇮🇹</div>
       <div class="erasmus-body">
-        <h3>Erasmus+ International Mobility — Italy</h3>
-        <p>Awarded a prestigious <strong style="color:#93c5fd;">Erasmus+ mobility grant</strong> to conduct thesis research at a partner institution in Italy for three months (2020–21). The research focused on estimating global solar radiation potential across Nepal using hybrid AI models — combining Angstrom-Prescott empirical models with Artificial Neural Networks. This work contributed to a 3.3 GPA master's thesis under the supervision of Prof. Dr. Khem Narayan Poudyal and Asst. Prof. Aayush Bhattarai at Pulchowk Campus, IOE.</p>
+        <h3>Erasmus+ Research Mobility — University of Sannio, Italy</h3>
+        <p>Conducted research in the <strong style="color:#93c5fd;">Civil Structures Laboratory</strong> at the University of Sannio (Jan-Apr 2026), developing a low-cost, DeepTag-based vision system for structural dynamic testing. This work, supervised jointly with collaborators including Prof. Monaco and Prof. Picariello, formed the core of the M.Sc. thesis and led to a peer-reviewed publication at IEEE MetroLivEnv 2026.</p>
       </div>
     </div>
 
-    <div style="text-align:center;margin-top:2.5rem;">
+    <!-- SOI Asia / DHASH Banner -->
+    <div class="erasmus-banner reveal reveal-d2" style="margin-top:1.5rem;background:linear-gradient(135deg, #163a2e 0%, #10281f 100%);border-color:rgba(52,211,153,.2);">
+      <div class="erasmus-flag">🌏</div>
+      <div class="erasmus-body">
+        <h3>SOI Asia / DHASH — Digital Cultural Heritage</h3>
+        <p>Research Contributor to <strong style="color:#6ee7b7;">DHASH</strong>, a SOI Asia project on digital cultural heritage and open science, collaborating with researchers across the Asia-Pacific. Presented DHASH work at a project showcase in Yokohama, Japan (2025) and at the Asian Institute of Technology, Thailand, and presented at APAN 62's E-Culture Working Group. Also a participant in AI3 (Asian Internet Interconnection Initiatives) in Malaysia and the Philippines, and EBA Minamata fieldwork in Japan.</p>
+      </div>
+    </div>
+
+    <div style="text-align:center;margin-top:2.5rem;display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
       <a href="https://scholar.google.com/citations?user=6ObsaHgAAAAJ&hl=en" target="_blank" class="btn-outline" style="color:rgba(255,255,255,.5);border-color:rgba(255,255,255,.15);">View Google Scholar profile ↗</a>
+      <a href="#" target="_blank" class="btn-outline" style="color:rgba(255,255,255,.5);border-color:rgba(255,255,255,.15);" title="Add ORCID link">View ORCID iD ↗</a>
     </div>
   </div>
 </section>
@@ -877,10 +994,27 @@
     <div class="reveal">
       <span class="eyebrow">Work</span>
       <h2 class="section-title">Delivered Projects</h2>
-      <p class="section-subtitle">From government information systems to climate-tech platforms — a selection of impactful projects built across sectors.</p>
+      <p class="section-subtitle">From government information systems to climate-tech platforms and technical education — a selection of impactful projects built across sectors.</p>
     </div>
 
     <div class="work-grid reveal reveal-d1">
+
+      <div class="work-card">
+        <div class="work-card-img" style="background:#eef2ff;">
+          <span>🎓</span>
+        </div>
+        <div class="work-card-body">
+          <div class="work-card-client">Institute of Engineering, TU — Instructor</div>
+          <div class="work-card-title">Samsung Innovation Campus</div>
+          <div class="work-card-desc">Design and deliver SIC coursework in coding, data science, and big data analytics for engineering students at Pulchowk Campus, IOE.</div>
+          <div class="work-card-tags">
+            <span class="tag tag-blue">Teaching</span>
+            <span class="tag tag-ink">Data Science</span>
+            <span class="tag tag-gold">Curriculum Design</span>
+            <span class="tag tag-green"><a class="blue" href="pcampus.edu.np">details</a></span>
+          </div>
+        </div>
+      </div>
 
       <div class="work-card">
         <div class="work-card-img" style="background:#f0f4ff;">
@@ -894,6 +1028,7 @@
             <span class="tag tag-blue">Government</span>
             <span class="tag tag-ink">MIS</span>
             <span class="tag tag-gold">Policy</span>
+            <span class="tag tag-ink"><a class="blue" href="projectBank.html">details</a></span>
           </div>
         </div>
       </div>
@@ -910,6 +1045,7 @@
             <span class="tag tag-green">Climate Tech</span>
             <span class="tag tag-blue">UNDP</span>
             <span class="tag tag-gold">Startup</span>
+            <span class="tag tag-ink"><a class="blue" href="greencoins.html">details</a></span>
           </div>
         </div>
       </div>
@@ -925,11 +1061,12 @@
           <div class="work-card-tags">
             <span class="tag tag-blue">Data Viz</span>
             <span class="tag tag-ink">Dashboard</span>
+            <span class="tag tag-ink"><a class="blue" href="InfoViz/dashboard.html">details</a></span>
           </div>
         </div>
       </div>
 
-      <div class="work-card">
+      <!-- <div class="work-card">
         <div class="work-card-img" style="background:#fef9f0;">
           <img src="images/work-4.jpg" alt="Nextlite" style="width:100%;height:180px;object-fit:cover;">
         </div>
@@ -943,7 +1080,7 @@
             <span class="tag tag-gold">Media</span>
           </div>
         </div>
-      </div>
+      </div> -->
 
     </div>
   </div>
@@ -951,7 +1088,7 @@
 
 <div class="divider"></div>
 
-<!-- ════ AWARDS ════ -->
+<!-- ════ AWARDS + PAST EXPERIENCE ════ -->
 <section id="awards" class="section-pad">
   <div class="container-w">
     <div class="reveal">
@@ -961,12 +1098,11 @@
 
     <div class="awards-grid reveal reveal-d1">
 
-      <div class="award-card">
-        <div class="award-pos">1</div>
-        <div class="award-icon">⚽</div>
-        <div class="award-title">IoE Football Cup — First Place</div>
-        <div class="award-event">Institute of Engineering, Nepal</div>
-        <div class="award-year">2022</div>
+      <div class="award-card" style="border-color:var(--accent-lt);background:var(--accent-lt);">
+        <div class="award-icon">🇮🇹</div>
+        <div class="award-title">Erasmus+ Research Mobility</div>
+        <div class="award-event">University of Sannio, Italy · Structural Dynamic Testing</div>
+        <div class="award-year">2024–2026</div>
       </div>
 
       <div class="award-card">
@@ -986,14 +1122,6 @@
       </div>
 
       <div class="award-card">
-        <div class="award-pos">20</div>
-        <div class="award-icon">🇨🇳</div>
-        <div class="award-title">Belt and Road Entrepreneurial Stories — Top 20</div>
-        <div class="award-event">International Entrepreneurship Competition, China</div>
-        <div class="award-year">2019</div>
-      </div>
-
-      <div class="award-card">
         <div class="award-pos">5</div>
         <div class="award-icon">🏆</div>
         <div class="award-title">Startup ICT Award — Top 5</div>
@@ -1001,13 +1129,85 @@
         <div class="award-year">2019</div>
       </div>
 
-      <div class="award-card" style="border-color:var(--accent-lt);background:var(--accent-lt);">
+      <!-- <div class="award-card">
         <div class="award-icon">🇮🇹</div>
         <div class="award-title">Erasmus+ International Mobility Grant</div>
         <div class="award-event">Research stay in Italy · Thesis on Solar Radiation &amp; ANN</div>
         <div class="award-year">2020–2021</div>
+      </div> -->
+
+    </div>
+
+    <!-- Past Experience -->
+    <div class="past-heading reveal">
+      <h3>Past Experience</h3>
+      <span>Earlier roles &amp; recognition, kept here for the full record</span>
+    </div>
+
+    <div class="past-grid reveal reveal-d1">
+      <div class="past-card">
+        <div class="past-year">2023–2024</div>
+        <div class="past-title">Consultant Engineer</div>
+        <div class="past-desc">National Planning Commission, Nepal — delivered orientation and training on the Local/Provincial Project Bank Management Information System (LPBMIS/PPBMIS) to government employees at local and provincial level.</div>
       </div>
 
+      <div class="past-card">
+        <div class="past-year">2022</div>
+        <div class="past-title">IoE Football Cup — First Place</div>
+        <div class="past-desc">Institute of Engineering, Nepal.</div>
+      </div>
+
+      <div class="past-card">
+        <div class="past-year">2019</div>
+        <div class="past-title">Belt and Road Entrepreneurial Stories — Top 20</div>
+        <div class="past-desc">International Entrepreneurship Competition, China.</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ════ GALLERY ════ -->
+<section id="gallery" class="section-pad">
+  <div class="container-w">
+    <div class="reveal">
+      <span class="eyebrow">Gallery</span>
+      <h2 class="section-title">Moments &amp; Milestones</h2>
+      <p class="section-subtitle">A mix of research travel, fieldwork, teaching, and personal moments.</p>
+    </div>
+
+    <div class="gallery-filters reveal reveal-d1">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="research">Research &amp; Travel</button>
+      <button class="filter-btn" data-filter="teaching">Teaching &amp; Campus</button>
+      <button class="filter-btn" data-filter="personal">Personal</button>
+    </div>
+
+    <div class="gallery-grid reveal reveal-d1">
+      <!-- Add / replace photos here — repeat this figure block for each new photo -->
+      <figure class="gallery-item" data-category="research">
+        <img src="images/gallery/dhash-yokohama.jpg" alt="DHASH project showcase, Yokohama, Japan" loading="lazy">
+        <figcaption>DHASH project showcase — Yokohama, Japan (2025)</figcaption>
+      </figure>
+
+      <figure class="gallery-item" data-category="research">
+        <img src="images/gallery/sannio-lab.jpg" alt="Civil Structures Laboratory, University of Sannio" loading="lazy">
+        <figcaption>Civil Structures Lab, University of Sannio, Italy</figcaption>
+      </figure>
+
+      <figure class="gallery-item" data-category="teaching">
+        <img src="images/gallery/sic-classroom.jpg" alt="Samsung Innovation Campus classroom" loading="lazy">
+        <figcaption>Teaching a Samsung Innovation Campus session</figcaption>
+      </figure>
+
+      <figure class="gallery-item" data-category="personal">
+        <img src="images/gallery/wedding.jpg" alt="Wedding, Kathmandu" loading="lazy">
+        <figcaption>Wedding day, Kathmandu (2026)</figcaption>
+      </figure>
+
+      <!-- add more <figure class="gallery-item" data-category="research|teaching|personal"> blocks as needed -->
     </div>
   </div>
 </section>
@@ -1049,7 +1249,7 @@
         <div class="insight-body" style="justify-content:center;align-items:center;min-height:280px;text-align:center;">
           <div style="font-size:2rem;margin-bottom:1rem;">✍️</div>
           <div class="insight-title" style="color:var(--ink-muted);">More articles coming soon</div>
-          <div class="insight-desc" style="text-align:center;">Working on posts about solar radiation modelling, graph algorithms for transit networks, and teaching data science at IoE.</div>
+          <div class="insight-desc" style="text-align:center;">Working on posts about vision-based structural monitoring, digital cultural heritage, and teaching data science at IoE.</div>
         </div>
       </div>
 
@@ -1069,6 +1269,10 @@
         <span class="eyebrow">Contact</span>
         <h2 class="section-title">Get in Touch</h2>
         <p class="section-subtitle">Open to research collaborations, speaking invitations, consulting enquiries, and teaching opportunities.</p>
+
+        <div class="phd-banner">
+          🎓 Currently seeking PhD positions in computer vision, structural health monitoring, and AI for infrastructure / digital heritage — happy to discuss potential collaborations.
+        </div>
 
         <div class="contact-details">
           <div class="contact-item">
@@ -1099,6 +1303,15 @@
             <div class="contact-item-text">
               <small>Google Scholar</small>
               <span><a href="https://scholar.google.com/citations?user=6ObsaHgAAAAJ&hl=en" target="_blank" style="color:#60a5fa;">View publications ↗</a></span>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">
+              <svg width="16" height="16" viewBox="0 0 256 256" fill="currentColor"><path d="M128,0C57.3,0,0,57.3,0,128s57.3,128,128,128,128-57.3,128-128S198.7,0,128,0Z"/></svg>
+            </div>
+            <div class="contact-item-text">
+              <small>ORCID</small>
+              <span><a href="https://orcid.org/0009-0002-0922-6586" target="_blank" style="color:#60a5fa;" title="Add ORCID link">Add your ORCID iD ↗</a></span>
             </div>
           </div>
         </div>
@@ -1147,9 +1360,10 @@
         <a href="#hero">Home</a>
         <a href="#research">Research</a>
         <a href="#work">Work</a>
+        <a href="#gallery">Gallery</a>
         <a href="CV_Sushant.pdf" target="_blank">CV</a>
       </div>
-      <span class="footer-copy">© 2025 Sushant Chalise · Kathmandu, Nepal</span>
+      <span class="footer-copy">© 2026 Sushant Chalise · Kathmandu, Nepal</span>
     </div>
   </div>
 </footer>
@@ -1183,7 +1397,17 @@ function toggleMobileNav() {
   mn.style.display = mn.style.display === 'none' ? 'block' : 'none';
 }
 
-
+/* ── Gallery filter ── */
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const filter = btn.dataset.filter;
+    document.querySelectorAll('.gallery-item').forEach(item => {
+      item.style.display = (filter === 'all' || item.dataset.category === filter) ? '' : 'none';
+    });
+  });
+});
 </script>
 </body>
 </html>
